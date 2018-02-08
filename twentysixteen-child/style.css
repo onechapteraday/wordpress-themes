@@ -21,6 +21,7 @@
  * 3.0 - Table Book Metadata
  * 4.0 - Add partners images
  * 5.0 - Copyright for featured images
+ * 6.0 - Goodreads book widget
  */
 
 
@@ -151,4 +152,22 @@ figcaption.wp-post-image-copyright a {
 figcaption.wp-post-image-copyright a:hover {
     color: #007acc;
     text-decoration: underline;
+}
+
+
+/*
+ * 6.0 - Goodreads book widget
+ */
+
+.gr_grid_book_container {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin-right: 1px;
+    margin-bottom: 4px;
+    vertical-align: top;
+}
+
+.gr_grid_book_container a {
+    display: block;
 }
