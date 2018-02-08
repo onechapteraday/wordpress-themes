@@ -150,7 +150,7 @@ function twentysixteen_entry_taxonomies() {
         );
     }
 
-    $people_list = get_the_terms( $post->ID, 'person', '', ', ' );
+    $people_list = get_the_term_list( get_the_ID(), 'person', '', ', ' );
     if ( $people_list ) {
         printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
             _x( 'People', 'Used before tag names.', 'twentysixteen' ),
@@ -158,7 +158,7 @@ function twentysixteen_entry_taxonomies() {
         );
     }
 
-    $locations_list = get_the_terms( $post->ID, 'location', '', ', ' );
+    $locations_list = get_the_terms( get_the_ID(), 'location', '', ', ' );
     if ( $locations_list ) {
         $i = 0;
         $locations = '';
