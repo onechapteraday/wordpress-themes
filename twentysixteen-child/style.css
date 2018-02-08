@@ -18,6 +18,7 @@
  *
  * 1.0 - Override CSS from parent styles
  * 2.0 - Post Dictionary
+ * 3.0 - Table Book Metadata
  */
 
 
@@ -58,4 +59,28 @@ body {
 .post_dictionary_data dd.post_dictionary_info {
     font-style: italic;
     margin: 0;
+}
+
+
+/**
+ * 3.0 - Table Book Metadata
+ */
+
+table.book_metadata {
+}
+
+table.book_metadata td {
+    padding: 1em 0;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    vertical-align: top;
+}
+
+table.book_metadata td.book_data {
+    padding: 1em;
+}
+
+table.book_metadata td ul.book_info {
+    margin: 15px 0 0;
+    list-style: none;
 }
