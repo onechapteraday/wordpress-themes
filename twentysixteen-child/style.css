@@ -19,6 +19,7 @@
  * 1.0 - Override CSS from parent styles
  * 2.0 - Post Dictionary
  * 3.0 - Table Book Metadata
+ * 4.0 - Add partners images
  */
 
 
@@ -83,4 +84,26 @@ table.book_metadata td.book_data {
 table.book_metadata td ul.book_info {
     margin: 15px 0 0;
     list-style: none;
+}
+
+
+/*
+ * 4.0 - Add partners images
+ */
+
+a.logo_partner {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    color: transparent;
+    max-width: 60px;
+}
+
+a.logo_amazon {
+    vertical-align: bottom;
+}
+
+a.logo_fnac {
+    max-width: 45px;
+    margin-left: 5px;
 }
