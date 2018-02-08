@@ -1,6 +1,6 @@
 /*
  Theme Name:   Twenty Sixteen Child
- Theme URI: https://wordpress.org/themes/twentysixteen/
+ Theme URI:    https://wordpress.org/themes/twentysixteen/
  Description:  Twenty Sixteen Child Theme
  Author:       Christelle Hilaricus
  Author URI:   http://github.com/christellehilaricus
@@ -12,6 +12,50 @@
  Text Domain:  twenty-sixteen-child
 */
 
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Override CSS from parent styles
+ * 2.0 - Post Dictionary
+ */
+
+
+/**
+ * 1.0 - Override CSS from parent styles
+ *
+ * Can be useful to have some parent styles override
+ */
+
 body {
-  background: red !important;
+    background: red !important;
+}
+
+
+/**
+ * 2.0 - Post Dictionary
+ */
+
+.post_dictionary_letters ul {
+    list-style: none;
+}
+
+.post_dictionary_letters li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin: 0 5px 0 0;
+    text-transform: uppercase;
+}
+
+.post_dictionary_data .post_dictionary_letter {
+    font-size: 24px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0 0 0.75em;
+}
+
+.post_dictionary_data dd.post_dictionary_info {
+    font-style: italic;
+    margin: 0;
 }
