@@ -20,6 +20,7 @@
  * 2.0 - Post Dictionary
  * 3.0 - Table Book Metadata
  * 4.0 - Add partners images
+ * 5.0 - Copyright for featured images
  */
 
 
@@ -106,4 +107,48 @@ a.logo_amazon {
 a.logo_fnac {
     max-width: 45px;
     margin-left: 5px;
+}
+
+
+/*
+ * 5.0 - Copyright for featured images
+ */
+
+figure {
+    position: relative;
+    margin: 0 0 20px;
+}
+
+figcaption.wp-post-image-copyright {
+    font-size: 10px;
+    color: grey;
+    margin: 5px 0 0 20px;
+}
+
+figcaption.wp-post-image-copyright:before {
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    color: white;
+    background-color: darkgrey;
+    content: "i";
+    font-style: italic;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+figcaption.wp-post-image-copyright a {
+    color: grey;
+    -webkit-transition: all 0.225s ease-in-out;
+    -moz-transition: all 0.225s ease-in-out;
+    transition: all 0.225s ease-in-out;
+}
+
+figcaption.wp-post-image-copyright a:hover {
+    color: #007acc;
+    text-decoration: underline;
 }

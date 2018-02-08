@@ -65,7 +65,7 @@ function filter_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size,
         $author = get_featured_image_copyright_author($post_thumbnail_id);
 
 	if ( $link ) {
-                $html .= '<figcaption class="wp-post-image-copyright">&rsaquo; ';
+                $html .= '<figcaption class="wp-post-image-copyright">Copyright : ';
 		$html .= '<a href="' . $link . '" target="_blank" rel="nofollow">';
 		$html .= $author . '</a></figcaption>';
 	}
