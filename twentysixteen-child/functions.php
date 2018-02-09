@@ -185,4 +185,24 @@ function twentysixteen_entry_taxonomies() {
 }
 endif;
 
+
+
+/**
+ * Add new sidebar only for custom post type book
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+if ( function_exists('register_sidebar') ) {
+    register_sidebar(array(
+        'name' => 'Barre latérale pour les Livres',
+        'id' => 'book',
+        'description' => 'Ajoutez des widgets ici pour les faire apparaître dans la barre latérale des Livres.',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+}
+
 ?>

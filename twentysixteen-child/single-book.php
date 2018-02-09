@@ -50,5 +50,5 @@ get_header(); ?>
 
 </div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('book'); ?>
 <?php get_footer(); ?>
