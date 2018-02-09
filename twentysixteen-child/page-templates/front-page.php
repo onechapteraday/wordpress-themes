@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<div id="content" class="site-content no-sidebar" role="main">
+<div id="primary" class="custom-front-page" role="main">
 
 <?php get_sidebar( 'fullwidth-top' ); ?>
 <?php get_sidebar( 'content-one' ); ?>
