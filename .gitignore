@@ -1,18 +1,6 @@
-coherent
-hueman
-illustratr
-new-onechapter
-revolution
-twentytwelve
-twentythirteen
-twentyfourteen
-twentyfifteen
-twentyseventeen
-uku-light
-WP-template
-zuki
-zuki-last
-zuki-revolution
+# Ignore all
+*
 
-*.zip
-index.php
+# Except
+!twentysixteen
+!twentysixteen-child
