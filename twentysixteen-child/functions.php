@@ -18,6 +18,38 @@ function my_theme_enqueue_styles() {
 
 
 
+# Short title
+
+function twentysixteenchild_title_limit($length, $replacer = '...') {
+    $string = the_title('','',FALSE);
+
+    if(strlen($string) > $length)
+        $string = (preg_match('/^(.*)\W.*$/', substr($string, 0, $length+1), $matches) ? $matches[1] : substr($string, 0, $length)) . $replacer;
+
+    echo $string;
+}
+
+
+
+# Multiple custom excerpt lengths
+
+function twentysixteenchild_excerpt($limit) {
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    }
+
+    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+
+    return $excerpt;
+}
+
+
+
 /**
  * Add new custom post type book into queries.
  *
@@ -188,21 +220,1003 @@ endif;
 
 
 /**
- * Add new sidebar only for custom post type book
+ * Override widgets area
+ *
+ * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  *
  * @since Twenty Sixteen Child 1.0
  */
 
-if ( function_exists('register_sidebar') ) {
-    register_sidebar(array(
-        'name' => 'Barre latérale pour les Livres',
-        'id' => 'book',
-        'description' => 'Ajoutez des widgets ici pour les faire apparaître dans la barre latérale des Livres.',
+function twentysixteenchild_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'twentysixteen' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+
+    register_sidebar( array(
+        'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
+        'id'            => 'sidebar-2',
+        'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+
+    register_sidebar( array(
+        'name'          => __( 'Content Bottom 2', 'twentysixteen' ),
+        'id'            => 'sidebar-3',
+        'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+
+    register_sidebar(array(
+        'name'          => __( 'Sidebar for Books', 'twentysixteen-child' ),
+        'id'            => 'book',
+        'description'   => 'Add widgets here to appears in your Books sidebar.',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+
+    register_sidebar( array (
+        'name' => __( 'Front Page - FullWidth Top', 'twentysixteen-child' ),
+        'id' => 'front-fullwidth-top',
+        'description' => __( 'Widgets appear in a single-column widget area on the top of the Front Page (and above the Featured Content slider, if active).', 'twentysixteen-child' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => "</aside>",
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar( array (
+        'name' => __( 'Front Page - Post Content 1', 'twentysixteen-child' ),
+        'id' => 'front-content-1',
+        'description' => __( 'Widgets appear left of Sidebar 1 and below the FullWidth Top widget area. This widget area is especially designed for the custom Zuki Posts by Category widgets.', 'twentysixteen-child' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => "</aside>",
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar( array (
+        'name' => __( 'Front Page - Sidebar 1', 'twentysixteen-child' ),
+        'id' => 'front-sidebar-1',
+        'description' => __( 'Widgets appear in a right-aligned sidebar area next to the Post Content 1 widget area.', 'twentysixteen-child' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => "</aside>",
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar( array (
+        'name' => __( 'Front Page - FullWidth Center', 'twentysixteen-child' ),
+        'id' => 'front-fullwidth-center',
+        'description' => __( 'Widgets will appear in a single-column widget area below the Post Content 1 and Sidebar 1 widget areas.', 'twentysixteen-child' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => "</aside>",
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar( array (
+         'name' => __( 'Front Page - Post Content 2', 'twentysixteen-child' ),
+         'id' => 'front-content-2',
+         'description' => __( 'Widgets appear left of Sidebar 2 and below the FullWidth Center widget area. This widget area is especially designed for the custom Zuki Posts by Category widgets.', 'twentysixteen-child' ),
+         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+         'after_widget' => "</aside>",
+         'before_title' => '<h3 class="widget-title">',
+         'after_title' => '</h3>',
+    ));
+
+    register_sidebar( array (
+        'name' => __( 'Front Page - Sidebar 2', 'twentysixteen-child' ),
+        'id' => 'front-sidebar-2',
+        'description' => __( 'Widgets appear in a right-aligned sidebar area next to the Post Content 2 widget area.', 'twentysixteen-child' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => "</aside>",
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar( array (
+        'name' => __( 'Front Page - FullWidth Bottom', 'twentysixteen-child' ),
+        'id' => 'front-fullwidth-bottom',
+        'description' => __( 'Widgets will appear in a single-column widget area at the bottom of your Front Page above the footer.', 'twentysixteen-child' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => "</aside>",
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
     ));
 }
 
+add_action( 'widgets_init', 'twentysixteenchild_widgets_init' );
+
+
+
+/**
+ * Add Recent posts (Small 1) widget
+ *
+ * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+class twentysixteenchild_recentposts_small_one extends WP_Widget {
+
+     public function __construct() {
+         parent::__construct( 'twentysixteenchild_recentposts_small_one', __( 'New: Recent Posts (Small 1)', 'twentysixteen-child' ), array(
+             'classname'   => 'widget_twentysixteenchild_recentposts_small_one',
+             'description' => __( 'Small Recents Posts widget with featured images.', 'twentysixteen-child' ),
+         ));
+     }
+
+     public function widget($args, $instance) {
+         $title = $instance['title'];
+         $postnumber = $instance['postnumber'];
+         $category = apply_filters('widget_title', $instance['category']);
+
+         echo $args['before_widget'];
+
+         if( ! empty( $title ) )
+             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
+
+         # The Query
+         $smallone_query = new WP_Query(array (
+             'post_status'    => 'publish',
+             'posts_per_page' => $postnumber,
+             'category_name' => $category,
+             'ignore_sticky_posts' => 1
+         ));
+
+         # The Loop
+         if($smallone_query->have_posts()) : ?>
+
+             <?php while($smallone_query->have_posts()) : $smallone_query->the_post() ?>
+             <article class="rp-small-one">
+                 <div class="rp-small-one-content cf">
+                     <?php if ( '' != get_the_post_thumbnail() ) : ?>
+                         <div class="entry-thumb">
+                             <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-small-square'); ?></a>
+                         </div><!-- end .entry-thumb -->
+                     <?php endif; ?>
+
+                     <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
+                     <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php twentysixteenchild_title_limit( 60, '...'); ?></a></h3>
+                 </div><!--end .rp-small-one-content -->
+             </article><!--end .rp-small-one -->
+             <?php endwhile ?>
+
+         <?php endif ?>
+
+         <?php
+         echo $args['after_widget'];
+
+         # Reset the post globals as this query will have stomped on it
+         wp_reset_postdata();
+     }
+
+    function update($new_instance, $old_instance) {
+        $instance['title'] = $new_instance['title'];
+        $instance['postnumber'] = $new_instance['postnumber'];
+        $instance['category'] = $new_instance['category'];
+
+        return $new_instance;
+    }
+
+    function form($instance) {
+        $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
+        $category = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($title); ?>" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('postnumber'); ?>"><?php _e('Number of posts to show:','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('postnumber'); ?>" value="<?php echo esc_attr($postnumber); ?>" class="widefat" id="<?php echo $this->get_field_id('postnumber'); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category slug (optional, separate multiple categories by comma):','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('category'); ?>" value="<?php echo esc_attr($category); ?>" class="widefat" id="<?php echo $this->get_field_id('category'); ?>" />
+        </p>
+        <?php
+
+     }
+}
+
+register_widget('twentysixteenchild_recentposts_small_one');
+
+
+
+/**
+ * Add Recent posts (Small 2) widget
+ *
+ * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+class twentysixteenchild_recentposts_small_two extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct( 'twentysixteenchild_recentposts_small_two', __( 'New: Recent Posts (Small 2)', 'twentysixteen-child' ), array(
+            'classname'   => 'widget_twentysixteenchild_recentposts_small_two',
+            'description' => __( 'Small Recents Posts widget without featured images.', 'twentysixteen-child' ),
+        ));
+    }
+
+    public function widget($args, $instance) {
+        $title = $instance['title'];
+        $postnumber = $instance['postnumber'];
+        $category = apply_filters('widget_title', $instance['category']);
+
+        echo $args['before_widget'];
+
+        if( ! empty( $title ) )
+            echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
+
+        # The Query
+        $smalltwo_query = new WP_Query(array (
+            'post_status'    => 'publish',
+            'posts_per_page' => $postnumber,
+            'category_name' => $category,
+            'ignore_sticky_posts' => 1
+        ));
+
+        # The Loop
+        if($smalltwo_query->have_posts()) : ?>
+
+            <?php while($smalltwo_query->have_posts()) : $smalltwo_query->the_post() ?>
+            <article class="rp-small-two">
+                <p class="summary"><a href="<?php the_permalink(); ?>"><span class="entry-title"><?php the_title(); ?></span><?php echo twentysixteenchild_excerpt(15); ?></a><span class="entry-date"><?php echo get_the_date(); ?></span></p>
+            </article><!--end .rp-small-two -->
+
+            <?php endwhile ?>
+
+        <?php endif ?>
+
+        <?php
+	echo $args['after_widget'];
+
+        # Reset the post globals as this query will have stomped on it
+        wp_reset_postdata();
+    }
+
+    function update($new_instance, $old_instance) {
+        $instance['title'] = $new_instance['title'];
+        $instance['postnumber'] = $new_instance['postnumber'];
+        $instance['category'] = $new_instance['category'];
+
+        return $new_instance;
+    }
+
+    function form($instance) {
+        $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
+        $category = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($title); ?>" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('postnumber'); ?>"><?php _e('Number of posts to show:','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('postnumber'); ?>" value="<?php echo esc_attr($postnumber); ?>" class="widefat" id="<?php echo $this->get_field_id('postnumber'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category slug (optional):','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('category'); ?>" value="<?php echo esc_attr($category); ?>" class="widefat" id="<?php echo $this->get_field_id('category'); ?>" />
+	</p>
+	<?php
+
+    }
+}
+
+register_widget('twentysixteenchild_recentposts_small_two');
+
+
+
+/**
+ * Add Recent posts (Medium 1) widget
+ *
+ * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+class twentysixteenchild_recentposts_medium_one extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct( 'twentysixteenchild_recentposts_medium_one', __( 'New: Recent Posts (Medium 1)', 'twentysixteen-child' ), array(
+            'classname'   => 'widget_twentysixteenchild_recentposts_medium_one',
+            'description' => __( 'Medium-sized Recents Posts with featured image and excerpt.', 'twentysixteen-child' ),
+        ) );
+    }
+
+    public function widget($args, $instance) {
+        $title = $instance['title'];
+        $postnumber = $instance['postnumber'];
+        $category = apply_filters('widget_title', $instance['category']);
+
+        echo $args['before_widget'];
+
+        if( ! empty( $title ) )
+            echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
+
+        # The Query
+        $mediumone_query = new WP_Query(array (
+            'post_status'    => 'publish',
+            'posts_per_page' => $postnumber,
+            'category_name' => $category,
+            'ignore_sticky_posts' => 1
+        ));
+
+        # The Loop
+        if($mediumone_query->have_posts()) : ?>
+
+            <?php while($mediumone_query->have_posts()) : $mediumone_query->the_post() ?>
+                <article class="rp-medium-one">
+                    <div class="rp-medium-one-content">
+                        <?php if ( '' != get_the_post_thumbnail() ) : ?>
+                            <div class="entry-thumb">
+                                <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-medium-landscape'); ?></a>
+                            </div><!-- end .entry-thumb -->
+                        <?php endif; ?>
+
+                        <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
+                        <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php twentysixteenchild_title_limit( 85, '...'); ?></a></h3>
+                        <p class="summary"><?php echo twentysixteenchild_excerpt(20); ?></p>
+
+                        <div class="entry-author">
+                        <?php
+                            printf( __( 'by <a href="%1$s" title="%2$s">%3$s</a>', 'twentysixteen-child' ),
+                            esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+                            sprintf( esc_attr__( 'All posts by %s', 'twentysixteen-child' ), get_the_author() ),
+                            get_the_author() );
+                        ?>
+                        </div><!-- end .entry-author -->
+
+                        <?php if ( comments_open() ) : ?>
+                            <div class="entry-comments">
+                                <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+                            </div><!-- end .entry-comments -->
+                        <?php endif; // comments_open() ?>
+                    </div><!--end .rp-medium-one -->
+                </article><!--end .rp-medium-one -->
+            <?php endwhile ?>
+
+        <?php endif ?>
+
+        <?php
+        echo $args['after_widget'];
+
+        # Reset the post globals as this query will have stomped on it
+        wp_reset_postdata();
+    }
+
+    function update($new_instance, $old_instance) {
+        $instance['title'] = $new_instance['title'];
+        $instance['postnumber'] = $new_instance['postnumber'];
+        $instance['category'] = $new_instance['category'];
+
+        return $new_instance;
+    }
+
+    function form($instance) {
+        $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
+        $category = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($title); ?>" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('postnumber'); ?>"><?php _e('Number of posts to show:','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('postnumber'); ?>" value="<?php echo esc_attr($postnumber); ?>" class="widefat" id="<?php echo $this->get_field_id('postnumber'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category slug (optional):','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('category'); ?>" value="<?php echo esc_attr($category); ?>" class="widefat" id="<?php echo $this->get_field_id('category'); ?>" />
+	</p>
+	<?php
+
+    }
+}
+
+register_widget('twentysixteenchild_recentposts_medium_one');
+
+
+
+/**
+ * Add Recent posts (Medium 2) widget
+ *
+ * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+class twentysixteenchild_recentposts_medium_two extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct( 'twentysixteenchild_recentposts_medium_two', __( 'New: Recent Posts (Medium 2)', 'twentysixteen-child' ), array(
+            'classname'   => 'widget_twentysixteenchild_recentposts_medium_two',
+            'description' => __( 'Medium-sized Recents Posts in a 2-column layout with featured image and excerpt.', 'twentysixteen-child' ),
+        ));
+    }
+
+    public function widget($args, $instance) {
+        $title = $instance['title'];
+        $postnumber = $instance['postnumber'];
+        $category = apply_filters('widget_title', $instance['category']);
+
+        echo $args['before_widget'];
+
+        if( ! empty( $title ) )
+            echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
+
+        # The Query
+        $mediumtwo_query = new WP_Query(array (
+            'post_status'    => 'publish',
+            'posts_per_page' => $postnumber,
+            'category_name' => $category,
+            'ignore_sticky_posts' => 1
+        ));
+
+        # The Loop
+        if($mediumtwo_query->have_posts()) : ?>
+
+            <?php while($mediumtwo_query->have_posts()) : $mediumtwo_query->the_post() ?>
+            <article class="rp-medium-two">
+                <div class="rp-medium-two-content">
+                    <?php if ( '' != get_the_post_thumbnail() ) : ?>
+                        <div class="entry-thumb">
+                            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-medium-landscape'); ?></a>
+                        </div><!-- end .entry-thumb -->
+                    <?php endif; ?>
+
+                    <div class="story">
+                        <h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h3>
+                        <div class="entry-author">
+                            <?php
+                                printf( __( 'Published by <a href="%1$s" title="%2$s">%3$s</a>', 'twentysixteen-child' ),
+                                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+                                sprintf( esc_attr__( 'All posts by %s', 'twentysixteen-child' ), get_the_author() ),
+                                get_the_author() );
+                            ?>
+                        </div><!-- end .entry-author -->
+
+                        <p class="summary"><?php echo twentysixteenchild_excerpt(30); ?></p>
+                        <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
+
+                        <?php if ( comments_open() ) : ?>
+                            <div class="entry-comments">
+                                <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+                            </div><!-- end .entry-comments -->
+                        <?php endif; // comments_open() ?>
+
+                        <div class="entry-cats">
+                            <?php the_category(', '); ?>
+                        </div><!-- end .entry-cats -->
+                    </div><!--end .story -->
+                </div><!--end .rp-medium-two-content -->
+            </article><!--end .rp-medium-two -->
+            <?php endwhile ?>
+
+        <?php endif ?>
+
+        <?php
+        echo $args['after_widget'];
+
+        # Reset the post globals as this query will have stomped on it
+        wp_reset_postdata();
+    }
+
+    function update($new_instance, $old_instance) {
+        $instance['title'] = $new_instance['title'];
+        $instance['postnumber'] = $new_instance['postnumber'];
+        $instance['category'] = $new_instance['category'];
+
+        return $new_instance;
+    }
+
+    function form($instance) {
+        $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
+        $category = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($title); ?>" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('postnumber'); ?>"><?php _e('Number of posts to show:','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('postnumber'); ?>" value="<?php echo esc_attr($postnumber); ?>" class="widefat" id="<?php echo $this->get_field_id('postnumber'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category slug (optional):','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('category'); ?>" value="<?php echo esc_attr($category); ?>" class="widefat" id="<?php echo $this->get_field_id('category'); ?>" />
+	</p>
+	<?php
+
+    }
+}
+
+register_widget('twentysixteenchild_recentposts_medium_two');
+
+
+
+/**
+ * Add Recent posts (Big 1) widget
+ *
+ * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+class twentysixteenchild_recentposts_big_one extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct( 'twentysixteenchild_recentposts_big_one', __( 'New: Recent Posts (Big 1)', 'twentysixteen-child' ), array(
+            'classname'   => 'widget_twentysixteenchild_recentposts_big_one',
+            'description' => __( 'Big Recents Posts with an overlay excerpt text. Featured images must have a minimum size of 1200x800 pixel.', 'twentysixteen-child' ),
+        ));
+    }
+
+    public function widget($args, $instance) {
+        $title = $instance['title'];
+        $postnumber = $instance['postnumber'];
+        $category = apply_filters('widget_title', $instance['category']);
+
+        echo $args['before_widget'];
+
+        if( ! empty( $title ) )
+            echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
+
+        # The Query
+        $bigone_query = new WP_Query(array (
+            'post_status'    => 'publish',
+            'posts_per_page' => $postnumber,
+            'category_name' => $category,
+            'ignore_sticky_posts' => 1
+        ));
+
+        # The Loop
+        if($bigone_query->have_posts()) : ?>
+
+            <?php while($bigone_query->have_posts()) : $bigone_query->the_post() ?>
+            <article class="rp-big-one cf">
+                <div class="rp-big-one-content">
+
+                    <?php if ( '' != get_the_post_thumbnail() ) : ?>
+                        <div class="entry-thumb">
+                            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-fullwidth'); ?></a>
+                        </div><!-- end .entry-thumb -->
+                    <?php endif; ?>
+
+                    <div class="story">
+                        <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h2>
+                        <div class="entry-author">
+                            <?php
+                                printf( __( '<span>by</span> <a href="%1$s" title="%2$s">%3$s</a>', 'twentysixteen-child' ),
+                                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+                                sprintf( esc_attr__( 'All posts by %s', 'twentysixteen-child' ), get_the_author() ),
+                                get_the_author() );
+                            ?>
+                        </div><!-- end .entry-author -->
+
+			<p class="summary"><?php echo twentysixteenchild_excerpt(65); ?></p>
+			<div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
+
+                        <?php if ( comments_open() ) : ?>
+                            <div class="entry-comments">
+                                <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+                            </div><!-- end .entry-comments -->
+                        <?php endif; // comments_open() ?>
+
+                        <div class="entry-cats">
+		            <?php the_category(', '); ?>
+                        </div><!-- end .entry-cats -->
+                    </div><!--end .story -->
+
+                </div><!--end .rp-big-one-content -->
+            </article><!--end .rp-big-one -->
+            <?php endwhile ?>
+
+        <?php endif ?>
+
+        <?php
+        echo $args['after_widget'];
+
+        # Reset the post globals as this query will have stomped on it
+        wp_reset_postdata();
+    }
+
+    function update($new_instance, $old_instance) {
+        $instance['title'] = $new_instance['title'];
+        $instance['postnumber'] = $new_instance['postnumber'];
+        $instance['category'] = $new_instance['category'];
+
+        return $new_instance;
+    }
+
+    function form($instance) {
+        $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
+        $category = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($title); ?>" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('postnumber'); ?>"><?php _e('Number of posts to show:','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('postnumber'); ?>" value="<?php echo esc_attr($postnumber); ?>" class="widefat" id="<?php echo $this->get_field_id('postnumber'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category slug (optional):','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('category'); ?>" value="<?php echo esc_attr($category); ?>" class="widefat" id="<?php echo $this->get_field_id('category'); ?>" />
+	</p>
+	<?php
+    }
+}
+
+register_widget('twentysixteenchild_recentposts_big_one');
+
+
+
+/**
+ * Add Recent posts (Big 2) widget
+ *
+ * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+class twentysixteenchild_recentposts_big_two extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct( 'twentysixteenchild_recentposts_big_two', __( 'New: Recent Posts (Big 2)', 'twentysixteen-child' ), array(
+            'classname'   => 'widget_twentysixteenchild_recentposts_big_two',
+            'description' => __( 'Big Recents Posts with featured image and a 2-column excerpt. Featured images must have a minimum size of 1200x800 pixel.', 'twentysixteen-child' ),
+        ));
+    }
+
+    public function widget($args, $instance) {
+        $title = $instance['title'];
+        $postnumber = $instance['postnumber'];
+        $category = apply_filters('widget_title', $instance['category']);
+
+        echo $args['before_widget'];
+
+        if( ! empty( $title ) )
+            echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
+
+        # The Query
+        $bigtwo_query = new WP_Query(array (
+            'post_status'    => 'publish',
+            'posts_per_page' => $postnumber,
+            'category_name' => $category,
+            'ignore_sticky_posts' => 1
+        ));
+
+    # The Loop
+    if($bigtwo_query->have_posts()) : ?>
+
+        <?php while($bigtwo_query->have_posts()) : $bigtwo_query->the_post() ?>
+        <article class="rp-big-two cf">
+            <div class="rp-big-two-content">
+
+            <?php if ( '' != get_the_post_thumbnail() ) : ?>
+                <div class="entry-thumb">
+                    <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-fullwidth'); ?></a>
+                </div><!-- end .entry-thumb -->
+            <?php endif; ?>
+
+            <header class="entry-header">
+                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h2>
+            </header>
+
+            <div class="story">
+                <div class="entry-author">
+                <?php
+                    printf( __( '<span>by</span> <a href="%1$s" title="%2$s">%3$s</a>', 'twentysixteen-child' ),
+                    esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+                    sprintf( esc_attr__( 'All posts by %s', 'twentysixteen-child' ), get_the_author() ),
+                    get_the_author() );
+                ?>
+                </div><!-- end .entry-author -->
+
+                <p class="summary"><?php echo twentysixteenchild_excerpt(175); ?></p>
+
+                <footer class="entry-footer">
+                    <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
+
+                    <?php if ( comments_open() ) : ?>
+                        <div class="entry-comments">
+                            <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+                        </div><!-- end .entry-comments -->
+                    <?php endif; // comments_open() ?>
+
+                    <div class="entry-cats">
+                        <?php the_category(', '); ?>
+                    </div><!-- end .entry-cats -->
+                </footer>
+             </div><!--end .story -->
+             </div><!--end .rp-big-two-content -->
+         </article><!--end .rp-big-two -->
+       <?php endwhile ?>
+
+    <?php endif ?>
+
+    <?php
+        echo $args['after_widget'];
+
+        # Reset the post globals as this query will have stomped on it
+        wp_reset_postdata();
+    }
+
+    function update($new_instance, $old_instance) {
+        $instance['title'] = $new_instance['title'];
+        $instance['postnumber'] = $new_instance['postnumber'];
+        $instance['category'] = $new_instance['category'];
+
+        return $new_instance;
+    }
+
+    function form($instance) {
+        $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
+        $category = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($title); ?>" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('postnumber'); ?>"><?php _e('Number of posts to show:','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('postnumber'); ?>" value="<?php echo esc_attr($postnumber); ?>" class="widefat" id="<?php echo $this->get_field_id('postnumber'); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category slug (optional):','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('category'); ?>" value="<?php echo esc_attr($category); ?>" class="widefat" id="<?php echo $this->get_field_id('category'); ?>" />
+        </p>
+        <?php
+
+    }
+}
+
+register_widget('twentysixteenchild_recentposts_big_two');
+
+
+
+/**
+ * Add Recent posts (Colored) widget
+ *
+ * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+class twentysixteenchild_recentposts_color extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct( 'twentysixteenchild_recentposts_color', __( 'New: Recent Posts (Background)', 'twentysixteen-child' ), array(
+            'classname'   => 'widget_twentysixteenchild_recentposts_color',
+            'description' => __( 'Medium-sized Recents Posts with a background color.', 'twentysixteen-child' ),
+        ));
+    }
+
+    public function widget($args, $instance) {
+        $title = $instance['title'];
+        $postnumber = $instance['postnumber'];
+        $category = apply_filters('widget_title', $instance['category']);
+
+        echo $args['before_widget'];
+
+        if( ! empty( $title ) )
+            echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
+
+        # The Query
+        $color_query = new WP_Query(array (
+            'post_status'    => 'publish',
+            'posts_per_page' => $postnumber,
+            'category_name' => $category,
+            'ignore_sticky_posts' => 1
+        ));
+        ?>
+
+        <div class="bg-wrap cf">
+            <?php
+            # The Loop
+            if($color_query->have_posts()) : ?>
+
+                <?php while($color_query->have_posts()) : $color_query->the_post() ?>
+                <article class="rp-color cf">
+                    <?php if ( '' != get_the_post_thumbnail() ) : ?>
+                        <div class="entry-thumb">
+                            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-medium-portrait'); ?></a>
+                        </div><!-- end .entry-thumb -->
+                    <?php endif; ?>
+
+                    <header class="entry-header">
+                        <div class="entry-cats">
+                            <?php the_category(', '); ?>
+                        </div><!-- end .entry-cats -->
+
+                        <h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h3>
+                    </header>
+
+                    <div class="story">
+                        <p class="summary"><?php echo twentysixteenchild_excerpt(30); ?></p>
+
+                        <footer class="entry-footer">
+                            <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
+
+                            <?php if ( comments_open() ) : ?>
+                                <div class="entry-comments">
+                                    <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+                                </div><!-- end .entry-comments -->
+                            <?php endif; // comments_open() ?>
+                        </footer>
+                    </div><!--end .story -->
+                 </article><!--end .rp-color -->
+
+                <?php endwhile ?>
+            <?php endif ?>
+        </div><!--end .bg-wrap -->
+
+        <?php
+        echo $args['after_widget'];
+
+        # Reset the post globals as this query will have stomped on it
+        wp_reset_postdata();
+    }
+
+    function update($new_instance, $old_instance) {
+        $instance['title'] = $new_instance['title'];
+        $instance['postnumber'] = $new_instance['postnumber'];
+        $instance['category'] = $new_instance['category'];
+
+        return $new_instance;
+    }
+
+    function form($instance) {
+        $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
+        $category = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($title); ?>" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('postnumber'); ?>"><?php _e('Number of posts to show:','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('postnumber'); ?>" value="<?php echo esc_attr($postnumber); ?>" class="widefat" id="<?php echo $this->get_field_id('postnumber'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category slug (optional):','twentysixteen-child'); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('category'); ?>" value="<?php echo esc_attr($category); ?>" class="widefat" id="<?php echo $this->get_field_id('category'); ?>" />
+	</p>
+	<?php
+
+    }
+}
+
+register_widget('twentysixteenchild_recentposts_color');
+
+
+
+/**
+ * Add Quote widget
+ *
+ * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+class twentysixteenchild_quote extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct( 'twentysixteenchild_quote', __( 'New: Quote', 'twentysixteen-child' ), array(
+            'classname'   => 'widget_twentysixteenchild_quote',
+            'description' => __( 'A big quote or text slogan.', 'twentysixteen-child' ),
+        ));
+    }
+
+    public function widget($args, $instance) {
+        extract( $args );
+        $title = $instance['title'];
+        $quotetext = $instance['quotetext'];
+        $quoteauthor = $instance['quoteauthor'];
+
+        echo $before_widget;
+
+        if($title != '')
+            echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
+
+	?>
+        <div class="quote-wrap">
+            <blockquote class="quote-text"><?php echo ( wp_kses_post(wpautop($quotetext))  ); ?>
+            <?php
+	        if($quoteauthor != '') {
+                    echo '<cite class="quote-author"> ' . ( wp_kses_post($quoteauthor) ) . ' </cite>';
+                }
+            ?>
+            </blockquote>
+        </div><!-- end .quote-wrap -->
+        <?php
+
+        echo $after_widget;
+
+        # Reset the post globals as this query will have stomped on it
+        wp_reset_postdata();
+    }
+
+    function update($new_instance, $old_instance) {
+        $instance['title'] = $new_instance['title'];
+        $instance['quotetext'] = $new_instance['quotetext'];
+        $instance['quoteauthor'] = $new_instance['quoteauthor'];
+
+        return $new_instance;
+    }
+
+    function form($instance) {
+        $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $quotetext = isset( $instance['quotetext'] ) ? esc_attr( $instance['quotetext'] ) : '';
+        $quoteauthor = isset( $instance['quoteauthor'] ) ? esc_attr( $instance['quoteauthor'] ) : '';
+
+	?>
+	<p>
+	    <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($title); ?>" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('quotetext'); ?>"><?php _e('Quote Text:','twentysixteen-child'); ?></label>
+	    <textarea name="<?php echo $this->get_field_name('quotetext'); ?>" class="widefat" rows="8" cols="12" id="<?php echo $this->get_field_id('quotetext'); ?>"><?php echo( $quotetext ); ?></textarea>
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('quoteauthor'); ?>"><?php _e('Quote Author (optional):','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('quoteauthor'); ?>" value="<?php echo esc_attr($quoteauthor); ?>" class="widefat" id="<?php echo $this->get_field_id('quoteauthor'); ?>" />
+	</p>
+	<?php
+
+    }
+}
+
+register_widget('twentysixteenchild_quote');
 ?>
