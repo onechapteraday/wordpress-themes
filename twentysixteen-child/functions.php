@@ -382,9 +382,9 @@ class twentysixteenchild_recentposts_small_one extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-        $title = $instance['title'];
-        $postnumber = $instance['postnumber'];
-        $category = apply_filters('widget_title', $instance['category']);
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
+        $category = isset($instance['category']) ? apply_filters('widget_title', $instance['category']) : '';
         $tag = isset($instance['tag']) ? $instance['tag'] : '';
 
         echo $args['before_widget'];
@@ -491,9 +491,9 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-        $title = $instance['title'];
-        $postnumber = $instance['postnumber'];
-        $category = apply_filters('widget_title', $instance['category']);
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
+        $category = isset($instance['category']) ? apply_filters('widget_title', $instance['category']) : '';
         $tag = isset($instance['tag']) ? $instance['tag'] : '';
 
         echo $args['before_widget'];
@@ -592,9 +592,9 @@ class twentysixteenchild_recentposts_medium_one extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-        $title = $instance['title'];
-        $postnumber = $instance['postnumber'];
-        $category = apply_filters('widget_title', $instance['category']);
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
+        $category = isset($instance['category']) ? apply_filters('widget_title', $instance['category']) : '';
         $tag = isset($instance['tag']) ? $instance['tag'] : '';
 
         echo $args['before_widget'];
@@ -717,9 +717,9 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-        $title = $instance['title'];
-        $postnumber = $instance['postnumber'];
-        $category = apply_filters('widget_title', $instance['category']);
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
+        $category = isset($instance['category']) ? apply_filters('widget_title', $instance['category']) : '';
         $tag = isset($instance['tag']) ? $instance['tag'] : '';
 
         echo $args['before_widget'];
@@ -848,9 +848,9 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-        $title = $instance['title'];
-        $postnumber = $instance['postnumber'];
-        $category = apply_filters('widget_title', $instance['category']);
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
+        $category = isset($instance['category']) ? apply_filters('widget_title', $instance['category']) : '';
         $tag = isset($instance['tag']) ? $instance['tag'] : '';
 
         echo $args['before_widget'];
@@ -980,9 +980,9 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-        $title = $instance['title'];
-        $postnumber = $instance['postnumber'];
-        $category = apply_filters('widget_title', $instance['category']);
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
+        $category = isset($instance['category']) ? apply_filters('widget_title', $instance['category']) : '';
         $tag = isset($instance['tag']) ? $instance['tag'] : '';
 
         echo $args['before_widget'];
@@ -1118,9 +1118,9 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-        $title = $instance['title'];
-        $postnumber = $instance['postnumber'];
-        $category = apply_filters('widget_title', $instance['category']);
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
+        $category = isset($instance['category']) ? apply_filters('widget_title', $instance['category']) : '';
         $tag = isset($instance['tag']) ? $instance['tag'] : '';
 
         echo $args['before_widget'];
@@ -1249,9 +1249,9 @@ class twentysixteenchild_quote extends WP_Widget {
 
     public function widget($args, $instance) {
         extract( $args );
-        $title = $instance['title'];
-        $quotetext = $instance['quotetext'];
-        $quoteauthor = $instance['quoteauthor'];
+        $title = isset($instance['title']) ? $instance['title'] : '';
+        $quotetext = isset($instance['quotetext']) ? $instance['quotetext'] : '';
+        $quoteauthor = isset($instance['quoteauthor']) ? $instance['quoteauthor'] : '';
 
         echo $before_widget;
 
