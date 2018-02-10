@@ -1,0 +1,354 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-10 17:10+0100\n"
+"PO-Revision-Date: 2018-02-10 17:25+0100\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: category.php:51 taxonomy-location.php:51 taxonomy-person.php:89
+#: taxonomy-publisher.php:57
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: category.php:52 taxonomy-location.php:52 taxonomy-person.php:90
+#: taxonomy-publisher.php:58
+msgid "Next page"
+msgstr "Page suivante"
+
+#: category.php:53 taxonomy-location.php:53 taxonomy-person.php:91
+#: taxonomy-publisher.php:59 template-parts/content-single-book.php:233
+msgid "Page"
+msgstr "Page"
+
+#: functions.php:161
+msgctxt "Used before post author name."
+msgid "Author"
+msgstr "Auteur"
+
+#: functions.php:174
+msgctxt "Used before post format."
+msgid "Format"
+msgstr "Format"
+
+#: functions.php:186 functions.php:665 functions.php:791 functions.php:923
+#: functions.php:1060 functions.php:1194
+#, php-format
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+"Laisser un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
+
+#: functions.php:201 functions.php:234
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: functions.php:204
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr "Catégories"
+
+#: functions.php:212
+msgctxt "Used before tag names."
+msgid "People"
+msgstr "Personnes"
+
+#: functions.php:229
+msgctxt "Used before tag names."
+msgid "Locations"
+msgstr "Localisations"
+
+#: functions.php:237
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr "Étiquettes"
+
+#: functions.php:256
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: functions.php:258
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+"Ajouter des widgets ici pour les faire apparaître dans votre barre latérale."
+
+#: functions.php:266
+msgid "Content Bottom 1"
+msgstr "Contenu Bas 1"
+
+#: functions.php:268 functions.php:278
+msgid "Appears at the bottom of the content on posts and pages."
+msgstr "Apparaît en bas du contenu des articles et des pages."
+
+#: functions.php:276
+msgid "Content Bottom 2"
+msgstr "Contenu Bas 2"
+
+#: functions.php:286
+msgid "Sidebar for Books"
+msgstr "Barre latérale pour les Livres"
+
+#: functions.php:296
+msgid "Front Page - FullWidth Top"
+msgstr "Page d'accueil - FullWidth Top"
+
+#: functions.php:298
+msgid ""
+"Widgets appear in a single-column widget area on the top of the Front Page "
+"(and above the Featured Content slider, if active)."
+msgstr ""
+"Les widgets apparaissent dans la zone de widgets d'une colonne située en "
+"haut de la Page d'accueil (et au-dessus du silder de contenu, si celui-ci "
+"est actif)."
+
+#: functions.php:306
+msgid "Front Page - Post Content 1"
+msgstr "Page d'accueil - Contenu 1"
+
+#: functions.php:308
+msgid ""
+"Widgets appear left of Sidebar 1 and below the FullWidth Top widget area. "
+"This widget area is especially designed for the custom Twenty Sixteen Child Posts by "
+"Category widgets."
+msgstr ""
+"Les widgets apparaissent à gauche de la Barre latérale 1 et en-dessous de la "
+"zone FullWidth Top. Cette zone a été créée spécialement pour les "
+
+#: functions.php:316
+msgid "Front Page - Sidebar 1"
+msgstr ""
+
+#: functions.php:318
+msgid ""
+"Widgets appear in a right-aligned sidebar area next to the Post Content 1 "
+"widget area."
+msgstr ""
+
+#: functions.php:326
+msgid "Front Page - FullWidth Center"
+msgstr ""
+
+#: functions.php:328
+msgid ""
+"Widgets will appear in a single-column widget area below the Post Content 1 "
+"and Sidebar 1 widget areas."
+msgstr ""
+
+#: functions.php:336
+msgid "Front Page - Post Content 2"
+msgstr ""
+
+#: functions.php:338
+msgid ""
+"Widgets appear left of Sidebar 2 and below the FullWidth Center widget area. "
+"This widget area is especially designed for the custom Twenty Sixteen Child Posts by "
+"Category widgets."
+msgstr ""
+
+#: functions.php:346
+msgid "Front Page - Sidebar 2"
+msgstr ""
+
+#: functions.php:348
+msgid ""
+"Widgets appear in a right-aligned sidebar area next to the Post Content 2 "
+"widget area."
+msgstr ""
+
+#: functions.php:356
+msgid "Front Page - FullWidth Bottom"
+msgstr ""
+
+#: functions.php:358
+msgid ""
+"Widgets will appear in a single-column widget area at the bottom of your "
+"Front Page above the footer."
+msgstr ""
+
+#: functions.php:380
+msgid "Recent Posts Widget Background Color"
+msgstr ""
+
+#: functions.php:401
+msgid "New: Recent Posts (Small 1)"
+msgstr ""
+
+#: functions.php:403
+msgid "Small Recents Posts widget with featured images."
+msgstr ""
+
+#: functions.php:436 functions.php:646 functions.php:771 functions.php:776
+#: functions.php:903 functions.php:908 functions.php:1035 functions.php:1040
+#: functions.php:1174 functions.php:1183
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: functions.php:472 functions.php:573 functions.php:698 functions.php:829
+#: functions.php:962 functions.php:1099 functions.php:1229 functions.php:1317
+msgid "Title:"
+msgstr ""
+
+#: functions.php:477 functions.php:578 functions.php:703 functions.php:834
+#: functions.php:967 functions.php:1104 functions.php:1234
+msgid "Number of posts to show:"
+msgstr ""
+
+#: functions.php:482
+msgid "Category slug (optional, separate multiple categories by comma):"
+msgstr ""
+
+#: functions.php:487
+msgid "Tag slug (optional, separate multiple tags by comma):"
+msgstr ""
+
+#: functions.php:510
+msgid "New: Recent Posts (Small 2)"
+msgstr ""
+
+#: functions.php:512
+msgid "Small Recents Posts widget without featured images."
+msgstr ""
+
+#: functions.php:583 functions.php:708 functions.php:839 functions.php:972
+#: functions.php:1109 functions.php:1239
+msgid "Category slug (optional):"
+msgstr ""
+
+#: functions.php:588 functions.php:713 functions.php:844 functions.php:977
+#: functions.php:1114 functions.php:1244
+msgid "Tag slug (optional):"
+msgstr ""
+
+#: functions.php:611
+msgid "New: Recent Posts (Medium 1)"
+msgstr ""
+
+#: functions.php:613
+msgid "Medium-sized Recents Posts with featured image and excerpt."
+msgstr ""
+
+#: functions.php:656
+#, php-format
+msgid "by <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
+msgstr "par <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
+
+#: functions.php:658 functions.php:781 functions.php:913 functions.php:1048
+#, php-format
+msgid "All posts by %s"
+msgstr "Tous les articles de %s"
+
+#: functions.php:736
+msgid "New: Recent Posts (Medium 2)"
+msgstr ""
+
+#: functions.php:738
+msgid ""
+"Medium-sized Recents Posts in a 2-column layout with featured image and "
+"excerpt."
+msgstr ""
+
+#: functions.php:779
+#, php-format
+msgid "Published by <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
+msgstr "Écrit par <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
+
+#: functions.php:867
+msgid "New: Recent Posts (Big 1)"
+msgstr ""
+
+#: functions.php:869
+msgid ""
+"Big Recents Posts with an overlay excerpt text. Featured images must have a "
+"minimum size of 1200x800 pixel."
+msgstr ""
+
+#: functions.php:911 functions.php:1046
+#, php-format
+msgid "<span>by</span> <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
+msgstr "<span>par</span> <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
+
+#: functions.php:999
+msgid "New: Recent Posts (Big 2)"
+msgstr ""
+
+#: functions.php:1001
+msgid ""
+"Big Recents Posts with featured image and a 2-column excerpt. Featured "
+"images must have a minimum size of 1200x800 pixel."
+msgstr ""
+
+#: functions.php:1137
+msgid "New: Recent Posts (Background)"
+msgstr ""
+
+#: functions.php:1139
+msgid "Medium-sized Recents Posts with a background color."
+msgstr ""
+
+#: functions.php:1267
+msgid "New: Quote"
+msgstr "New: Citation"
+
+#: functions.php:1269
+msgid "A big quote or text slogan."
+msgstr "Une grande citation ou un slogan."
+
+#: functions.php:1322
+msgid "Quote Text:"
+msgstr "Texte de la citation :"
+
+#: functions.php:1327
+msgid "Quote Author (optional):"
+msgstr "Auteur de la citation (facultatif) :"
+
+#: single-book.php:29
+msgctxt "Parent post link"
+msgid ""
+"<span class=\"meta-nav\">Published in</span><span class=\"post-title\">"
+"%title</span>"
+msgstr ""
+"<span class=\"meta-nav\">Publié dans</span><span class=\"post-title\">"
+"%title</span>"
+
+#: single-book.php:34
+msgid "Next"
+msgstr "Suivant"
+
+#: single-book.php:35
+msgid "Next post:"
+msgstr "Article suivant :"
+
+#: single-book.php:37
+msgid "Previous"
+msgstr "Précédent"
+
+#: single-book.php:38
+msgid "Previous post:"
+msgstr "Article precedent :"
+
+#: taxonomy-location.php:29
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s : %2$s"
+
+#: template-parts/content-single-book.php:229
+msgid "Pages:"
+msgstr "Pages :"
+
+#: template-parts/content-single-book.php:250
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Modifier<span class=\"screen-reader-text\"> \"%s\"</span>"

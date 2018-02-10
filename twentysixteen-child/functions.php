@@ -79,6 +79,9 @@ add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
  */
 
 function twentysixteenchild_setup() {
+    # Make Twenty Sixteen Child available for translation. Translations can be added to the /languages/ directory.
+    load_theme_textdomain( 'twentysixteen-child', get_stylesheet_directory() . '/languages' );
+
     # This theme uses post thumbnails.
     add_theme_support( 'post-thumbnails' );
 
@@ -302,7 +305,7 @@ function twentysixteenchild_widgets_init() {
     register_sidebar( array (
         'name' => __( 'Front Page - Post Content 1', 'twentysixteen-child' ),
         'id' => 'front-content-1',
-        'description' => __( 'Widgets appear left of Sidebar 1 and below the FullWidth Top widget area. This widget area is especially designed for the custom Zuki Posts by Category widgets.', 'twentysixteen-child' ),
+        'description' => __( 'Widgets appear left of Sidebar 1 and below the FullWidth Top widget area. This widget area is especially designed for the custom Twenty Sixteen Child Posts by Category widgets.', 'twentysixteen-child' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => "</aside>",
         'before_title' => '<h3 class="widget-title">',
@@ -332,7 +335,7 @@ function twentysixteenchild_widgets_init() {
     register_sidebar( array (
          'name' => __( 'Front Page - Post Content 2', 'twentysixteen-child' ),
          'id' => 'front-content-2',
-         'description' => __( 'Widgets appear left of Sidebar 2 and below the FullWidth Center widget area. This widget area is especially designed for the custom Zuki Posts by Category widgets.', 'twentysixteen-child' ),
+         'description' => __( 'Widgets appear left of Sidebar 2 and below the FullWidth Center widget area. This widget area is especially designed for the custom Twenty Sixteen Child Posts by Category widgets.', 'twentysixteen-child' ),
          'before_widget' => '<aside id="%1$s" class="widget %2$s">',
          'after_widget' => "</aside>",
          'before_title' => '<h3 class="widget-title">',
