@@ -73,6 +73,27 @@ add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
 
 /**
+ * Sets up theme defaults for WordPress features
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+function twentysixteenchild_setup() {
+    # This theme uses post thumbnails.
+    add_theme_support( 'post-thumbnails' );
+
+    #  Adding several sizes for Post Thumbnails
+    add_image_size( 'twentysixteenchild-small-square', 120, 120, true ); // Small Square thumbnails (cropped)
+    add_image_size( 'twentysixteenchild-medium-portrait', 420, 560, true ); // Medium Portrait thumbnails (cropped)
+    add_image_size( 'twentysixteenchild-medium-landscape', 840, 560, true ); // Medium landscape thumbnails (cropped)
+    add_image_size( 'twentysixteenchild-fullwidth', 1200, 800, true ); // Big thumbnails (cropped)
+}
+
+add_action( 'after_setup_theme', 'twentysixteenchild_setup' );
+
+
+
+/**
  * Add copyright for featured images.
  *
  * @since Twenty Sixteen Child 1.0
