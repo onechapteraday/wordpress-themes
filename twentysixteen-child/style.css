@@ -223,6 +223,17 @@ figcaption.wp-post-image-copyright a:hover {
     overflow: hidden;
 }
 
+.custom-front-page .cf:before {
+    display: table;
+    content: " ";
+}
+
+.custom-front-page .cf:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
 
 /*
  * 7.1 - FullWidth
@@ -889,7 +900,7 @@ figcaption.wp-post-image-copyright a:hover {
     display: inline;
 }
 
-.widget_tewntysixteenchild_recentposts_color .bg-wrap {
+.widget_twentysixteenchild_recentposts_color .bg-wrap {
     display: block;
     background: #ebf8fe;
 }
