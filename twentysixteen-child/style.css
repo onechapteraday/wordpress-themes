@@ -56,6 +56,18 @@ td {
     font-size: 0.9375rem;
 }
 
+.custom-front-page blockquote {
+    border: none;
+    padding: 0;
+    color: initial;
+}
+
+body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
+    float: none;
+    margin: 0;
+    width: auto;
+}
+
 
 /**
  * 2.0 - Post Dictionary
@@ -298,10 +310,15 @@ figcaption.wp-post-image-copyright a:hover {
 }
 
 .rp-small-one-content h3.entry-title {
+     display: inline;
      margin: 0;
      font-size: 13px;
      font-size: 0.8125rem;
      line-height: 1.15;
+}
+
+.rp-small-one figcaption {
+    display: none;
 }
 
 .front-fullwidth .rp-small-one,
@@ -386,11 +403,17 @@ figcaption.wp-post-image-copyright a:hover {
     line-height: 1.5;
 }
 
+.rp-small-two .summary a {
+    color: dimgrey;
+}
+
 .rp-small-two p span.entry-title {
     font-size: 13px;
     font-size: 0.8125rem;
     font-weight: bold;
     line-height: 1.25;
+    margin-right: 4px;
+    color: #007acc;
 }
 
 .rp-small-two p span.entry-title:after {
@@ -446,6 +469,7 @@ figcaption.wp-post-image-copyright a:hover {
 }
 
 .rp-medium-one-content h3.entry-title {
+    display: inline;
     margin: 0;
     font-size: 15px;
     font-size: 0.9375rem;
@@ -662,8 +686,8 @@ figcaption.wp-post-image-copyright a:hover {
 .rp-big-one .entry-author {
     display: block;
     padding-bottom: 25px;
-    font-size: 11px;
-    font-size: 0.6875rem;
+    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 1.5;
     font-style: italic;
 }
@@ -745,9 +769,7 @@ figcaption.wp-post-image-copyright a:hover {
 }
 
 .front-sidebar .rp-big-one h2.entry-title,
-.front-sidebar .rp-big-two h2.entry-title,
-.default-sidebar .rp-big-one h2.entry-title,
-.default-sidebar .rp-big-two h2.entry-title  {
+.default-sidebar .rp-big-one h2.entry-title {
     margin: 12px 0 8px;
     padding: 0;
     font-size: 24px;
@@ -789,12 +811,21 @@ figcaption.wp-post-image-copyright a:hover {
 .front-fullwidth .rp-big-two,
 .front-content .rp-big-two {
     position: relative;
-    margin: 0 0 80px;
+    margin: 0 0 40px;
 }
 
 .front-sidebar .rp-big-two,
 .default-sidebar .rp-big-two  {
     margin-bottom: 40px;
+}
+
+.front-sidebar .rp-big-two h2.entry-title,
+.default-sidebar .rp-big-two h2.entry-title  {
+    margin: 12px 0 8px;
+    padding: 0;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
 }
 
 .front-fullwidth .rp-big-two .entry-thumb,
@@ -877,9 +908,9 @@ figcaption.wp-post-image-copyright a:hover {
 }
 
 .rp-color p.summary {
-    margin: 10px 0 5px;
-    font-size: 11px;
-    font-size: 0.6875rem;
+    margin: 10px 0;
+    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.5;
 }
 
@@ -919,7 +950,6 @@ figcaption.wp-post-image-copyright a:hover {
 .widget_twentysixteenchild_quote blockquote.quote-text {
     line-height: 1.4;
     letter-spacing: -0.5px;
-    font-family: Georgia, serif;
 }
 
 .default-sidebar .widget_twentysixteenchild_quote blockquote.quote-text,
@@ -1300,5 +1330,9 @@ figcaption.wp-post-image-copyright a:hover {
 @media screen and (max-width: 910px) {
     .custom-front-page {
         padding: 0 7.6923%;
+    }
+
+    .rp-big-two-content .entry-header {
+        margin: 0;
     }
 }
