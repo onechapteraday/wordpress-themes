@@ -372,9 +372,10 @@ class twentysixteenchild_recentposts_small_one extends WP_Widget {
 
          # The Query
          $smallone_query = new WP_Query(array (
-             'post_status'    => 'publish',
-             'posts_per_page' => $postnumber,
-             'category_name' => $category,
+             'post_status'         => 'publish',
+             'post_type'           => array('post', 'book'),
+             'posts_per_page'      => $postnumber,
+             'category_name'       => $category,
              'ignore_sticky_posts' => 1
          ));
 
@@ -471,9 +472,10 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
 
         # The Query
         $smalltwo_query = new WP_Query(array (
-            'post_status'    => 'publish',
-            'posts_per_page' => $postnumber,
-            'category_name' => $category,
+            'post_status'         => 'publish',
+            'post_type'           => array('post', 'book'),
+            'posts_per_page'      => $postnumber,
+            'category_name'       => $category,
             'ignore_sticky_posts' => 1
         ));
 
@@ -562,9 +564,10 @@ class twentysixteenchild_recentposts_medium_one extends WP_Widget {
 
         # The Query
         $mediumone_query = new WP_Query(array (
-            'post_status'    => 'publish',
-            'posts_per_page' => $postnumber,
-            'category_name' => $category,
+            'post_status'         => 'publish',
+            'post_type'           => array('post', 'book'),
+            'posts_per_page'      => $postnumber,
+            'category_name'       => $category,
             'ignore_sticky_posts' => 1
         ));
 
@@ -677,9 +680,10 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
 
         # The Query
         $mediumtwo_query = new WP_Query(array (
-            'post_status'    => 'publish',
-            'posts_per_page' => $postnumber,
-            'category_name' => $category,
+            'post_status'         => 'publish',
+            'post_type'           => array('post', 'book'),
+            'posts_per_page'      => $postnumber,
+            'category_name'       => $category,
             'ignore_sticky_posts' => 1
         ));
 
@@ -798,9 +802,10 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
 
         # The Query
         $bigone_query = new WP_Query(array (
-            'post_status'    => 'publish',
-            'posts_per_page' => $postnumber,
-            'category_name' => $category,
+            'post_status'         => 'publish',
+            'post_type'           => array('post', 'book'),
+            'posts_per_page'      => $postnumber,
+            'category_name'       => $category,
             'ignore_sticky_posts' => 1
         ));
 
@@ -920,9 +925,10 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
 
         # The Query
         $bigtwo_query = new WP_Query(array (
-            'post_status'    => 'publish',
-            'posts_per_page' => $postnumber,
-            'category_name' => $category,
+            'post_status'         => 'publish',
+            'post_type'           => array('post', 'book'),
+            'posts_per_page'      => $postnumber,
+            'category_name'       => $category,
             'ignore_sticky_posts' => 1
         ));
 
@@ -1048,9 +1054,10 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
 
         # The Query
         $color_query = new WP_Query(array (
-            'post_status'    => 'publish',
-            'posts_per_page' => $postnumber,
-            'category_name' => $category,
+            'post_status'         => 'publish',
+            'post_type'           => array('post', 'book'),
+            'posts_per_page'      => $postnumber,
+            'category_name'       => $category,
             'ignore_sticky_posts' => 1
         ));
         ?>
