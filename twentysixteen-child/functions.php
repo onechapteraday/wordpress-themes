@@ -618,7 +618,7 @@ class twentysixteenchild_recentposts_medium_one extends WP_Widget {
 
                         <?php if ( comments_open() ) : ?>
                             <div class="entry-comments">
-                                <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+				<?php comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) ); ?>
                             </div><!-- end .entry-comments -->
                         <?php endif; // comments_open() ?>
                     </div><!--end .rp-medium-one -->
@@ -744,7 +744,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
 
                         <?php if ( comments_open() ) : ?>
                             <div class="entry-comments">
-                                <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+				<?php comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) ); ?>
                             </div><!-- end .entry-comments -->
                         <?php endif; // comments_open() ?>
 
@@ -876,7 +876,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
 
                         <?php if ( comments_open() ) : ?>
                             <div class="entry-comments">
-                                <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+				<?php comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) ); ?>
                             </div><!-- end .entry-comments -->
                         <?php endif; // comments_open() ?>
 
@@ -1013,7 +1013,7 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
 
                     <?php if ( comments_open() ) : ?>
                         <div class="entry-comments">
-                            <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+                            <?php comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) ); ?>
                         </div><!-- end .entry-comments -->
                     <?php endif; // comments_open() ?>
 
@@ -1147,7 +1147,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
 
                             <?php if ( comments_open() ) : ?>
                                 <div class="entry-comments">
-                                    <?php comments_popup_link( '<span class="leave-reply">' . __( 'comments 0', 'twentysixteen-child' ) . '</span>', __( 'comment 1', 'twentysixteen-child' ), __( 'comments %', 'twentysixteen-child' ) ); ?>
+                                    <?php comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) ); ?>
                                 </div><!-- end .entry-comments -->
                             <?php endif; // comments_open() ?>
                         </footer>

@@ -234,6 +234,12 @@ figcaption.wp-post-image-copyright a:hover {
     clear: both;
 }
 
+.custom-front-page .entry-comments:before {
+    display: inline;
+    content: '\2014';
+    padding: 0 2px 0 0;
+}
+
 
 /*
  * 7.1 - FullWidth
