@@ -699,6 +699,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
         $title = $instance['title'];
         $postnumber = $instance['postnumber'];
         $category = apply_filters('widget_title', $instance['category']);
+        $tag = isset($instance['tag']) ? $instance['tag'] : '';
 
         echo $args['before_widget'];
 
@@ -711,6 +712,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
             'post_type'           => array('post', 'book'),
             'posts_per_page'      => $postnumber,
             'category_name'       => $category,
+            'tag'                 => $tag,
             'ignore_sticky_posts' => 1
         ));
 
@@ -767,6 +769,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
         $instance['title'] = $new_instance['title'];
         $instance['postnumber'] = $new_instance['postnumber'];
         $instance['category'] = $new_instance['category'];
+        $instance['tag'] = $new_instance['tag'];
 
         return $new_instance;
     }
@@ -775,6 +778,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
         $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
         $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
         $category = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+        $tag = isset( $instance['tag'] ) ? esc_attr( $instance['tag'] ) : '';
 
         ?>
 	<p>
@@ -790,6 +794,11 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
 	<p>
 	    <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category slug (optional):','twentysixteen-child'); ?></label>
 	    <input type="text" name="<?php echo $this->get_field_name('category'); ?>" value="<?php echo esc_attr($category); ?>" class="widefat" id="<?php echo $this->get_field_id('category'); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id('tag'); ?>"><?php _e('Tag slug (optional):','twentysixteen-child'); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name('tag'); ?>" value="<?php echo esc_attr($tag); ?>" class="widefat" id="<?php echo $this->get_field_id('tag'); ?>" />
 	</p>
 	<?php
 
