@@ -944,6 +944,19 @@ figcaption.wp-post-image-copyright a:hover {
     display: inline;
 }
 
+#secondary.sidebar .rp-color {
+    width: 100%;
+    float: none;
+}
+
+#secondary.sidebar .rp-color figure img {
+    width: 100%;
+}
+
+#secondary.sidebar .rp-color header {
+    margin: 0;
+}
+
 .widget_twentysixteenchild_recentposts_color .bg-wrap {
     display: block;
     background: #ebf8fe;
@@ -1001,8 +1014,8 @@ figcaption.wp-post-image-copyright a:hover {
 
 @media screen and (min-width: 479px) {
     .rp-color {
-        width: 33.3%;
-        float: left;
+        width: 100%;
+        float: none;
     }
 
     .rp-color:nth-of-type(3n+1) {
@@ -1012,9 +1025,22 @@ figcaption.wp-post-image-copyright a:hover {
     .rp-color:nth-of-type(3n+3) {
         clear: right;
     }
+
+    .rp-color figure img {
+        width: 100%;
+    }
+
+    .rp-color header {
+        margin: 0;
+    }
 }
 
 @media screen and (min-width: 767px) {
+    .rp-color {
+        width: 33.33%;
+        float: left;
+    }
+
     .front-content .rp-small-one,
     .front-fullwidth .rp-small-one {
         border-right: 1px solid #ededed;
