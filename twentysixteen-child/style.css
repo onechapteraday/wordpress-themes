@@ -159,23 +159,20 @@ figure {
 figcaption.wp-post-image-copyright {
     font-size: 10px;
     color: grey;
-    margin: 10px 0 0 20px;
+    margin: 5px 0 0 15px;
 }
 
 figcaption.wp-post-image-copyright:before {
     position: absolute;
     display: block;
-    width: 15px;
-    height: 15px;
+    content: "";
     left: 0;
-    color: white;
-    background-color: darkgrey;
-    content: "i";
-    font-style: italic;
-    text-align: center;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4px 8px 4px;
+    border-color: transparent transparent #a1a1a1 transparent;
 }
 
 figcaption.wp-post-image-copyright a {
