@@ -280,6 +280,11 @@ figcaption.wp-post-image-copyright a:hover {
     float: none;
 }
 
+.front-fullwidth .rp-medium-two h3.entry-title {
+    font-size: 25px;
+    font-size: 1.5625rem;
+}
+
 .front-fullwidth .entry-header {
     max-width: 100%;
 }
@@ -1110,7 +1115,7 @@ figcaption.wp-post-image-copyright a:hover {
         float: left;
     }
 
-    .single .rp-medium-one {
+    #secondary.sidebar .rp-medium-one {
         border-right: none;
     }
 
@@ -1356,6 +1361,10 @@ figcaption.wp-post-image-copyright a:hover {
 
     .rp-big-two-content .entry-header {
         margin: 0;
+    }
+
+    .front-fullwidth .rp-medium-two .story {
+        padding-top: 10px;
     }
 }
 
