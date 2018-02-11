@@ -51,6 +51,21 @@ function twentysixteenchild_excerpt($limit) {
 
 
 /**
+ * Filter the except length to 100 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+
+function wp_custom_excerpt_length( $length ) {
+    return 100;
+}
+
+add_filter( 'excerpt_length', 'wp_custom_excerpt_length', 999 );
+
+
+
+/**
  * Add new custom post type book into queries.
  *
  * @since Twenty Sixteen Child 1.0
