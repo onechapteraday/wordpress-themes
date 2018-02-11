@@ -33,6 +33,8 @@
  *    7.8 - Recent Posts (Colored)
  *    7.9 - Quote
  *    7.10 - Media Queries
+ * 8.0 - Page templates
+ *    8.1 - Full-width single
  */
 
 
@@ -1355,4 +1357,24 @@ figcaption.wp-post-image-copyright a:hover {
     .rp-big-two-content .entry-header {
         margin: 0;
     }
+}
+
+
+/**
+ * 8.0 - Page templates
+ */
+
+
+/**
+ * 8.1 - Full-width single
+ */
+
+.book-template-fullwidth-single-book .content-area,
+.post-template-fullwidth-single .content-area {
+    width: 100%
+}
+
+.book-template-fullwidth-single-book .post-thumbnail img,
+.post-template-fullwidth-single .post-thumbnail img {
+    width: 100%;
 }
