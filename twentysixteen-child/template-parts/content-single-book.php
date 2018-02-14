@@ -94,17 +94,24 @@
 				<?php
 				}
 			?>
-		        <tr>
-			        <td>
-					<b>Éditeur</b>
-			        </td>
-			        <td>
-					<?php
-						$publisher = get_book_publisher( $book_id )[0];
-						echo '<a href="' . get_term_link( $publisher->term_id ). '">' . $publisher->name . '</a>';
-					?>
-			        </td>
-		        </tr>
+			<?php
+				$publisher = get_book_publisher( $book_id )[0];
+
+				if ( $publisher ) {
+				?>
+                                <tr>
+                                    <td>
+                                        <b>Éditeur</b>
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo '<a href="' . get_term_link( $publisher->term_id ). '">' . $publisher->name . '</a>';
+                                        ?>
+                                    </td>
+                                </tr>
+				<?php
+				}
+			?>
 			<?php
 				$collection = get_book_collection( $book_id );
 
