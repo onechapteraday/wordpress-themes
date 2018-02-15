@@ -51,14 +51,14 @@ function twentysixteenchild_excerpt($limit) {
 
 
 /**
- * Filter the except length to 100 words.
+ * Filter the except length to 120 words.
  *
  * @param int $length Excerpt length.
  * @return int (Maybe) modified excerpt length.
  */
 
 function wp_custom_excerpt_length( $length ) {
-    return 100;
+    return 120;
 }
 
 add_filter( 'excerpt_length', 'wp_custom_excerpt_length', 999 );
