@@ -485,6 +485,7 @@ figcaption.wp-post-image-copyright a:hover {
 }
 
 .rp-medium-one .entry-date {
+    display: inline;
     padding-bottom: 3px;
     font-size: 11px;
     font-size: 0.6875rem;
@@ -496,9 +497,9 @@ figcaption.wp-post-image-copyright a:hover {
 }
 
 .rp-medium-one p {
-    margin: 7px 0 3px;
-    font-size: 11px;
-    font-size: 0.6875rem;
+    margin: 15px 0 10px;
+    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .rp-medium-one:last-of-type {
@@ -540,6 +541,11 @@ figcaption.wp-post-image-copyright a:hover {
 .front-content .widget_twentysixteenchild_recentposts_medium_one {
     padding-bottom: 20px;
 }
+
+    #front-sidebar-one .rp-medium-one-content h3.entry-title {
+        font-size: 20px;
+        font-size: 1.25rem;
+    }
 
 
 /*

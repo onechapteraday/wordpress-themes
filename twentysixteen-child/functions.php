@@ -642,9 +642,9 @@ class twentysixteenchild_recentposts_medium_one extends WP_Widget {
                             </div><!-- end .entry-thumb -->
                         <?php endif; ?>
 
-                        <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
                         <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php twentysixteenchild_title_limit( 85, '...'); ?></a></h3>
                         <p class="summary"><?php echo twentysixteenchild_excerpt(20); ?></p>
+                        <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
 
                         <?php if ( comments_open() ) : ?>
                             <div class="entry-comments">
