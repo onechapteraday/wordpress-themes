@@ -542,10 +542,10 @@ figcaption.wp-post-image-copyright a:hover {
     padding-bottom: 20px;
 }
 
-    #front-sidebar-one .rp-medium-one-content h3.entry-title {
-        font-size: 20px;
-        font-size: 1.25rem;
-    }
+#front-sidebar-one .rp-medium-one-content h3.entry-title {
+    font-size: 18px;
+    font-size: 1.125rem;
+}
 
 
 /*
