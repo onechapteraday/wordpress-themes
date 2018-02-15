@@ -1395,6 +1395,11 @@ figcaption.wp-post-image-copyright a:hover {
     .front-fullwidth .rp-medium-two .story {
         padding-top: 10px;
     }
+
+    .jetpack_subscription_widget {
+        font-size: 13px;
+        font-size: 0.8125rem;
+    }
 }
 
 
