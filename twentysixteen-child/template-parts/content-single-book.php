@@ -95,7 +95,7 @@
 				}
 			?>
 			<?php
-				$publisher = get_book_publisher( $book_id )[0];
+				$publisher = get_book_publisher( $book_id );
 
 				if ( $publisher ) {
 				?>

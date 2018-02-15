@@ -25,7 +25,9 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					$title = single_term_title('', false);
+					echo '<h1 class="page-title">' . $title . '</h1>';
+
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 
 					$publisher_link = get_publisher_option('publisher_link');
