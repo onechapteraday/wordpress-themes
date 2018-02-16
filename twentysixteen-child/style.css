@@ -1402,6 +1402,23 @@ figcaption.wp-post-image-copyright a:hover {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .rp-color header.entry-header {
+        margin: 0;
+    }
+
+    .rp-medium-two {
+        float: none;
+    }
+
+    .rp-medium-two p.summary {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
 
 /**
  * 8.0 - Page templates
