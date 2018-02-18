@@ -48,18 +48,29 @@
 					<?php echo get_book_title_original( $book_id ); ?>
 			        </td>
 		        </tr>
+			<?php
+			$author = get_book_author( $book_id );
+			$author_second = get_book_author_second( $book_id );
+
+			if ( $author ) {
+			?>
 		        <tr>
 			        <td>
-					<b>Auteur</b>
+					<b>Auteur<?php if ( $author_second ) { echo 's'; } ?></b>
 			        </td>
 			        <td>
 					<?php
-						$author = get_book_author( $book_id );
-						if ( $author ) {
-							echo '<a href="' . get_term_link( $author->term_id ). '">' . $author->name . '</a>';
-						}
+					echo '<a href="' . get_term_link( $author->term_id ). '">' . $author->name . '</a>';
+
+					if ( $author_second ) {
+						echo ', <a href="' . get_term_link( $author_second->term_id ). '">' . $author_second->name . '</a>';
+					}
 					?>
+			        </td>
 		        </tr>
+			<?php
+			}
+			?>
 			<?php
 				$translator = get_book_translator( $book_id );
 
