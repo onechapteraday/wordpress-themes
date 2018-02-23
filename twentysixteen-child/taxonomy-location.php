@@ -26,7 +26,7 @@ get_header(); ?>
 			<header class="page-header">
 				<?php
 					$tax = get_taxonomy( get_queried_object()->taxonomy );
-					$title = sprintf( __( '%1$s: %2$s' ), $tax->labels->singular_name, __( single_term_title( '', false ), 'location-taxonomy' ) );
+					$title = sprintf( __( '%1$s: %2$s' ), __( $tax->labels->singular_name, 'location-taxonomy' ), __( single_term_title( '', false ), 'location-taxonomy' ) );
 					echo '<h1 class="page-title">' . $title . '</h1>';
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
