@@ -965,6 +965,10 @@ figcaption.wp-post-image-copyright a:hover {
     background: #ebf8fe;
 }
 
+.single-book .rp-color .entry-cats {
+    display: none;
+}
+
 
 /*
  * 7.9 - Quote
