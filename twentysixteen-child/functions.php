@@ -240,14 +240,25 @@ function twentysixteen_entry_taxonomies() {
     }
 
     # Persons list
-    $people_list = get_the_term_list( get_the_ID(), 'person', '', ', ' );
-    usort( $people_list, 'sortPersonByName' );
+    $people_list = get_the_terms( get_the_ID(), 'person', '', ', ' );
 
     if ( $people_list ) {
-        printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-            _x( 'People', 'Used before tag names.', 'twentysixteen' ),
-            $people_list
-        );
+        usort( $people_list, 'sortPersonByName' );
+        $people = '';
+
+        foreach($people_list as $i => $tag) {
+            if ( $i > 0) $people .= ', ';
+            $people .= '<a href="' . get_term_link( $tag->term_id ) . '">';
+            $people .= $tag->name;
+            $people .= '</a>';
+        }
+
+        if ( $people ) {
+            printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+                _x( 'People', 'Used before tag names.', 'twentysixteen' ),
+                $people
+            );
+        }
     }
 
     # Locations list
@@ -259,15 +270,13 @@ function twentysixteen_entry_taxonomies() {
         }
 
         usort( $locations_list, 'sortLocationByTranslation' );
-
-        $i = 0;
         $locations = '';
-        foreach($locations_list as $tag) {
-            if ( $i != 0) $locations .= ', ';
-            $locations .= '<a href="' . get_term_link($tag->term_id) . '">';
+
+        foreach($locations_list as $i => $tag) {
+            if ( $i > 0) $locations .= ', ';
+            $locations .= '<a href="' . get_term_link( $tag->term_id ) . '">';
             $locations .= $tag->translation;
             $locations .= '</a>';
-            $i++;
         }
 
         printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
