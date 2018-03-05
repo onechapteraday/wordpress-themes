@@ -159,20 +159,7 @@ figure {
 figcaption.wp-post-image-copyright {
     font-size: 10px;
     color: grey;
-    margin: 5px 0 0 25px;
-}
-
-figcaption.wp-post-image-copyright:before {
-    position: absolute;
-    display: block;
-    content: "";
-    left: 10px;
-    bottom: 5px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 4px 8px 4px;
-    border-color: transparent transparent #a1a1a1 transparent;
+    margin: 5px 0 0 5px;
 }
 
 figcaption.wp-post-image-copyright a {
