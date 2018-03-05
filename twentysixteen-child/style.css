@@ -952,6 +952,8 @@ figcaption.wp-post-image-copyright a:hover {
     background: #ebf8fe;
 }
 
+.category-books .rp-color .entry-cats,
+.tax-publisher .rp-color .entry-cats,
 .single-book .rp-color .entry-cats {
     display: none;
 }
