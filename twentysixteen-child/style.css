@@ -906,8 +906,8 @@ figcaption.wp-post-image-copyright a:hover {
 
 .rp-color p.summary {
     margin: 10px 0;
-    font-size: 12px;
-    font-size: 0.75rem;
+    font-size: 13px;
+    font-size: 0.84375rem;
     line-height: 1.5;
 }
 
@@ -952,11 +952,11 @@ figcaption.wp-post-image-copyright a:hover {
     background: #ebf8fe;
 }
 
-.category-books .rp-color .entry-cats,
-.tax-publisher .rp-color .entry-cats,
-.single-book .rp-color .entry-cats {
+.sidebar-book .rp-color .entry-cats,
+.sidebar-book .rp-color .story footer.entry-footer {
     display: none;
 }
+
 
 
 /*

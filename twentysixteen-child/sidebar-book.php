@@ -9,7 +9,7 @@
 ?>
 
 <?php if ( is_active_sidebar( 'book' )  ) : ?>
-	<aside id="secondary" class="sidebar widget-area" role="complementary">
+	<aside id="secondary" class="sidebar sidebar-book widget-area" role="complementary">
 		<?php dynamic_sidebar( 'book' ); ?>
 	</aside><!-- .sidebar .widget-area -->
 <?php endif; ?>
