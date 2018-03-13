@@ -1462,6 +1462,10 @@ header ol.breadcrumb li {
     padding: 0 5px;
 }
 
+header ol.breadcrumb li > * {
+    color: black;
+}
+
 header ol.breadcrumb li:first-child {
     padding-left: 0;
 }
