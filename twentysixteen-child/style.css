@@ -82,6 +82,14 @@ body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
     display: none;
 }
 
+.taxonomy-description.social-icons {
+    margin-top: 5px;
+}
+
+.taxonomy-description.social-icons [class^="icon-"]:before{
+    font-size: 120%;
+}
+
 
 /**
  * 2.0 - Post Dictionary

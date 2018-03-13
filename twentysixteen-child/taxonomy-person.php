@@ -44,8 +44,7 @@ get_header(); ?>
 					$website = get_person_option('website');
 
 					if ( $facebook || $instagram || $soundcloud || $twitter || $youtube || $website ) {
-					    echo '<div class="taxonomy-description">';
-					    echo '<p><b>Sur la toile :</b> ';
+					    echo '<div class="taxonomy-description social-icons">';
 
 					    if ( $website ) {
 					        echo '<a class="icon-mouse" href="http://' . $website . '" target="_blank"></a>';
