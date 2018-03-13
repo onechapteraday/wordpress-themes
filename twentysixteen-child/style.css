@@ -1467,13 +1467,19 @@ header ol.breadcrumb {
 
 header ol.breadcrumb li {
     display: inline;
-    padding: 0 5px;
+    padding: 0;
 }
 
 header ol.breadcrumb li > * {
     color: black;
 }
 
-header ol.breadcrumb li:first-child {
-    padding-left: 0;
+header ol.breadcrumb li:before {
+    display: inline-block;
+    content: "›";
+    padding: 0 5px;
+}
+
+header ol.breadcrumb li:first-child:before {
+    display: none;
 }
