@@ -10,6 +10,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+                <?php
+                    if( shortcode_exists( 'wp_breadcrumb_single' ) ) {
+                        do_shortcode( '[wp_breadcrumb_single id=' . get_the_ID() . ']' );
+                    }
+                ?>
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
@@ -269,7 +275,6 @@
 		        </tr>
 		</table>
 		<?php
-
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
 				'after'       => '</div>',
