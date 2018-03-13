@@ -24,6 +24,12 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+                                <?php
+                                    if( shortcode_exists( 'wp_breadcrumb_person' ) ) {
+					$person_id = get_queried_object()->term_id;
+                                        do_shortcode( '[wp_breadcrumb_person id=' . $person_id . ']' );
+                                    }
+                                ?>
 				<?php
 					$title = single_term_title('', false);
 					echo '<h1 class="page-title">' . $title . '</h1>';
@@ -101,5 +107,85 @@ get_header(); ?>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+<?php
+    $person = get_queried_object();
+    $authors = array(
+        'agatha-christie',
+	'aime-cesaire',
+	'andre-schwarz-bart',
+	'anna-gavalda',
+	'anna-hope',
+	'anne-damour',
+	'anne-goscinny',
+	'antoine-paje',
+	'ayelet-gundar-goshen',
+	'benedicte-jourgeaud',
+	'bertice-berry',
+	'brownie-wise',
+	'carene-ponte',
+	'carole-maurel',
+	'claude-demanuelli',
+	'colin-reingewirtz',
+	'deloupy',
+	'delphine-coulin',
+	'diniz-galhos',
+	'durian-sukegawa',
+	'elodie-leplat',
+	'emmanuel-brault',
+	'gael-faye',
+	'gary-younge',
+	'georges-emmanuel-clancier',
+	'gilles-marchand',
+	'hakan-gunday',
+	'halim-mahmoudi',
+	'ingrid-chabbert',
+	'jane-deuxard',
+	'jane-shemilt',
+	'jean-descat',
+	'jean-esch',
+	'jean-kwok',
+	'jessie-burton',
+	'jonas-jonasson',
+	'joseph-kessel',
+	'karine-lalechere',
+	'laetitia-colombani',
+	'laurence-sendrowicz',
+	'leila-slimani',
+	'liz-moore',
+	'lucas-vallerie',
+	'lucie-firoud',
+	'marcel-ayme',
+	'martha-batalha',
+	'mary-higgins-clark',
+	'maryse-conde',
+	'mathilde-bach',
+	'matt-haig',
+	'myriam-dartois-ako',
+	'nathacha-appanah',
+	'nathan-hill',
+	'nina-simone',
+	'olivier-bourdeaut',
+	'paula-hawkins',
+	'sarah-alderson',
+	'simone-schwarz-bart',
+	'sophie-astrabie',
+	'tomas-eloy-martinez',
+	'veronica-henry',
+	'vincent-raynaud',
+	'yaa-gyasi',
+	'yasmina-khadra',
+	'yvon-roy',
+	'zadie-smith',
+	'zeruya-shalev',
+    );
+
+    # Check if author
+    if( in_array( $person->slug, $authors ) ){
+        get_sidebar( 'book' );
+    }
+    else {
+        get_sidebar();
+    }
+?>
+
 <?php get_footer(); ?>
