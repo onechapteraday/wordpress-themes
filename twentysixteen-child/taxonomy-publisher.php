@@ -40,7 +40,7 @@ get_header(); ?>
 
 					if ($publisher_link) {
 					    echo '<div class="taxonomy-description"><p>';
-					    echo '<b>Site web :</b> <a href="' . $publisher_link . '" target="_blank">' . $publisher_link . '</a>';
+					    echo '<a href="' . $publisher_link . '" target="_blank">' . $publisher_link . '</a>';
 					    echo '</p></div>';
 					}
 				?>
