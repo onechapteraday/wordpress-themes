@@ -24,6 +24,12 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+                                <?php
+                                    if( shortcode_exists( 'wp_breadcrumb_tag' ) ) {
+					$tag_id = get_queried_object()->term_id;
+                                        do_shortcode( '[wp_breadcrumb_tag id=' . $tag_id . ']' );
+                                    }
+                                ?>
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
