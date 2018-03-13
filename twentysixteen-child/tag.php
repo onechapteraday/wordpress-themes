@@ -61,5 +61,56 @@ get_header(); ?>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
-<?php get_sidebar( 'book' ); ?>
+<?php
+    $tag = get_queried_object();
+    $book_tags = array(
+        'bande-dessinee',
+        'biographie',
+        'deception-litteraire',
+        'femmes-fortes',
+        'fiction-historique',
+        'fiction-romantique',
+        'journee-internationale-du-livre',
+        'lecture',
+        'litterature-africaine',
+        'litterature-algerienne',
+        'litterature-americaine',
+        'litterature-anglaise',
+        'litterature-antillaise',
+        'litterature-argentine',
+        'litterature-asiatique',
+        'litterature-bresilienne',
+        'litterature-classique',
+        'litterature-contemporaine',
+        'litterature-etrangere',
+        'litterature-francaise',
+        'litterature-haitienne',
+        'litterature-israelienne',
+        'litterature-japonaise',
+        'litterature-mauricienne',
+        'litterature-sud-americaine',
+        'litterature-suedoise',
+        'litterature-turque',
+        'livre',
+        'memoire',
+        'non-fiction',
+        'premier-roman',
+        'recit-de-voyage',
+        'recueil-de-nouvelles',
+        'roman-graphique',
+        'roman-policier',
+        'salon-du-livre',
+        'science-fiction',
+        'thriller',
+    );
+
+    # Check if book_tag
+    if( in_array( $tag->slug, $book_tags ) ){
+        get_sidebar( 'book' );
+    }
+    else {
+        get_sidebar();
+    }
+?>
+
 <?php get_footer(); ?>
