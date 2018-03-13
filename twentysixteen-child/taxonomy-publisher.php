@@ -24,6 +24,12 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+                                <?php
+                                    if( shortcode_exists( 'wp_breadcrumb_publisher' ) ) {
+					$publisher_id = get_queried_object()->term_id;
+                                        do_shortcode( '[wp_breadcrumb_publisher id=' . $publisher_id . ']' );
+                                    }
+                                ?>
 				<?php
 					$title = single_term_title('', false);
 					echo '<h1 class="page-title">' . $title . '</h1>';
