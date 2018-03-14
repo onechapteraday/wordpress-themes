@@ -31,7 +31,9 @@ get_header(); ?>
                                     }
                                 ?>
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					$title = single_term_title('', false);
+					echo '<h1 class="page-title">' . ucfirst( $title ) . '</h1>';
+
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
