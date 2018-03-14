@@ -24,6 +24,12 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+                                <?php
+                                    if( shortcode_exists( 'wp_breadcrumb_location' ) ) {
+					$location_id = get_queried_object()->term_id;
+                                        do_shortcode( '[wp_breadcrumb_location id=' . $location_id . ']' );
+                                    }
+                                ?>
 				<?php
 					$tax = get_taxonomy( get_queried_object()->taxonomy );
 					$title = sprintf( __( '%1$s: %2$s' ), __( $tax->labels->singular_name, 'location-taxonomy' ), __( single_term_title( '', false ), 'location-taxonomy' ) );
