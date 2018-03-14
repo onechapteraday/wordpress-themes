@@ -1476,7 +1476,7 @@ header ol.breadcrumb li > * {
 
 header ol.breadcrumb li:before {
     display: inline-block;
-    content: "›";
+    content: "\203A";
     padding: 0 5px;
 }
 
