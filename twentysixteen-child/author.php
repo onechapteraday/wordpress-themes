@@ -24,6 +24,12 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+                                <?php
+                                    if( shortcode_exists( 'wp_breadcrumb_author' ) ) {
+					$author_id = get_queried_object()->ID;
+                                        do_shortcode( '[wp_breadcrumb_author id=' . $author_id . ']' );
+                                    }
+                                ?>
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description"><p>', '</p></div>' );
