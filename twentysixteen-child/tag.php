@@ -79,6 +79,7 @@ get_header(); ?>
         'femmes-fortes',
         'fiction-historique',
         'fiction-romantique',
+        'immigration',
         'journee-internationale-du-livre',
         'lecture',
         'litterature-africaine',
