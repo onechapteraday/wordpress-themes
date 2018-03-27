@@ -106,6 +106,7 @@ get_header(); ?>
         'livre',
         'memoire',
         'non-fiction',
+        'poesie',
         'premier-roman',
         'recit-de-voyage',
         'recueil-de-nouvelles',
