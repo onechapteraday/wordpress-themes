@@ -262,15 +262,6 @@
 					<a href="<?php echo $amazon['link']; ?>" target="_blank" rel="nofollow" class="logo_partner logo_amazon">
 						<img src="<?php echo $amazon['img']; ?>" alt="Amazon" />
 					</a>
-					<?php
-					if ( $fnac['link'] ) {
-						?>
-						<a href="<?php echo $fnac['link']; ?>" target="_blank" rel="nofollow" class="logo_partner logo_fnac">
-							<img src="<?php echo $fnac['img']; ?>" alt="Amazon" />
-						</a>
-						<?php
-					}
-					?>
 			        </td>
 		        </tr>
 		</table>
