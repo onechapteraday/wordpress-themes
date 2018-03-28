@@ -66,7 +66,7 @@ add_filter( 'excerpt_length', 'wp_custom_excerpt_length', 999 );
 
 
 /**
- * Add new custom post type book into queries.
+ * Add new custom post type book into archives pages.
  *
  * @since Twenty Sixteen Child 1.0
  *
@@ -76,14 +76,55 @@ add_filter( 'excerpt_length', 'wp_custom_excerpt_length', 999 );
 
 function add_my_post_types_to_query( $query ) {
     if ( !is_admin() ) {
-        if ( is_archive() && $query->is_main_query() )
-            $query->set( 'post_type', array( 'post', 'book' ) );
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if ( is_archive() && $query->is_main_query() ){
+            $query->set( 'post_type', $post_types );
+	}
     }
 
     return $query;
 }
 
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+
+
+/**
+ * Add new custom post type book into home and feed pages.
+ *
+ * @since Twenty Sixteen Child 1.0
+ *
+ * @param array $query Query of the page.
+ * @return array A new modified query.
+ */
+
+function add_custom_post_types_filter( $query ) {
+    $post_types = array( 'post' );
+
+    if( post_type_exists( 'book' ) ){
+        array_push( $post_types, 'book' );
+    }
+
+    if( post_type_exists( 'album' ) ){
+        array_push( $post_types, 'album' );
+    }
+
+    if ( ($query->is_home() && $query->is_main_query()) || $query->is_feed() ) {
+        $query->set( 'post_type', $post_types );
+    }
+
+    return $query;
+}
+
+add_action( 'pre_get_posts', 'add_custom_post_types_filter' );
 
 
 
