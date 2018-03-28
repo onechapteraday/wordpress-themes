@@ -101,6 +101,7 @@ body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
 
 .post_dictionary_letters ul {
     list-style: none;
+    margin-left: 0;
 }
 
 .post_dictionary_letters li {
