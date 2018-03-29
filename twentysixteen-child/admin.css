@@ -1,0 +1,11 @@
+#dashboard_right_now li.custom-post-type-album a:before {
+  content: "\f514";
+}
+
+#dashboard_right_now li.custom-post-type-book a:before {
+  content: "\f330";
+}
+
+#dashboard_right_now li.custom-post-type-interview a:before {
+  content: "\f482";
+}
