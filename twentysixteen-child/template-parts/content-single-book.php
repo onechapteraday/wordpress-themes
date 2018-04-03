@@ -112,6 +112,23 @@
 				}
 			?>
 			<?php
+				$colourist = get_book_colourist( $book_id );
+
+				if ($colourist) {
+				?>
+		                <tr>
+				        <td>
+						<b>Coloriste</b>
+				        </td>
+				        <td>
+						<?php
+							echo '<a href="' . get_term_link( $colourist->term_id ). '">' . $colourist->name . '</a>';
+						?>
+		                </tr>
+				<?php
+				}
+			?>
+			<?php
 				$publisher = get_book_publisher( $book_id );
 
 				if ( $publisher ) {
