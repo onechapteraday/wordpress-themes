@@ -1,9 +1,0 @@
-# Ignore all
-*
-
-# Except
-!twentysixteen/*
-!twentysixteen-child
-!twentysixteen-child/*
-!twentysixteen-child/page-templates/*
-!twentysixteen-child/template-parts/*
