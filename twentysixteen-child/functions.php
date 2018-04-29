@@ -307,49 +307,53 @@ function twentysixteen_entry_taxonomies() {
     }
 
     # Persons list
-    $people_list = get_the_terms( get_the_ID(), 'person', '', ', ' );
+    if( taxonomy_exists( 'person' )) {
+        $people_list = get_the_terms( get_the_ID(), 'person', '', ', ' );
 
-    if ( $people_list ) {
-        usort( $people_list, 'sortPersonByName' );
-        $people = '';
+        if ( $people_list ) {
+            usort( $people_list, 'sortPersonByName' );
+            $people = '';
 
-        foreach($people_list as $i => $tag) {
-            if ( $i > 0) $people .= ', ';
-            $people .= '<a href="' . get_term_link( $tag->term_id ) . '">';
-            $people .= $tag->name;
-            $people .= '</a>';
-        }
+            foreach($people_list as $i => $tag) {
+                if ( $i > 0) $people .= ', ';
+                $people .= '<a href="' . get_term_link( $tag->term_id ) . '">';
+                $people .= $tag->name;
+                $people .= '</a>';
+            }
 
-        if ( $people ) {
-            printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                _x( 'People', 'Used before tag names.', 'twentysixteen' ),
-                $people
-            );
+            if ( $people ) {
+                printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+                    _x( 'People', 'Used before tag names.', 'twentysixteen' ),
+                    $people
+                );
+            }
         }
     }
 
     # Locations list
-    $locations_list = get_the_terms( get_the_ID(), 'location', '', ', ' );
+    if( taxonomy_exists( 'location' )) {
+        $locations_list = get_the_terms( get_the_ID(), 'location', '', ', ' );
 
-    if ( $locations_list ) {
-        foreach( $locations_list as $mylocation ) {
-            $mylocation->translation = __( $mylocation->name, 'location-taxonomy' );
+        if ( $locations_list ) {
+            foreach( $locations_list as $mylocation ) {
+                $mylocation->translation = __( $mylocation->name, 'location-taxonomy' );
+            }
+
+            usort( $locations_list, 'sortLocationByTranslation' );
+            $locations = '';
+
+            foreach($locations_list as $i => $tag) {
+                if ( $i > 0) $locations .= ', ';
+                $locations .= '<a href="' . get_term_link( $tag->term_id ) . '">';
+                $locations .= $tag->translation;
+                $locations .= '</a>';
+            }
+
+            printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+                _x( 'Locations', 'Used before tag names.', 'twentysixteen' ),
+                $locations
+            );
         }
-
-        usort( $locations_list, 'sortLocationByTranslation' );
-        $locations = '';
-
-        foreach($locations_list as $i => $tag) {
-            if ( $i > 0) $locations .= ', ';
-            $locations .= '<a href="' . get_term_link( $tag->term_id ) . '">';
-            $locations .= $tag->translation;
-            $locations .= '</a>';
-        }
-
-        printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-            _x( 'Locations', 'Used before tag names.', 'twentysixteen' ),
-            $locations
-        );
     }
 
     # Tags list
