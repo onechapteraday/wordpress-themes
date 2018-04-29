@@ -32,7 +32,7 @@ get_header(); ?>
                                 ?>
 				<?php
 					$title = single_term_title('', false);
-					echo '<h1 class="page-title">' . ucfirst( $title ) . '</h1>';
+					echo '<h1 class="page-title">' . mb_strtoupper( mb_substr( $title, 0, 1 )) . mb_substr( $title, 1 ) . '</h1>';
 
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
