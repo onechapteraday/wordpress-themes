@@ -1691,17 +1691,32 @@ class popular_tags_in_category_widget extends WP_Widget {
             $catID = $categories[0]->cat_ID;
 	}
 
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if( post_type_exists( 'interview' ) ){
+            array_push( $post_types, 'interview' );
+        }
+
+
         if ( $catID ) {
             $posts_with_category = get_posts( array(
                          'category'       => $catID,
-                         'post_type'      => array('post', 'book'),
+                         'post_type'      => $post_types,
                          'number_posts'   => -1,
                          'posts_per_page' => -1,
                      ));
         }
         else {
             $posts_with_category = get_posts( array(
-                         'post_type'      => array('post', 'book'),
+                         'post_type'      => $post_types,
                          'number_posts'   => -1,
                          'posts_per_page' => -1,
                      ));
@@ -1729,7 +1744,31 @@ class popular_tags_in_category_widget extends WP_Widget {
                 );
 
         echo '<div class="tagcloud">';
-        wp_tag_cloud ( $tag_args );
+
+        $mytags_array = get_terms ( $tag_args );
+
+        if( sizeof( $mytags_array ) ){
+            function widget_sort_tag_by_name( $a, $b ){
+                $translit = array('Á'=>'A','À'=>'A','Â'=>'A','Ä'=>'A','Ã'=>'A','Å'=>'A','Ç'=>'C','É'=>'E','È'=>'E','Ê'=>'E','Ë'=>'E','Í'=>'I','Ï'=>'I','Î'=>'I','Ì'=>'I','Ñ'=>'N','Ó'=>'O','Ò'=>'O','Ô'=>'O','Ö'=>'O','Õ'=>'O','Ú'=>'U','Ù'=>'U','Û'=>'U','Ü'=>'U','Ý'=>'Y','á'=>'a','à'=>'a','â'=>'a','ä'=>'a','ã'=>'a','å'=>'a','ç'=>'c','é'=>'e','è'=>'e','ê'=>'e','ë'=>'e','í'=>'i','ì'=>'i','î'=>'i','ï'=>'i','ñ'=>'n','ó'=>'o','ò'=>'o','ô'=>'o','ö'=>'o','õ'=>'o','ú'=>'u','ù'=>'u','û'=>'u','ü'=>'u','ý'=>'y','ÿ'=>'y');
+                $at = strtolower( strtr( $a->name, $translit ) );
+                $bt = strtolower( strtr( $b->name, $translit ) );
+
+                return strcoll( $at, $bt );
+            }
+
+            usort( $mytags_array, 'widget_sort_tag_by_name' );
+
+            echo '<ul class="wp-tag-cloud">';
+
+	    foreach ( $mytags_array as $mytag ) {
+                echo '<li><a href="' . get_term_link( $mytag->term_id ) . '" class="tag-cloud-link tag-link-' . $mytag->term_id . '">';
+                echo $mytag->name;
+                echo '</a></li>';
+	    }
+
+            echo '</ul>';
+	}
+
         echo '</div>';
 
         echo $args['after_widget'];
