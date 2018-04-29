@@ -1707,7 +1707,6 @@ class popular_tags_in_category_widget extends WP_Widget {
             array_push( $post_types, 'interview' );
         }
 
-
         if ( $catID ) {
             $posts_with_category = get_posts( array(
                          'category'       => $catID,
@@ -1741,7 +1740,9 @@ class popular_tags_in_category_widget extends WP_Widget {
                     'largest'  => 1,
                     'unit'     => 'em',
                     'format'   => 'list',
-                    'number'   => 50,
+                    'number'   => 75,
+                    'orderby'  => 'count',
+                    'order'    => 'DESC',
                     'include'  => $array_of_terms_in_category,
                 );
 
