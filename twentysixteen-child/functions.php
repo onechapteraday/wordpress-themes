@@ -1687,8 +1687,10 @@ class popular_tags_in_category_widget extends WP_Widget {
         $categories = get_the_category();
 
 	$catID = null;
-	if ( isset ( $categories[0] ) ) {
-            $catID = $categories[0]->cat_ID;
+        if( !is_home() ){
+	    if( isset( $categories[0] ) ) {
+                $catID = $categories[0]->cat_ID;
+	    }
 	}
 
         $post_types = array( 'post' );
