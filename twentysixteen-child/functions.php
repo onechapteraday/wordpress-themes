@@ -523,9 +523,23 @@ class twentysixteenchild_recentposts_small_one extends WP_Widget {
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
         # The Query
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if( post_type_exists( 'interview' ) ){
+            array_push( $post_types, 'interview' );
+        }
+
         $smallone_query = new WP_Query(array (
             'post_status'         => 'publish',
-            'post_type'           => array('post', 'book'),
+            'post_type'           => $post_types,
             'posts_per_page'      => $postnumber,
             'category_name'       => $category,
             'tag'                 => $tag,
@@ -632,9 +646,23 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
         # The Query
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if( post_type_exists( 'interview' ) ){
+            array_push( $post_types, 'interview' );
+        }
+
         $smalltwo_query = new WP_Query(array (
             'post_status'         => 'publish',
-            'post_type'           => array('post', 'book'),
+            'post_type'           => $post_types,
             'posts_per_page'      => $postnumber,
             'category_name'       => $category,
             'tag'                 => $tag,
@@ -733,9 +761,23 @@ class twentysixteenchild_recentposts_medium_one extends WP_Widget {
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
         # The Query
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if( post_type_exists( 'interview' ) ){
+            array_push( $post_types, 'interview' );
+        }
+
         $mediumone_query = new WP_Query(array (
             'post_status'         => 'publish',
-            'post_type'           => array('post', 'book'),
+            'post_type'           => $post_types,
             'posts_per_page'      => $postnumber,
             'category_name'       => $category,
             'tag'                 => $tag,
@@ -849,9 +891,23 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
         # The Query
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if( post_type_exists( 'interview' ) ){
+            array_push( $post_types, 'interview' );
+        }
+
         $mediumtwo_query = new WP_Query(array (
             'post_status'         => 'publish',
-            'post_type'           => array('post', 'book'),
+            'post_type'           => $post_types,
             'posts_per_page'      => $postnumber,
             'category_name'       => $category,
             'tag'                 => $tag,
@@ -972,9 +1028,23 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
         # The Query
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if( post_type_exists( 'interview' ) ){
+            array_push( $post_types, 'interview' );
+        }
+
         $bigone_query = new WP_Query(array (
             'post_status'         => 'publish',
-            'post_type'           => array('post', 'book'),
+            'post_type'           => $post_types,
             'posts_per_page'      => $postnumber,
             'category_name'       => $category,
             'tag'                 => $tag,
@@ -1096,9 +1166,23 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
         # The Query
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if( post_type_exists( 'interview' ) ){
+            array_push( $post_types, 'interview' );
+        }
+
         $bigtwo_query = new WP_Query(array (
             'post_status'         => 'publish',
-            'post_type'           => array('post', 'book'),
+            'post_type'           => $post_types,
             'posts_per_page'      => $postnumber,
             'category_name'       => $category,
             'tag'                 => $tag,
@@ -1225,9 +1309,23 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
         # The Query
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if( post_type_exists( 'interview' ) ){
+            array_push( $post_types, 'interview' );
+        }
+
         $color_query = new WP_Query(array (
             'post_status'         => 'publish',
-            'post_type'           => array('post', 'book'),
+            'post_type'           => $post_types,
             'posts_per_page'      => $postnumber,
             'category_name'       => $category,
             'tag'                 => $tag,
@@ -1356,9 +1454,23 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
         # The Query
+        $post_types = array( 'post' );
+
+        if( post_type_exists( 'book' ) ){
+            array_push( $post_types, 'book' );
+        }
+
+        if( post_type_exists( 'album' ) ){
+            array_push( $post_types, 'album' );
+        }
+
+        if( post_type_exists( 'interview' ) ){
+            array_push( $post_types, 'interview' );
+        }
+
         $color_query = new WP_Query(array (
             'post_status'         => 'publish',
-            'post_type'           => array('post', 'book'),
+            'post_type'           => $post_types,
             'posts_per_page'      => $postnumber,
             'category_name'       => $category,
             'tag'                 => $tag,
