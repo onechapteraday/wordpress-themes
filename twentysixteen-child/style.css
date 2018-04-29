@@ -94,6 +94,10 @@ body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
     font-size: 120%;
 }
 
+.widget_popular_tags_in_category_widget li a {
+    font-size: 0.875em;
+}
+
 
 /**
  * 2.0 - Post Dictionary
