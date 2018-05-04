@@ -1492,3 +1492,9 @@ header ol.breadcrumb li:before {
 header ol.breadcrumb li:first-child:before {
     display: none;
 }
+
+.single header ol.breadcrumb {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
