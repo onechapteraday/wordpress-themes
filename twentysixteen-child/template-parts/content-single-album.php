@@ -70,15 +70,24 @@
 					<?php echo date_i18n( 'j F Y', strtotime(get_album_date_release( $album_id )) ); ?>
 			        </td>
 		        </tr>
+			<?php
+
+			$price = get_album_price( $album_id );
+
+			if( $price ){
+
+			?>
 		        <tr>
 			        <td>
 					<b>Prix</b>
 			        </td>
 			        <td>
-					<?php echo get_album_price( $album_id ); ?> &euro;
+					<?php echo $price; ?> &euro;
 			        </td>
 		        </tr>
 			<?php
+
+                        }
 
 			$rating = get_album_rating( $album_id );
 
@@ -134,21 +143,26 @@
 			}
 
 			?>
+			<?php
+
+			$amazon = get_album_amazon( $album_id );
+
+                        if( $amazon['link'] ){
+
+			?>
 		        <tr>
 			        <td>
 					<b>Disponible sur</b>
 			        </td>
 			        <td>
-					<?php
-
-					$amazon = get_album_amazon( $album_id );
-
-					?>
 					<a href="<?php echo $amazon['link']; ?>" target="_blank" rel="nofollow" class="logo_partner logo_amazon">
 						<img src="<?php echo $amazon['img']; ?>" alt="Amazon" />
 					</a>
 			        </td>
 		        </tr>
+                        <?php
+                        }
+                        ?>
 		</table>
 		<?php
 			wp_link_pages( array(

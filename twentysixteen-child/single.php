@@ -54,8 +54,12 @@ get_header(); ?>
     $category = get_the_category();
 
     if ( $category ){
-        if( $category[0]->slug == 'books' ){
+        $category_slug = $category[0]->slug;
+
+        if( $category_slug == 'books' ){
             get_sidebar( 'book' );
+        }elseif( $category_slug == 'music' ){
+            get_sidebar( 'music' );
         }else{
             get_sidebar();
         }
