@@ -84,6 +84,8 @@ get_header(); ?>
         'fiction-historique',
         'fiction-romantique',
         'histoire',
+        'hommage',
+        'identite',
         'illustration',
         'immigration',
         'journee-internationale-du-livre',
