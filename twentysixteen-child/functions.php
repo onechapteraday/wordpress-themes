@@ -1875,4 +1875,34 @@ function admin_style() {
 
 add_action('admin_enqueue_scripts', 'admin_style');
 
+
+/**
+ * Jetpack Related Posts functions
+ */
+
+# Remove automatic display
+
+function jetpack_relatedposts_remove_display() {
+    if( class_exists( 'Jetpack_RelatedPosts' ) ){
+        $jprp = Jetpack_RelatedPosts::init();
+        $callback = array( $jprp, 'filter_add_target_to_dom' );
+
+        remove_filter( 'the_content', $callback, 40 );
+    }
+}
+
+add_filter( 'wp', 'jetpack_relatedposts_remove_display', 20 );
+
+# Update thumbnail size
+
+function jetpack_relatedposts_update_thumbnail_size( $thumbnail_size ){
+    $thumbnail_size['width'] = 420;
+    $thumbnail_size['height'] = 635;
+    $thumbnail_size['crop'] = true;
+
+    return $thumbnail_size;
+}
+
+add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jetpack_relatedposts_update_thumbnail_size' );
+
 ?>

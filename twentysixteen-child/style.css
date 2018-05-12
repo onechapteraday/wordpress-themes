@@ -98,6 +98,60 @@ body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
     font-size: 0.875em;
 }
 
+.entry-content #jp-relatedposts {
+    padding: 3em 0 0;
+}
+
+.jp-relatedposts:before,
+.jp-relatedposts-items:before,
+.jp-relatedposts:last-child::after,
+.jp-relatedposts-items:after {
+    display: none;
+}
+
+.jp-relatedposts-post-context {
+    display: none;
+}
+
+.jp-relatedposts-post-title,
+.entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+    margin-bottom: 0.45em;
+}
+
+.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
+    margin-bottom: 2.05em;
+    text-transform: uppercase;
+    color: #686868;
+    letter-spacing: 0.769px;
+}
+
+@media screen and (max-width: 909px) {
+    #jp-relatedposts .jp-relatedposts-items-visual {
+        margin-right: -10px !important;
+    }
+
+    .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+        box-sizing: border-box;
+        width: 33.33%;
+        padding-right: 10px;
+    }
+
+    #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:nth-child(3n) {
+        clear: none !important;
+    }
+
+    .jp-relatedposts-post-title,
+    .entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
+        display: none !important;
+    }
+}
+
 
 /**
  * 2.0 - Post Dictionary

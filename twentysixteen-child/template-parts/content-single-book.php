@@ -283,6 +283,10 @@
 		        </tr>
 		</table>
 		<?php
+                        if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+                            echo do_shortcode( '[jetpack-related-posts]' );
+                        }
+
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
 				'after'       => '</div>',
