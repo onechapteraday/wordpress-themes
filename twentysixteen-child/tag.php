@@ -83,6 +83,7 @@ get_header(); ?>
         'femme-forte',
         'fiction-historique',
         'fiction-romantique',
+        'gun-violence',
         'histoire',
         'hommage',
         'identite',
@@ -136,8 +137,10 @@ get_header(); ?>
         'roman-graphique',
         'roman-policier',
         'salon-du-livre',
+        'sexualite',
         'science-fiction',
         'thriller',
+        'violence-armee',
     );
 
     # Check if book_tag

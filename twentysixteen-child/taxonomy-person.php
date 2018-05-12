@@ -194,6 +194,7 @@ get_header(); ?>
 	'thierry-smolderen',
 	'timothe-le-boucher',
 	'tomas-eloy-martinez',
+	'valerie-le-plouhinec',
 	'veronica-henry',
 	'vincent-raynaud',
 	'yaa-gyasi',
