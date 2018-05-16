@@ -232,7 +232,6 @@ function filter_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size,
 add_filter( 'post_thumbnail_html', 'filter_post_thumbnail_html', 10, 5 );
 
 
-
 /**
  * Custom Twenty Sixteen Child template tags
  *
@@ -1929,7 +1928,7 @@ add_filter( 'wp', 'jetpack_relatedposts_remove_display', 20 );
 
 function jetpack_relatedposts_update_thumbnail_size( $thumbnail_size ){
     $thumbnail_size['width'] = 420;
-    $thumbnail_size['height'] = 635;
+    $thumbnail_size['height'] = 655;
     $thumbnail_size['crop'] = true;
 
     return $thumbnail_size;
