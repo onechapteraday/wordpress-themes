@@ -1936,4 +1936,24 @@ function jetpack_relatedposts_update_thumbnail_size( $thumbnail_size ){
 
 add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jetpack_relatedposts_update_thumbnail_size' );
 
+
+/**
+ * Add class no-sidebar to fullwidth templates
+ */
+
+function twentysixteen_child_body_classes( $classes ){
+    if(
+        is_page_template( 'page-templates/fullwidth-single.php' )
+        || is_page_template( 'page-templates/fullwidth-single-book.php' )
+        || is_page_template( 'page-templates/fullwidth-single-album.php' )
+        || is_page_template( 'page-templates/fullwidth-single-interview.php' )
+    ){
+        $classes[] = 'no-sidebar';
+    }
+
+    return $classes;
+}
+
+add_filter( 'body_class', 'twentysixteen_child_body_classes' );
+
 ?>
