@@ -159,6 +159,42 @@ function twentysixteenchild_setup() {
 add_action( 'after_setup_theme', 'twentysixteenchild_setup' );
 
 
+/**
+ * Displays an optional post thumbnail.
+ *
+ * Wraps the post thumbnail in an anchor element on index views, or a div
+ * element when on single views.
+ *
+ * Override twentysixteen_post_thumbnail() function.
+ *
+ * @since Twenty Sixteen Child 1.0
+ */
+
+function twentysixteen_post_thumbnail() {
+    if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+        return;
+    }
+
+    if ( is_singular() ) :
+    ?>
+
+    <div class="post-thumbnail">
+        <figure>
+            <?php the_post_thumbnail(); ?>
+        </figure>
+    </div><!-- .post-thumbnail -->
+
+    <?php else : ?>
+
+    <div class="post-thumbnail">
+        <figure>
+            <?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+        </figure>
+    </div>
+
+    <?php endif; // End is_singular()
+}
+
 
 /**
  * Add copyright for featured images.
@@ -173,21 +209,21 @@ add_action( 'after_setup_theme', 'twentysixteenchild_setup' );
  * @return string $html New post thumbnail HTML with copyright.
  */
 
-function filter_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
-    $html = '<figure>' . $html;
-
-    if (function_exists('get_featured_image_copyright')) {
-        $link = get_featured_image_copyright_link($post_thumbnail_id);
-        $author = get_featured_image_copyright_author($post_thumbnail_id);
-
-	if ( $link ) {
-                $html .= '<figcaption class="wp-post-image-copyright">&copy; ';
-		$html .= '<a href="' . $link . '" target="_blank" rel="nofollow">';
-		$html .= $author . '</a></figcaption>';
-	}
+function filter_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size, $attr ){
+    if( !is_singular() ){
+       $html = '<a href="'. get_permalink( $post_id ). '" aria-hidden="true">' . $html . '</a>';
     }
 
-    $html .= '</figure>';
+    if( function_exists( 'get_featured_image_copyright' ) ){
+        $link   = get_featured_image_copyright_link( $post_thumbnail_id );
+        $author = get_featured_image_copyright_author( $post_thumbnail_id );
+
+	if( $link ){
+            $html .= '<figcaption class="wp-post-image-copyright">&copy; ';
+	    $html .= '<a href="' . $link . '" target="_blank" rel="nofollow">';
+	    $html .= $author . '</a></figcaption>';
+	}
+    }
 
     # Make filter magic happen here...
     return $html;
