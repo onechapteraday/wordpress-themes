@@ -174,11 +174,7 @@ add_action( 'after_setup_theme', 'twentysixteenchild_setup' );
  */
 
 function filter_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
-    if ( is_singular() ) {
-        $html = '<figure>' . $html;
-    } else {
-        $html = '<figure><a href="'. get_permalink($post_id). '" aria-hidden="true">' . $html . '</a>';
-    }
+    $html = '<figure>' . $html;
 
     if (function_exists('get_featured_image_copyright')) {
         $link = get_featured_image_copyright_link($post_thumbnail_id);
