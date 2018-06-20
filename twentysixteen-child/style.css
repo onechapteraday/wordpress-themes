@@ -115,6 +115,16 @@ body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
     left: 0;
 }
 
+.akismet_comment_form_privacy_notice {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    margin-top: 30px;
+}
+
+.comment-form label {
+    display: inline;
+}
+
 /* Post 2685 styles */
 
 .postid-2685 table.group {
