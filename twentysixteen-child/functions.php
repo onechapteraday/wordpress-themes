@@ -1926,9 +1926,26 @@ add_filter( 'wp', 'jetpack_relatedposts_remove_display', 20 );
 
 # Update thumbnail size
 
+function jetpack_relatedposts_custom_image( $media, $post_id, $args ) {
+    if ( $media ) {
+        $source = $media[0]['src'];
+
+        $info = pathinfo( $source );
+        $dirname   = $info['dirname'];
+        $filename  = $info['filename'];
+        $extension = $info['extension'];
+
+        $media[0]['src'] = $dirname . '/' . $filename . '-420x560.' . $extension;
+
+        return $media;
+    }
+}
+
+add_filter( 'jetpack_images_get_images', 'jetpack_relatedposts_custom_image', 10, 3 );
+
 function jetpack_relatedposts_update_thumbnail_size( $thumbnail_size ){
     $thumbnail_size['width'] = 420;
-    $thumbnail_size['height'] = 655;
+    $thumbnail_size['height'] = 560;
     $thumbnail_size['crop'] = true;
 
     return $thumbnail_size;
