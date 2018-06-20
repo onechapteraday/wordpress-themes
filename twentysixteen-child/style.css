@@ -1159,7 +1159,8 @@ figcaption.wp-post-image-copyright a:hover {
 }
 
 .widget_twentysixteenchild_recentposts_color .bg-wrap,
-.widget_twentysixteenchild_randomposts_color .bg-wrap {
+.widget_twentysixteenchild_randomposts_color .bg-wrap,
+.widget_twentysixteenchild_randomposts_without_last_color .bg-wrap {
     display: block;
     background: #ebf8fe;
 }
