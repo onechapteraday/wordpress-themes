@@ -94,8 +94,25 @@ body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
     font-size: 120%;
 }
 
-.widget_popular_tags_in_category_widget li a {
-    font-size: 0.875em;
+/* Post 2685 styles */
+
+.postid-2685 table.group {
+    counter-reset: teamCounter;
+}
+
+.postid-2685 table.group tr.team {
+    counter-increment: teamCounter;
+}
+
+.postid-2685 table.group tr.team td:before {
+    content: counter(teamCounter) " - ";
+	position: absolute;
+	left: 2px;
+}
+
+.postid-2685 table.group tr.team td {
+	position: relative;
+	padding-left: 30px;
 }
 
 /* >= 985px */
