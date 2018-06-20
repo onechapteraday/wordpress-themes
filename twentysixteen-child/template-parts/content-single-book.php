@@ -129,6 +129,23 @@
 				}
 			?>
 			<?php
+				$preface = get_book_author_preface( $book_id );
+
+				if( $preface ){
+				?>
+		                <tr>
+				        <td>
+						<b>Préface</b>
+				        </td>
+				        <td>
+						<?php
+							echo '<a href="' . get_term_link( $preface->term_id ). '">' . $preface->name . '</a>';
+						?>
+		                </tr>
+				<?php
+				}
+			?>
+			<?php
 				$publisher = get_book_publisher( $book_id );
 
 				if ( $publisher ) {
