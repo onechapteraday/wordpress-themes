@@ -1781,7 +1781,7 @@ class popular_tags_in_category_widget extends WP_Widget {
                     'largest'  => 1,
                     'unit'     => 'em',
                     'format'   => 'list',
-                    'number'   => 75,
+                    'number'   => 55,
                     'orderby'  => 'count',
                     'order'    => 'DESC',
                     'include'  => $array_of_terms_in_category,
