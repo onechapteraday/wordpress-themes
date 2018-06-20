@@ -216,16 +216,20 @@
 				$date = get_book_date_first_publication( $book_id );
 
 				if ( $date && $date != get_book_date_release( $book_id ) ) {
-				?>
-		        	<tr>
-				        <td>
-						<b>Première publication</b>
-				        </td>
-				        <td>
-						<?php echo date_i18n( 'j F Y', strtotime($date) ); ?>
-				        </td>
-		        	</tr>
-				<?php
+					$year = intval( substr( $date, 0, 4 ) );
+
+                                        if( $year > 1800 ){
+                                        ?>
+                                        <tr>
+                                                <td>
+                                                        <b>Première publication</b>
+                                                </td>
+                                                <td>
+                                                        <?php echo date_i18n( 'j F Y', strtotime($date) ); ?>
+                                                </td>
+                                        </tr>
+                                        <?php
+                                        }
 			}
 			
 			$rating = get_book_rating( $book_id );
