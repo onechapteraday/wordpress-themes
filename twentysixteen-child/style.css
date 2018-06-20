@@ -94,6 +94,27 @@ body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
     font-size: 120%;
 }
 
+.blockquote_highlight {
+	color: #333;
+}
+
+.blockquote_post_cite {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    color: #444;
+    padding-left: 20px;
+    max-width: 400px
+}
+
+.blockquote_post_cite::before {
+    position: absolute;
+    display: inline-block;
+    content: "–";
+    left: 0;
+}
+
 /* Post 2685 styles */
 
 .postid-2685 table.group {
