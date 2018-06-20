@@ -76,10 +76,10 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     width: auto;
 }
 
-#subscribe-text {
-    font-size: 13px;
-    font-size: 13.5px;
-    font-size: 0.84375rem;
+#subscribe-text,
+#subscribe-text + p {
+    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
