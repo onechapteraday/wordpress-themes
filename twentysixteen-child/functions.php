@@ -353,8 +353,8 @@ function twentysixteen_entry_taxonomies() {
             }
 
             if ( $people ) {
-                printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                    _x( 'People', 'Used before tag names.', 'twentysixteen' ),
+                printf( '<span class="persons-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+                    _x( 'People', 'Used before person names.', 'twentysixteen' ),
                     $people
                 );
             }
@@ -380,8 +380,8 @@ function twentysixteen_entry_taxonomies() {
                 $locations .= '</a>';
             }
 
-            printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                _x( 'Locations', 'Used before tag names.', 'twentysixteen' ),
+            printf( '<span class="locations-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+                _x( 'Locations', 'Used before location names.', 'twentysixteen' ),
                 $locations
             );
         }

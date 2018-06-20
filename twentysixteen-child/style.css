@@ -98,6 +98,26 @@ body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
     font-size: 0.875em;
 }
 
+/* >= 985px */
+
+@media screen and (min-width: 61.5625em) {
+	body:not(.search-results) .persons-links,
+	body:not(.search-results) .locations-links {
+		display: block;
+		margin-bottom: 0.5384615385em;
+	}
+
+	body.archive .tags-links {
+		display: none;
+	}
+
+	body.archive .post-1359 .locations-links {
+		display: none;
+	}
+}
+
+/* Jetpack Related Posts */
+
 .entry-content #jp-relatedposts {
     padding: 3em 0 0;
 }
