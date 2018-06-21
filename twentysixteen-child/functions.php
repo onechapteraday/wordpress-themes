@@ -1929,8 +1929,49 @@ class popular_tags_in_category_widget extends WP_Widget {
             $terms = wp_get_post_terms( $post->ID );
 
             foreach( $terms as $value ){
-                if( !in_array( $value, $array_of_terms_in_category, true ) ){
-                    array_push( $array_of_terms_in_category, $value->term_id );
+                $check = false;
+
+                if( is_singular( 'book' ) || is_category( 'books' ) || is_tax( 'publisher' ) ){
+                    $term_slug = $value->slug;
+
+                    $patterns = array(
+                        '/bande/',
+                        '/deuil/',
+                        '/enfant/',
+                        '/esclavage/',
+                        '/feminisme/',
+                        '/femme/',
+                        '/fiction/',
+                        '/violence/',
+                        '/hommage/',
+                        '/immigration/',
+                        '/lecture/',
+                        '/litteraire/',
+                        '/litterature/',
+                        '/livre/',
+                        '/poesie/',
+                        '/realisme-magique/',
+                        '/recueil/',
+                        '/roman/',
+                        '/thriller/',
+                    );
+
+                    foreach( $patterns as $pattern ){
+                        if( preg_match( $pattern, $term_slug ) ){
+                            $check = true;
+                            break;
+                        }
+                    }
+
+                    if( $check == true && !in_array( $value, $array_of_terms_in_category, true ) ){
+                        array_push( $array_of_terms_in_category, $value->term_id );
+                    }
+                }
+
+                else {
+                    if( !in_array( $value, $array_of_terms_in_category, true ) ){
+                        array_push( $array_of_terms_in_category, $value->term_id );
+                    }
                 }
             }
         }
