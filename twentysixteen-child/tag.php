@@ -125,6 +125,7 @@ get_header(); ?>
         'litterature-mexicaine',
         'litterature-nord-americaine',
         'litterature-nordique',
+        'litterature-norvegienne',
         'litterature-oceanienne',
         'litterature-rwandaise',
         'litterature-sud-americaine',

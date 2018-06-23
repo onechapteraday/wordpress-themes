@@ -1930,31 +1930,45 @@ class popular_tags_in_category_widget extends WP_Widget {
 
             foreach( $terms as $value ){
                 $check = false;
+                $tag_check = false;
 
-                if( is_singular( 'book' ) || is_category( 'books' ) || is_tax( 'publisher' ) ){
+                $patterns = array(
+                    '/bande/',
+                    '/deuil/',
+                    '/esclavage/',
+                    '/feminisme/',
+                    '/fiction/',
+                    '/immigration/',
+                    '/lecture/',
+                    '/litteraire/',
+                    '/litterature/',
+                    '/livre/',
+                    '/poesie/',
+                    '/realisme-magique/',
+                    '/recueil/',
+                    '/roman/',
+                    '/thriller/',
+                    '/violence/',
+                );
+
+                # Check if is_tag with book patterns
+
+                if( is_tag() ){
+                    $tag = get_queried_object();
+                    $tag_slug = $tag->slug;
+
+                    foreach( $patterns as $pattern ){
+                        if( preg_match( $pattern, $tag_slug ) ){
+                            $tag_check = true;
+                            break;
+                        }
+                    }
+                }
+
+                # Check whether or not if I should update tag cloud with specific book tags
+
+                if( is_singular( 'book' ) || is_category( 'books' ) || is_tax( 'publisher' ) || $tag_check == true ){
                     $term_slug = $value->slug;
-
-                    $patterns = array(
-                        '/bande/',
-                        '/deuil/',
-                        '/enfant/',
-                        '/esclavage/',
-                        '/feminisme/',
-                        '/femme/',
-                        '/fiction/',
-                        '/violence/',
-                        '/hommage/',
-                        '/immigration/',
-                        '/lecture/',
-                        '/litteraire/',
-                        '/litterature/',
-                        '/livre/',
-                        '/poesie/',
-                        '/realisme-magique/',
-                        '/recueil/',
-                        '/roman/',
-                        '/thriller/',
-                    );
 
                     foreach( $patterns as $pattern ){
                         if( preg_match( $pattern, $term_slug ) ){
@@ -1963,10 +1977,14 @@ class popular_tags_in_category_widget extends WP_Widget {
                         }
                     }
 
+                    # Will construct tag cloud with only specific book tags from posts
+
                     if( $check == true && !in_array( $value, $array_of_terms_in_category, true ) ){
                         array_push( $array_of_terms_in_category, $value->term_id );
                     }
                 }
+
+                # Will construct tag cloud with only tags from posts
 
                 else {
                     if( !in_array( $value, $array_of_terms_in_category, true ) ){
@@ -1977,15 +1995,15 @@ class popular_tags_in_category_widget extends WP_Widget {
         }
 
         $tag_args = array(
-                    'smallest' => 1,
-                    'largest'  => 1,
-                    'unit'     => 'em',
-                    'format'   => 'list',
-                    'number'   => 55,
-                    'orderby'  => 'count',
-                    'order'    => 'DESC',
-                    'include'  => $array_of_terms_in_category,
-                );
+                        'smallest' => 1,
+                        'largest'  => 1,
+                        'unit'     => 'em',
+                        'format'   => 'list',
+                        'number'   => 55,
+                        'orderby'  => 'count',
+                        'order'    => 'DESC',
+                        'include'  => $array_of_terms_in_category,
+                    );
 
         echo '<div class="tagcloud">';
 
