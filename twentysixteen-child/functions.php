@@ -1659,10 +1659,9 @@ class twentysixteenchild_randomposts_without_last_color extends WP_Widget {
         $latest_posts = new WP_Query( array(
             'post_status'         => 'publish',
             'post_type'           => $post_types,
-            'posts_per_page'      => $postnumber,
+            'posts_per_page'      => 5,
             'category_name'       => $category,
             'tag'                 => $tag,
-            'numberposts'         => 5,
             'fields'              => 'ids',
             'ignore_sticky_posts' => 1
         ));
