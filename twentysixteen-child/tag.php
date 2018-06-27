@@ -93,6 +93,7 @@ get_header(); ?>
         '/litterature/',
         '/livre/',
         '/memoire/',
+        '/narrateur/',
         '/poesie/',
         '/racisme/',
         '/realisme-magique/',
