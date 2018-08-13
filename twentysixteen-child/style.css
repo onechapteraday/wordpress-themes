@@ -82,10 +82,6 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     font-size: 0.9375rem;
 }
 
-body:not(.search-results) article:not(.type-page) .entry-footer span.edit-link {
-    display: none;
-}
-
 .taxonomy-description.social-icons {
     margin-top: 5px;
 }
