@@ -170,12 +170,12 @@ add_action( 'after_setup_theme', 'twentysixteenchild_setup' );
  * @since Twenty Sixteen Child 1.0
  */
 
-function twentysixteen_post_thumbnail() {
+function twentysixteen_post_thumbnail( $post_thumbnail_size = 'post-thumbnail', $post_thumbnail_link = false ) {
     if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
         return;
     }
 
-    if ( is_singular() ) :
+    if ( is_singular() && ! $post_thumbnail_link ) :
     ?>
 
     <div class="post-thumbnail">
@@ -188,7 +188,7 @@ function twentysixteen_post_thumbnail() {
 
     <div class="post-thumbnail">
         <figure>
-            <?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+            <?php the_post_thumbnail( $post_thumbnail_size, array( 'alt' => the_title_attribute( 'echo=0' ), 'show_link' => $post_thumbnail_link ) ); ?>
         </figure>
     </div>
 
@@ -210,7 +210,7 @@ function twentysixteen_post_thumbnail() {
  */
 
 function filter_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size, $attr ){
-    if( !is_singular() ){
+    if( ! is_singular() || ! empty ( $attr ) ){
        $html = '<a href="'. get_permalink( $post_id ). '" aria-hidden="true">' . $html . '</a>';
     }
 
@@ -219,9 +219,9 @@ function filter_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size,
         $author = get_featured_image_copyright_author( $post_thumbnail_id );
 
 	if( $link ){
-            $html .= '<figcaption class="wp-post-image-copyright">&copy; ';
-	    $html .= '<a href="' . $link . '" target="_blank" rel="nofollow">';
-	    $html .= $author . '</a></figcaption>';
+            $html .= '<figcaption class="wp-post-image-copyright">';
+	    $html .= '<a href="' . $link . '" target="_blank" rel="nofollow">Copyright : <span class="copyright_author">';
+	    $html .= $author . '</span></a></figcaption>';
 	}
     }
 
@@ -595,7 +595,7 @@ class twentysixteenchild_recentposts_small_one extends WP_Widget {
                 <div class="rp-small-one-content cf">
                     <?php if ( '' != get_the_post_thumbnail() ) : ?>
                         <div class="entry-thumb">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-small-square'); ?></a>
+                            <?php twentysixteen_post_thumbnail( 'twentysixteenchild-small-square', true ); ?>
                         </div><!-- end .entry-thumb -->
                     <?php endif; ?>
 
@@ -833,7 +833,7 @@ class twentysixteenchild_recentposts_medium_one extends WP_Widget {
                     <div class="rp-medium-one-content">
                         <?php if ( '' != get_the_post_thumbnail() ) : ?>
                             <div class="entry-thumb">
-                                <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-medium-landscape'); ?></a>
+                                <?php twentysixteen_post_thumbnail( 'twentysixteenchild-medium-landscape', true ); ?>
                             </div><!-- end .entry-thumb -->
                         <?php endif; ?>
 
@@ -963,7 +963,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
                 <div class="rp-medium-two-content">
                     <?php if ( '' != get_the_post_thumbnail() ) : ?>
                         <div class="entry-thumb">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-medium-landscape'); ?></a>
+                            <?php twentysixteen_post_thumbnail( 'twentysixteenchild-medium-landscape', true ); ?>
                         </div><!-- end .entry-thumb -->
                     <?php endif; ?>
 
@@ -1101,7 +1101,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
 
                     <?php if ( '' != get_the_post_thumbnail() ) : ?>
                         <div class="entry-thumb">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-fullwidth'); ?></a>
+                            <?php twentysixteen_post_thumbnail( 'twentysixteenchild-fullwidth', true ); ?>
                         </div><!-- end .entry-thumb -->
                     <?php endif; ?>
 
@@ -1239,7 +1239,7 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
 
             <?php if ( '' != get_the_post_thumbnail() ) : ?>
                 <div class="entry-thumb">
-                    <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-fullwidth'); ?></a>
+                    <?php twentysixteen_post_thumbnail( 'twentysixteenchild-fullwidth', true ); ?>
                 </div><!-- end .entry-thumb -->
             <?php endif; ?>
 
@@ -1383,7 +1383,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
                 <article class="rp-color cf">
                     <?php if ( '' != get_the_post_thumbnail() ) : ?>
                         <div class="entry-thumb">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-medium-portrait'); ?></a>
+                            <?php twentysixteen_post_thumbnail( 'twentysixteenchild-medium-portrait', true ); ?>
                         </div><!-- end .entry-thumb -->
                     <?php endif; ?>
 
@@ -1529,7 +1529,7 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
                 <article class="rp-color cf">
                     <?php if ( '' != get_the_post_thumbnail() ) : ?>
                         <div class="entry-thumb">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-medium-portrait'); ?></a>
+                            <?php twentysixteen_post_thumbnail( 'twentysixteenchild-medium-portrait', true ); ?>
                         </div><!-- end .entry-thumb -->
                     <?php endif; ?>
 
@@ -1687,7 +1687,7 @@ class twentysixteenchild_randomposts_without_last_color extends WP_Widget {
                 <article class="rp-color cf">
                     <?php if ( '' != get_the_post_thumbnail() ) : ?>
                         <div class="entry-thumb">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail('twentysixteenchild-medium-portrait'); ?></a>
+                            <?php twentysixteen_post_thumbnail( 'twentysixteenchild-medium-portrait', true ); ?>
                         </div><!-- end .entry-thumb -->
                     <?php endif; ?>
 

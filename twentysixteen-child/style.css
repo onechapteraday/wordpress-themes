@@ -366,19 +366,22 @@ figure {
 figcaption.wp-post-image-copyright {
     font-size: 10px;
     color: grey;
-    margin: 5px 0 0 5px;
+    margin: 5px 0 0;
 }
 
 figcaption.wp-post-image-copyright a {
     color: grey;
-    -webkit-transition: all 0.225s ease-in-out;
-    -moz-transition: all 0.225s ease-in-out;
-    transition: all 0.225s ease-in-out;
+    outline: none;
 }
 
-figcaption.wp-post-image-copyright a:hover {
+figcaption.wp-post-image-copyright a .copyright_author {
+    -webkit-transition: all 0.325s ease-in-out;
+    -moz-transition: all 0.325s ease-in-out;
+    transition: all 0.325s ease-in-out;
+}
+
+figcaption.wp-post-image-copyright a .copyright_author:hover {
     color: #007acc;
-    text-decoration: underline;
 }
 
 
@@ -440,10 +443,23 @@ figcaption.wp-post-image-copyright a:hover {
     clear: both;
 }
 
+.rp-big-one    .entry-thumb .post-thumbnail,
+.rp-big-two    .entry-thumb .post-thumbnail,
+.rp-color      .entry-thumb .post-thumbnail,
+.rp-medium-one .entry-thumb .post-thumbnail,
+.rp-medium-two .entry-thumb .post-thumbnail,
+.rp-big-one    .entry-thumb .post-thumbnail figure,
+.rp-big-two    .entry-thumb .post-thumbnail figure,
+.rp-color      .entry-thumb .post-thumbnail figure,
+.rp-medium-one .entry-thumb .post-thumbnail figure,
+.rp-medium-two .entry-thumb .post-thumbnail figure {
+    margin-bottom: 12px;
+}
+
 .custom-front-page .entry-comments:before,
-.rp-big-one .entry-comments:before,
-.rp-big-two .entry-comments:before,
-.rp-color .entry-comments:before,
+.rp-big-one    .entry-comments:before,
+.rp-big-two    .entry-comments:before,
+.rp-color      .entry-comments:before,
 .rp-medium-one .entry-comments:before,
 .rp-medium-two .entry-comments:before {
     display: inline;
