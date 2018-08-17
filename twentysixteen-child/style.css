@@ -122,6 +122,10 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     display: inline;
 }
 
+.main-navigation li {
+    font-size: 15px;
+}
+
 /* Post 2685 styles */
 
 .postid-2685 table.group {
@@ -141,6 +145,14 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 .postid-2685 table.group tr.team td {
 	position: relative;
 	padding-left: 30px;
+}
+
+/* >= 910px */
+
+@media screen and (min-width: 56.875em) {
+        .main-navigation ul ul a {
+                width: 12.975em;
+        }
 }
 
 /* >= 985px */
