@@ -1982,7 +1982,7 @@ class popular_tags_in_category_widget extends WP_Widget {
 
                 # Check whether or not if I should update tag cloud with specific book tags
 
-                if( is_singular( 'book' ) || is_category( 'books' ) || is_tax( 'publisher' ) || $tag_check == true ){
+                if( is_singular( 'book' ) || is_category( 'reads' ) || is_tax( 'publisher' ) || $tag_check == true ){
                     $term_slug = $value->slug;
 
                     foreach( $patterns as $pattern ){
