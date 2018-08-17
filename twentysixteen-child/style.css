@@ -50,6 +50,10 @@ body {
     background: initial;
 }
 
+body a {
+    outline: none;
+}
+
 table {
     border-width: 1px 0 0 0;
 }
@@ -385,6 +389,7 @@ figcaption.wp-post-image-copyright {
 figcaption.wp-post-image-copyright a {
     color: grey;
     outline: none;
+    cursor: default;
 }
 
 figcaption.wp-post-image-copyright a .copyright_author {
@@ -395,6 +400,7 @@ figcaption.wp-post-image-copyright a .copyright_author {
 
 figcaption.wp-post-image-copyright a .copyright_author:hover {
     color: #007acc;
+    cursor: pointer;
 }
 
 
@@ -466,7 +472,7 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
 .rp-color      .entry-thumb .post-thumbnail figure,
 .rp-medium-one .entry-thumb .post-thumbnail figure,
 .rp-medium-two .entry-thumb .post-thumbnail figure {
-    margin-bottom: 12px;
+    margin: 0 0 12px;
 }
 
 .custom-front-page .entry-comments:before,
@@ -790,7 +796,7 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
 
 .rp-medium-two p.summary {
     display: block;
-    margin: 25px 0 20px;
+    margin: 20px 0 15px;
     font-size: 13px;
     font-size: 0.8125rem;
     line-height: 1.6;
@@ -890,8 +896,8 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
 }
 
 .front-fullwidth .widget_twentysixteenchild_recentposts_medium_two,
-.front-content .widget_twentysixteenchild_recentposts_medium_two {
-    padding-bottom: 20px;
+.front-content   .widget_twentysixteenchild_recentposts_medium_two {
+    padding-bottom: 0;
 }
 
 
