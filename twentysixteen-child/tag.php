@@ -108,17 +108,57 @@ get_header(); ?>
         '/violence/',
     );
 
+    $music_patterns = array(
+        '/album/',
+        '/concert/',
+        '/musique/',
+        '/remix/',
+        '/riddim/',
+        '/single/',
+        '/acoustique/',
+        '/blues/',
+        '/dancehall/',
+        '/gospel/',
+        '/gwo-ka/',
+        '/jazz/',
+        '/kizomba/',
+        '/konpa/',
+        '/rap/',
+        '/reggae/',
+        '/rnb/',
+        '/rock/',
+        '/salsa/',
+        '/soul/',
+        '/zouk/',
+        '/batterie/',
+        '/guitare/',
+        '/piano/',
+    );
+
     # Check if book_tag
 
     foreach( $book_patterns as $pattern ){
         if( preg_match( $pattern, $tag->slug ) ){
-            $check = true;
+            $book_check = true;
             break;
         }
     }
 
-    if( $check ){
+    # Check if music_tag
+
+    foreach( $music_patterns as $pattern ){
+        if( preg_match( $pattern, $tag->slug ) ){
+            $music_check = true;
+            break;
+        }
+    }
+
+
+    if( $book_check ){
         get_sidebar( 'book' );
+    }
+    else if( $music_check ){
+        get_sidebar( 'music' );
     }
     else {
         get_sidebar();
