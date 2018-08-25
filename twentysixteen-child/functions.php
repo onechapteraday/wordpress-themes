@@ -1962,6 +1962,7 @@ class popular_tags_in_category_widget extends WP_Widget {
                     '/sexualite/',
                     '/slam/',
                     '/temoignage/',
+                    '/terrorisme/',
                     '/thriller/',
                     '/violence/',
                 );
