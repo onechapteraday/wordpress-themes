@@ -439,7 +439,7 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
     font-size: 11px;
     font-size: 0.6875rem;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.725;
     letter-spacing: 1.5px;
 }
 
@@ -1718,10 +1718,6 @@ header ol.breadcrumb li:first-child:before {
 /**
  * 10.0 - Jetpack Display Posts Widget
  */
-
-.custom-front-page .widget.widget_jetpack_display_posts_widget h3.widget-title {
-    line-height: 1.725;
-}
 
 .widget.widget_jetpack_display_posts_widget .jetpack-display-remote-posts {
     background: #ebf8fe;
