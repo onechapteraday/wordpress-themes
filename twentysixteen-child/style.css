@@ -163,6 +163,7 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 
 @media screen and (min-width: 61.5625em) {
 	body:not(.search-results) .persons-links,
+	body:not(.search-results) .prizes-links,
 	body:not(.search-results) .locations-links {
 		display: block;
 		margin-bottom: 0.5384615385em;

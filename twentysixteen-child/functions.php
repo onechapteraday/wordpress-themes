@@ -318,6 +318,14 @@ function sortPersonByName( $a, $b ){
     return strcoll( $at, $bt );
 }
 
+function sortPrizeByName( $a, $b ){
+    $translit = array('Á'=>'A','À'=>'A','Â'=>'A','Ä'=>'A','Ã'=>'A','Å'=>'A','Ç'=>'C','É'=>'E','È'=>'E','Ê'=>'E','Ë'=>'E','Í'=>'I','Ï'=>'I','Î'=>'I','Ì'=>'I','Ñ'=>'N','Ó'=>'O','Ò'=>'O','Ô'=>'O','Ö'=>'O','Õ'=>'O','Ú'=>'U','Ù'=>'U','Û'=>'U','Ü'=>'U','Ý'=>'Y','á'=>'a','à'=>'a','â'=>'a','ä'=>'a','ã'=>'a','å'=>'a','ç'=>'c','é'=>'e','è'=>'e','ê'=>'e','ë'=>'e','í'=>'i','ì'=>'i','î'=>'i','ï'=>'i','ñ'=>'n','ó'=>'o','ò'=>'o','ô'=>'o','ö'=>'o','õ'=>'o','ú'=>'u','ù'=>'u','û'=>'u','ü'=>'u','ý'=>'y','ÿ'=>'y');
+    $at = strtr( $a->name, $translit );
+    $bt = strtr( $b->name, $translit );
+
+    return strcoll( $at, $bt );
+}
+
 function sortLocationByTranslation( $a, $b ){
     $translit = array('Á'=>'A','À'=>'A','Â'=>'A','Ä'=>'A','Ã'=>'A','Å'=>'A','Ç'=>'C','É'=>'E','È'=>'E','Ê'=>'E','Ë'=>'E','Í'=>'I','Ï'=>'I','Î'=>'I','Ì'=>'I','Ñ'=>'N','Ó'=>'O','Ò'=>'O','Ô'=>'O','Ö'=>'O','Õ'=>'O','Ú'=>'U','Ù'=>'U','Û'=>'U','Ü'=>'U','Ý'=>'Y','á'=>'a','à'=>'a','â'=>'a','ä'=>'a','ã'=>'a','å'=>'a','ç'=>'c','é'=>'e','è'=>'e','ê'=>'e','ë'=>'e','í'=>'i','ì'=>'i','î'=>'i','ï'=>'i','ñ'=>'n','ó'=>'o','ò'=>'o','ô'=>'o','ö'=>'o','õ'=>'o','ú'=>'u','ù'=>'u','û'=>'u','ü'=>'u','ý'=>'y','ÿ'=>'y');
     $at = strtr( $a->translation, $translit );
@@ -360,6 +368,33 @@ function twentysixteen_entry_taxonomies() {
             }
         }
     }
+
+    # Literary Prizes list
+    if( taxonomy_exists( 'prize' )) {
+        $prizes_list = get_the_terms( get_the_ID(), 'prize', '', ', ' );
+
+        if ( $prizes_list ) {
+            foreach( $prizes_list as $myprize ) {
+                $myprize->translation = __( $myprize->name, 'prize-taxonomy' );
+            }
+
+            usort( $prizes_list, 'sortPrizeByName' );
+            $prizes = '';
+
+            foreach($prizes_list as $i => $tag) {
+                if ( $i > 0) $prizes .= ', ';
+                $prizes .= '<a href="' . get_term_link( $tag->term_id ) . '">';
+                $prizes .= $tag->name;
+                $prizes .= '</a>';
+            }
+
+            printf( '<span class="prizes-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+                _x( 'Literary Prizes', 'Used before prize names.', 'twentysixteen' ),
+                $prizes
+            );
+        }
+    }
+
 
     # Locations list
     if( taxonomy_exists( 'location' )) {
