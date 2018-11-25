@@ -2241,6 +2241,7 @@ class popular_tags_in_category_widget extends WP_Widget {
                     '/memoire/',
                     '/narrateur/',
                     '/poesie/',
+                    '/prix/',
                     '/racisme/',
                     '/realisme-magique/',
                     '/recit/',

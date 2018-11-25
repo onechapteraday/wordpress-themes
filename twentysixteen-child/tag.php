@@ -95,6 +95,7 @@ get_header(); ?>
         '/memoire/',
         '/narrateur/',
         '/poesie/',
+        '/prix/',
         '/racisme/',
         '/realisme-magique/',
         '/recit/',
