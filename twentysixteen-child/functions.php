@@ -1053,7 +1053,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
     public function __construct() {
         parent::__construct( 'twentysixteenchild_randomposts_medium_two', __( 'New: Random Posts (Medium 2)', 'twentysixteen-child' ), array(
             'classname'   => 'widget_twentysixteenchild_randomposts_medium_two',
-            'description' => __( 'Medium-sized Recents Posts in a 2-column layout with featured image and excerpt.', 'twentysixteen-child' ),
+            'description' => __( 'Medium-sized Random Posts in a 2-column layout with featured image and excerpt.', 'twentysixteen-child' ),
         ));
     }
 
