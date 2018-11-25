@@ -91,12 +91,12 @@
 
 			$rating = get_album_rating( $album_id );
 
-			if ($rating) {
+			if( $rating && is_user_logged_in() ){
 
 			?>
 		        <tr>
 			        <td>
-					<b>Ma note</b>
+					<b>Mon appréciation</b>
 			        </td>
 			        <td>
 					<?php
