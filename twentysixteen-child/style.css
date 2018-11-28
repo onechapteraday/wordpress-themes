@@ -130,6 +130,12 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     font-size: 15px;
 }
 
+.tagcloud a.tag-link-1936 {
+    line-height: 1.375;
+    padding-top: 0.35em;
+    padding-bottom: 0.275em;
+}
+
 /* Entry paragraphs */
 
 .entry-content {
