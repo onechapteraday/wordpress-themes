@@ -136,32 +136,6 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     padding-bottom: 0.275em;
 }
 
-/* Entry paragraphs */
-
-.entry-content {
-    counter-reset: paragraphCount;
-}
-
-.entry-content p {
-    position: relative;
-    counter-increment: paragraphCount;
-}
-
-.entry-content p:before {
-    position: absolute;
-    content: counter(paragraphCount);
-    top: 3px;
-    left: -55px;
-    width: 20px;
-    height: 20px;
-    font-size: 80%;
-    border-left: 1px solid grey;
-    border-top: 1px solid grey;
-    padding: 0 0 0 8px;
-    opacity: 0.3;
-    filter: alpha(opacity=30);
-}
-
 /* Post 2685 styles */
 
 .postid-2685 table.group {
@@ -208,6 +182,32 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 	body.archive .post-1359 .locations-links {
 		display: none;
 	}
+
+        /* Entry paragraphs */
+
+        .entry-content {
+            counter-reset: paragraphCount;
+        }
+
+        .entry-content p {
+            position: relative;
+            counter-increment: paragraphCount;
+        }
+
+        .entry-content p:before {
+            position: absolute;
+            content: counter(paragraphCount);
+            top: 3px;
+            left: -55px;
+            width: 20px;
+            height: 20px;
+            font-size: 80%;
+            border-left: 1px solid grey;
+            border-top: 1px solid grey;
+            padding: 0 0 0 8px;
+            opacity: 0.3;
+            filter: alpha(opacity=30);
+        }
 }
 
 /* Recent comments Widget */
