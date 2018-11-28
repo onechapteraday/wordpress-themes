@@ -205,6 +205,14 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
             opacity: 0.25;
             filter: alpha(opacity=25);
         }
+
+        .entry-content > p.media {
+            counter-increment: paragraphCount -0;
+        }
+
+        .entry-content > p.media:before {
+            display: none;
+        }
 }
 
 /* Recent comments Widget */
