@@ -185,16 +185,16 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 
         /* Entry paragraphs */
 
-        .entry-content {
+        .single .entry-content {
             counter-reset: paragraphCount;
         }
 
-        .entry-content > p {
+        .single .entry-content > p {
             position: relative;
             counter-increment: paragraphCount;
         }
 
-        .entry-content > p:before {
+        .single .entry-content > p:before {
             position: absolute;
             content: counter(paragraphCount);
             top: 3px;
@@ -206,11 +206,11 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
             filter: alpha(opacity=25);
         }
 
-        .entry-content > p.media {
+        .single .entry-content > p.media {
             counter-increment: paragraphCount -0;
         }
 
-        .entry-content > p.media:before {
+        .single .entry-content > p.media:before {
             display: none;
         }
 }
