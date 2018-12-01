@@ -54,40 +54,52 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
         $tax_query = array();
 
         if( $publisher ){
+            $publisher = str_replace( ' ', '', $publisher );
+            $pu_array  = explode( ',', $publisher );
+
             $publisher_array = array(
                 'taxonomy' => 'publisher',
                 'field'    => 'slug',
-                'terms'    => $publisher,
+                'terms'    => $pu_array,
             );
 
             array_push( $tax_query, $publisher_array );
         }
 
         if( $location ){
+            $location = str_replace( ' ', '', $location );
+            $lo_array = explode( ',', $location );
+
             $location_array = array(
                 'taxonomy' => 'location',
                 'field'    => 'slug',
-                'terms'    => $location,
+                'terms'    => $lo_array,
             );
 
             array_push( $tax_query, $location_array );
         }
 
         if( $person ){
+            $person   = str_replace( ' ', '', $person );
+            $pe_array = explode( ',', $person );
+
             $person_array = array(
                 'taxonomy' => 'person',
                 'field'    => 'slug',
-                'terms'    => $person,
+                'terms'    => $pe_array,
             );
 
             array_push( $tax_query, $person_array );
         }
 
         if( $prize ){
+            $prize    = str_replace( ' ', '', $prize );
+            $pr_array = explode( ',', $prize );
+
             $prize_array = array(
                 'taxonomy' => 'prize',
                 'field'    => 'slug',
-                'terms'    => $prize,
+                'terms'    => $pr_array,
             );
 
             array_push( $tax_query, $prize_array );
