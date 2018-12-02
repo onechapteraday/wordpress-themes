@@ -223,26 +223,51 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
             <input type="text" name="<?php echo $this->get_field_name('tag'); ?>" value="<?php echo esc_attr($tag); ?>" class="widefat" id="<?php echo $this->get_field_id('tag'); ?>" />
 	</p>
 
+        <?php
+
+        if( taxonomy_exists( 'publisher' )) {
+
+        ?>
 	<p>
 	    <label for="<?php echo $this->get_field_id('publisher'); ?>"><?php _e('Publisher slug (optional):','twentysixteen-child'); ?></label>
             <input type="text" name="<?php echo $this->get_field_name('publisher'); ?>" value="<?php echo esc_attr($publisher); ?>" class="widefat" id="<?php echo $this->get_field_id('publisher'); ?>" />
 	</p>
+        <?php
 
+        }
+
+        if( taxonomy_exists( 'location' )) {
+
+        ?>
 	<p>
 	    <label for="<?php echo $this->get_field_id('location'); ?>"><?php _e('Location slug (optional):','twentysixteen-child'); ?></label>
             <input type="text" name="<?php echo $this->get_field_name('location'); ?>" value="<?php echo esc_attr($location); ?>" class="widefat" id="<?php echo $this->get_field_id('location'); ?>" />
 	</p>
+        <?php
 
+        }
+
+        if( taxonomy_exists( 'person' )) {
+
+        ?>
 	<p>
 	    <label for="<?php echo $this->get_field_id('person'); ?>"><?php _e('Person slug (optional):','twentysixteen-child'); ?></label>
             <input type="text" name="<?php echo $this->get_field_name('person'); ?>" value="<?php echo esc_attr($person); ?>" class="widefat" id="<?php echo $this->get_field_id('person'); ?>" />
 	</p>
+        <?php
 
+        }
+
+        if( taxonomy_exists( 'prize' )) {
+
+        ?>
 	<p>
 	    <label for="<?php echo $this->get_field_id('prize'); ?>"><?php _e('Prize slug (optional):','twentysixteen-child'); ?></label>
             <input type="text" name="<?php echo $this->get_field_name('prize'); ?>" value="<?php echo esc_attr($prize); ?>" class="widefat" id="<?php echo $this->get_field_id('prize'); ?>" />
 	</p>
 	<?php
+
+        }
 
     }
 }
