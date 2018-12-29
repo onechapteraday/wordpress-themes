@@ -232,59 +232,6 @@
                                         }
 			}
 			
-			$rating = get_book_rating( $book_id );
-
-			if( $rating && is_user_logged_in() ){
-
-			?>
-		        <tr>
-			        <td>
-					<b>Mon appréciation</b>
-			        </td>
-			        <td>
-					<?php
-						$rating = get_book_rating( $book_id );
-
-						switch ( $rating ) {
-						    case 1:
-						        $rating_title = 'Je n\'ai pas aimé';
-						        break;
-						    case 2:
-						        $rating_title = 'Pourquoi pas...';
-						        break;
-						    case 3:
-						        $rating_title = 'J\'ai aimé';
-						        break;
-						    case 4:
-						        $rating_title = 'J\'ai adoré';
-						        break;
-						    case 5:
-						        $rating_title = 'Coup de c&oelig;ur';
-						        break;
-						    default:
-						        $rating_title = '';
-						        break;
-						}
-						?>
-						<span title="<?php echo $rating_title; ?>">
-						<?php
-						for ($i = 0; $i < 5; $i++) {
-							if ($i < $rating) {
-								echo '&bigstar;';
-							} else {
-								echo '&star;';
-							}
-						}
-						?>
-						</span>
-						<?php
-					?>
-			        </td>
-		        </tr>
-			<?php
-			
-			}
-			
 			?>
 		        <tr>
 			        <td>
