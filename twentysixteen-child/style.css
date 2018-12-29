@@ -130,10 +130,19 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     font-size: 15px;
 }
 
-.tagcloud a.tag-link-1936 {
+.widget_popular_prizes_in_category_widget .tagcloud li {
+    max-width: 100%;
+}
+
+.widget_popular_prizes_in_category_widget .tagcloud .tag-cloud-link {
     line-height: 1.375;
     padding-top: 0.35em;
     padding-bottom: 0.275em;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0.1535em;
 }
 
 /* Post 2685 styles */
