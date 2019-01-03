@@ -18,17 +18,24 @@ class twentysixteenchild_randomposts_without_last_color extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-        $title = isset($instance['title']) ? $instance['title'] : '';
+        $title      = isset($instance['title']) ? $instance['title'] : '';
         $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
-        $category = isset($instance['category']) ? apply_filters('widget_title', $instance['category']) : '';
-        $tag = isset($instance['tag']) ? $instance['tag'] : '';
+        $category   = isset($instance['category']) ? apply_filters('widget_title', $instance['category']) : '';
+        $tag        = isset($instance['tag']) ? $instance['tag'] : '';
+        $publisher  = isset($instance['publisher']) ? $instance['publisher'] : '';
+        $location   = isset($instance['location']) ? $instance['location'] : '';
+        $person     = isset($instance['person']) ? $instance['person'] : '';
+        $prize      = isset($instance['prize']) ? $instance['prize'] : '';
 
         echo $args['before_widget'];
 
         if( ! empty( $title ) )
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
-        # The Query
+
+        ## The Query
+
+        # Add every existing post types
         $post_types = array( 'post' );
 
         if( post_type_exists( 'book' ) ){
