@@ -96,11 +96,12 @@
 			?>
 		        <tr>
 			        <td>
-					<b>Disponible sur</b>
+					<b>Lien affilié</b>
 			        </td>
 			        <td>
 					<a href="<?php echo $amazon['link']; ?>" target="_blank" rel="nofollow" class="logo_partner logo_amazon">
-						<img src="<?php echo $amazon['img']; ?>" alt="Amazon" />
+				            <img src="<?php echo $amazon['img_buy']; ?>" alt="Achat sur Amazon" />
+                                            <span>Acheter sur Amazon</span>
 					</a>
 			        </td>
 		        </tr>
