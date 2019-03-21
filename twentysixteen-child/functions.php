@@ -188,7 +188,7 @@ function twentysixteen_post_thumbnail( $post_thumbnail_size = 'post-thumbnail', 
 
     <div class="post-thumbnail">
         <figure>
-            <?php the_post_thumbnail( $post_thumbnail_size, array( 'alt' => the_title_attribute( 'echo=0' ), 'show_link' => $post_thumbnail_link ) ); ?>
+            <?php the_post_thumbnail( $post_thumbnail_size, array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
         </figure>
     </div>
 
