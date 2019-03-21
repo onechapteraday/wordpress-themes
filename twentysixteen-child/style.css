@@ -68,6 +68,10 @@ td {
     font-size: 0.9375rem;
 }
 
+.single span.small-caps {
+  font-variant: small-caps;
+}
+
 .custom-front-page blockquote {
     border: none;
     padding: 0;
