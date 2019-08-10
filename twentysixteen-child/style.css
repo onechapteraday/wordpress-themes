@@ -78,6 +78,16 @@ td {
     color: initial;
 }
 
+footer.entry-footer {
+    font-size: 12px;
+    font-size: 0.75em;
+}
+
+footer.entry-footer span.author.vcard a,
+footer.entry-footer span.author.vcard span {
+    display: none;
+}
+
 body:not(.search-results) .front-sidebar article:not(.type-page).rp-big-two .entry-footer,
 body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     float: none;
