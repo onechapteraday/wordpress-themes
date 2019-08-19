@@ -149,6 +149,11 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
     }
 }
 
-register_widget('twentysixteenchild_recentposts_color');
+# Register and load the widget
+function twentysixteenchild_recentposts_color_register() {
+    register_widget( 'twentysixteenchild_recentposts_color' );
+}
+
+add_action( 'widgets_init', 'twentysixteenchild_recentposts_color_register' );
 
 ?>

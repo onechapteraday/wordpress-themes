@@ -169,6 +169,11 @@ class twentysixteenchild_randomposts_without_last_color extends WP_Widget {
     }
 }
 
-register_widget('twentysixteenchild_randomposts_without_last_color');
+# Register and load the widget
+function twentysixteenchild_randomposts_without_last_color_register() {
+    register_widget( 'twentysixteenchild_randomposts_without_last_color' );
+}
+
+add_action( 'widgets_init', 'twentysixteenchild_randomposts_without_last_color_register' );
 
 ?>

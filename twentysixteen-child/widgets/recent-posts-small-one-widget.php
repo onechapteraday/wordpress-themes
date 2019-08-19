@@ -128,6 +128,11 @@ class twentysixteenchild_recentposts_small_one extends WP_Widget {
      }
 }
 
-register_widget('twentysixteenchild_recentposts_small_one');
+# Register and load the widget
+function twentysixteenchild_recentposts_small_one_register() {
+    register_widget( 'twentysixteenchild_recentposts_small_one' );
+}
+
+add_action( 'widgets_init', 'twentysixteenchild_recentposts_small_one_register' );
 
 ?>

@@ -148,6 +148,11 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
     }
 }
 
-register_widget('twentysixteenchild_recentposts_big_two');
+# Register and load the widget
+function twentysixteenchild_recentposts_big_two_register() {
+    register_widget( 'twentysixteenchild_recentposts_big_two' );
+}
+
+add_action( 'widgets_init', 'twentysixteenchild_recentposts_big_two_register' );
 
 ?>

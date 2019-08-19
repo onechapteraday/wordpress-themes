@@ -88,6 +88,11 @@ class twentysixteenchild_quote extends WP_Widget {
     }
 }
 
-register_widget('twentysixteenchild_quote');
+# Register and load the widget
+function twentysixteenchild_quote_register() {
+    register_widget( 'twentysixteenchild_quote' );
+}
+
+add_action( 'widgets_init', 'twentysixteenchild_quote_register' );
 
 ?>

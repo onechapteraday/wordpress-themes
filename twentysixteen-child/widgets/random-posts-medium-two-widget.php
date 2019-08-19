@@ -143,6 +143,11 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
     }
 }
 
-register_widget('twentysixteenchild_randomposts_medium_two');
+# Register and load the widget
+function twentysixteenchild_randomposts_medium_two_register() {
+    register_widget( 'twentysixteenchild_randomposts_medium_two' );
+}
+
+add_action( 'widgets_init', 'twentysixteenchild_randomposts_medium_two_register' );
 
 ?>
