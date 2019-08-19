@@ -455,26 +455,6 @@ function twentysixteenchild_widgets_init() {
         'after_title'   => '</h2>',
     ));
 
-    register_sidebar( array(
-        'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
-        'id'            => 'sidebar-2',
-        'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ));
-
-    register_sidebar( array(
-        'name'          => __( 'Content Bottom 2', 'twentysixteen' ),
-        'id'            => 'sidebar-3',
-        'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ));
-
     register_sidebar(array(
         'name'          => __( 'Sidebar for Books', 'twentysixteen-child' ),
         'id'            => 'book',
@@ -563,6 +543,26 @@ function twentysixteenchild_widgets_init() {
         'after_widget' => "</aside>",
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
+    ));
+
+    register_sidebar( array(
+        'name'          => __( 'Content Bottom 1', 'twentysixteen-child' ),
+        'id'            => 'sidebar-2',
+        'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen-child' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+
+    register_sidebar( array(
+        'name'          => __( 'Content Bottom 2', 'twentysixteen-child' ),
+        'id'            => 'sidebar-3',
+        'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen-child' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
     ));
 }
 
