@@ -11,10 +11,19 @@
 class twentysixteenchild_randomposts_without_last_medium_two extends WP_Widget {
 
     public function __construct() {
-        parent::__construct( 'twentysixteenchild_randomposts_without_last_medium_two', __( 'New: Random Posts w/o Last 5 (Medium 2)', 'twentysixteen-child' ), array(
-            'classname'   => 'widget_twentysixteenchild_randomposts_without_last_medium_two',
-            'description' => __( 'Medium-sized Random Posts w/o Last 5 in a 2-column layout with featured image and excerpt.', 'twentysixteen-child' ),
-        ));
+        parent::__construct(
+            # Base ID of your widget
+            'twentysixteenchild_randomposts_without_last_medium_two',
+
+            # Widget name will appear in UI
+            __( 'Random Posts w/o Last 5 (Medium 2)', 'twentysixteen-child' ),
+
+            # Widget description
+            array(
+                'classname'   => 'widget_twentysixteenchild_randomposts_without_last_medium_two',
+                'description' => __( 'Medium-sized Random Posts w/o Last 5 in a 2-column layout with featured image and excerpt.', 'twentysixteen-child' ),
+            )
+        );
     }
 
     public function widget($args, $instance) {

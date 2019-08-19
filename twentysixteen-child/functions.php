@@ -478,7 +478,7 @@ function twentysixteenchild_widgets_init() {
     register_sidebar(array(
         'name'          => __( 'Sidebar for Books', 'twentysixteen-child' ),
         'id'            => 'book',
-        'description'   => 'Add widgets here to appears in your Books sidebar.',
+        'description'   => __('Add widgets here to appears in your Book sidebar.', 'twentysixteen-child'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h2 class="widget-title">',
@@ -488,7 +488,7 @@ function twentysixteenchild_widgets_init() {
     register_sidebar(array(
         'name'          => __( 'Sidebar for Music', 'twentysixteen-child' ),
         'id'            => 'music',
-        'description'   => 'Add widgets here to appears in your Music sidebar.',
+        'description'   => __('Add widgets here to appears in your Music sidebar.', 'twentysixteen-child'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h2 class="widget-title">',

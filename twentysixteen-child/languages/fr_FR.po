@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-19 11:46-0400\n"
-"PO-Revision-Date: 2019-08-19 12:05-0400\n"
+"POT-Creation-Date: 2019-08-19 12:41-0400\n"
+"PO-Revision-Date: 2019-08-19 12:42-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -59,15 +59,15 @@ msgctxt "Used before post format."
 msgid "Format"
 msgstr "Format"
 
-#: functions.php:299 widgets/random-posts-colored-widget.php:164
-#: widgets/random-posts-medium-two-widget.php:76
-#: widgets/random-posts-without-last-colored-widget.php:105
-#: widgets/random-posts-without-last-medium-two-widget.php:88
-#: widgets/recent-posts-big-one-widget.php:76
-#: widgets/recent-posts-big-two-widget.php:80
-#: widgets/recent-posts-colored-widget.php:85
-#: widgets/recent-posts-medium-one-widget.php:73
-#: widgets/recent-posts-medium-two-widget.php:75
+#: functions.php:299 widgets/random-posts-colored-widget.php:173
+#: widgets/random-posts-medium-two-widget.php:85
+#: widgets/random-posts-without-last-colored-widget.php:114
+#: widgets/random-posts-without-last-medium-two-widget.php:97
+#: widgets/recent-posts-big-one-widget.php:85
+#: widgets/recent-posts-big-two-widget.php:89
+#: widgets/recent-posts-colored-widget.php:94
+#: widgets/recent-posts-medium-one-widget.php:82
+#: widgets/recent-posts-medium-two-widget.php:84
 #, php-format
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
@@ -128,9 +128,21 @@ msgstr "Contenu du bas 2"
 msgid "Sidebar for Books"
 msgstr "Barre latérale pour les livres"
 
+#: functions.php:481
+msgid "Add widgets here to appears in your Book sidebar."
+msgstr ""
+"Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
+"pour les livres."
+
 #: functions.php:489
 msgid "Sidebar for Music"
 msgstr "Barre latérale pour la musique"
+
+#: functions.php:491
+msgid "Add widgets here to appears in your Music sidebar."
+msgstr ""
+"Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
+"pour la musique."
 
 #: functions.php:499
 msgid "Front Page - FullWidth Top"
@@ -239,7 +251,7 @@ msgstr "F j, Y"
 #: functions.php:612
 msgctxt "post format archive title"
 msgid "Asides"
-msgstr ""
+msgstr "Apartés"
 
 #: functions.php:614
 msgctxt "post format archive title"
@@ -406,118 +418,118 @@ msgstr ""
 msgid "New title"
 msgstr "Nouveau titre"
 
-#: widgets/popular-tags-in-category-widget.php:216 widgets/quote-widget.php:64
-#: widgets/random-posts-colored-widget.php:207
-#: widgets/random-posts-medium-two-widget.php:114
-#: widgets/random-posts-without-last-colored-widget.php:140
-#: widgets/random-posts-without-last-medium-two-widget.php:126
-#: widgets/recent-posts-big-one-widget.php:115
-#: widgets/recent-posts-big-two-widget.php:119
-#: widgets/recent-posts-colored-widget.php:120
-#: widgets/recent-posts-medium-one-widget.php:106
-#: widgets/recent-posts-medium-two-widget.php:113
-#: widgets/recent-posts-small-one-widget.php:99
-#: widgets/recent-posts-small-two-widget.php:91
+#: widgets/popular-tags-in-category-widget.php:216 widgets/quote-widget.php:73
+#: widgets/random-posts-colored-widget.php:216
+#: widgets/random-posts-medium-two-widget.php:123
+#: widgets/random-posts-without-last-colored-widget.php:149
+#: widgets/random-posts-without-last-medium-two-widget.php:135
+#: widgets/recent-posts-big-one-widget.php:124
+#: widgets/recent-posts-big-two-widget.php:128
+#: widgets/recent-posts-colored-widget.php:129
+#: widgets/recent-posts-medium-one-widget.php:115
+#: widgets/recent-posts-medium-two-widget.php:122
+#: widgets/recent-posts-small-one-widget.php:108
+#: widgets/recent-posts-small-two-widget.php:100
 msgid "Title:"
-msgstr "Nouveau&nbsp;:"
+msgstr "Titre :"
 
-#: widgets/quote-widget.php:14
-msgid "New: Quote"
-msgstr "Nouveau : Citation"
+#: widgets/quote-widget.php:19
+msgid "Quote"
+msgstr "Citation"
 
-#: widgets/quote-widget.php:16
+#: widgets/quote-widget.php:24
 msgid "A big quote or text slogan."
 msgstr "Une grande citation ou un slogan."
 
-#: widgets/quote-widget.php:69
+#: widgets/quote-widget.php:78
 msgid "Quote Text:"
 msgstr "Texte de la citation :"
 
-#: widgets/quote-widget.php:74
+#: widgets/quote-widget.php:83
 msgid "Quote Author (optional):"
 msgstr "Auteur de la citation (facultatif) :"
 
-#: widgets/random-posts-colored-widget.php:14
-msgid "New: Random Posts (Background)"
-msgstr "Nouveau : Articles aléatoires (Arrière-plan)"
+#: widgets/random-posts-colored-widget.php:19
+msgid "Random Posts (Background)"
+msgstr "Articles aléatoires (Arrière-plan)"
 
-#: widgets/random-posts-colored-widget.php:16
+#: widgets/random-posts-colored-widget.php:24
 msgid "Medium-sized Random Posts with a background color."
 msgstr "Articles aléatoires de taille moyenne avec un arrière-plan coloré."
 
-#: widgets/random-posts-colored-widget.php:153
-#: widgets/random-posts-medium-two-widget.php:69
-#: widgets/random-posts-without-last-colored-widget.php:94
-#: widgets/random-posts-without-last-medium-two-widget.php:81
-#: widgets/recent-posts-big-one-widget.php:69
-#: widgets/recent-posts-big-two-widget.php:69
-#: widgets/recent-posts-colored-widget.php:74
-#: widgets/recent-posts-medium-two-widget.php:68
+#: widgets/random-posts-colored-widget.php:162
+#: widgets/random-posts-medium-two-widget.php:78
+#: widgets/random-posts-without-last-colored-widget.php:103
+#: widgets/random-posts-without-last-medium-two-widget.php:90
+#: widgets/recent-posts-big-one-widget.php:78
+#: widgets/recent-posts-big-two-widget.php:78
+#: widgets/recent-posts-colored-widget.php:83
+#: widgets/recent-posts-medium-two-widget.php:77
 #, php-format
 msgid "Permalink to %s"
 msgstr "Permalien vers %s"
 
-#: widgets/random-posts-colored-widget.php:212
-#: widgets/random-posts-medium-two-widget.php:119
-#: widgets/random-posts-without-last-colored-widget.php:145
-#: widgets/random-posts-without-last-medium-two-widget.php:131
-#: widgets/recent-posts-big-one-widget.php:120
-#: widgets/recent-posts-big-two-widget.php:124
-#: widgets/recent-posts-colored-widget.php:125
-#: widgets/recent-posts-medium-one-widget.php:111
-#: widgets/recent-posts-medium-two-widget.php:118
-#: widgets/recent-posts-small-one-widget.php:104
-#: widgets/recent-posts-small-two-widget.php:96
+#: widgets/random-posts-colored-widget.php:221
+#: widgets/random-posts-medium-two-widget.php:128
+#: widgets/random-posts-without-last-colored-widget.php:154
+#: widgets/random-posts-without-last-medium-two-widget.php:140
+#: widgets/recent-posts-big-one-widget.php:129
+#: widgets/recent-posts-big-two-widget.php:133
+#: widgets/recent-posts-colored-widget.php:134
+#: widgets/recent-posts-medium-one-widget.php:120
+#: widgets/recent-posts-medium-two-widget.php:127
+#: widgets/recent-posts-small-one-widget.php:113
+#: widgets/recent-posts-small-two-widget.php:105
 msgid "Number of posts to show:"
 msgstr "Nombre d'articles à afficher&nbsp;:"
 
-#: widgets/random-posts-colored-widget.php:217
-#: widgets/random-posts-medium-two-widget.php:124
-#: widgets/random-posts-without-last-colored-widget.php:150
-#: widgets/random-posts-without-last-medium-two-widget.php:136
-#: widgets/recent-posts-big-one-widget.php:125
-#: widgets/recent-posts-big-two-widget.php:129
-#: widgets/recent-posts-colored-widget.php:130
-#: widgets/recent-posts-medium-one-widget.php:116
-#: widgets/recent-posts-medium-two-widget.php:123
-#: widgets/recent-posts-small-two-widget.php:101
+#: widgets/random-posts-colored-widget.php:226
+#: widgets/random-posts-medium-two-widget.php:133
+#: widgets/random-posts-without-last-colored-widget.php:159
+#: widgets/random-posts-without-last-medium-two-widget.php:145
+#: widgets/recent-posts-big-one-widget.php:134
+#: widgets/recent-posts-big-two-widget.php:138
+#: widgets/recent-posts-colored-widget.php:139
+#: widgets/recent-posts-medium-one-widget.php:125
+#: widgets/recent-posts-medium-two-widget.php:132
+#: widgets/recent-posts-small-two-widget.php:110
 msgid "Category slug (optional):"
 msgstr "Slug de la catégorie (facultatif)&nbsp;:"
 
-#: widgets/random-posts-colored-widget.php:222
-#: widgets/random-posts-medium-two-widget.php:129
-#: widgets/random-posts-without-last-colored-widget.php:155
-#: widgets/random-posts-without-last-medium-two-widget.php:141
-#: widgets/recent-posts-big-one-widget.php:130
-#: widgets/recent-posts-big-two-widget.php:134
-#: widgets/recent-posts-colored-widget.php:135
-#: widgets/recent-posts-medium-one-widget.php:121
-#: widgets/recent-posts-medium-two-widget.php:128
-#: widgets/recent-posts-small-two-widget.php:106
+#: widgets/random-posts-colored-widget.php:231
+#: widgets/random-posts-medium-two-widget.php:138
+#: widgets/random-posts-without-last-colored-widget.php:164
+#: widgets/random-posts-without-last-medium-two-widget.php:150
+#: widgets/recent-posts-big-one-widget.php:139
+#: widgets/recent-posts-big-two-widget.php:143
+#: widgets/recent-posts-colored-widget.php:144
+#: widgets/recent-posts-medium-one-widget.php:130
+#: widgets/recent-posts-medium-two-widget.php:137
+#: widgets/recent-posts-small-two-widget.php:115
 msgid "Tag slug (optional):"
 msgstr "Slug de l'étiquette (facultatif)&nbsp;:"
 
-#: widgets/random-posts-colored-widget.php:232
+#: widgets/random-posts-colored-widget.php:241
 msgid "Publisher slug (optional):"
 msgstr "Slug de la maison d'édition (facultatif)&nbsp;:"
 
-#: widgets/random-posts-colored-widget.php:243
+#: widgets/random-posts-colored-widget.php:252
 msgid "Location slug (optional):"
 msgstr "Slug de la localisation (facultatif)&nbsp;:"
 
-#: widgets/random-posts-colored-widget.php:254
+#: widgets/random-posts-colored-widget.php:263
 msgid "Person slug (optional):"
 msgstr "Slug de la personne (facultatif)&nbsp;:"
 
-#: widgets/random-posts-colored-widget.php:265
+#: widgets/random-posts-colored-widget.php:274
 msgid "Prize slug (optional):"
 msgstr "Slug du prix littéraire (facultatif)&nbsp;:"
 
-#: widgets/random-posts-medium-two-widget.php:14
-msgid "New: Random Posts (Medium 2)"
-msgstr "Nouveau : Articles aléatoires (Moyen 2)"
+#: widgets/random-posts-medium-two-widget.php:19
+msgid "Random Posts (Medium 2)"
+msgstr "Articles aléatoires (Moyen 2)"
 
-#: widgets/random-posts-medium-two-widget.php:16
+#: widgets/random-posts-medium-two-widget.php:24
 msgid ""
 "Medium-sized Random Posts in a 2-column layout with featured image and "
 "excerpt."
@@ -525,21 +537,21 @@ msgstr ""
 "Articles aléatoires de taille moyenne avec une mise en page sur deux "
 "colonnes, une image mise en avant et un extrait."
 
-#: widgets/random-posts-without-last-colored-widget.php:14
-msgid "New: Random Posts w/o Last 5 (Background)"
-msgstr "Nouveau : Articles aléatoires sans les 5 derniers (Arrière-plan)"
+#: widgets/random-posts-without-last-colored-widget.php:19
+msgid "Random Posts w/o Last 5 (Background)"
+msgstr "Articles aléatoires sans les 5 derniers (Arrière-plan)"
 
-#: widgets/random-posts-without-last-colored-widget.php:16
+#: widgets/random-posts-without-last-colored-widget.php:24
 msgid "Medium-sized Random Posts w/o Last 5 with a background color."
 msgstr ""
 "Articles aléatoires de taille moyenne sans les cinq derniers publiés avec un "
 "arrière-plan coloré."
 
-#: widgets/random-posts-without-last-medium-two-widget.php:14
-msgid "New: Random Posts w/o Last 5 (Medium 2)"
-msgstr "Nouveau : Articles aléatoires sans les 5 derniers (Moyen&nbsp;2)"
+#: widgets/random-posts-without-last-medium-two-widget.php:19
+msgid "Random Posts w/o Last 5 (Medium 2)"
+msgstr "Articles aléatoires sans les 5 derniers (Moyen&nbsp;2)"
 
-#: widgets/random-posts-without-last-medium-two-widget.php:16
+#: widgets/random-posts-without-last-medium-two-widget.php:24
 msgid ""
 "Medium-sized Random Posts w/o Last 5 in a 2-column layout with featured "
 "image and excerpt."
@@ -547,11 +559,11 @@ msgstr ""
 "Articles aléatoires de taille moyenne sans les cinq derniers publiés mise en "
 "page sur deux colonnes, une image mise en avant et un extrait."
 
-#: widgets/recent-posts-big-one-widget.php:14
-msgid "New: Recent Posts (Big 1)"
-msgstr "Nouveau : Articles récents (Grand 2)"
+#: widgets/recent-posts-big-one-widget.php:19
+msgid "Recent Posts (Big 1)"
+msgstr "Articles récents (Grand 1)"
 
-#: widgets/recent-posts-big-one-widget.php:16
+#: widgets/recent-posts-big-one-widget.php:24
 msgid ""
 "Big Recents Posts with an overlay excerpt text. Featured images must have a "
 "minimum size of 1200x800 pixel."
@@ -560,11 +572,11 @@ msgstr ""
 "Les images mises en avant doivent avoir une taille minimale de 1200x800 "
 "pixels."
 
-#: widgets/recent-posts-big-two-widget.php:14
-msgid "New: Recent Posts (Big 2)"
-msgstr "Nouveau : Articles récents (Grand 2)"
+#: widgets/recent-posts-big-two-widget.php:19
+msgid "Recent Posts (Big 2)"
+msgstr "Articles récents (Grand 2)"
 
-#: widgets/recent-posts-big-two-widget.php:16
+#: widgets/recent-posts-big-two-widget.php:24
 msgid ""
 "Big Recents Posts with featured image and a 2-column excerpt. Featured "
 "images must have a minimum size of 1200x800 pixel."
@@ -573,29 +585,29 @@ msgstr ""
 "sur deux colonnes. Les images mises en avant doivent avoir une taille "
 "minimale de 1200x800 pixels."
 
-#: widgets/recent-posts-colored-widget.php:14
-msgid "New: Recent Posts (Background)"
-msgstr "Nouveau : Articles récents (Arrière-plan)"
+#: widgets/recent-posts-colored-widget.php:19
+msgid "Recent Posts (Background)"
+msgstr "Articles récents (Arrière-plan)"
 
-#: widgets/recent-posts-colored-widget.php:16
+#: widgets/recent-posts-colored-widget.php:24
 msgid "Medium-sized Recents Posts with a background color."
 msgstr "Articles récents de taille moyenne avec un arrière-plan coloré."
 
-#: widgets/recent-posts-medium-one-widget.php:14
-msgid "New: Recent Posts (Medium 1)"
-msgstr "Nouveau : Articles récents (Moyen 1)"
+#: widgets/recent-posts-medium-one-widget.php:19
+msgid "Recent Posts (Medium 1)"
+msgstr "Articles récents (Moyen 1)"
 
-#: widgets/recent-posts-medium-one-widget.php:16
+#: widgets/recent-posts-medium-one-widget.php:24
 msgid "Medium-sized Recents Posts with featured image and excerpt."
 msgstr ""
 "Articles récents de taille moyenne avec une image mise en avant et un "
 "extrait."
 
-#: widgets/recent-posts-medium-two-widget.php:14
-msgid "New: Recent Posts (Medium 2)"
-msgstr "Nouveau : Articles récents (Moyen 2)"
+#: widgets/recent-posts-medium-two-widget.php:19
+msgid "Recent Posts (Medium 2)"
+msgstr "Articles récents (Moyen 2)"
 
-#: widgets/recent-posts-medium-two-widget.php:16
+#: widgets/recent-posts-medium-two-widget.php:24
 msgid ""
 "Medium-sized Recents Posts in a 2-column layout with featured image and "
 "excerpt."
@@ -603,33 +615,36 @@ msgstr ""
 "Articles récents de taille moyenne avec une mise en page sur deux colonnes, "
 "une image mise en avant et un extrait."
 
-#: widgets/recent-posts-small-one-widget.php:14
-msgid "New: Recent Posts (Small 1)"
-msgstr "Nouveau : Articles récents (Petit 1)"
+#: widgets/recent-posts-small-one-widget.php:19
+msgid "Recent Posts (Small 1)"
+msgstr "Articles récents (Petit 1)"
 
-#: widgets/recent-posts-small-one-widget.php:16
+#: widgets/recent-posts-small-one-widget.php:24
 msgid "Small Recents Posts widget with featured images."
 msgstr "Articles récents de petite taille avec les images mises en avant."
 
-#: widgets/recent-posts-small-one-widget.php:109
+#: widgets/recent-posts-small-one-widget.php:118
 msgid "Category slug (optional, separate multiple categories by comma):"
 msgstr ""
 "Slug de la catégorie (facultatif, séparer les catégories avec une "
 "virgule)&nbsp;:"
 
-#: widgets/recent-posts-small-one-widget.php:114
+#: widgets/recent-posts-small-one-widget.php:123
 msgid "Tag slug (optional, separate multiple tags by comma):"
 msgstr ""
 "Slug de l'étiquette (facultatif, séparer les catégories avec une "
 "virgule)&nbsp;:"
 
-#: widgets/recent-posts-small-two-widget.php:14
-msgid "New: Recent Posts (Small 2)"
-msgstr "Nouveau : Articles récents (Petit 2)"
+#: widgets/recent-posts-small-two-widget.php:19
+msgid "Recent Posts (Small 2)"
+msgstr "Articles récents (Petit 2)"
 
-#: widgets/recent-posts-small-two-widget.php:16
+#: widgets/recent-posts-small-two-widget.php:24
 msgid "Small Recents Posts widget without featured images."
 msgstr "Articles récents de petite taille sans les images mises en avant."
+
+#~ msgid "New: Quote"
+#~ msgstr "Nouveau : Citation"
 
 #~ msgid "by <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
 #~ msgstr "par <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"

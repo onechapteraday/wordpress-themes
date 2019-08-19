@@ -11,10 +11,19 @@
 class twentysixteenchild_recentposts_small_two extends WP_Widget {
 
     public function __construct() {
-        parent::__construct( 'twentysixteenchild_recentposts_small_two', __( 'New: Recent Posts (Small 2)', 'twentysixteen-child' ), array(
-            'classname'   => 'widget_twentysixteenchild_recentposts_small_two',
-            'description' => __( 'Small Recents Posts widget without featured images.', 'twentysixteen-child' ),
-        ));
+        parent::__construct(
+            # Base ID of your widget
+            'twentysixteenchild_recentposts_small_two',
+
+            # Widget name will appear in UI
+            __( 'Recent Posts (Small 2)', 'twentysixteen-child' ),
+
+            # Widget description
+            array(
+                'classname'   => 'widget_twentysixteenchild_recentposts_small_two',
+                'description' => __( 'Small Recents Posts widget without featured images.', 'twentysixteen-child' ),
+            )
+        );
     }
 
     public function widget($args, $instance) {

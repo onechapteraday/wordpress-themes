@@ -11,10 +11,19 @@
 class twentysixteenchild_randomposts_color extends WP_Widget {
 
     public function __construct() {
-        parent::__construct( 'twentysixteenchild_randomposts_color', __( 'New: Random Posts (Background)', 'twentysixteen-child' ), array(
-            'classname'   => 'widget_twentysixteenchild_randomposts_color',
-            'description' => __( 'Medium-sized Random Posts with a background color.', 'twentysixteen-child' ),
-        ));
+        parent::__construct(
+            # Base ID of your widget
+            'twentysixteenchild_randomposts_color',
+
+            # Widget name will appear in UI
+            __( 'Random Posts (Background)', 'twentysixteen-child' ),
+
+            # Widget description
+            array(
+                'classname'   => 'widget_twentysixteenchild_randomposts_color',
+                'description' => __( 'Medium-sized Random Posts with a background color.', 'twentysixteen-child' ),
+            )
+        );
     }
 
     public function widget($args, $instance) {

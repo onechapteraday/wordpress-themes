@@ -11,10 +11,19 @@
 class twentysixteenchild_recentposts_color extends WP_Widget {
 
     public function __construct() {
-        parent::__construct( 'twentysixteenchild_recentposts_color', __( 'New: Recent Posts (Background)', 'twentysixteen-child' ), array(
-            'classname'   => 'widget_twentysixteenchild_recentposts_color',
-            'description' => __( 'Medium-sized Recents Posts with a background color.', 'twentysixteen-child' ),
-        ));
+        parent::__construct(
+            # Base ID of your widget
+            'twentysixteenchild_recentposts_color',
+
+            # Widget name will appear in UI
+            __( 'Recent Posts (Background)', 'twentysixteen-child' ),
+
+            # Widget description
+            array(
+                'classname'   => 'widget_twentysixteenchild_recentposts_color',
+                'description' => __( 'Medium-sized Recents Posts with a background color.', 'twentysixteen-child' ),
+            )
+        );
     }
 
     public function widget($args, $instance) {

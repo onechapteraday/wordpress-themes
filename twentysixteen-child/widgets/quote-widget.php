@@ -11,10 +11,19 @@
 class twentysixteenchild_quote extends WP_Widget {
 
     public function __construct() {
-        parent::__construct( 'twentysixteenchild_quote', __( 'New: Quote', 'twentysixteen-child' ), array(
-            'classname'   => 'widget_twentysixteenchild_quote',
-            'description' => __( 'A big quote or text slogan.', 'twentysixteen-child' ),
-        ));
+        parent::__construct(
+            # Base ID of your widget
+            'twentysixteenchild_quote',
+
+            # Widget name will appear in UI
+            __( 'Quote', 'twentysixteen-child' ),
+
+            # Widget description
+            array(
+                'classname'   => 'widget_twentysixteenchild_quote',
+                'description' => __( 'A big quote or text slogan.', 'twentysixteen-child' ),
+            )
+        );
     }
 
     public function widget($args, $instance) {

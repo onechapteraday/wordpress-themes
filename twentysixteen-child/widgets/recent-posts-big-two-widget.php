@@ -11,10 +11,19 @@
 class twentysixteenchild_recentposts_big_two extends WP_Widget {
 
     public function __construct() {
-        parent::__construct( 'twentysixteenchild_recentposts_big_two', __( 'New: Recent Posts (Big 2)', 'twentysixteen-child' ), array(
-            'classname'   => 'widget_twentysixteenchild_recentposts_big_two',
-            'description' => __( 'Big Recents Posts with featured image and a 2-column excerpt. Featured images must have a minimum size of 1200x800 pixel.', 'twentysixteen-child' ),
-        ));
+        parent::__construct(
+            # Base ID of your widget
+            'twentysixteenchild_recentposts_big_two',
+
+            # Widget name will appear in UI
+            __( 'Recent Posts (Big 2)', 'twentysixteen-child' ),
+
+            # Widget description
+            array(
+                'classname'   => 'widget_twentysixteenchild_recentposts_big_two',
+                'description' => __( 'Big Recents Posts with featured image and a 2-column excerpt. Featured images must have a minimum size of 1200x800 pixel.', 'twentysixteen-child' ),
+            )
+        );
     }
 
     public function widget($args, $instance) {
