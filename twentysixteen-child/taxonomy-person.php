@@ -31,47 +31,54 @@ get_header(); ?>
                                     }
                                 ?>
 				<?php
-					$title = single_term_title('', false);
+					$title = single_term_title( '', false );
 					echo '<h1 class="page-title">' . $title . '</h1>';
 
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 
-					$facebook = get_person_option('facebook');
-					$instagram = get_person_option('instagram');
-					$soundcloud = get_person_option('soundcloud');
-					$twitter = get_person_option('twitter');
-					$youtube = get_person_option('youtube');
-					$website = get_person_option('website');
-					$sidebar = get_person_option('sidebar');
+					$facebook   = get_person_option( 'facebook' )  ;
+					$instagram  = get_person_option( 'instagram' ) ;
+					$soundcloud = get_person_option( 'soundcloud' );
+					$goodreads  = get_person_option( 'goodreads' ) ;
+					$twitter    = get_person_option( 'twitter' )   ;
+					$youtube    = get_person_option( 'youtube' )   ;
+					$website    = get_person_option( 'website' )   ;
+					$sidebar    = get_person_option( 'sidebar' )   ;
 
-					if ( $facebook || $instagram || $soundcloud || $twitter || $youtube || $website ) {
+					if ( $facebook || $instagram || $soundcloud || $twitter || $youtube || $goodreads || $website ) {
 					    echo '<div class="taxonomy-description social-icons">';
+					    echo '<p><u>' . __( 'More information', 'twentysixteen-child' ) . '</u>' . __( ': ', 'twentysixteen-child' );
 
 					    if ( $website ) {
-					        echo '<a class="icon-mouse" href="http://' . $website . '" target="_blank"></a>';
+					        echo '<a class="icon-link" href="http://' . $website . '" target="_blank" title="'. __( 'Website', 'twentysixteen' ) . '"></a>';
 					    }
 
 					    if ( $facebook ) {
-					        echo '<a class="icon-facebook" href="http://facebook.com/' . $facebook . '" target="_blank"></a>';
+					        echo '<a class="icon-facebook" href="http://facebook.com/' . $facebook . '" target="_blank" title="Facebook"></a>';
 					    }
 
 					    if ( $twitter ) {
-					        echo '<a class="icon-twitter" href="http://twitter.com/' . $twitter . '" target="_blank"></a>';
+					        echo '<a class="icon-twitter" href="http://twitter.com/' . $twitter . '" target="_blank" title="Twitter"></a>';
 					    }
 
 					    if ( $instagram ) {
-					        echo '<a class="icon-instagram" href="http://instagram.com/' . $instagram . '" target="_blank"></a>';
+					        echo '<a class="icon-instagram" href="http://instagram.com/' . $instagram . '" target="_blank" title="Instagram"></a>';
 					    }
 
 					    if ( $youtube ) {
-					        echo '<a class="icon-youtube" href="http://youtube.com/' . $youtube . '" target="_blank"></a>';
+					        echo '<a class="icon-youtube" href="http://youtube.com/' . $youtube . '" target="_blank" title="YouTube"></a>';
+					    }
+
+					    if ( $goodreads ) {
+					        echo '<a class="icon-goodreads" href="https://www.goodreads.com/author/show/' . $goodreads . '" target="_blank" title="Goodreads"></a>';
 					    }
 
 					    if ( $soundcloud ) {
-					        echo '<a class="icon-soundcloud" href="http://soundcloud.com/' . $soundcloud . '" target="_blank"></a>';
+					        echo '<a class="icon-soundcloud" href="http://soundcloud.com/' . $soundcloud . '" target="_blank" title="Soundcloud"></a>';
 					    }
 
-					    echo '</p></div>';
+					    echo '</p>';
+					    echo '</div>';
 					}
 				?>
 			</header><!-- .page-header -->

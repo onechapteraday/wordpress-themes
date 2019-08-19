@@ -97,16 +97,16 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 
 #subscribe-text,
 #subscribe-text + p {
-    font-size: 15px;
-    font-size: 0.9375rem;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.taxonomy-description p {
+    margin-bottom: 12px;
 }
 
 .taxonomy-description.social-icons {
-    margin-top: 5px;
-}
-
-.taxonomy-description.social-icons [class^="icon-"]:before{
-    font-size: 120%;
+    margin-top: 10px;
 }
 
 .blockquote_highlight {

@@ -12,10 +12,10 @@ class popular_tags_in_category_widget extends WP_Widget {
             'popular_tags_in_category_widget',
 
             # Widget name will appear in UI
-            __('Popular Tags in Category Widget', 'popular_tags_in_category_widget_domain'),
+            __('Popular Tags in Category Widget', 'twentysixteen-child'),
 
             # Widget description
-            array( 'description' => __( 'This widget will show all the tags in the specific category you choose', 'popular_tags_in_category_widget_domain' ), )
+            array( 'description' => __( 'This widget will show all the tags in the specific category you choose.', 'twentysixteen-child' ), )
         );
     }
 
@@ -207,7 +207,7 @@ class popular_tags_in_category_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         } else {
-            $title = __( 'New title', 'popular_tags_in_category_widget_domain' );
+            $title = __( 'New title', 'twentysixteen-child' );
         }
 
         # Widget admin form
