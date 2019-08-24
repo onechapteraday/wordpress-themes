@@ -55,21 +55,41 @@
 			        </td>
 		        </tr>
 			<?php
-			$author = get_book_author( $book_id );
-			$author_second = get_book_author_second( $book_id );
+			$authors = get_book_author( $book_id );
 
-			if ( $author ) {
+			if ( $authors ) {
 			?>
 		        <tr>
 			        <td>
-					<b>Auteur<?php if ( $author_second ) { echo 's'; } ?></b>
+					<b>Auteur<?php
+				        if ( count( $authors ) > 1 ){
+					    $female_only = true;
+
+					    foreach( $authors as $author ){
+				                $gender = get_option( 'taxonomy_' . $author->term_id )['gender'];
+
+                                                if( $gender == 0 ){
+                                                    $female_only = false;
+                                                    break;
+                                                }
+					    }
+
+					    if( $female_only ) echo 'e';
+					    echo 's';
+					} else {
+				            $gender = get_option( 'taxonomy_' . $authors[0]->term_id )['gender'];
+					    if( $gender == 1 ) echo 'e';
+					}
+                                        ?></b>
 			        </td>
 			        <td>
 					<?php
-					echo '<a href="' . get_term_link( $author->term_id ). '">' . $author->name . '</a>';
+                                        $item_count = 0;
+				        foreach( $authors as $author ){
+					    if( $item_count > 0 ) echo ', ';
 
-					if ( $author_second ) {
-						echo ', <a href="' . get_term_link( $author_second->term_id ). '">' . $author_second->name . '</a>';
+					    echo '<a href="' . get_term_link( $author->term_id ). '">' . $author->name . '</a>';
+                                            $item_count++;
 					}
 					?>
 			        </td>
