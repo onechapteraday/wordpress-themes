@@ -57,7 +57,7 @@
 			<?php
 			$authors = get_book_author( $book_id );
 
-			if ( $authors ) {
+			if( $authors ){
 			?>
 		        <tr>
 			        <td>
@@ -149,9 +149,9 @@
 				}
 			?>
 			<?php
-				$preface = get_book_author_preface( $book_id );
+				$preface_authors = get_book_author_preface( $book_id );
 
-				if( $preface ){
+				if( $preface_authors ){
 				?>
 		                <tr>
 				        <td>
@@ -159,8 +159,15 @@
 				        </td>
 				        <td>
 						<?php
-							echo '<a href="' . get_term_link( $preface->term_id ). '">' . $preface->name . '</a>';
+                                                $item_count = 0;
+				                foreach( $preface_authors as $author ){
+					            if( $item_count > 0 ) echo ', ';
+
+					            echo '<a href="' . get_term_link( $author->term_id ). '">' . $author->name . '</a>';
+                                                    $item_count++;
+					        }
 						?>
+				        </td>
 		                </tr>
 				<?php
 				}
