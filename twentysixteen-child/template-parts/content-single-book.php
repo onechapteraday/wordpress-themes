@@ -266,7 +266,7 @@
 				?>
 		                <tr>
 				        <td>
-						<b>Préface</b>
+					        <b><?php echo _x( 'Preface', 'book metadata preface authors', 'twentysixteen-child' ); ?></b>
 				        </td>
 				        <td>
 						<?php
