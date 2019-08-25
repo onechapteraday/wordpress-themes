@@ -33,11 +33,11 @@
 			$book_id = get_the_ID();
 
 			$title = get_book_title_read( $book_id );
-			if ($title) {
+			if( $title ){
 			?>
 		        <tr>
 			        <td>
-					<b>Titre</b>
+					<b><?php echo _x( 'Title read', 'book metadata title read', 'twentysixteen-child' ); ?></b>
 			        </td>
 			        <td>
 					<?php echo $title; ?>
@@ -48,7 +48,7 @@
 			?>
 		        <tr>
 			        <td>
-					<b>Titre original</b>
+					<b><?php echo _x( 'Original title', 'book metadata original title', 'twentysixteen-child' ); ?></b>
 			        </td>
 			        <td>
 					<?php echo get_book_title_original( $book_id ); ?>
@@ -61,7 +61,7 @@
 			?>
 		        <tr>
 			        <td>
-					<b>Auteur<?php
+					<b><?php
 				        if ( count( $authors ) > 1 ){
 					    $female_only = true;
 
@@ -74,11 +74,19 @@
                                                 }
 					    }
 
-					    if( $female_only ) echo 'e';
-					    echo 's';
+					    if( $female_only ){
+					        echo _x( 'Authors', 'book metadata female authors', 'twentysixteen-child' );
+					    } else {
+					        echo _x( 'Authors', 'book metadata authors', 'twentysixteen-child' );
+					    }
 					} else {
 				            $gender = get_option( 'taxonomy_' . $authors[0]->term_id )['gender'];
-					    if( $gender == 1 ) echo 'e';
+
+					    if( $gender == 1 ){
+					        echo _x( 'Author', 'book metadata female author', 'twentysixteen-child' );
+					    } else {
+					        echo _x( 'Author', 'book metadata male author', 'twentysixteen-child' );
+					    }
 					}
                                         ?></b>
 			        </td>
