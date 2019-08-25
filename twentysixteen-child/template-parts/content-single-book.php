@@ -368,20 +368,27 @@
 			$date = get_book_date_first_publication( $book_id );
 
 			if( $date && $date != get_book_date_release( $book_id ) ){
-				$year = intval( substr( $date, 0, 4 ) );
+                                $timestamp = $date;
+                                $format = 'j F Y';
 
-                                if( $year > 1800 ){
+                                $date_first_release = DateTime::createFromFormat( 'Y-m-d', $date );
+
                                 ?>
                                 <tr>
                                         <td>
 				                <b><?php echo _x( 'First publication', 'book metadata first publication date', 'twentysixteen-child' ); ?></b>
                                         </td>
                                         <td>
-                                                <?php echo date_i18n( 'j F Y', strtotime( $date ) ); ?>
+                                                <?php
+                                                    $day   = $date_first_release->format( 'j' );
+                                                    $month = $GLOBALS['wp_locale']->get_month( $date_first_release->format( 'm' ) );
+                                                    $year  = $date_first_release->format( 'Y' );
+
+                                                    echo $day . ' ' . $month . ' ' . $year;
+                                                ?>
                                         </td>
                                 </tr>
                                 <?php
-                                }
 			}
 			
 			?>
