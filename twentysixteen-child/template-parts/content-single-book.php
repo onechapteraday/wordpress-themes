@@ -360,46 +360,51 @@
 					<b><?php echo _x( 'Release date', 'book metadata release date', 'twentysixteen-child' ); ?></b>
 			        </td>
 			        <td>
-					<?php echo date_i18n( 'j F Y', strtotime(get_book_date_release( $book_id )) ); ?>
+					<?php echo date_i18n( 'j F Y', strtotime( get_book_date_release( $book_id ) ) ); ?>
 			        </td>
 		        </tr>
 			<?php
-				$date = get_book_date_first_publication( $book_id );
 
-				if( $date && $date != get_book_date_release( $book_id ) ){
-					$year = intval( substr( $date, 0, 4 ) );
+			$date = get_book_date_first_publication( $book_id );
 
-                                        if( $year > 1800 ){
-                                        ?>
-                                        <tr>
-                                                <td>
-					                <b><?php echo _x( 'First publication', 'book metadata first publication date', 'twentysixteen-child' ); ?></b>
-                                                </td>
-                                                <td>
-                                                        <?php echo date_i18n( 'j F Y', strtotime( $date ) ); ?>
-                                                </td>
-                                        </tr>
-                                        <?php
-                                        }
+			if( $date && $date != get_book_date_release( $book_id ) ){
+				$year = intval( substr( $date, 0, 4 ) );
+
+                                if( $year > 1800 ){
+                                ?>
+                                <tr>
+                                        <td>
+				                <b><?php echo _x( 'First publication', 'book metadata first publication date', 'twentysixteen-child' ); ?></b>
+                                        </td>
+                                        <td>
+                                                <?php echo date_i18n( 'j F Y', strtotime( $date ) ); ?>
+                                        </td>
+                                </tr>
+                                <?php
+                                }
 			}
 			
 			?>
+			<?php
+
+			$amazon = get_book_amazon( $book_id );
+
+                        if( $amazon ){
+			?>
 		        <tr>
 			        <td>
-					<b>Lien affilié</b>
+			                <b><?php echo _x( 'Affiliate link', 'book metadata Amazon affiliate link', 'twentysixteen-child' ); ?></b>
 			        </td>
 			        <td>
-					<?php
-
-					$amazon = get_book_amazon( $book_id );
-
-					?>
-					<a href="<?php echo $amazon['link']; ?>" target="_blank" rel="nofollow" class="logo_partner logo_amazon">
-				            <img src="<?php echo $amazon['img_buy']; ?>" alt="Achat sur Amazon" />
-                                            <span>Acheter sur Amazon</span>
-					</a>
+			                <a href="<?php echo $amazon[ 'link' ]; ?>" target="_blank" rel="nofollow" class="logo_partner logo_amazon">
+			                     <img src="<?php echo $amazon[ 'img_buy' ]; ?>" alt="Amazon" />
+                                             <span><?php echo _x( 'Buy on Amazon', 'book metadata Amazon affiliate message', 'twentysixteen-child' ); ?></span>
+			                </a>
 			        </td>
 		        </tr>
+                        <?php
+                        }
+                        ?>
 		</table>
                 <div>
                 </div>
