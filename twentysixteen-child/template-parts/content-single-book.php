@@ -157,18 +157,53 @@
 				}
 			?>
 			<?php
-				$illustrator = get_book_illustrator( $book_id );
+				$illustrators = get_book_illustrator( $book_id );
 
-				if ($illustrator) {
+				if( $illustrators ){
 				?>
 		        	<tr>
 				        <td>
-						<b>Illustrateur</b>
+					        <b><?php
+				                if( count( $illustrators ) > 1 ){
+					            $female_only = true;
+
+					            foreach( $illustrators as $illustrator ){
+				                        $gender = get_option( 'taxonomy_' . $illustrator->term_id )['gender'];
+
+                                                        if( $gender == 0 ){
+                                                            $female_only = false;
+                                                            break;
+                                                        }
+					            }
+
+					            if( $female_only ){
+					                echo _x( 'Illustrators', 'book metadata female illustrators', 'twentysixteen-child' );
+					            } else {
+					                echo _x( 'Illustrators', 'book metadata illustrators', 'twentysixteen-child' );
+					            }
+					        } else {
+				                    $gender = get_option( 'taxonomy_' . $authors[0]->term_id )['gender'];
+
+					            if( $gender == 1 ){
+					                echo _x( 'Illustrator', 'book metadata female illustrator', 'twentysixteen-child' );
+					            } else {
+					                echo _x( 'Illustrator', 'book metadata male illustrator', 'twentysixteen-child' );
+					            }
+					        }
+                                                ?></b>
+				        </td>
 				        </td>
 				        <td>
-						<?php
-							echo '<a href="' . get_term_link( $illustrator->term_id ). '">' . $illustrator->name . '</a>';
-						?>
+					        <?php
+                                                $item_count = 0;
+				                foreach( $illustrators as $illustrator ){
+					            if( $item_count > 0 ) echo ', ';
+
+					            echo '<a href="' . get_term_link( $illustrator->term_id ). '">' . $illustrator->name . '</a>';
+                                                    $item_count++;
+					        }
+					        ?>
+				        </td>
 		        	</tr>
 				<?php
 				}
