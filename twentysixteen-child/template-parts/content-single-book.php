@@ -317,15 +317,15 @@
 			?>
 		        <tr>
 			        <td>
-					<b>ISBN</b>
+					<b><?php echo _x( 'ISBN13', 'book metadata isbn13', 'twentysixteen-child' ); ?></b>
 			        </td>
 			        <td>
-					<?php echo get_book_isbn( $book_id ); ?>
+					<?php echo get_book_isbn13( $book_id ); ?>
 			        </td>
 		        </tr>
 		        <tr>
 			        <td>
-					<b>Prix</b>
+					<b><?php echo _x( 'Price', 'book metadata price', 'twentysixteen-child' ); ?></b>
 			        </td>
 			        <td>
 					<?php echo get_book_price( $book_id ); ?> &euro;
@@ -333,7 +333,7 @@
 		        </tr>
 		        <tr>
 			        <td>
-					<b>Nombre de pages</b>
+					<b><?php echo _x( 'Number of pages', 'book metadata number of pages', 'twentysixteen-child' ); ?></b>
 			        </td>
 			        <td>
 					<?php echo get_book_pages_number( $book_id ); ?> pages
@@ -341,7 +341,7 @@
 		        </tr>
 		        <tr>
 			        <td>
-					<b>Date de parution</b>
+					<b><?php echo _x( 'Release date', 'book metadata release date', 'twentysixteen-child' ); ?></b>
 			        </td>
 			        <td>
 					<?php echo date_i18n( 'j F Y', strtotime(get_book_date_release( $book_id )) ); ?>
@@ -357,7 +357,7 @@
                                         ?>
                                         <tr>
                                                 <td>
-                                                        <b>Première publication</b>
+					                <b><?php echo _x( 'First publication', 'book metadata first publication date', 'twentysixteen-child' ); ?></b>
                                                 </td>
                                                 <td>
                                                         <?php echo date_i18n( 'j F Y', strtotime($date) ); ?>
