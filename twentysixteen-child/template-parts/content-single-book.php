@@ -96,7 +96,7 @@
 				        foreach( $authors as $author ){
 					    if( $item_count > 0 ) echo ', ';
 
-					    echo '<a href="' . get_term_link( $author->term_id ). '">' . $author->name . '</a>';
+					    echo '<a href="' . get_term_link( $author->term_id ) . '">' . $author->name . '</a>';
                                             $item_count++;
 					}
 					?>
@@ -147,7 +147,7 @@
 				                foreach( $translators as $translator ){
 					            if( $item_count > 0 ) echo ', ';
 
-					            echo '<a href="' . get_term_link( $translator->term_id ). '">' . $translator->name . '</a>';
+					            echo '<a href="' . get_term_link( $translator->term_id ) . '">' . $translator->name . '</a>';
                                                     $item_count++;
 					        }
 					        ?>
@@ -199,7 +199,7 @@
 				                foreach( $illustrators as $illustrator ){
 					            if( $item_count > 0 ) echo ', ';
 
-					            echo '<a href="' . get_term_link( $illustrator->term_id ). '">' . $illustrator->name . '</a>';
+					            echo '<a href="' . get_term_link( $illustrator->term_id ) . '">' . $illustrator->name . '</a>';
                                                     $item_count++;
 					        }
 					        ?>
@@ -250,7 +250,7 @@
 				                foreach( $colourists as $colourist ){
 					            if( $item_count > 0 ) echo ', ';
 
-					            echo '<a href="' . get_term_link( $colourist->term_id ). '">' . $colourist->name . '</a>';
+					            echo '<a href="' . get_term_link( $colourist->term_id ) . '">' . $colourist->name . '</a>';
                                                     $item_count++;
 					        }
 					        ?>
@@ -274,7 +274,7 @@
 				                foreach( $preface_authors as $author ){
 					            if( $item_count > 0 ) echo ', ';
 
-					            echo '<a href="' . get_term_link( $author->term_id ). '">' . $author->name . '</a>';
+					            echo '<a href="' . get_term_link( $author->term_id ) . '">' . $author->name . '</a>';
                                                     $item_count++;
 					        }
 						?>
@@ -293,7 +293,7 @@
 					        <b><?php echo _x( 'Publisher', 'book metadata publisher', 'twentysixteen-child' ); ?></b>
                                         </td>
                                         <td>
-                                                <?php echo '<a href="' . get_term_link( $publisher->term_id ). '">' . $publisher->name . '</a>'; ?>
+                                                <?php echo '<a href="' . get_term_link( $publisher->term_id ) . '">' . $publisher->name . '</a>'; ?>
                                         </td>
                                 </tr>
 				<?php
@@ -309,7 +309,7 @@
 					        <b><?php echo _x( 'Collection', 'book metadata publisher collection', 'twentysixteen-child' ); ?></b>
 				        </td>
 				        <td>
-						<?php echo '<a href="' . get_term_link( $collection->term_id ). '">' . $collection->name . '</a>'; ?>
+						<?php echo '<a href="' . get_term_link( $collection->term_id ) . '">' . $collection->name . '</a>'; ?>
 				        </td>
 		        	</tr>
 				<?php
@@ -366,7 +366,7 @@
 			<?php
 				$date = get_book_date_first_publication( $book_id );
 
-				if ( $date && $date != get_book_date_release( $book_id ) ) {
+				if( $date && $date != get_book_date_release( $book_id ) ){
 					$year = intval( substr( $date, 0, 4 ) );
 
                                         if( $year > 1800 ){
@@ -376,7 +376,7 @@
 					                <b><?php echo _x( 'First publication', 'book metadata first publication date', 'twentysixteen-child' ); ?></b>
                                                 </td>
                                                 <td>
-                                                        <?php echo date_i18n( 'j F Y', strtotime($date) ); ?>
+                                                        <?php echo date_i18n( 'j F Y', strtotime( $date ) ); ?>
                                                 </td>
                                         </tr>
                                         <?php
@@ -404,7 +404,7 @@
                 <div>
                 </div>
 		<?php
-                        if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+                        if( class_exists( 'Jetpack_RelatedPosts' ) ){
                             echo do_shortcode( '[jetpack-related-posts]' );
                         }
 
