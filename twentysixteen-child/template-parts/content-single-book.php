@@ -286,17 +286,15 @@
 			<?php
 				$publisher = get_book_publisher( $book_id );
 
-				if ( $publisher ) {
+				if( $publisher ){
 				?>
                                 <tr>
-                                    <td>
-                                        <b>Éditeur</b>
-                                    </td>
-                                    <td>
-                                        <?php
-                                            echo '<a href="' . get_term_link( $publisher->term_id ). '">' . $publisher->name . '</a>';
-                                        ?>
-                                    </td>
+                                        <td>
+					        <b><?php echo _x( 'Publisher', 'book metadata publisher', 'twentysixteen-child' ); ?></b>
+                                        </td>
+                                        <td>
+                                                <?php echo '<a href="' . get_term_link( $publisher->term_id ). '">' . $publisher->name . '</a>'; ?>
+                                        </td>
                                 </tr>
 				<?php
 				}
@@ -304,16 +302,15 @@
 			<?php
 				$collection = get_book_collection( $book_id );
 
-				if ($collection) {
+				if( $collection ){
 				?>
 		        	<tr>
 				        <td>
-						<b>Collection</b>
+					        <b><?php echo _x( 'Collection', 'book metadata publisher collection', 'twentysixteen-child' ); ?></b>
 				        </td>
 				        <td>
-						<?php
-							echo '<a href="' . get_term_link( $collection->term_id ). '">' . $collection->name . '</a>';
-						?>
+						<?php echo '<a href="' . get_term_link( $collection->term_id ). '">' . $collection->name . '</a>'; ?>
+				        </td>
 		        	</tr>
 				<?php
 				}
