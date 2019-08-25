@@ -315,6 +315,23 @@
 				<?php
 				}
 			?>
+			<?php
+				$isbn10 = get_book_isbn10( $book_id );
+
+				if( $isbn10 ){
+				?>
+                                <tr>
+				        <td>
+                                                <b><?php echo _x( 'ISBN10', 'book metadata isbn10', 'twentysixteen-child' ); ?></b>
+				        </td>
+				        <td>
+                                                <?php echo $isbn10; ?>
+				        </td>
+                                </tr>
+				<?php
+				}
+			?>
+		        <tr>
 		        <tr>
 			        <td>
 					<b><?php echo _x( 'ISBN13', 'book metadata isbn13', 'twentysixteen-child' ); ?></b>
