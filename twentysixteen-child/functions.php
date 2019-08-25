@@ -90,6 +90,10 @@ function add_my_post_types_to_query( $query ) {
             array_push( $post_types, 'interview' );
         }
 
+        if( post_type_exists( 'concert' ) ){
+            array_push( $post_types, 'concert' );
+        }
+
         if ( is_archive() && $query->is_main_query() ){
             $query->set( 'post_type', $post_types );
 	}
@@ -123,6 +127,10 @@ function add_custom_post_types_filter( $query ) {
 
     if( post_type_exists( 'interview' ) ){
         array_push( $post_types, 'interview' );
+    }
+
+    if( post_type_exists( 'concert' ) ){
+        array_push( $post_types, 'concert' );
     }
 
     if ( ($query->is_home() && $query->is_main_query()) || $query->is_feed() ) {
@@ -261,6 +269,10 @@ function twentysixteen_entry_meta() {
 
     if( post_type_exists( 'interview' ) ){
         array_push( $post_types, 'interview' );
+    }
+
+    if( post_type_exists( 'concert' ) ){
+        array_push( $post_types, 'concert' );
     }
 
     foreach( $post_types as $type ){
