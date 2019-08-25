@@ -315,6 +315,14 @@
 				<?php
 				}
 			?>
+		        <tr>
+			        <td>
+					<b><?php echo _x( 'ISBN13', 'book metadata isbn13', 'twentysixteen-child' ); ?></b>
+			        </td>
+			        <td>
+					<?php echo get_book_isbn13( $book_id ); ?>
+			        </td>
+		        </tr>
 			<?php
 				$isbn10 = get_book_isbn10( $book_id );
 
@@ -331,15 +339,6 @@
 				<?php
 				}
 			?>
-		        <tr>
-		        <tr>
-			        <td>
-					<b><?php echo _x( 'ISBN13', 'book metadata isbn13', 'twentysixteen-child' ); ?></b>
-			        </td>
-			        <td>
-					<?php echo get_book_isbn13( $book_id ); ?>
-			        </td>
-		        </tr>
 		        <tr>
 			        <td>
 					<b><?php echo _x( 'Price', 'book metadata price', 'twentysixteen-child' ); ?></b>
