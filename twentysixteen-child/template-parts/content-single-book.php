@@ -131,7 +131,7 @@
 					                echo _x( 'Translators', 'book metadata translators', 'twentysixteen-child' );
 					            }
 					        } else {
-				                    $gender = get_option( 'taxonomy_' . $authors[0]->term_id )['gender'];
+				                    $gender = get_option( 'taxonomy_' . $translators[0]->term_id )['gender'];
 
 					            if( $gender == 1 ){
 					                echo _x( 'Translator', 'book metadata female translator', 'twentysixteen-child' );
@@ -182,7 +182,7 @@
 					                echo _x( 'Illustrators', 'book metadata illustrators', 'twentysixteen-child' );
 					            }
 					        } else {
-				                    $gender = get_option( 'taxonomy_' . $authors[0]->term_id )['gender'];
+				                    $gender = get_option( 'taxonomy_' . $illustrators[0]->term_id )['gender'];
 
 					            if( $gender == 1 ){
 					                echo _x( 'Illustrator', 'book metadata female illustrator', 'twentysixteen-child' );
@@ -234,7 +234,7 @@
 					                echo _x( 'Colourists', 'book metadata colourists', 'twentysixteen-child' );
 					            }
 					        } else {
-				                    $gender = get_option( 'taxonomy_' . $authors[0]->term_id )['gender'];
+				                    $gender = get_option( 'taxonomy_' . $colourists[0]->term_id )['gender'];
 
 					            if( $gender == 1 ){
 					                echo _x( 'Colourist', 'book metadata female colourist', 'twentysixteen-child' );
