@@ -3,30 +3,29 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-25 10:13-0400\n"
-"PO-Revision-Date: 2019-08-25 10:20-0400\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: fr_FR\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 2.0.6\n"
 
 #: functions.php:271
 msgctxt "Used before post author name."
 msgid "Author"
-msgstr "Auteur"
+msgstr ""
 
 #: functions.php:285
 msgctxt "Used before post format."
 msgid "Format"
-msgstr "Format"
+msgstr ""
 
 #: functions.php:299 widgets/random-posts-without-last-medium-two-widget.php:97
 #: widgets/recent-posts-big-one-widget.php:85
@@ -40,83 +39,74 @@ msgstr "Format"
 #, php-format
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
-"Laisser un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
 
 #: functions.php:339 functions.php:426
 msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
-msgstr ", "
+msgstr ""
 
 #: functions.php:343
 msgctxt "Used before category names."
 msgid "Categories"
-msgstr "Catégories"
+msgstr ""
 
 #: functions.php:365
 msgctxt "Used before person names."
 msgid "People"
-msgstr "Personnes"
+msgstr ""
 
 #: functions.php:392
 msgctxt "Used before prize names."
 msgid "Literary Prizes"
-msgstr "Prix littéraires"
+msgstr ""
 
 #: functions.php:419
 msgctxt "Used before location names."
 msgid "Locations"
-msgstr "Localisations"
+msgstr ""
 
 #: functions.php:430
 msgctxt "Used before tag names."
 msgid "Tags"
-msgstr "Étiquettes"
+msgstr ""
 
 #: functions.php:449
 msgid "Sidebar"
-msgstr "Barre latérale"
+msgstr ""
 
 #: functions.php:451
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
-"Ajouter des widgets ici pour les faire apparaître dans votre barre latérale."
 
 #: functions.php:459
 msgid "Sidebar for Books"
-msgstr "Barre latérale pour les livres"
+msgstr ""
 
 #: functions.php:461
 msgid "Add widgets here to appears in your Book sidebar."
 msgstr ""
-"Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
-"pour les livres."
 
 #: functions.php:469
 msgid "Sidebar for Music"
-msgstr "Barre latérale pour la musique"
+msgstr ""
 
 #: functions.php:471
 msgid "Add widgets here to appears in your Music sidebar."
 msgstr ""
-"Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
-"pour la musique."
 
 #: functions.php:479
 msgid "Front Page - FullWidth Top"
-msgstr "Page d'accueil - Pleine largeur haut"
+msgstr ""
 
 #: functions.php:481
 msgid ""
 "Widgets appear in a single-column widget area on the top of the Front Page "
 "(and above the Featured Content slider, if active)."
 msgstr ""
-"Les widgets apparaissent dans la zone de widgets d'une colonne située en "
-"haut de la Page d'accueil (et au-dessus du silder de contenu, si celui-ci "
-"est actif)."
 
 #: functions.php:489
 msgid "Front Page - Post Content 1"
-msgstr "Page d'accueil - Contenu 1"
+msgstr ""
 
 #: functions.php:491
 msgid ""
@@ -124,37 +114,30 @@ msgid ""
 "This widget area is especially designed for the custom Twenty Sixteen Child "
 "Posts by Category widgets."
 msgstr ""
-"Les widgets apparaissent à gauche de la Barre latérale&nbsp;1 et en-dessous "
-"de la zone Pleine largeur haut. Cette zone a été spécialement créée pour les "
-"widgets personnalisés du thème Twenty Sixteen Child."
 
 #: functions.php:499
 msgid "Front Page - Sidebar 1"
-msgstr "Page d'accueil - Barre latérale 1"
+msgstr ""
 
 #: functions.php:501
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 1 "
 "widget area."
 msgstr ""
-"Les widgets apparaissent dans la barre latérale alignée à droite près de la "
-"zone du widget Contenu&nbsp;1."
 
 #: functions.php:509
 msgid "Front Page - FullWidth Center"
-msgstr "Page d'accueil - Pleine largeur central"
+msgstr ""
 
 #: functions.php:511
 msgid ""
 "Widgets will appear in a single-column widget area below the Post Content 1 "
 "and Sidebar 1 widget areas."
 msgstr ""
-"Les widgets vont apparaître dans une seule colonne en-dessous des zones "
-"Contenu&nbsp;1 et Barre latérale&nbsp;1."
 
 #: functions.php:519
 msgid "Front Page - Post Content 2"
-msgstr "Page d'accueil - Contenu 2"
+msgstr ""
 
 #: functions.php:521
 msgid ""
@@ -162,109 +145,102 @@ msgid ""
 "This widget area is especially designed for the custom Twenty Sixteen Child "
 "Posts by Category widgets."
 msgstr ""
-"Les widgets apparaissent à gauche de la Barre latérale&nbsp;2 et en-dessous "
-"de la zone Pleine largeur central. Cette zone a été spécialement créée pour "
-"les widgets personnalisés du thème Twenty Sixteen Child."
 
 #: functions.php:529
 msgid "Front Page - Sidebar 2"
-msgstr "Page d'accueil - Barre latérale 2"
+msgstr ""
 
 #: functions.php:531
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 2 "
 "widget area."
 msgstr ""
-"Les widgets apparaissent dans la barre latérale alignée à droite près de la "
-"zone du widget Contenu&nbsp;2."
 
 #: functions.php:539
 msgid "Front Page - FullWidth Bottom"
-msgstr "Page d'accueil - Pleine largeur bas"
+msgstr ""
 
 #: functions.php:541
 msgid ""
 "Widgets will appear in a single-column widget area at the bottom of your "
 "Front Page above the footer."
 msgstr ""
-"Les widgets vont apparaître dans une seule colonne à la fin de votre Page "
-"d'accueil au-dessus du pied-de-page."
 
 #: functions.php:549
 msgid "Content Bottom 1"
-msgstr "Contenu du bas 1"
+msgstr ""
 
 #: functions.php:551 functions.php:561
 msgid "Appears at the bottom of the content on posts and pages."
-msgstr "Apparaît en bas du contenu des articles et des pages."
+msgstr ""
 
 #: functions.php:559
 msgid "Content Bottom 2"
-msgstr "Contenu du bas 2"
+msgstr ""
 
 #: functions.php:605
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr "Y"
+msgstr ""
 
 #: functions.php:607
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr "F Y"
+msgstr ""
 
 #: functions.php:609
 msgctxt "daily archives date format"
 msgid "F j, Y"
-msgstr "F j, Y"
+msgstr ""
 
 #: functions.php:612
 msgctxt "post format archive title"
 msgid "Asides"
-msgstr "Apartés"
+msgstr ""
 
 #: functions.php:614
 msgctxt "post format archive title"
 msgid "Galleries"
-msgstr "Galeries"
+msgstr ""
 
 #: functions.php:616
 msgctxt "post format archive title"
 msgid "Images"
-msgstr "Images"
+msgstr ""
 
 #: functions.php:618
 msgctxt "post format archive title"
 msgid "Videos"
-msgstr "Vidéos"
+msgstr ""
 
 #: functions.php:620
 msgctxt "post format archive title"
 msgid "Quotes"
-msgstr "Citations"
+msgstr ""
 
 #: functions.php:622
 msgctxt "post format archive title"
 msgid "Links"
-msgstr "Liens"
+msgstr ""
 
 #: functions.php:624
 msgctxt "post format archive title"
 msgid "Statuses"
-msgstr "Statuts"
+msgstr ""
 
 #: functions.php:626
 msgctxt "post format archive title"
 msgid "Audio"
-msgstr "Audios"
+msgstr ""
 
 #: functions.php:628
 msgctxt "post format archive title"
 msgid "Chats"
-msgstr "Messages"
+msgstr ""
 
 #: functions.php:635
 msgid "Archives"
-msgstr "Archives"
+msgstr ""
 
 #: single.php:29 image.php:108 page-templates/fullwidth-single.php:31
 #: page-templates/fullwidth-single-album.php:31
@@ -276,8 +252,6 @@ msgid ""
 "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">"
 "%title</span>"
 msgstr ""
-"<span class=\"meta-nav\">Publié dans</span><span class=\"post-title\">"
-"%title</span>"
 
 #: single.php:34 page-templates/fullwidth-single.php:36
 #: page-templates/fullwidth-single-album.php:36
@@ -285,7 +259,7 @@ msgstr ""
 #: page-templates/fullwidth-single-book.php:36 single-album.php:34
 #: single-book.php:34
 msgid "Next"
-msgstr "Suivant"
+msgstr ""
 
 #: single.php:35 page-templates/fullwidth-single.php:37
 #: page-templates/fullwidth-single-album.php:37
@@ -293,7 +267,7 @@ msgstr "Suivant"
 #: page-templates/fullwidth-single-book.php:37 single-album.php:35
 #: single-book.php:35
 msgid "Next post:"
-msgstr "Article suivant :"
+msgstr ""
 
 #: single.php:37 page-templates/fullwidth-single.php:39
 #: page-templates/fullwidth-single-album.php:39
@@ -301,7 +275,7 @@ msgstr "Article suivant :"
 #: page-templates/fullwidth-single-book.php:39 single-album.php:37
 #: single-book.php:37
 msgid "Previous"
-msgstr "Précédent"
+msgstr ""
 
 #: single.php:38 page-templates/fullwidth-single.php:40
 #: page-templates/fullwidth-single-album.php:40
@@ -309,21 +283,21 @@ msgstr "Précédent"
 #: page-templates/fullwidth-single-book.php:40 single-album.php:38
 #: single-book.php:38
 msgid "Previous post:"
-msgstr "Article precedent :"
+msgstr ""
 
 #: image.php:24
 msgid "Previous Image"
-msgstr "Image précédente"
+msgstr ""
 
 #: image.php:25
 msgid "Next Image"
-msgstr "Image suivante"
+msgstr ""
 
 #: image.php:62 template-parts/content-single-book.php:417
 #: template-parts/content.php:33 template-parts/content-single.php:35
 #: template-parts/content-single-album.php:118
 msgid "Pages:"
-msgstr "Pages :"
+msgstr ""
 
 #: image.php:66 category.php:59 category-reads.php:59 search.php:44 tag.php:59
 #: taxonomy-publisher.php:67 archive.php:57 taxonomy-location.php:58
@@ -332,7 +306,7 @@ msgstr "Pages :"
 #: template-parts/content-single-album.php:122 taxonomy-prize.php:67
 #: author.php:57 taxonomy-person.php:104 category-music.php:59
 msgid "Page"
-msgstr "Page"
+msgstr ""
 
 #: image.php:90 template-parts/content-single-book.php:434
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
@@ -340,218 +314,212 @@ msgstr "Page"
 #: template-parts/content-single-album.php:135
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Modifier<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
 
 #: category.php:57 category-reads.php:57 search.php:42 tag.php:57
 #: taxonomy-publisher.php:65 archive.php:55 taxonomy-location.php:56
 #: taxonomy-prize.php:65 author.php:55 taxonomy-person.php:102
 #: category-music.php:57
 msgid "Previous page"
-msgstr "Page précédente"
+msgstr ""
 
 #: category.php:58 category-reads.php:58 search.php:43 tag.php:58
 #: taxonomy-publisher.php:66 archive.php:56 taxonomy-location.php:57
 #: taxonomy-prize.php:66 author.php:56 taxonomy-person.php:103
 #: category-music.php:58
 msgid "Next page"
-msgstr "Page suivante"
+msgstr ""
 
 #: search.php:23
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Résultats de recherche pour&nbsp;: %s"
+msgstr ""
 
 #: template-parts/content-single-book.php:40
 msgctxt "book metadata title read"
 msgid "Title read"
-msgstr "Titre lu"
+msgstr ""
 
 #: template-parts/content-single-book.php:51
 msgctxt "book metadata original title"
 msgid "Original title"
-msgstr "Titre original"
+msgstr ""
 
 #: template-parts/content-single-book.php:78
 msgctxt "book metadata female authors"
 msgid "Authors"
-msgstr "Auteures"
+msgstr ""
 
 #: template-parts/content-single-book.php:80
 msgctxt "book metadata authors"
 msgid "Authors"
-msgstr "Auteurs"
+msgstr ""
 
 #: template-parts/content-single-book.php:86
 msgctxt "book metadata female author"
 msgid "Author"
-msgstr "Auteure"
+msgstr ""
 
 #: template-parts/content-single-book.php:88
 msgctxt "book metadata male author"
 msgid "Author"
-msgstr "Auteur"
+msgstr ""
 
 #: template-parts/content-single-book.php:129
 msgctxt "book metadata female translators"
 msgid "Translators"
-msgstr "Traductrices"
+msgstr ""
 
 #: template-parts/content-single-book.php:131
 msgctxt "book metadata translators"
 msgid "Translators"
-msgstr "Traducteurs"
+msgstr ""
 
 #: template-parts/content-single-book.php:137
 msgctxt "book metadata female translator"
 msgid "Translator"
-msgstr "Traductrice"
+msgstr ""
 
 #: template-parts/content-single-book.php:139
 msgctxt "book metadata male translator"
 msgid "Translator"
-msgstr "Traducteur"
+msgstr ""
 
 #: template-parts/content-single-book.php:180
 msgctxt "book metadata female illustrators"
 msgid "Illustrators"
-msgstr "Illustratrices"
+msgstr ""
 
 #: template-parts/content-single-book.php:182
 msgctxt "book metadata illustrators"
 msgid "Illustrators"
-msgstr "Illustrateurs"
+msgstr ""
 
 #: template-parts/content-single-book.php:188
 msgctxt "book metadata female illustrator"
 msgid "Illustrator"
-msgstr "Illustratrice"
+msgstr ""
 
 #: template-parts/content-single-book.php:190
 msgctxt "book metadata male illustrator"
 msgid "Illustrator"
-msgstr "Illustrateur"
+msgstr ""
 
 #: template-parts/content-single-book.php:232
 msgctxt "book metadata female colourists"
 msgid "Colourists"
-msgstr "Coloristes"
+msgstr ""
 
 #: template-parts/content-single-book.php:234
 msgctxt "book metadata colourists"
 msgid "Colourists"
-msgstr "Coloristes"
+msgstr ""
 
 #: template-parts/content-single-book.php:240
 msgctxt "book metadata female colourist"
 msgid "Colourist"
-msgstr "Coloriste"
+msgstr ""
 
 #: template-parts/content-single-book.php:242
 msgctxt "book metadata male colourist"
 msgid "Colourist"
-msgstr "Coloriste"
+msgstr ""
 
 #: template-parts/content-single-book.php:269
 msgctxt "book metadata preface authors"
 msgid "Preface"
-msgstr "Préface"
+msgstr ""
 
 #: template-parts/content-single-book.php:293
 msgctxt "book metadata publisher"
 msgid "Publisher"
-msgstr "Éditeur"
+msgstr ""
 
 #: template-parts/content-single-book.php:309
 msgctxt "book metadata publisher collection"
 msgid "Collection"
-msgstr "Collection"
+msgstr ""
 
 #: template-parts/content-single-book.php:320
 msgctxt "book metadata isbn13"
 msgid "ISBN13"
-msgstr "ISBN13"
+msgstr ""
 
 #: template-parts/content-single-book.php:333
 msgctxt "book metadata isbn10"
 msgid "ISBN10"
-msgstr "ISBN10"
+msgstr ""
 
 #: template-parts/content-single-book.php:344
 msgctxt "book metadata price"
 msgid "Price"
-msgstr "Prix"
+msgstr ""
 
 #: template-parts/content-single-book.php:352
-#, fuzzy
-#| msgid "Number of posts to show:"
 msgctxt "book metadata number of pages"
 msgid "Number of pages"
-msgstr "Nombre d'articles à afficher&nbsp;:"
+msgstr ""
 
 #: template-parts/content-single-book.php:360
 msgctxt "book metadata release date"
 msgid "Release date"
-msgstr "Date de publication"
+msgstr ""
 
 #: template-parts/content-single-book.php:377
 msgctxt "book metadata first publication date"
 msgid "First publication"
-msgstr "Première publication"
+msgstr ""
 
 #: template-parts/content-single-book.php:396
 msgctxt "book metadata Amazon affiliate link"
 msgid "Affiliate link"
-msgstr "Lien affilié"
+msgstr ""
 
 #: template-parts/content-single-book.php:401
 msgctxt "book metadata Amazon affiliate message"
 msgid "Buy on Amazon"
-msgstr "Acheter sur Amazon"
+msgstr ""
 
 #: template-parts/content.php:14
 msgid "Featured"
-msgstr "Mis en avant"
+msgstr ""
 
 #: template-parts/content.php:28
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Continuer la lecture<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
 
 #: 404.php:22
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oups&#8239;! Cette page est introuvable."
+msgstr ""
 
 #: 404.php:26
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Il semblerait que rien n’ait été trouvé à cette adresse. Essayez peut-être "
-"avec une recherche&nbsp;?"
 
 #: taxonomy-person.php:50
 msgid "More information"
-msgstr "Plus de renseignements"
+msgstr ""
 
 #: taxonomy-person.php:50
 msgid ": "
-msgstr "&nbsp;: "
+msgstr ""
 
 #: taxonomy-person.php:53
 msgid "Website"
-msgstr "Site web"
+msgstr ""
 
 #: widgets/popular-tags-in-category-widget.php:15
 msgid "Popular Tags in Category Widget"
-msgstr "Nuage d'étiquettes populaires dans la catégorie"
+msgstr ""
 
 #: widgets/popular-tags-in-category-widget.php:18
 msgid "This widget will show all the tags in the specific category you choose."
 msgstr ""
-"Ce widget va afficher les étiquettes populaires de la catégorie que vous "
-"choisissez."
 
 #: widgets/popular-tags-in-category-widget.php:210
 msgid "New title"
-msgstr "Nouveau titre"
+msgstr ""
 
 #: widgets/popular-tags-in-category-widget.php:216
 #: widgets/random-posts-without-last-medium-two-widget.php:135
@@ -566,19 +534,17 @@ msgstr "Nouveau titre"
 #: widgets/recent-posts-small-one-widget.php:108
 #: widgets/random-posts-colored-widget.php:216
 msgid "Title:"
-msgstr "Titre :"
+msgstr ""
 
 #: widgets/random-posts-without-last-medium-two-widget.php:19
 msgid "Random Posts w/o Last 5 (Medium 2)"
-msgstr "Articles aléatoires sans les 5 derniers (Moyen&nbsp;2)"
+msgstr ""
 
 #: widgets/random-posts-without-last-medium-two-widget.php:24
 msgid ""
 "Medium-sized Random Posts w/o Last 5 in a 2-column layout with featured "
 "image and excerpt."
 msgstr ""
-"Articles aléatoires de taille moyenne sans les cinq derniers publiés mise en "
-"page sur deux colonnes, une image mise en avant et un extrait."
 
 #: widgets/random-posts-without-last-medium-two-widget.php:90
 #: widgets/recent-posts-big-one-widget.php:78
@@ -590,7 +556,7 @@ msgstr ""
 #: widgets/random-posts-colored-widget.php:162
 #, php-format
 msgid "Permalink to %s"
-msgstr "Permalien vers %s"
+msgstr ""
 
 #: widgets/random-posts-without-last-medium-two-widget.php:140
 #: widgets/recent-posts-big-one-widget.php:129
@@ -604,7 +570,7 @@ msgstr "Permalien vers %s"
 #: widgets/recent-posts-small-one-widget.php:113
 #: widgets/random-posts-colored-widget.php:221
 msgid "Number of posts to show:"
-msgstr "Nombre d'articles à afficher&nbsp;:"
+msgstr ""
 
 #: widgets/random-posts-without-last-medium-two-widget.php:145
 #: widgets/recent-posts-big-one-widget.php:134
@@ -617,7 +583,7 @@ msgstr "Nombre d'articles à afficher&nbsp;:"
 #: widgets/recent-posts-big-two-widget.php:138
 #: widgets/random-posts-colored-widget.php:226
 msgid "Category slug (optional):"
-msgstr "Slug de la catégorie (facultatif)&nbsp;:"
+msgstr ""
 
 #: widgets/random-posts-without-last-medium-two-widget.php:150
 #: widgets/recent-posts-big-one-widget.php:139
@@ -630,178 +596,132 @@ msgstr "Slug de la catégorie (facultatif)&nbsp;:"
 #: widgets/recent-posts-big-two-widget.php:143
 #: widgets/random-posts-colored-widget.php:231
 msgid "Tag slug (optional):"
-msgstr "Slug de l'étiquette (facultatif)&nbsp;:"
+msgstr ""
 
 #: widgets/recent-posts-big-one-widget.php:19
 msgid "Recent Posts (Big 1)"
-msgstr "Articles récents (Grand 1)"
+msgstr ""
 
 #: widgets/recent-posts-big-one-widget.php:24
 msgid ""
 "Big Recents Posts with an overlay excerpt text. Featured images must have a "
 "minimum size of 1200x800 pixel."
 msgstr ""
-"Articles récents de grande taille avec un extrait de texte en superposition. "
-"Les images mises en avant doivent avoir une taille minimale de 1200x800 "
-"pixels."
 
 #: widgets/recent-posts-colored-widget.php:19
 msgid "Recent Posts (Background)"
-msgstr "Articles récents (Arrière-plan)"
+msgstr ""
 
 #: widgets/recent-posts-colored-widget.php:24
 msgid "Medium-sized Recents Posts with a background color."
-msgstr "Articles récents de taille moyenne avec un arrière-plan coloré."
+msgstr ""
 
 #: widgets/quote-widget.php:19
 msgid "Quote"
-msgstr "Citation"
+msgstr ""
 
 #: widgets/quote-widget.php:24
 msgid "A big quote or text slogan."
-msgstr "Une grande citation ou un slogan."
+msgstr ""
 
 #: widgets/quote-widget.php:78
 msgid "Quote Text:"
-msgstr "Texte de la citation :"
+msgstr ""
 
 #: widgets/quote-widget.php:83
 msgid "Quote Author (optional):"
-msgstr "Auteur de la citation (facultatif) :"
+msgstr ""
 
 #: widgets/recent-posts-medium-one-widget.php:19
 msgid "Recent Posts (Medium 1)"
-msgstr "Articles récents (Moyen 1)"
+msgstr ""
 
 #: widgets/recent-posts-medium-one-widget.php:24
 msgid "Medium-sized Recents Posts with featured image and excerpt."
 msgstr ""
-"Articles récents de taille moyenne avec une image mise en avant et un "
-"extrait."
 
 #: widgets/recent-posts-small-two-widget.php:19
 msgid "Recent Posts (Small 2)"
-msgstr "Articles récents (Petit 2)"
+msgstr ""
 
 #: widgets/recent-posts-small-two-widget.php:24
 msgid "Small Recents Posts widget without featured images."
-msgstr "Articles récents de petite taille sans les images mises en avant."
+msgstr ""
 
 #: widgets/random-posts-medium-two-widget.php:19
 msgid "Random Posts (Medium 2)"
-msgstr "Articles aléatoires (Moyen 2)"
+msgstr ""
 
 #: widgets/random-posts-medium-two-widget.php:24
 msgid ""
 "Medium-sized Random Posts in a 2-column layout with featured image and "
 "excerpt."
 msgstr ""
-"Articles aléatoires de taille moyenne avec une mise en page sur deux "
-"colonnes, une image mise en avant et un extrait."
 
 #: widgets/recent-posts-medium-two-widget.php:19
 msgid "Recent Posts (Medium 2)"
-msgstr "Articles récents (Moyen 2)"
+msgstr ""
 
 #: widgets/recent-posts-medium-two-widget.php:24
 msgid ""
 "Medium-sized Recents Posts in a 2-column layout with featured image and "
 "excerpt."
 msgstr ""
-"Articles récents de taille moyenne avec une mise en page sur deux colonnes, "
-"une image mise en avant et un extrait."
 
 #: widgets/random-posts-without-last-colored-widget.php:19
 msgid "Random Posts w/o Last 5 (Background)"
-msgstr "Articles aléatoires sans les 5 derniers (Arrière-plan)"
+msgstr ""
 
 #: widgets/random-posts-without-last-colored-widget.php:24
 msgid "Medium-sized Random Posts w/o Last 5 with a background color."
 msgstr ""
-"Articles aléatoires de taille moyenne sans les cinq derniers publiés avec un "
-"arrière-plan coloré."
 
 #: widgets/recent-posts-big-two-widget.php:19
 msgid "Recent Posts (Big 2)"
-msgstr "Articles récents (Grand 2)"
+msgstr ""
 
 #: widgets/recent-posts-big-two-widget.php:24
 msgid ""
 "Big Recents Posts with featured image and a 2-column excerpt. Featured "
 "images must have a minimum size of 1200x800 pixel."
 msgstr ""
-"Articles récents de grande taille avec une image mise en page et un extrait "
-"sur deux colonnes. Les images mises en avant doivent avoir une taille "
-"minimale de 1200x800 pixels."
 
 #: widgets/recent-posts-small-one-widget.php:19
 msgid "Recent Posts (Small 1)"
-msgstr "Articles récents (Petit 1)"
+msgstr ""
 
 #: widgets/recent-posts-small-one-widget.php:24
 msgid "Small Recents Posts widget with featured images."
-msgstr "Articles récents de petite taille avec les images mises en avant."
+msgstr ""
 
 #: widgets/recent-posts-small-one-widget.php:118
 msgid "Category slug (optional, separate multiple categories by comma):"
 msgstr ""
-"Slug de la catégorie (facultatif, séparer les catégories avec une "
-"virgule)&nbsp;:"
 
 #: widgets/recent-posts-small-one-widget.php:123
 msgid "Tag slug (optional, separate multiple tags by comma):"
 msgstr ""
-"Slug de l'étiquette (facultatif, séparer les catégories avec une "
-"virgule)&nbsp;:"
 
 #: widgets/random-posts-colored-widget.php:19
 msgid "Random Posts (Background)"
-msgstr "Articles aléatoires (Arrière-plan)"
+msgstr ""
 
 #: widgets/random-posts-colored-widget.php:24
 msgid "Medium-sized Random Posts with a background color."
-msgstr "Articles aléatoires de taille moyenne avec un arrière-plan coloré."
+msgstr ""
 
 #: widgets/random-posts-colored-widget.php:241
 msgid "Publisher slug (optional):"
-msgstr "Slug de la maison d'édition (facultatif)&nbsp;:"
+msgstr ""
 
 #: widgets/random-posts-colored-widget.php:252
 msgid "Location slug (optional):"
-msgstr "Slug de la localisation (facultatif)&nbsp;:"
+msgstr ""
 
 #: widgets/random-posts-colored-widget.php:263
 msgid "Person slug (optional):"
-msgstr "Slug de la personne (facultatif)&nbsp;:"
+msgstr ""
 
 #: widgets/random-posts-colored-widget.php:274
 msgid "Prize slug (optional):"
-msgstr "Slug du prix littéraire (facultatif)&nbsp;:"
-
-#~ msgid "Skip to content"
-#~ msgstr "Passer au contenu"
-
-#~ msgid "Primary Menu"
-#~ msgstr "Menu primaire"
-
-#~ msgctxt "Used before full size attachment link."
-#~ msgid "Full size"
-#~ msgstr "Pleine dimension"
-
-#~ msgid "New: Quote"
-#~ msgstr "Nouveau : Citation"
-
-#~ msgid "by <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
-#~ msgstr "par <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
-
-#~ msgid "All posts by %s"
-#~ msgstr "Tous les articles de %s"
-
-#~ msgid "Published by <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
-#~ msgstr "Écrit par <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
-
-#~ msgid "<span>by</span> <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
-#~ msgstr "<span>par</span> <a href=\"%1$s\" title=\"%2$s\">%3$s</a>"
-
-#~ msgid "%1$s: %2$s"
-#~ msgstr "%1$s : %2$s"
+msgstr ""
