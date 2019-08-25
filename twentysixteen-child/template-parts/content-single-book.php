@@ -62,7 +62,7 @@
 		        <tr>
 			        <td>
 					<b><?php
-				        if ( count( $authors ) > 1 ){
+				        if( count( $authors ) > 1 ){
 					    $female_only = true;
 
 					    foreach( $authors as $author ){
@@ -113,7 +113,7 @@
 		        	<tr>
 				        <td>
 					        <b><?php
-				                if ( count( $translators ) > 1 ){
+				                if( count( $translators ) > 1 ){
 					            $female_only = true;
 
 					            foreach( $translators as $translator ){
