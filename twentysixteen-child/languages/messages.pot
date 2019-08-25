@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-25 10:13-0400\n"
+"POT-Creation-Date: 2019-08-25 11:18-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -333,6 +333,11 @@ msgstr ""
 #: search.php:23
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-single-book.php:30
+msgctxt "book metadata section title"
+msgid "About this book"
 msgstr ""
 
 #: template-parts/content-single-book.php:40

@@ -27,7 +27,7 @@
 		<?php
 			the_content();
 		?>
-		<h2>À propos de ce livre</h2>
+		<h2><?php echo _x( 'About this book', 'book metadata section title', 'twentysixteen-child' ); ?></h2>
 		<table>
 			<?php
 			$book_id = get_the_ID();

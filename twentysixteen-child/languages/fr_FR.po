@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-25 10:13-0400\n"
-"PO-Revision-Date: 2019-08-25 10:30-0400\n"
+"POT-Creation-Date: 2019-08-25 11:18-0400\n"
+"PO-Revision-Date: 2019-08-25 11:20-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -360,6 +360,11 @@ msgstr "Page suivante"
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de recherche pour&nbsp;: %s"
+
+#: template-parts/content-single-book.php:30
+msgctxt "book metadata section title"
+msgid "About this book"
+msgstr "À propos de ce livre"
 
 #: template-parts/content-single-book.php:40
 msgctxt "book metadata title read"
