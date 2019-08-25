@@ -209,18 +209,52 @@
 				}
 			?>
 			<?php
-				$colourist = get_book_colourist( $book_id );
+				$colourists = get_book_colourist( $book_id );
 
-				if ($colourist) {
+				if( $colourists ){
 				?>
 		                <tr>
 				        <td>
-						<b>Coloriste</b>
+					        <b><?php
+				                if( count( $colourists ) > 1 ){
+					            $female_only = true;
+
+					            foreach( $colourists as $colourist ){
+				                        $gender = get_option( 'taxonomy_' . $colourist->term_id )['gender'];
+
+                                                        if( $gender == 0 ){
+                                                            $female_only = false;
+                                                            break;
+                                                        }
+					            }
+
+					            if( $female_only ){
+					                echo _x( 'Colourists', 'book metadata female colourists', 'twentysixteen-child' );
+					            } else {
+					                echo _x( 'Colourists', 'book metadata colourists', 'twentysixteen-child' );
+					            }
+					        } else {
+				                    $gender = get_option( 'taxonomy_' . $authors[0]->term_id )['gender'];
+
+					            if( $gender == 1 ){
+					                echo _x( 'Colourist', 'book metadata female colourist', 'twentysixteen-child' );
+					            } else {
+					                echo _x( 'Colourist', 'book metadata male colourist', 'twentysixteen-child' );
+					            }
+					        }
+                                                ?></b>
 				        </td>
 				        <td>
-						<?php
-							echo '<a href="' . get_term_link( $colourist->term_id ). '">' . $colourist->name . '</a>';
-						?>
+					        <?php
+                                                $item_count = 0;
+				                foreach( $colourists as $colourist ){
+					            if( $item_count > 0 ) echo ', ';
+
+					            echo '<a href="' . get_term_link( $colourist->term_id ). '">' . $colourist->name . '</a>';
+                                                    $item_count++;
+					        }
+					        ?>
+				        </td>
 		                </tr>
 				<?php
 				}
