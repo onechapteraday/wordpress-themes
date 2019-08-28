@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-25 11:18-0400\n"
+"POT-Creation-Date: 2019-08-28 12:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:271
+#: functions.php:283
 msgctxt "Used before post author name."
 msgid "Author"
 msgstr ""
 
-#: functions.php:285
+#: functions.php:297
 msgctxt "Used before post format."
 msgid "Format"
 msgstr ""
 
-#: functions.php:299 widgets/random-posts-without-last-medium-two-widget.php:97
+#: functions.php:311 widgets/random-posts-without-last-medium-two-widget.php:97
 #: widgets/recent-posts-big-one-widget.php:85
 #: widgets/recent-posts-colored-widget.php:94
 #: widgets/recent-posts-medium-one-widget.php:82
@@ -40,205 +40,205 @@ msgstr ""
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: functions.php:339 functions.php:426
+#: functions.php:351 functions.php:438
 msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
 msgstr ""
 
-#: functions.php:343
+#: functions.php:355
 msgctxt "Used before category names."
 msgid "Categories"
 msgstr ""
 
-#: functions.php:365
+#: functions.php:377
 msgctxt "Used before person names."
 msgid "People"
 msgstr ""
 
-#: functions.php:392
+#: functions.php:404
 msgctxt "Used before prize names."
 msgid "Literary Prizes"
 msgstr ""
 
-#: functions.php:419
+#: functions.php:431
 msgctxt "Used before location names."
 msgid "Locations"
 msgstr ""
 
-#: functions.php:430
+#: functions.php:442
 msgctxt "Used before tag names."
 msgid "Tags"
 msgstr ""
 
-#: functions.php:449
+#: functions.php:461
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:451
+#: functions.php:463
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:459
+#: functions.php:471
 msgid "Sidebar for Books"
 msgstr ""
 
-#: functions.php:461
+#: functions.php:473
 msgid "Add widgets here to appears in your Book sidebar."
 msgstr ""
 
-#: functions.php:469
+#: functions.php:481
 msgid "Sidebar for Music"
 msgstr ""
 
-#: functions.php:471
+#: functions.php:483
 msgid "Add widgets here to appears in your Music sidebar."
 msgstr ""
 
-#: functions.php:479
+#: functions.php:491
 msgid "Front Page - FullWidth Top"
 msgstr ""
 
-#: functions.php:481
+#: functions.php:493
 msgid ""
 "Widgets appear in a single-column widget area on the top of the Front Page "
 "(and above the Featured Content slider, if active)."
 msgstr ""
 
-#: functions.php:489
+#: functions.php:501
 msgid "Front Page - Post Content 1"
 msgstr ""
 
-#: functions.php:491
+#: functions.php:503
 msgid ""
 "Widgets appear left of Sidebar 1 and below the FullWidth Top widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
 "Posts by Category widgets."
 msgstr ""
 
-#: functions.php:499
+#: functions.php:511
 msgid "Front Page - Sidebar 1"
 msgstr ""
 
-#: functions.php:501
+#: functions.php:513
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 1 "
 "widget area."
 msgstr ""
 
-#: functions.php:509
+#: functions.php:521
 msgid "Front Page - FullWidth Center"
 msgstr ""
 
-#: functions.php:511
+#: functions.php:523
 msgid ""
 "Widgets will appear in a single-column widget area below the Post Content 1 "
 "and Sidebar 1 widget areas."
 msgstr ""
 
-#: functions.php:519
+#: functions.php:531
 msgid "Front Page - Post Content 2"
 msgstr ""
 
-#: functions.php:521
+#: functions.php:533
 msgid ""
 "Widgets appear left of Sidebar 2 and below the FullWidth Center widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
 "Posts by Category widgets."
 msgstr ""
 
-#: functions.php:529
+#: functions.php:541
 msgid "Front Page - Sidebar 2"
 msgstr ""
 
-#: functions.php:531
+#: functions.php:543
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 2 "
 "widget area."
 msgstr ""
 
-#: functions.php:539
+#: functions.php:551
 msgid "Front Page - FullWidth Bottom"
 msgstr ""
 
-#: functions.php:541
+#: functions.php:553
 msgid ""
 "Widgets will appear in a single-column widget area at the bottom of your "
 "Front Page above the footer."
 msgstr ""
 
-#: functions.php:549
+#: functions.php:561
 msgid "Content Bottom 1"
 msgstr ""
 
-#: functions.php:551 functions.php:561
+#: functions.php:563 functions.php:573
 msgid "Appears at the bottom of the content on posts and pages."
 msgstr ""
 
-#: functions.php:559
+#: functions.php:571
 msgid "Content Bottom 2"
 msgstr ""
 
-#: functions.php:605
+#: functions.php:617
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:607
+#: functions.php:619
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: functions.php:609
+#: functions.php:621
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: functions.php:612
+#: functions.php:624
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: functions.php:614
+#: functions.php:626
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: functions.php:616
+#: functions.php:628
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: functions.php:618
+#: functions.php:630
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: functions.php:620
+#: functions.php:632
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: functions.php:622
+#: functions.php:634
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: functions.php:624
+#: functions.php:636
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: functions.php:626
+#: functions.php:638
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: functions.php:628
+#: functions.php:640
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
 
-#: functions.php:635
+#: functions.php:647
 msgid "Archives"
 msgstr ""
 
@@ -293,25 +293,25 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: image.php:62 template-parts/content-single-book.php:417
+#: image.php:62 template-parts/content-single-book.php:424
 #: template-parts/content.php:33 template-parts/content-single.php:35
-#: template-parts/content-single-album.php:118
+#: template-parts/content-single-album.php:211
 msgid "Pages:"
 msgstr ""
 
 #: image.php:66 category.php:59 category-reads.php:59 search.php:44 tag.php:59
 #: taxonomy-publisher.php:67 archive.php:57 taxonomy-location.php:58
-#: template-parts/content-single-book.php:421 template-parts/content.php:37
+#: template-parts/content-single-book.php:428 template-parts/content.php:37
 #: template-parts/content-single.php:39
-#: template-parts/content-single-album.php:122 taxonomy-prize.php:67
+#: template-parts/content-single-album.php:215 taxonomy-prize.php:67
 #: author.php:57 taxonomy-person.php:104 category-music.php:59
 msgid "Page"
 msgstr ""
 
-#: image.php:90 template-parts/content-single-book.php:434
+#: image.php:90 template-parts/content-single-book.php:441
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content.php:49 template-parts/content-single.php:51
-#: template-parts/content-single-album.php:135
+#: template-parts/content-single-album.php:228
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -470,17 +470,17 @@ msgctxt "book metadata release date"
 msgid "Release date"
 msgstr ""
 
-#: template-parts/content-single-book.php:377
+#: template-parts/content-single-book.php:379
 msgctxt "book metadata first publication date"
 msgid "First publication"
 msgstr ""
 
-#: template-parts/content-single-book.php:396
+#: template-parts/content-single-book.php:403
 msgctxt "book metadata Amazon affiliate link"
 msgid "Affiliate link"
 msgstr ""
 
-#: template-parts/content-single-book.php:401
+#: template-parts/content-single-book.php:408
 msgctxt "book metadata Amazon affiliate message"
 msgid "Buy on Amazon"
 msgstr ""
@@ -492,6 +492,81 @@ msgstr ""
 #: template-parts/content.php:28
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content-single-album.php:32
+msgctxt "single metadata section title"
+msgid "About this single"
+msgstr ""
+
+#: template-parts/content-single-album.php:36
+msgctxt "album metadata section title"
+msgid "About this album"
+msgstr ""
+
+#: template-parts/content-single-album.php:64
+msgctxt "album metadata female artists"
+msgid "Artists"
+msgstr ""
+
+#: template-parts/content-single-album.php:66
+msgctxt "album metadata artists"
+msgid "Artists"
+msgstr ""
+
+#: template-parts/content-single-album.php:72
+msgctxt "album metadata female artist"
+msgid "Artist"
+msgstr ""
+
+#: template-parts/content-single-album.php:74
+msgctxt "album metadata male artist"
+msgid "Artist"
+msgstr ""
+
+#: template-parts/content-single-album.php:114
+msgctxt "album metadata female featured artists"
+msgid "Featured artists"
+msgstr ""
+
+#: template-parts/content-single-album.php:116
+msgctxt "album metadata featured artists"
+msgid "Featured artists"
+msgstr ""
+
+#: template-parts/content-single-album.php:122
+msgctxt "album metadata female featured artist"
+msgid "Featured artist"
+msgstr ""
+
+#: template-parts/content-single-album.php:124
+msgctxt "album metadata male featured artist"
+msgid "Featured artist"
+msgstr ""
+
+#: template-parts/content-single-album.php:146
+msgctxt "album metadata title"
+msgid "Title"
+msgstr ""
+
+#: template-parts/content-single-album.php:159
+msgctxt "album metadata release date"
+msgid "Release date"
+msgstr ""
+
+#: template-parts/content-single-album.php:175
+msgctxt "album metadata price"
+msgid "Price"
+msgstr ""
+
+#: template-parts/content-single-album.php:192
+msgctxt "album metadata Amazon affiliate link"
+msgid "Affiliate link"
+msgstr ""
+
+#: template-parts/content-single-album.php:197
+msgctxt "album metadata Amazon affiliate message"
+msgid "Buy on Amazon"
 msgstr ""
 
 #: 404.php:22
