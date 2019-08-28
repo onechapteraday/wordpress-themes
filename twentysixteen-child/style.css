@@ -318,7 +318,19 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 
 .jp-relatedposts-post-title,
 .entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
-    margin-bottom: 0.45em;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 0.75em;
+    margin-bottom: 0.25em;
+    max-height: 60px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+    font-weight: normal;
 }
 
 .entry-content #jp-relatedposts h3.jp-relatedposts-headline {
@@ -341,13 +353,6 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 
     #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:nth-child(3n) {
         clear: none !important;
-    }
-
-    .jp-relatedposts-post-title,
-    .entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
     .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
