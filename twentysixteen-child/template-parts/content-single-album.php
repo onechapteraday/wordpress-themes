@@ -40,6 +40,16 @@
 		<table>
 			<?php
 			$album_id = get_the_ID();
+			?>
+		        <tr>
+			        <td>
+					<b><?php echo _x( 'Title', 'album metadata title', 'twentysixteen-child' ); ?></b>
+			        </td>
+			        <td>
+					<?php echo get_album_title_original( $album_id ); ?>
+			        </td>
+		        </tr>
+			<?php
 
 			$authors = get_album_author( $album_id );
 
@@ -140,16 +150,6 @@
 		        </tr>
 			<?php
 			}
-			?>
-		        <tr>
-			        <td>
-					<b><?php echo _x( 'Title', 'album metadata title', 'twentysixteen-child' ); ?></b>
-			        </td>
-			        <td>
-					<?php echo get_album_title_original( $album_id ); ?>
-			        </td>
-		        </tr>
-			<?php
 
                         if( get_album_date_release( $album_id ) ){
 
