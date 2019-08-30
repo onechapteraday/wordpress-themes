@@ -288,6 +288,12 @@ function twentysixteen_entry_meta() {
     }
 
     if ( in_array( get_post_type(), $post_types ) ) {
+        $post_type = get_post_type();
+
+        if( $post_type == 'book' ){
+            twentysixteen_child_release_date();
+        }
+
         twentysixteen_entry_date();
     }
 
@@ -765,8 +771,29 @@ function update_post_order_query( $query ) {
         $query->set( 'post__in', $posts_id );
         $query->set( 'orderby', 'post__in' );
     }
+
+    # Display publisher and collection by release date of book
+    if( $query->is_tax( 'publisher' ) ) {
+        $query->set( 'meta_key', 'date_release' );
+        $query->set( 'orderby', 'meta_value' );
+        $query->set( 'order', 'desc' );
+    }
 }
 
 add_action( 'pre_get_posts', 'update_post_order_query' );
 
+
+/**
+ * Get release date of book and display it
+ */
+
+function twentysixteen_child_release_date(){
+    $release_date = get_post_meta( get_the_ID(), 'date_release', true );
+
+    printf( '<span class="posted-on book-release-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
+        _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ),
+        esc_url( get_permalink() ),
+        _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ) . ' ' . date_i18n( 'j F Y', strtotime( $release_date ) )
+    );
+}
 ?>

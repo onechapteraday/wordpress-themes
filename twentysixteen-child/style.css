@@ -37,6 +37,7 @@
  *    8.1 - Full-width single
  * 9.0 - Breadcrumb
  * 10.0 - Jetpack Display Posts Widget
+ * 11.0 - Publisher taxonomy archive
  */
 
 
@@ -1860,4 +1861,21 @@ header ol.breadcrumb li:first-child:before {
 
 .widget.widget_jetpack_display_posts_widget .jetpack-display-remote-posts h4 a:hover {
     color: #007acc;
+}
+
+
+/**
+ * 11.0 - Publisher taxonomy archive
+ */
+
+body:not(search-results) article:not(.sticky) .entry-footer .book-release-date {
+    display: none;
+}
+
+body.tax-publisher .entry-footer .posted-on + .posted-on {
+    display: none;
+}
+
+body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
+    display: block;
 }
