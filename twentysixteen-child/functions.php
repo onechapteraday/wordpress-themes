@@ -724,4 +724,49 @@ function twentysixteen_child_body_classes( $classes ){
 
 add_filter( 'body_class', 'twentysixteen_child_body_classes' );
 
+
+/**
+ * Update posts order in literary prize archive
+ */
+
+function update_post_order_query( $query ) {
+    # Display prizes by year of attribution desc
+    if( $query->is_tax( 'prize' ) ) {
+
+        $queried_slug = $query->queried_object->slug;
+
+        $sql = "SELECT *
+                FROM `wp_posts` p, `wp_terms` t, `wp_term_relationships` r, `wp_term_taxonomy` x
+                WHERE p.ID = r.object_id
+                AND t.term_id = x.term_id
+                AND r.term_taxonomy_id = x.term_taxonomy_id
+                AND p.post_status = 'publish'
+                AND (
+                    x.term_id = (
+                        SELECT term_id
+                        FROM `wp_terms`
+                        WHERE slug = '$queried_slug'
+                    ) OR
+                    x.parent = (
+                        SELECT term_id
+                        FROM `wp_terms`
+                        WHERE slug = '$queried_slug'
+                    )
+                )
+                ORDER BY t.name DESC";
+
+        $results = $GLOBALS['wpdb']->get_results( $sql );
+        $posts_id = array();
+
+        foreach( $results as $result ){
+            array_push( $posts_id, $result->ID );
+        }
+
+        $query->set( 'post__in', $posts_id );
+        $query->set( 'orderby', 'post__in' );
+    }
+}
+
+add_action( 'pre_get_posts', 'update_post_order_query' );
+
 ?>

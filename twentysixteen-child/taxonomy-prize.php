@@ -31,14 +31,14 @@ get_header(); ?>
                                     }
                                 ?>
 				<?php
-					$title = single_term_title('', false);
+					$title = single_term_title( '', false );
 					echo '<h1 class="page-title">' . $title . '</h1>';
 
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 
-					$prize_link = get_prize_option('prize_link');
+					$prize_link = get_prize_option( 'prize_link' );
 
-					if ($prize_link) {
+					if( $prize_link ){
 					    echo '<div class="taxonomy-description"><p>';
 					    echo '<a href="' . $prize_link . '" target="_blank">Site web</a>';
 					    echo '</p></div>';
