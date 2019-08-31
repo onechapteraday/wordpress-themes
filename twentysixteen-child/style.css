@@ -369,6 +369,10 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
         display: none !important;
     }
+
+    body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
+        display: inline !important;
+    }
 }
 
 
