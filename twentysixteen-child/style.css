@@ -160,6 +160,11 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     margin-bottom: 0.1535em;
 }
 
+.entry-content ul li,
+.entry-content ol li {
+    margin-bottom: 20px;
+}
+
 /* Post 2685 styles */
 
 .postid-2685 table.group {
