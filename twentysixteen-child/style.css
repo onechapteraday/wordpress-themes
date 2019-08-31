@@ -38,6 +38,7 @@
  * 9.0 - Breadcrumb
  * 10.0 - Jetpack Display Posts Widget
  * 11.0 - Publisher taxonomy archive
+ * 12.0 - Media print
  */
 
 
@@ -1892,4 +1893,135 @@ body.tax-publisher .entry-footer .posted-on + .posted-on {
 
 body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
     display: block;
+}
+
+
+/**
+ * 12.0 - Media print
+ */
+
+@media print {
+    body,
+    h1, h2, h3 {
+        font-size: 80%;
+    }
+
+    h1, h2, h3 {
+        break-after: avoid-page;
+        page-break-after: avoid-page;
+    }
+
+    h1.entry-title {
+        font-size: 25px;
+        margin-bottom: 20px;
+        hyphens: none;
+    }
+
+    pre {
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    blockquote {
+        font-size: 15px;
+    }
+
+    header#masthead,
+    header.entry-header ol.breadcrumb,
+    div.entry-content iframe,
+    footer.entry-footer,
+    div.post-thumbnail,
+    div.single-metadata,
+    div#comments,
+    div.sharedaddy,
+    footer#colophon {
+        display: none;
+    }
+
+    div#jp-relatedposts {
+        display: none !important;
+    }
+
+    div.entry-content h2 {
+        font-size: 18px;
+        margin: 20px auto 18px;
+        hyphens: none;
+    }
+
+    div.entry-content h3 {
+        font-size: 16px;
+        margin: 18px auto;
+        hyphens: none;
+    }
+
+    div.entry-content a,
+    div.entry-content a:link,
+    div.entry-content a:active {
+        -webkit-box-shadow: none;
+           -moz-box-shadow: none;
+                box-shadow: none;
+        border-bottom: none !important;
+    }
+
+    div.entry-content a:link:after,
+    div.entry-content a:visited:after {
+        content: "\00a0(" attr(href) ") ";
+        font-size: 80%;
+        color: #333;
+    }
+
+    div.entry-content p,
+    div.entry-content li,
+    div.entry-content pre,
+    div.entry-content blockquote {
+        page-break-inside: avoid;
+    }
+
+    div.entry-content p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    div.entry-content p:last-of-type + blockquote{
+        margin-top: 20px;
+    }
+
+    div.entry-content table td {
+        font-size: 80%;
+    }
+
+    div.entry-content img {
+        page-break-before: always;
+    }
+
+    body.archive header.page-header {
+        border: none;
+        margin-bottom: 30px;
+    }
+
+    body.archive header ol.breadcrumb {
+        display: none;
+    }
+
+    body.archive h2.entry-title {
+        font-size: 20px;
+        margin: 20px auto 18px;
+        hyphens: none;
+    }
+
+    body.archive footer.entry-footer {
+        display: block;
+    }
+
+    body.archive footer.entry-footer .cat-links,
+    body.archive footer.entry-footer .comments-link {
+        display: none;
+    }
+
+    body.archive article {
+        margin-bottom: 20px;
+    }
+
+    body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
+        display: inline;
+    }
 }

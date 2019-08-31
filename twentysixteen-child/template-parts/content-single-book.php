@@ -27,6 +27,7 @@
 		<?php
 			the_content();
 		?>
+                <div class="single-metadata metadata-book">
 		<h2><?php echo _x( 'About this book', 'book metadata section title', 'twentysixteen-child' ); ?></h2>
 		<table>
 			<?php
@@ -413,7 +414,6 @@
                         }
                         ?>
 		</table>
-                <div>
                 </div>
 		<?php
                         if( class_exists( 'Jetpack_RelatedPosts' ) ){

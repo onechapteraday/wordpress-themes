@@ -24,6 +24,7 @@
 	<?php twentysixteen_post_thumbnail(); ?>
 
 	<div class="entry-content">
+                <div class="single-metadata metadata-album">
 		<?php
 			the_content();
 
@@ -202,6 +203,7 @@
                         }
                         ?>
 		</table>
+                </div>
 		<?php
                         if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
                             echo do_shortcode( '[jetpack-related-posts]' );
