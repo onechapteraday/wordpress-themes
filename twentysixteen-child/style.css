@@ -69,6 +69,11 @@ td {
     font-size: 0.9375rem;
 }
 
+h1.entry-title,
+h2.entry-title {
+    hyphens: none;
+}
+
 .single span.small-caps {
   font-variant: small-caps;
 }
