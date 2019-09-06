@@ -1906,9 +1906,11 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
         font-size: 80%;
     }
 
-    h1, h2, h3 {
-        break-after: avoid-page;
-        page-break-after: avoid-page;
+    h1,
+    div.entry-content h2,
+    div.entry-content h3 {
+        page-break-after: avoid;
+             break-after: avoid;
     }
 
     h1.entry-title {
@@ -1926,6 +1928,7 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
         font-size: 15px;
     }
 
+    div#eu-cookie-law,
     header#masthead,
     header.entry-header ol.breadcrumb,
     div.entry-content iframe,
@@ -1972,6 +1975,7 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
 
     div.entry-content p,
     div.entry-content li,
+    div.entry-content img,
     div.entry-content pre,
     div.entry-content blockquote {
         page-break-inside: avoid;
@@ -1981,16 +1985,17 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
         margin-bottom: 0;
     }
 
-    div.entry-content p:last-of-type + blockquote{
+    div.entry-content p:last-of-type + img
+    div.entry-content p:last-of-type + blockquote {
+        margin-top: 20px;
+    }
+
+    div.entry-content table {
         margin-top: 20px;
     }
 
     div.entry-content table td {
         font-size: 80%;
-    }
-
-    div.entry-content img {
-        page-break-before: always;
     }
 
     body.archive header.page-header {
