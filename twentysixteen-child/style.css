@@ -137,6 +137,16 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     left: 0;
 }
 
+.entry-content blockquote small {
+    margin-top: 5px;
+    line-height: 1.5;
+    color: #8e8e8e;
+}
+
+.entry-content blockquote small:before {
+    content: none;
+}
+
 .akismet_comment_form_privacy_notice {
     font-size: 15px;
     font-size: 0.9375rem;
@@ -1926,6 +1936,10 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
 
     blockquote {
         font-size: 15px;
+    }
+
+    blockquote small {
+        font-size: 13px;
     }
 
     div#eu-cookie-law,
