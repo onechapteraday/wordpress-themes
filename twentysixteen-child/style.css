@@ -1836,20 +1836,6 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
     font-size: 1.4rem;
 }
 
-.single-interview .entry-content h2:before {
-    content: "Q : ";
-    opacity: 0.5;
-    margin-left: -40px;
-    position: absolute;
-}
-
-@media screen and (max-width: 636px) {
-    .single-interview .entry-content h2:before {
-        position: relative;
-        margin-left: 0;
-    }
-}
-
 
 /**
  * 9.0 - Breadcrumb
@@ -1991,10 +1977,6 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
 
     .single-interview div.entry-content h2 {
         font-size: 16px;
-    }
-
-    .single-interview div.entry-content h2:before {
-        display: none;
     }
 
     div.entry-content h3 {
