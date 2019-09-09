@@ -35,6 +35,7 @@
  *    7.10 - Media Queries
  * 8.0 - Page templates
  *    8.1 - Full-width single
+ *    8.2 - Single interview
  * 9.0 - Breadcrumb
  * 10.0 - Jetpack Display Posts Widget
  * 11.0 - Publisher taxonomy archive
@@ -1828,6 +1829,29 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
 
 
 /**
+ * 8.2 - Single interview
+ */
+
+.single-interview .entry-content h2 {
+    font-size: 1.4rem;
+}
+
+.single-interview .entry-content h2:before {
+    content: "Q : ";
+    opacity: 0.5;
+    margin-left: -40px;
+    position: absolute;
+}
+
+@media screen and (max-width: 636px) {
+    .single-interview .entry-content h2:before {
+        position: relative;
+        margin-left: 0;
+    }
+}
+
+
+/**
  * 9.0 - Breadcrumb
  */
 
@@ -1965,6 +1989,14 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
         hyphens: none;
     }
 
+    .single-interview div.entry-content h2 {
+        font-size: 16px;
+    }
+
+    .single-interview div.entry-content h2:before {
+        display: none;
+    }
+
     div.entry-content h3 {
         font-size: 16px;
         margin: 18px auto;
@@ -1988,6 +2020,7 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
     }
 
     div.entry-content p,
+    div.entry-content h2,
     div.entry-content li,
     div.entry-content img,
     div.entry-content pre,
