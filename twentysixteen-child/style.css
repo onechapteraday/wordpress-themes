@@ -252,6 +252,10 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
         filter: alpha(opacity=25);
     }
 
+    .single .entry-content > blockquote.alignleft + p:before {
+        content: '';
+    }
+
     .single .entry-content > p.media {
         counter-increment: paragraphCount -0;
     }
