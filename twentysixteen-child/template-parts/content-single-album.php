@@ -24,10 +24,11 @@
 	<?php twentysixteen_post_thumbnail(); ?>
 
 	<div class="entry-content">
-                <div class="single-metadata metadata-album">
 		<?php
 			the_content();
-
+		?>
+                <div class="single-metadata metadata-album">
+		<?php
                         if( has_tag( 'single' ) ){
 		            ?>
 		            <h2><?php echo _x( 'About this single', 'single metadata section title', 'twentysixteen-child' ); ?></h2>
