@@ -182,6 +182,18 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     margin-bottom: 20px;
 }
 
+.widget-area .widget h2.widget-title,
+.widget-area .widget h3.widget-title {
+    margin: 0;
+    padding: 0 0 25px;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    line-height: 1.725;
+    letter-spacing: 1.5px;
+}
+
+
 /* Post 2685 styles */
 
 .postid-2685 table.group {
@@ -589,7 +601,7 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
 
 .custom-front-page .widget h3.widget-title {
     margin: 0;
-    padding: 0 0 35px;
+    padding: 0 0 25px;
     font-size: 11px;
     font-size: 0.6875rem;
     text-transform: uppercase;
