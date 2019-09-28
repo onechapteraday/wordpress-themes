@@ -796,4 +796,5 @@ function twentysixteen_child_release_date(){
         _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ) . ' ' . date_i18n( 'j F Y', strtotime( $release_date ) )
     );
 }
+
 ?>
