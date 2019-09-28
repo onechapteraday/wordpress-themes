@@ -193,6 +193,10 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     letter-spacing: 1.5px;
 }
 
+.archive .page-header h1.page-title {
+    margin-bottom: 15px;
+}
+
 
 /* Post 2685 styles */
 
