@@ -197,6 +197,11 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     margin-bottom: 15px;
 }
 
+.widget.widget_jetpack_display_posts_widget .jetpack-display-remote-posts h4 + a {
+    display: block;
+    margin-bottom: 15px;
+}
+
 
 /* Post 2685 styles */
 
