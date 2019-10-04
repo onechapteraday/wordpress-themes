@@ -36,12 +36,39 @@ get_header(); ?>
 
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 
-					$publisher_link = get_publisher_option('publisher_link');
+					$publisher_link       = get_publisher_option( 'publisher_link' )      ;
+					$publisher_twitter    = get_publisher_option( 'publisher_twitter' )   ;
+					$publisher_facebook   = get_publisher_option( 'publisher_facebook' )  ;
+					$publisher_instagram  = get_publisher_option( 'publisher_instagram' ) ;
+					$publisher_youtube    = get_publisher_option( 'publisher_youtube' )   ;
 
-					if( $publisher_link ){
-					    echo '<div class="taxonomy-description"><p>';
-					    echo '<a href="' . $publisher_link . '" target="_blank">Site web</a>';
-					    echo '</p></div>';
+					if( $publisher_link || $publisher_twitter || $publisher_facebook || $publisher_instagram || $publisher_youtube ){
+					    echo '<div class="taxonomy-description social-icons">';
+					    echo '<p><u>' . __( 'More information', 'twentysixteen-child' ) . '</u>' . __( ': ', 'twentysixteen-child' );
+
+
+					    if ( $publisher_link ) {
+					        echo '<a class="icon-link" href="http://' . $publisher_link . '" target="_blank" title="'. __( 'Website', 'twentysixteen' ) . '"></a>';
+					    }
+
+					    if ( $publisher_facebook ) {
+					        echo '<a class="icon-facebook" href="http://facebook.com/' . $publisher_facebook . '" target="_blank" title="Facebook"></a>';
+					    }
+
+					    if ( $publisher_twitter ) {
+					        echo '<a class="icon-twitter" href="http://twitter.com/' . $publisher_twitter . '" target="_blank" title="Twitter"></a>';
+					    }
+
+					    if ( $publisher_instagram ) {
+					        echo '<a class="icon-instagram" href="http://instagram.com/' . $publisher_instagram . '" target="_blank" title="Instagram"></a>';
+					    }
+
+					    if ( $publisher_youtube ) {
+					        echo '<a class="icon-youtube" href="http://youtube.com/' . $publisher_youtube . '" target="_blank" title="YouTube"></a>';
+					    }
+
+					    echo '</p>';
+					    echo '</div>';
 					}
 				?>
 			</header><!-- .page-header -->
