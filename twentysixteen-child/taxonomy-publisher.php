@@ -38,7 +38,7 @@ get_header(); ?>
 
 					$publisher_link = get_publisher_option('publisher_link');
 
-					if ($publisher_link) {
+					if( $publisher_link ){
 					    echo '<div class="taxonomy-description"><p>';
 					    echo '<a href="' . $publisher_link . '" target="_blank">Site web</a>';
 					    echo '</p></div>';
