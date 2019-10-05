@@ -25,51 +25,89 @@ get_header(); ?>
 
 			<header class="page-header">
                                 <?php
+                                    $publisher = get_queried_object();
+
                                     if( shortcode_exists( 'wp_breadcrumb_publisher' ) ) {
-					$publisher_id = get_queried_object()->term_id;
+					$publisher_id = $publisher->term_id;
                                         do_shortcode( '[wp_breadcrumb_publisher id=' . $publisher_id . ']' );
                                     }
                                 ?>
 				<?php
-					$title = single_term_title('', false);
-					echo '<h1 class="page-title">' . $title . '</h1>';
+				    $title = single_term_title('', false);
+				    echo '<h1 class="page-title">' . $title . '</h1>';
 
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				    the_archive_description( '<div class="taxonomy-description">', '</div>' );
 
-					$publisher_link       = get_publisher_option( 'publisher_link' )      ;
-					$publisher_twitter    = get_publisher_option( 'publisher_twitter' )   ;
-					$publisher_facebook   = get_publisher_option( 'publisher_facebook' )  ;
-					$publisher_instagram  = get_publisher_option( 'publisher_instagram' ) ;
-					$publisher_youtube    = get_publisher_option( 'publisher_youtube' )   ;
+                                    $coll_id = get_term_children( $publisher_id, 'publisher' );
 
-					if( $publisher_link || $publisher_twitter || $publisher_facebook || $publisher_instagram || $publisher_youtube ){
-					    echo '<div class="taxonomy-description social-icons">';
-					    echo '<p><u>' . __( 'More information', 'twentysixteen-child' ) . '</u>' . __( ': ', 'twentysixteen-child' );
+                                    if( $coll_id ){
+                                        $collections = array();
+
+                                        foreach( $coll_id as $id ){
+                                            $term = get_term( $id, 'publisher' );
+                                            array_push( $collections, $term );
+                                        }
+
+                                        if( $collections ){
+                                            function sort_collection_by_name( $a, $b ){
+                                                $translit = array('Á'=>'A','À'=>'A','Â'=>'A','Ä'=>'A','Ã'=>'A','Å'=>'A','Ç'=>'C','É'=>'E','È'=>'E','Ê'=>'E','Ë'=>'E','Í'=>'I','Ï'=>'I','Î'=>'I','Ì'=>'I','Ñ'=>'N','Ó'=>'O','Ò'=>'O','Ô'=>'O','Ö'=>'O','Õ'=>'O','Ú'=>'U','Ù'=>'U','Û'=>'U','Ü'=>'U','Ý'=>'Y','á'=>'a','à'=>'a','â'=>'a','ä'=>'a','ã'=>'a','å'=>'a','ç'=>'c','é'=>'e','è'=>'e','ê'=>'e','ë'=>'e','í'=>'i','ì'=>'i','î'=>'i','ï'=>'i','ñ'=>'n','ó'=>'o','ò'=>'o','ô'=>'o','ö'=>'o','õ'=>'o','ú'=>'u','ù'=>'u','û'=>'u','ü'=>'u','ý'=>'y','ÿ'=>'y');
+                                                $at = strtolower( strtr( $a->name, $translit ) );
+                                                $bt = strtolower( strtr( $b->name, $translit ) );
+
+                                                return strcoll( $at, $bt );
+                                            }
+
+                                            usort( $collections, 'sort_collection_by_name' );
+
+				            echo '<div class="taxonomy-description publisher-collections">';
+				            echo '<p>';
+
+                                            foreach( $collections as $collection ){
+                                                if( $collection->count > 0 ){
+                                                    $term_link = get_term_link( $collection );
+                                                    echo '<a href="' . $term_link . '">' . $collection->name . '</a>' . '&nbsp; :.&nbsp; ';
+                                                }
+                                            }
+
+				            echo '</p>';
+				            echo '</div>';
+                                        }
+                                    }
+
+				    $publisher_link       = get_publisher_option( 'publisher_link' )      ;
+				    $publisher_twitter    = get_publisher_option( 'publisher_twitter' )   ;
+				    $publisher_facebook   = get_publisher_option( 'publisher_facebook' )  ;
+				    $publisher_instagram  = get_publisher_option( 'publisher_instagram' ) ;
+				    $publisher_youtube    = get_publisher_option( 'publisher_youtube' )   ;
+
+				    if( $publisher_link || $publisher_twitter || $publisher_facebook || $publisher_instagram || $publisher_youtube ){
+				        echo '<div class="taxonomy-description social-icons">';
+				        echo '<p><u>' . __( 'More information', 'twentysixteen-child' ) . '</u>' . __( ': ', 'twentysixteen-child' );
 
 
-					    if ( $publisher_link ) {
-					        echo '<a class="icon-link" href="http://' . $publisher_link . '" target="_blank" title="'. __( 'Website', 'twentysixteen' ) . '"></a>';
-					    }
+				        if ( $publisher_link ) {
+				            echo '<a class="icon-link" href="' . $publisher_link . '" target="_blank" title="'. __( 'Website', 'twentysixteen' ) . '"></a>';
+				        }
 
-					    if ( $publisher_facebook ) {
-					        echo '<a class="icon-facebook" href="http://facebook.com/' . $publisher_facebook . '" target="_blank" title="Facebook"></a>';
-					    }
+				        if ( $publisher_facebook ) {
+				            echo '<a class="icon-facebook" href="http://facebook.com/' . $publisher_facebook . '" target="_blank" title="Facebook"></a>';
+				        }
 
-					    if ( $publisher_twitter ) {
-					        echo '<a class="icon-twitter" href="http://twitter.com/' . $publisher_twitter . '" target="_blank" title="Twitter"></a>';
-					    }
+				        if ( $publisher_twitter ) {
+				            echo '<a class="icon-twitter" href="http://twitter.com/' . $publisher_twitter . '" target="_blank" title="Twitter"></a>';
+				        }
 
-					    if ( $publisher_instagram ) {
-					        echo '<a class="icon-instagram" href="http://instagram.com/' . $publisher_instagram . '" target="_blank" title="Instagram"></a>';
-					    }
+				        if ( $publisher_instagram ) {
+				            echo '<a class="icon-instagram" href="http://instagram.com/' . $publisher_instagram . '" target="_blank" title="Instagram"></a>';
+				        }
 
-					    if ( $publisher_youtube ) {
-					        echo '<a class="icon-youtube" href="http://youtube.com/' . $publisher_youtube . '" target="_blank" title="YouTube"></a>';
-					    }
+				        if ( $publisher_youtube ) {
+				            echo '<a class="icon-youtube" href="http://youtube.com/' . $publisher_youtube . '" target="_blank" title="YouTube"></a>';
+				        }
 
-					    echo '</p>';
-					    echo '</div>';
-					}
+				        echo '</p>';
+				        echo '</div>';
+				    }
 				?>
 			</header><!-- .page-header -->
 

@@ -134,8 +134,12 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     margin-top: 10px;
 }
 
+.taxonomy-description.publisher-collections {
+    margin: 10px 0 12px;
+}
+
 .blockquote_highlight {
-	color: #333;
+    color: #333;
 }
 
 .blockquote_post_cite {
