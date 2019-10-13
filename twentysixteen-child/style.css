@@ -190,9 +190,9 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     padding-bottom: 0.275em;
     max-width: 100%;
     overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-bottom: 0.1535em;
 }
 
 .entry-content ul li,
