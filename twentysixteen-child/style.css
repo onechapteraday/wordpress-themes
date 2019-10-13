@@ -85,6 +85,9 @@ td {
 }
 
 .entry-title {
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
     hyphens: none;
 }
 
@@ -2000,6 +2003,9 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
     h1.entry-title {
         font-size: 25px;
         margin-bottom: 20px;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
         hyphens: none;
     }
 
@@ -2036,6 +2042,9 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
     div.entry-content h2 {
         font-size: 18px;
         margin: 20px auto 18px;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
         hyphens: none;
     }
 
@@ -2046,6 +2055,9 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
     div.entry-content h3 {
         font-size: 16px;
         margin: 18px auto;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
         hyphens: none;
     }
 
@@ -2103,6 +2115,9 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
     body.archive h2.entry-title {
         font-size: 20px;
         margin: 20px auto 18px;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
         hyphens: none;
     }
 
