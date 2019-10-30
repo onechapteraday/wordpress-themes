@@ -60,12 +60,16 @@ get_header(); ?>
                                             usort( $collections, 'sort_collection_by_name' );
 
 				            echo '<div class="taxonomy-description publisher-collections">';
-				            echo '<p>';
+				            echo '<p><u>' . __( 'Collections', 'twentysixteen-child' ) . '</u>' . __( ': ', 'twentysixteen-child' );
 
-                                            foreach( $collections as $collection ){
+                                            foreach( $collections as $key => $collection ){
                                                 if( $collection->count > 0 ){
+                                                    if( $key > 0 ){
+                                                        echo ' - ';
+                                                    }
+
                                                     $term_link = get_term_link( $collection );
-                                                    echo '<a href="' . $term_link . '">' . $collection->name . '</a>' . '&nbsp; :.&nbsp; ';
+                                                    echo '<a href="' . $term_link . '">' . $collection->name . '</a>' . '';
                                                 }
                                             }
 

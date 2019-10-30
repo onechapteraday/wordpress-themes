@@ -138,7 +138,12 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 }
 
 .taxonomy-description.publisher-collections {
-    margin: 10px 0 12px;
+    margin: 13px 0 10px;
+}
+
+.taxonomy-description.publisher-collections a {
+    text-decoration: none;
+    box-shadow: none;
 }
 
 .blockquote_highlight {
