@@ -42,6 +42,7 @@ get_header(); ?>
 
                                     if( $coll_id ){
                                         $collections = array();
+                                        $collections_with = array();
 
                                         foreach( $coll_id as $id ){
                                             $term = get_term( $id, 'publisher' );
@@ -64,13 +65,17 @@ get_header(); ?>
 
                                             foreach( $collections as $key => $collection ){
                                                 if( $collection->count > 0 ){
-                                                    if( $key > 0 ){
-                                                        echo ' - ';
-                                                    }
-
-                                                    $term_link = get_term_link( $collection );
-                                                    echo '<a href="' . $term_link . '">' . $collection->name . '</a>' . '';
+                                                    array_push( $collections_with, $collection );
                                                 }
+                                            }
+
+                                            foreach( $collections_with as $key => $collection ){
+                                               if( $key > 0 ){
+                                                   echo ' - ';
+                                               }
+
+                                               $term_link = get_term_link( $collection );
+                                               echo '<a href="' . $term_link . '">' . $collection->name . '</a>' . '';
                                             }
 
 				            echo '</p>';
