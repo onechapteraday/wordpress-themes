@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-30 13:34-0400\n"
-"PO-Revision-Date: 2019-08-30 13:34-0400\n"
+"POT-Creation-Date: 2019-11-18 23:41-0500\n"
+"PO-Revision-Date: 2019-11-18 23:45-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -28,15 +28,13 @@ msgctxt "Used before post format."
 msgid "Format"
 msgstr "Format"
 
-#: functions.php:317 widgets/random-posts-without-last-medium-two-widget.php:97
-#: widgets/recent-posts-big-one-widget.php:85
-#: widgets/recent-posts-colored-widget.php:94
+#: functions.php:317 widgets/recent-posts-big-one-widget.php:85
+#: widgets/recent-posts-colored-widget.php:234
 #: widgets/recent-posts-medium-one-widget.php:82
-#: widgets/random-posts-medium-two-widget.php:85
-#: widgets/recent-posts-medium-two-widget.php:84
-#: widgets/random-posts-without-last-colored-widget.php:114
+#: widgets/random-posts-medium-two-widget.php:227
+#: widgets/recent-posts-medium-two-widget.php:223
 #: widgets/recent-posts-big-two-widget.php:89
-#: widgets/random-posts-colored-widget.php:173
+#: widgets/random-posts-colored-widget.php:238
 #, php-format
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
@@ -202,71 +200,71 @@ msgstr "Apparaît en bas du contenu des articles et des pages."
 msgid "Content Bottom 2"
 msgstr "Contenu du bas 2"
 
-#: functions.php:623
+#: functions.php:621
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: functions.php:625
+#: functions.php:623
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: functions.php:627
+#: functions.php:625
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "F j, Y"
 
-#: functions.php:630
+#: functions.php:628
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "Apartés"
 
-#: functions.php:632
+#: functions.php:630
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "Galeries"
 
-#: functions.php:634
+#: functions.php:632
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "Images"
 
-#: functions.php:636
+#: functions.php:634
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "Vidéos"
 
-#: functions.php:638
+#: functions.php:636
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "Citations"
 
-#: functions.php:640
+#: functions.php:638
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "Liens"
 
-#: functions.php:642
+#: functions.php:640
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "Statuts"
 
-#: functions.php:644
+#: functions.php:642
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "Audios"
 
-#: functions.php:646
+#: functions.php:644
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "Messages"
 
-#: functions.php:653
+#: functions.php:651
 msgid "Archives"
 msgstr "Archives"
 
-#: functions.php:794
+#: functions.php:792 functions.php:794
 msgctxt "Used before release date of book."
 msgid "Released on"
 msgstr "Paru le"
@@ -326,15 +324,15 @@ msgstr "Image suivante"
 
 #: image.php:62 template-parts/content-single-book.php:424
 #: template-parts/content.php:33 template-parts/content-single.php:35
-#: template-parts/content-single-album.php:211
+#: template-parts/content-single-album.php:214
 msgid "Pages:"
 msgstr "Pages :"
 
 #: image.php:66 category.php:59 category-reads.php:59 search.php:44 tag.php:59
-#: taxonomy-publisher.php:67 archive.php:57 taxonomy-location.php:58
+#: taxonomy-publisher.php:141 archive.php:57 taxonomy-location.php:58
 #: template-parts/content-single-book.php:428 template-parts/content.php:37
 #: template-parts/content-single.php:39
-#: template-parts/content-single-album.php:215 taxonomy-prize.php:67
+#: template-parts/content-single-album.php:218 taxonomy-prize.php:67
 #: author.php:57 taxonomy-person.php:104 category-music.php:59
 msgid "Page"
 msgstr "Page"
@@ -342,20 +340,20 @@ msgstr "Page"
 #: image.php:90 template-parts/content-single-book.php:441
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content.php:49 template-parts/content-single.php:51
-#: template-parts/content-single-album.php:228
+#: template-parts/content-single-album.php:231
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Modifier<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: category.php:57 category-reads.php:57 search.php:42 tag.php:57
-#: taxonomy-publisher.php:65 archive.php:55 taxonomy-location.php:56
+#: taxonomy-publisher.php:139 archive.php:55 taxonomy-location.php:56
 #: taxonomy-prize.php:65 author.php:55 taxonomy-person.php:102
 #: category-music.php:57
 msgid "Previous page"
 msgstr "Page précédente"
 
 #: category.php:58 category-reads.php:58 search.php:43 tag.php:58
-#: taxonomy-publisher.php:66 archive.php:56 taxonomy-location.php:57
+#: taxonomy-publisher.php:140 archive.php:56 taxonomy-location.php:57
 #: taxonomy-prize.php:66 author.php:56 taxonomy-person.php:103
 #: category-music.php:58
 msgid "Next page"
@@ -366,152 +364,178 @@ msgstr "Page suivante"
 msgid "Search Results for: %s"
 msgstr "Résultats de recherche pour&nbsp;: %s"
 
-#: template-parts/content-single-book.php:30
+#: taxonomy-publisher.php:64
+msgid "Collections"
+msgstr "Collections littéraires"
+
+#: taxonomy-publisher.php:64 taxonomy-publisher.php:94 taxonomy-person.php:50
+msgid ": "
+msgstr "&nbsp;: "
+
+#: taxonomy-publisher.php:94 taxonomy-person.php:50
+msgid "More information"
+msgstr "Plus de renseignements"
+
+#: taxonomy-publisher.php:98 taxonomy-person.php:53
+msgid "Website"
+msgstr "Site web"
+
+#: comments.php:32
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "Une réflexion sur &ldquo;%s&rdquo;"
+
+#: comments.php:70
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: template-parts/content-single-book.php:31
 msgctxt "book metadata section title"
 msgid "About this book"
 msgstr "À propos de ce livre"
 
-#: template-parts/content-single-book.php:40
+#: template-parts/content-single-book.php:41
 msgctxt "book metadata title read"
 msgid "Title read"
 msgstr "Titre lu"
 
-#: template-parts/content-single-book.php:51
+#: template-parts/content-single-book.php:52
 msgctxt "book metadata original title"
 msgid "Original title"
 msgstr "Titre original"
 
-#: template-parts/content-single-book.php:78
+#: template-parts/content-single-book.php:79
 msgctxt "book metadata female authors"
 msgid "Authors"
 msgstr "Auteures"
 
-#: template-parts/content-single-book.php:80
+#: template-parts/content-single-book.php:81
 msgctxt "book metadata authors"
 msgid "Authors"
 msgstr "Auteurs"
 
-#: template-parts/content-single-book.php:86
+#: template-parts/content-single-book.php:87
 msgctxt "book metadata female author"
 msgid "Author"
 msgstr "Auteure"
 
-#: template-parts/content-single-book.php:88
+#: template-parts/content-single-book.php:89
 msgctxt "book metadata male author"
 msgid "Author"
 msgstr "Auteur"
 
-#: template-parts/content-single-book.php:129
+#: template-parts/content-single-book.php:130
 msgctxt "book metadata female translators"
 msgid "Translators"
 msgstr "Traductrices"
 
-#: template-parts/content-single-book.php:131
+#: template-parts/content-single-book.php:132
 msgctxt "book metadata translators"
 msgid "Translators"
 msgstr "Traducteurs"
 
-#: template-parts/content-single-book.php:137
+#: template-parts/content-single-book.php:138
 msgctxt "book metadata female translator"
 msgid "Translator"
 msgstr "Traductrice"
 
-#: template-parts/content-single-book.php:139
+#: template-parts/content-single-book.php:140
 msgctxt "book metadata male translator"
 msgid "Translator"
 msgstr "Traducteur"
 
-#: template-parts/content-single-book.php:180
+#: template-parts/content-single-book.php:181
 msgctxt "book metadata female illustrators"
 msgid "Illustrators"
 msgstr "Illustratrices"
 
-#: template-parts/content-single-book.php:182
+#: template-parts/content-single-book.php:183
 msgctxt "book metadata illustrators"
 msgid "Illustrators"
 msgstr "Illustrateurs"
 
-#: template-parts/content-single-book.php:188
+#: template-parts/content-single-book.php:189
 msgctxt "book metadata female illustrator"
 msgid "Illustrator"
 msgstr "Illustratrice"
 
-#: template-parts/content-single-book.php:190
+#: template-parts/content-single-book.php:191
 msgctxt "book metadata male illustrator"
 msgid "Illustrator"
 msgstr "Illustrateur"
 
-#: template-parts/content-single-book.php:232
+#: template-parts/content-single-book.php:233
 msgctxt "book metadata female colourists"
 msgid "Colourists"
 msgstr "Coloristes"
 
-#: template-parts/content-single-book.php:234
+#: template-parts/content-single-book.php:235
 msgctxt "book metadata colourists"
 msgid "Colourists"
 msgstr "Coloristes"
 
-#: template-parts/content-single-book.php:240
+#: template-parts/content-single-book.php:241
 msgctxt "book metadata female colourist"
 msgid "Colourist"
 msgstr "Coloriste"
 
-#: template-parts/content-single-book.php:242
+#: template-parts/content-single-book.php:243
 msgctxt "book metadata male colourist"
 msgid "Colourist"
 msgstr "Coloriste"
 
-#: template-parts/content-single-book.php:269
+#: template-parts/content-single-book.php:270
 msgctxt "book metadata preface authors"
 msgid "Preface"
 msgstr "Préface"
 
-#: template-parts/content-single-book.php:293
+#: template-parts/content-single-book.php:294
 msgctxt "book metadata publisher"
 msgid "Publisher"
 msgstr "Éditeur"
 
-#: template-parts/content-single-book.php:309
+#: template-parts/content-single-book.php:310
 msgctxt "book metadata publisher collection"
 msgid "Collection"
 msgstr "Collection"
 
-#: template-parts/content-single-book.php:320
+#: template-parts/content-single-book.php:321
 msgctxt "book metadata isbn13"
 msgid "ISBN13"
 msgstr "ISBN13"
 
-#: template-parts/content-single-book.php:333
+#: template-parts/content-single-book.php:334
 msgctxt "book metadata isbn10"
 msgid "ISBN10"
 msgstr "ISBN10"
 
-#: template-parts/content-single-book.php:344
+#: template-parts/content-single-book.php:345
 msgctxt "book metadata price"
 msgid "Price"
 msgstr "Prix"
 
-#: template-parts/content-single-book.php:352
+#: template-parts/content-single-book.php:353
 msgctxt "book metadata number of pages"
 msgid "Number of pages"
 msgstr "Nombre de pages"
 
-#: template-parts/content-single-book.php:360
+#: template-parts/content-single-book.php:361
 msgctxt "book metadata release date"
 msgid "Release date"
 msgstr "Date de publication"
 
-#: template-parts/content-single-book.php:379
+#: template-parts/content-single-book.php:380
 msgctxt "book metadata first publication date"
 msgid "First publication"
 msgstr "Première publication"
 
-#: template-parts/content-single-book.php:403
+#: template-parts/content-single-book.php:404
 msgctxt "book metadata Amazon affiliate link"
 msgid "Affiliate link"
 msgstr "Lien affilié"
 
-#: template-parts/content-single-book.php:408
+#: template-parts/content-single-book.php:409
 msgctxt "book metadata Amazon affiliate message"
 msgid "Buy on Amazon"
 msgstr "Acheter sur Amazon"
@@ -525,77 +549,77 @@ msgstr "Mis en avant"
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Continuer la lecture<span class=\"screen-reader-text\"> \"%s\"</span>"
 
-#: template-parts/content-single-album.php:32
+#: template-parts/content-single-album.php:34
 msgctxt "single metadata section title"
 msgid "About this single"
 msgstr "À propos de ce single"
 
-#: template-parts/content-single-album.php:36
+#: template-parts/content-single-album.php:38
 msgctxt "album metadata section title"
 msgid "About this album"
 msgstr "À propos de cet album"
 
-#: template-parts/content-single-album.php:46
+#: template-parts/content-single-album.php:48
 msgctxt "album metadata title"
 msgid "Title"
 msgstr "Titre"
 
-#: template-parts/content-single-album.php:74
+#: template-parts/content-single-album.php:76
 msgctxt "album metadata female artists"
 msgid "Artists"
 msgstr "Artistes"
 
-#: template-parts/content-single-album.php:76
+#: template-parts/content-single-album.php:78
 msgctxt "album metadata artists"
 msgid "Artists"
 msgstr "Artistes"
 
-#: template-parts/content-single-album.php:82
+#: template-parts/content-single-album.php:84
 msgctxt "album metadata female artist"
 msgid "Artist"
 msgstr "Artiste"
 
-#: template-parts/content-single-album.php:84
+#: template-parts/content-single-album.php:86
 msgctxt "album metadata male artist"
 msgid "Artist"
 msgstr "Artiste"
 
-#: template-parts/content-single-album.php:124
+#: template-parts/content-single-album.php:126
 msgctxt "album metadata female featured artists"
 msgid "Featured artists"
 msgstr "Artistes invitées"
 
-#: template-parts/content-single-album.php:126
+#: template-parts/content-single-album.php:128
 msgctxt "album metadata featured artists"
 msgid "Featured artists"
 msgstr "Artistes invités"
 
-#: template-parts/content-single-album.php:132
+#: template-parts/content-single-album.php:134
 msgctxt "album metadata female featured artist"
 msgid "Featured artist"
 msgstr "Artiste invitée"
 
-#: template-parts/content-single-album.php:134
+#: template-parts/content-single-album.php:136
 msgctxt "album metadata male featured artist"
 msgid "Featured artist"
 msgstr "Artiste invité"
 
-#: template-parts/content-single-album.php:159
+#: template-parts/content-single-album.php:161
 msgctxt "album metadata release date"
 msgid "Release date"
 msgstr "Date de parution"
 
-#: template-parts/content-single-album.php:175
+#: template-parts/content-single-album.php:177
 msgctxt "album metadata price"
 msgid "Price"
 msgstr "Prix"
 
-#: template-parts/content-single-album.php:192
+#: template-parts/content-single-album.php:194
 msgctxt "album metadata Amazon affiliate link"
 msgid "Affiliate link"
 msgstr "Lien affilié"
 
-#: template-parts/content-single-album.php:197
+#: template-parts/content-single-album.php:199
 msgctxt "album metadata Amazon affiliate message"
 msgid "Buy on Amazon"
 msgstr "Acheter sur Amazon"
@@ -609,18 +633,6 @@ msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "Il semblerait que rien n’ait été trouvé à cette adresse. Essayez peut-être "
 "avec une recherche&nbsp;?"
-
-#: taxonomy-person.php:50
-msgid "More information"
-msgstr "Plus de renseignements"
-
-#: taxonomy-person.php:50
-msgid ": "
-msgstr "&nbsp;: "
-
-#: taxonomy-person.php:53
-msgid "Website"
-msgstr "Site web"
 
 #: widgets/popular-tags-in-category-widget.php:15
 msgid "Popular Tags in Category Widget"
@@ -637,83 +649,17 @@ msgid "New title"
 msgstr "Nouveau titre"
 
 #: widgets/popular-tags-in-category-widget.php:216
-#: widgets/random-posts-without-last-medium-two-widget.php:135
 #: widgets/recent-posts-big-one-widget.php:124
-#: widgets/recent-posts-colored-widget.php:129 widgets/quote-widget.php:73
+#: widgets/recent-posts-colored-widget.php:281 widgets/quote-widget.php:73
 #: widgets/recent-posts-medium-one-widget.php:115
 #: widgets/recent-posts-small-two-widget.php:100
-#: widgets/random-posts-medium-two-widget.php:123
-#: widgets/recent-posts-medium-two-widget.php:122
-#: widgets/random-posts-without-last-colored-widget.php:149
+#: widgets/random-posts-medium-two-widget.php:277
+#: widgets/recent-posts-medium-two-widget.php:273
 #: widgets/recent-posts-big-two-widget.php:128
 #: widgets/recent-posts-small-one-widget.php:108
-#: widgets/random-posts-colored-widget.php:216
+#: widgets/random-posts-colored-widget.php:285
 msgid "Title:"
 msgstr "Titre :"
-
-#: widgets/random-posts-without-last-medium-two-widget.php:19
-msgid "Random Posts w/o Last 5 (Medium 2)"
-msgstr "Articles aléatoires sans les 5 derniers (Moyen&nbsp;2)"
-
-#: widgets/random-posts-without-last-medium-two-widget.php:24
-msgid ""
-"Medium-sized Random Posts w/o Last 5 in a 2-column layout with featured "
-"image and excerpt."
-msgstr ""
-"Articles aléatoires de taille moyenne sans les cinq derniers publiés mise en "
-"page sur deux colonnes, une image mise en avant et un extrait."
-
-#: widgets/random-posts-without-last-medium-two-widget.php:90
-#: widgets/recent-posts-big-one-widget.php:78
-#: widgets/recent-posts-colored-widget.php:83
-#: widgets/random-posts-medium-two-widget.php:78
-#: widgets/recent-posts-medium-two-widget.php:77
-#: widgets/random-posts-without-last-colored-widget.php:103
-#: widgets/recent-posts-big-two-widget.php:78
-#: widgets/random-posts-colored-widget.php:162
-#, php-format
-msgid "Permalink to %s"
-msgstr "Permalien vers %s"
-
-#: widgets/random-posts-without-last-medium-two-widget.php:140
-#: widgets/recent-posts-big-one-widget.php:129
-#: widgets/recent-posts-colored-widget.php:134
-#: widgets/recent-posts-medium-one-widget.php:120
-#: widgets/recent-posts-small-two-widget.php:105
-#: widgets/random-posts-medium-two-widget.php:128
-#: widgets/recent-posts-medium-two-widget.php:127
-#: widgets/random-posts-without-last-colored-widget.php:154
-#: widgets/recent-posts-big-two-widget.php:133
-#: widgets/recent-posts-small-one-widget.php:113
-#: widgets/random-posts-colored-widget.php:221
-msgid "Number of posts to show:"
-msgstr "Nombre d'articles à afficher&nbsp;:"
-
-#: widgets/random-posts-without-last-medium-two-widget.php:145
-#: widgets/recent-posts-big-one-widget.php:134
-#: widgets/recent-posts-colored-widget.php:139
-#: widgets/recent-posts-medium-one-widget.php:125
-#: widgets/recent-posts-small-two-widget.php:110
-#: widgets/random-posts-medium-two-widget.php:133
-#: widgets/recent-posts-medium-two-widget.php:132
-#: widgets/random-posts-without-last-colored-widget.php:159
-#: widgets/recent-posts-big-two-widget.php:138
-#: widgets/random-posts-colored-widget.php:226
-msgid "Category slug (optional):"
-msgstr "Slug de la catégorie (facultatif)&nbsp;:"
-
-#: widgets/random-posts-without-last-medium-two-widget.php:150
-#: widgets/recent-posts-big-one-widget.php:139
-#: widgets/recent-posts-colored-widget.php:144
-#: widgets/recent-posts-medium-one-widget.php:130
-#: widgets/recent-posts-small-two-widget.php:115
-#: widgets/random-posts-medium-two-widget.php:138
-#: widgets/recent-posts-medium-two-widget.php:137
-#: widgets/random-posts-without-last-colored-widget.php:164
-#: widgets/recent-posts-big-two-widget.php:143
-#: widgets/random-posts-colored-widget.php:231
-msgid "Tag slug (optional):"
-msgstr "Slug de l'étiquette (facultatif)&nbsp;:"
 
 #: widgets/recent-posts-big-one-widget.php:19
 msgid "Recent Posts (Big 1)"
@@ -728,6 +674,50 @@ msgstr ""
 "Les images mises en avant doivent avoir une taille minimale de 1200x800 "
 "pixels."
 
+#: widgets/recent-posts-big-one-widget.php:78
+#: widgets/recent-posts-colored-widget.php:223
+#: widgets/random-posts-medium-two-widget.php:220
+#: widgets/recent-posts-medium-two-widget.php:216
+#: widgets/recent-posts-big-two-widget.php:78
+#: widgets/random-posts-colored-widget.php:227
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalien vers %s"
+
+#: widgets/recent-posts-big-one-widget.php:129
+#: widgets/recent-posts-colored-widget.php:286
+#: widgets/recent-posts-medium-one-widget.php:120
+#: widgets/recent-posts-small-two-widget.php:105
+#: widgets/random-posts-medium-two-widget.php:282
+#: widgets/recent-posts-medium-two-widget.php:278
+#: widgets/recent-posts-big-two-widget.php:133
+#: widgets/recent-posts-small-one-widget.php:113
+#: widgets/random-posts-colored-widget.php:290
+msgid "Number of posts to show:"
+msgstr "Nombre d'articles à afficher&nbsp;:"
+
+#: widgets/recent-posts-big-one-widget.php:134
+#: widgets/recent-posts-colored-widget.php:296
+#: widgets/recent-posts-medium-one-widget.php:125
+#: widgets/recent-posts-small-two-widget.php:110
+#: widgets/random-posts-medium-two-widget.php:292
+#: widgets/recent-posts-medium-two-widget.php:288
+#: widgets/recent-posts-big-two-widget.php:138
+#: widgets/random-posts-colored-widget.php:300
+msgid "Category slug (optional):"
+msgstr "Slug de la catégorie (facultatif)&nbsp;:"
+
+#: widgets/recent-posts-big-one-widget.php:139
+#: widgets/recent-posts-colored-widget.php:301
+#: widgets/recent-posts-medium-one-widget.php:130
+#: widgets/recent-posts-small-two-widget.php:115
+#: widgets/random-posts-medium-two-widget.php:297
+#: widgets/recent-posts-medium-two-widget.php:293
+#: widgets/recent-posts-big-two-widget.php:143
+#: widgets/random-posts-colored-widget.php:305
+msgid "Tag slug (optional):"
+msgstr "Slug de l'étiquette (facultatif)&nbsp;:"
+
 #: widgets/recent-posts-colored-widget.php:19
 msgid "Recent Posts (Background)"
 msgstr "Articles récents (Arrière-plan)"
@@ -735,6 +725,41 @@ msgstr "Articles récents (Arrière-plan)"
 #: widgets/recent-posts-colored-widget.php:24
 msgid "Medium-sized Recents Posts with a background color."
 msgstr "Articles récents de taille moyenne avec un arrière-plan coloré."
+
+#: widgets/recent-posts-colored-widget.php:291
+#: widgets/random-posts-medium-two-widget.php:287
+#: widgets/recent-posts-medium-two-widget.php:283
+#: widgets/random-posts-colored-widget.php:295
+msgid "Number of posts to exclude (optional):"
+msgstr "Nombre d'articles à exclure (facultatif)&nbsp;:"
+
+#: widgets/recent-posts-colored-widget.php:311
+#: widgets/random-posts-medium-two-widget.php:307
+#: widgets/recent-posts-medium-two-widget.php:303
+#: widgets/random-posts-colored-widget.php:315
+msgid "Publisher slug (optional):"
+msgstr "Slug de la maison d'édition (facultatif)&nbsp;:"
+
+#: widgets/recent-posts-colored-widget.php:322
+#: widgets/random-posts-medium-two-widget.php:318
+#: widgets/recent-posts-medium-two-widget.php:314
+#: widgets/random-posts-colored-widget.php:326
+msgid "Location slug (optional):"
+msgstr "Slug de la localisation (facultatif)&nbsp;:"
+
+#: widgets/recent-posts-colored-widget.php:333
+#: widgets/random-posts-medium-two-widget.php:329
+#: widgets/recent-posts-medium-two-widget.php:325
+#: widgets/random-posts-colored-widget.php:337
+msgid "Person slug (optional):"
+msgstr "Slug de la personne (facultatif)&nbsp;:"
+
+#: widgets/recent-posts-colored-widget.php:344
+#: widgets/random-posts-medium-two-widget.php:340
+#: widgets/recent-posts-medium-two-widget.php:336
+#: widgets/random-posts-colored-widget.php:348
+msgid "Prize slug (optional):"
+msgstr "Slug du prix littéraire (facultatif)&nbsp;:"
 
 #: widgets/quote-widget.php:19
 msgid "Quote"
@@ -794,16 +819,6 @@ msgstr ""
 "Articles récents de taille moyenne avec une mise en page sur deux colonnes, "
 "une image mise en avant et un extrait."
 
-#: widgets/random-posts-without-last-colored-widget.php:19
-msgid "Random Posts w/o Last 5 (Background)"
-msgstr "Articles aléatoires sans les 5 derniers (Arrière-plan)"
-
-#: widgets/random-posts-without-last-colored-widget.php:24
-msgid "Medium-sized Random Posts w/o Last 5 with a background color."
-msgstr ""
-"Articles aléatoires de taille moyenne sans les cinq derniers publiés avec un "
-"arrière-plan coloré."
-
 #: widgets/recent-posts-big-two-widget.php:19
 msgid "Recent Posts (Big 2)"
 msgstr "Articles récents (Grand 2)"
@@ -845,21 +860,23 @@ msgstr "Articles aléatoires (Arrière-plan)"
 msgid "Medium-sized Random Posts with a background color."
 msgstr "Articles aléatoires de taille moyenne avec un arrière-plan coloré."
 
-#: widgets/random-posts-colored-widget.php:241
-msgid "Publisher slug (optional):"
-msgstr "Slug de la maison d'édition (facultatif)&nbsp;:"
+#~ msgid "Random Posts w/o Last 5 (Medium 2)"
+#~ msgstr "Articles aléatoires sans les 5 derniers (Moyen&nbsp;2)"
 
-#: widgets/random-posts-colored-widget.php:252
-msgid "Location slug (optional):"
-msgstr "Slug de la localisation (facultatif)&nbsp;:"
+#~ msgid ""
+#~ "Medium-sized Random Posts w/o Last 5 in a 2-column layout with featured "
+#~ "image and excerpt."
+#~ msgstr ""
+#~ "Articles aléatoires de taille moyenne sans les cinq derniers publiés mise "
+#~ "en page sur deux colonnes, une image mise en avant et un extrait."
 
-#: widgets/random-posts-colored-widget.php:263
-msgid "Person slug (optional):"
-msgstr "Slug de la personne (facultatif)&nbsp;:"
+#~ msgid "Random Posts w/o Last 5 (Background)"
+#~ msgstr "Articles aléatoires sans les 5 derniers (Arrière-plan)"
 
-#: widgets/random-posts-colored-widget.php:274
-msgid "Prize slug (optional):"
-msgstr "Slug du prix littéraire (facultatif)&nbsp;:"
+#~ msgid "Medium-sized Random Posts w/o Last 5 with a background color."
+#~ msgstr ""
+#~ "Articles aléatoires de taille moyenne sans les cinq derniers publiés avec "
+#~ "un arrière-plan coloré."
 
 #~ msgid "Skip to content"
 #~ msgstr "Passer au contenu"
