@@ -593,9 +593,6 @@ add_action( 'widgets_init', 'twentysixteenchild_widgets_init' );
 require_once( __DIR__ . '/widgets/random-posts-medium-two-widget.php');
 require_once( __DIR__ . '/widgets/random-posts-colored-widget.php');
 
-require_once( __DIR__ . '/widgets/random-posts-without-last-medium-two-widget.php');
-require_once( __DIR__ . '/widgets/random-posts-without-last-colored-widget.php');
-
 require_once( __DIR__ . '/widgets/recent-posts-small-one-widget.php');
 require_once( __DIR__ . '/widgets/recent-posts-small-two-widget.php');
 require_once( __DIR__ . '/widgets/recent-posts-medium-one-widget.php');
@@ -605,6 +602,7 @@ require_once( __DIR__ . '/widgets/recent-posts-big-two-widget.php');
 require_once( __DIR__ . '/widgets/recent-posts-colored-widget.php');
 
 require_once( __DIR__ . '/widgets/popular-tags-in-category-widget.php');
+
 require_once( __DIR__ . '/widgets/quote-widget.php');
 
 
