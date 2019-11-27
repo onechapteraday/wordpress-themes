@@ -107,57 +107,6 @@
 			}
 			?>
 			<?php
-				$translators = get_book_translator( $book_id );
-
-				if( $translators ){
-				?>
-		        	<tr>
-				        <td>
-					        <b><?php
-				                if( count( $translators ) > 1 ){
-					            $female_only = true;
-
-					            foreach( $translators as $translator ){
-				                        $gender = get_option( 'taxonomy_' . $translator->term_id )['gender'];
-
-                                                        if( $gender == 0 ){
-                                                            $female_only = false;
-                                                            break;
-                                                        }
-					            }
-
-					            if( $female_only ){
-					                echo _x( 'Translators', 'book metadata female translators', 'twentysixteen-child' );
-					            } else {
-					                echo _x( 'Translators', 'book metadata translators', 'twentysixteen-child' );
-					            }
-					        } else {
-				                    $gender = get_option( 'taxonomy_' . $translators[0]->term_id )['gender'];
-
-					            if( $gender == 1 ){
-					                echo _x( 'Translator', 'book metadata female translator', 'twentysixteen-child' );
-					            } else {
-					                echo _x( 'Translator', 'book metadata male translator', 'twentysixteen-child' );
-					            }
-					        }
-                                                ?></b>
-				        </td>
-				        <td>
-					        <?php
-                                                $item_count = 0;
-				                foreach( $translators as $translator ){
-					            if( $item_count > 0 ) echo ', ';
-
-					            echo '<a href="' . get_term_link( $translator->term_id ) . '">' . $translator->name . '</a>';
-                                                    $item_count++;
-					        }
-					        ?>
-				        </td>
-		        	</tr>
-				<?php
-				}
-			?>
-			<?php
 				$illustrators = get_book_illustrator( $book_id );
 
 				if( $illustrators ){
@@ -281,6 +230,57 @@
 						?>
 				        </td>
 		                </tr>
+				<?php
+				}
+			?>
+			<?php
+				$translators = get_book_translator( $book_id );
+
+				if( $translators ){
+				?>
+		        	<tr>
+				        <td>
+					        <b><?php
+				                if( count( $translators ) > 1 ){
+					            $female_only = true;
+
+					            foreach( $translators as $translator ){
+				                        $gender = get_option( 'taxonomy_' . $translator->term_id )['gender'];
+
+                                                        if( $gender == 0 ){
+                                                            $female_only = false;
+                                                            break;
+                                                        }
+					            }
+
+					            if( $female_only ){
+					                echo _x( 'Translators', 'book metadata female translators', 'twentysixteen-child' );
+					            } else {
+					                echo _x( 'Translators', 'book metadata translators', 'twentysixteen-child' );
+					            }
+					        } else {
+				                    $gender = get_option( 'taxonomy_' . $translators[0]->term_id )['gender'];
+
+					            if( $gender == 1 ){
+					                echo _x( 'Translator', 'book metadata female translator', 'twentysixteen-child' );
+					            } else {
+					                echo _x( 'Translator', 'book metadata male translator', 'twentysixteen-child' );
+					            }
+					        }
+                                                ?></b>
+				        </td>
+				        <td>
+					        <?php
+                                                $item_count = 0;
+				                foreach( $translators as $translator ){
+					            if( $item_count > 0 ) echo ', ';
+
+					            echo '<a href="' . get_term_link( $translator->term_id ) . '">' . $translator->name . '</a>';
+                                                    $item_count++;
+					        }
+					        ?>
+                                        </td>
+                                </tr>
 				<?php
 				}
 			?>
