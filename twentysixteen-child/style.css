@@ -1953,6 +1953,10 @@ header ol.breadcrumb li:first-child:before {
     text-overflow: ellipsis;
 }
 
+.page-template .taxonomy-description li {
+    margin: 0 0 8px;
+}
+
 
 /**
  * 10.0 - Jetpack Display Posts Widget
