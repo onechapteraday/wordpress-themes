@@ -25,21 +25,38 @@ get_header(); ?>
 
 		            <div class="cloud-locations taxonomy-description">
                                 <?php
-                                    $locations = get_terms( 'location' );
+                                    $args = array(
+                                                'echo'       => 0,
+                                                'number'     => 0,
+                                                'format'     => 'array',
+                                                'taxonomy'   => 'location',
+                                                'smallest'   => 11,
+                                                'largest'    => 18,
+                                                'unit'       => 'px',
+                                                'pad_counts' => true,
+                                            );
 
-                                    foreach( $locations as $trans_location ) {
-                                        $trans_location->translation = __( $trans_location->name, 'location-taxonomy' );
+                                    $locs = wp_tag_cloud( $args );
+                                    $locations = array();
+
+                                    foreach( $locs as $loc ){
+                                        preg_match('/(?i)<a([^>]+)>(.+?)<\/a>/', $loc, $output);
+
+                                        $location = new stdClass();
+                                        $location->name = $output[2];
+                                        $location->link = $output[1];
+                                        $location->translation = __( $output[2], 'location-taxonomy' );
+
+                                        array_push( $locations, $location );
                                     }
 
                                     if( function_exists('sortLocationByTranslation') ){
                                         usort( $locations, 'sortLocationByTranslation' );
                                     }
 
-                                    echo '<ul>';
                                     foreach( $locations as $location ){
-                                        echo '<li><a href="' . get_term_link( $location->term_id, 'location' ) . '">' . __( $location->translation ) . '</a></li>';
+                                        echo '<a' . $location->link . '">' . __( $location->translation ) . '</a>';
                                     }
-                                    echo '</ul>';
                                 ?>
                             </div>
 			</header><!-- .page-header -->
