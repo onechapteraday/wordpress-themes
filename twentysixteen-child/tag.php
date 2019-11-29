@@ -71,6 +71,8 @@ get_header(); ?>
 
 <?php
     $check = false;
+    $book_check = false;
+    $music_check = false;
     $tag = get_queried_object();
 
     $book_patterns = array(
