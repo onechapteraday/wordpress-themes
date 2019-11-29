@@ -28,12 +28,12 @@ get_header(); ?>
 		            <div class="cloud-publishers taxonomy-description">
                                 <?php
                                     $args = array(
-                                                'number'    => 0,
-                                                'taxonomy'  => 'publisher',
-                                                'smallest'  => 13,
-                                                'largest'   => 13,
-                                                'unit'      => 'px',
-                                                'parent'    => 0,
+                                                'number'     => 0,
+                                                'taxonomy'   => 'publisher',
+                                                'smallest'   => 11,
+                                                'largest'    => 18,
+                                                'unit'       => 'px',
+                                                'pad_counts' => true,
                                             );
 
                                     wp_tag_cloud( $args );

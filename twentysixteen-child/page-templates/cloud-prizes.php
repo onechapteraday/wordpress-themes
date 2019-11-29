@@ -28,12 +28,12 @@ get_header(); ?>
 		            <div class="cloud-prizes taxonomy-description">
                                 <?php
                                     $args = array(
-                                                'number'    => 0,
-                                                'taxonomy'  => 'prize',
-                                                'smallest'  => 13,
-                                                'largest'   => 13,
-                                                'unit'      => 'px',
-                                                'parent'    => 0,
+                                                'number'     => 0,
+                                                'taxonomy'   => 'prize',
+                                                'smallest'   => 11,
+                                                'largest'    => 18,
+                                                'unit'       => 'px',
+                                                'pad_counts' => true,
                                             );
 
                                     wp_tag_cloud( $args );
