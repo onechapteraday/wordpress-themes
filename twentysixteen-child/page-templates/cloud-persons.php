@@ -32,10 +32,31 @@ get_header(); ?>
                                                 'taxonomy'  => 'person',
                                                 'smallest'  => 11,
                                                 'largest'   => 18,
+                                                'format'    => 'array',
+                                                'echo'      => 0,
                                                 'unit'      => 'px',
                                             );
 
-                                    wp_tag_cloud( $args );
+                                    $persons = wp_tag_cloud( $args );
+                                    $tags = array();
+
+                                    foreach( $persons as $element ){
+                                        preg_match('/(?i)<a([^>]+)>(.+?)<\/a>/', $element, $output);
+
+                                        $element = new stdClass();
+                                        $element->name = $output[2];
+                                        $element->link = $output[1];
+
+                                        array_push( $tags, $element );
+                                    }
+
+                                    if( function_exists('sortByName') ){
+                                        usort( $tags, 'sortByName' );
+                                    }
+
+                                    foreach( $tags as $element ){
+                                        echo '<a' . $element->link . '">' . $element->name . '</a>';
+                                    }
                                 ?>
                             </div>
 			</header><!-- .page-header -->

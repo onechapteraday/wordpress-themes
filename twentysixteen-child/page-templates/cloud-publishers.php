@@ -52,10 +52,25 @@ get_header(); ?>
                                             );
 
                                     $publishers = wp_tag_cloud( $args );
+                                    $tags = array();
 
-                                    foreach( $publishers as $publisher ){
+                                    foreach( $publishers as $element ){
+                                        preg_match('/(?i)<a([^>]+)>(.+?)<\/a>/', $element, $output);
+
+                                        $element = new stdClass();
+                                        $element->name = $output[2];
+                                        $element->link = $output[1];
+
+                                        array_push( $tags, $element );
+                                    }
+
+                                    if( function_exists('sortByName') ){
+                                        usort( $tags, 'sortByName' );
+                                    }
+
+                                    foreach( $tags as $element ){
                                         $check = false;
-                                        preg_match('/class=\"([^"]*)\"/', $publisher, $attrs);
+                                        preg_match('/class=\"([^"]*)\"/', $element->link, $attrs);
 
                                         foreach( $parents_id as $parent ){
                                             if( strpos( $attrs[1], strval( $parent ) ) !== false ){
@@ -65,7 +80,7 @@ get_header(); ?>
                                         }
 
                                         if( $check ){
-                                            echo $publisher;
+                                            echo '<a' . $element->link . '">' . $element->name . '</a>';
                                         }
                                     }
                                 ?>
