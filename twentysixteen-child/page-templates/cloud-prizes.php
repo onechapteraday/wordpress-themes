@@ -27,8 +27,23 @@ get_header(); ?>
 
 		            <div class="cloud-prizes taxonomy-description">
                                 <?php
+                                    $parents_arg = array(
+                                                       'taxonomy'   => 'prize',
+                                                       'number'     => 0,
+                                                       'parent'     => 0,
+                                                   );
+
+                                    $parents = get_terms( $parents_arg );
+                                    $parents_id = array();
+
+                                    foreach( $parents as $parent ){
+                                        array_push( $parents_id, $parent->term_id );
+                                    }
+
                                     $args = array(
+                                                'echo'       => 0,
                                                 'number'     => 0,
+                                                'format'     => 'array',
                                                 'taxonomy'   => 'prize',
                                                 'smallest'   => 11,
                                                 'largest'    => 18,
@@ -36,7 +51,23 @@ get_header(); ?>
                                                 'pad_counts' => true,
                                             );
 
-                                    wp_tag_cloud( $args );
+                                    $prizes = wp_tag_cloud( $args );
+
+                                    foreach( $prizes as $prize ){
+                                        $check = false;
+                                        preg_match('/class=\"([^"]*)\"/', $prize, $attrs);
+
+                                        foreach( $parents_id as $parent ){
+                                            if( strpos( $attrs[1], strval( $parent ) ) !== false ){
+                                                $check = true;
+                                                break;
+                                            }
+                                        }
+
+                                        if( $check ){
+                                            echo $prize;
+                                        }
+                                    }
                                 ?>
                             </div>
 			</header><!-- .page-header -->

@@ -27,8 +27,23 @@ get_header(); ?>
 
 		            <div class="cloud-publishers taxonomy-description">
                                 <?php
+                                    $parents_arg = array(
+                                                       'taxonomy'   => 'publisher',
+                                                       'number'     => 0,
+                                                       'parent'     => 0,
+                                                   );
+
+                                    $parents = get_terms( $parents_arg );
+                                    $parents_id = array();
+
+                                    foreach( $parents as $parent ){
+                                        array_push( $parents_id, $parent->term_id );
+                                    }
+
                                     $args = array(
+                                                'echo'       => 0,
                                                 'number'     => 0,
+                                                'format'     => 'array',
                                                 'taxonomy'   => 'publisher',
                                                 'smallest'   => 11,
                                                 'largest'    => 18,
@@ -36,7 +51,23 @@ get_header(); ?>
                                                 'pad_counts' => true,
                                             );
 
-                                    wp_tag_cloud( $args );
+                                    $publishers = wp_tag_cloud( $args );
+
+                                    foreach( $publishers as $publisher ){
+                                        $check = false;
+                                        preg_match('/class=\"([^"]*)\"/', $publisher, $attrs);
+
+                                        foreach( $parents_id as $parent ){
+                                            if( strpos( $attrs[1], strval( $parent ) ) !== false ){
+                                                $check = true;
+                                                break;
+                                            }
+                                        }
+
+                                        if( $check ){
+                                            echo $publisher;
+                                        }
+                                    }
                                 ?>
                             </div>
 			</header><!-- .page-header -->
