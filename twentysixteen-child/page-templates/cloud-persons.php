@@ -32,7 +32,6 @@ get_header(); ?>
                                                 'taxonomy'  => 'person',
                                                 'smallest'  => 11,
                                                 'largest'   => 18,
-                                                'separator' => '&nbsp; &nbsp;',
                                                 'unit'      => 'px',
                                             );
 

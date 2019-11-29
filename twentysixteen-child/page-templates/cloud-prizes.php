@@ -33,7 +33,6 @@ get_header(); ?>
                                                 'smallest'  => 13,
                                                 'largest'   => 13,
                                                 'unit'      => 'px',
-                                                'separator' => '&nbsp; &nbsp;',
                                                 'parent'    => 0,
                                             );
 

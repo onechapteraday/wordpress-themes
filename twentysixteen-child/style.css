@@ -1964,7 +1964,7 @@ header ol.breadcrumb li:first-child:before {
 .page-template [class^='cloud'] a {
     display: inline-block;
     *display: inline;
-    margin: 0 0 8px;
+    margin: 0 10px 8px 0;
     zoom: 1;
 }
 

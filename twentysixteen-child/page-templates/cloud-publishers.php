@@ -32,7 +32,6 @@ get_header(); ?>
                                                 'taxonomy'  => 'publisher',
                                                 'smallest'  => 13,
                                                 'largest'   => 13,
-                                                'separator' => '&nbsp; &nbsp;',
                                                 'unit'      => 'px',
                                                 'parent'    => 0,
                                             );
