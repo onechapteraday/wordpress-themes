@@ -24,21 +24,22 @@ get_header(); ?>
 			    <?php
 			    	the_title( '<h1 class="page-title">', '</h1>' );
 			    ?>
-			</header><!-- .page-header -->
-		        <div class="taxonomy-description">
-                            <?php
-                                $args = array(
-                                            'number'    => 0,
-                                            'taxonomy'  => 'post_tag',
-                                            'smallest'  => 14,
-                                            'largest'   => 14,
-                                            'unit'      => 'px',
-                                            'format'    => 'list',
-                                        );
 
-                                wp_tag_cloud( $args );
-                            ?>
-                        </div>
+		            <div class="cloud-tags taxonomy-description">
+                                <?php
+                                    $args = array(
+                                                'number'    => 0,
+                                                'taxonomy'  => 'post_tag',
+                                                'smallest'  => 11,
+                                                'largest'   => 18,
+                                                'separator' => '&nbsp; &nbsp;',
+                                                'unit'      => 'px',
+                                            );
+
+                                    wp_tag_cloud( $args );
+                                ?>
+                            </div>
+			</header><!-- .page-header -->
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 

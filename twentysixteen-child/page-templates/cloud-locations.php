@@ -12,8 +12,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-
 			<header class="page-header">
                             <?php
                                 if( shortcode_exists( 'wp_breadcrumb_taxonomy' ) ) {
@@ -24,26 +22,27 @@ get_header(); ?>
 			    <?php
 			    	the_title( '<h1 class="page-title">', '</h1>' );
 			    ?>
+
+		            <div class="cloud-locations taxonomy-description">
+                                <?php
+                                    $locations = get_terms( 'location' );
+
+                                    foreach( $locations as $trans_location ) {
+                                        $trans_location->translation = __( $trans_location->name, 'location-taxonomy' );
+                                    }
+
+                                    if( function_exists('sortLocationByTranslation') ){
+                                        usort( $locations, 'sortLocationByTranslation' );
+                                    }
+
+                                    echo '<ul>';
+                                    foreach( $locations as $location ){
+                                        echo '<li><a href="' . get_term_link( $location->term_id, 'location' ) . '">' . __( $location->translation ) . '</a></li>';
+                                    }
+                                    echo '</ul>';
+                                ?>
+                            </div>
 			</header><!-- .page-header -->
-		        <div class="taxonomy-description">
-                            <?php
-                                $locations = get_terms( 'location' );
-
-                                foreach( $locations as $trans_location ) {
-                                    $trans_location->translation = __( $trans_location->name, 'location-taxonomy' );
-                                }
-
-                                if( function_exists('sortLocationByTranslation') ){
-                                    usort( $locations, 'sortLocationByTranslation' );
-                                }
-
-                                echo '<ul>';
-                                foreach( $locations as $location ){
-                                    echo '<li><a href="' . get_term_link( $location->term_id, 'location' ) . '">' . __( $location->translation ) . '</a></li>';
-                                }
-                                echo '</ul>';
-                            ?>
-                        </div>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 

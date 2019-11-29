@@ -1953,8 +1953,32 @@ header ol.breadcrumb li:first-child:before {
     text-overflow: ellipsis;
 }
 
+.page-template.page-template-page-templates .taxonomy-description {
+    margin: 20px 0 0;
+}
+
 .page-template .taxonomy-description li {
+    margin: 0 0 12px;
+}
+
+.page-template [class^='cloud'] a {
+    display: inline-block;
+    *display: inline;
     margin: 0 0 8px;
+    zoom: 1;
+}
+
+.page-template .cloud-location ul {
+    margin: 0;
+    font-size: 13px;
+}
+
+.page-template .cloud-location li {
+    list-style: none;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin-right: 10px;
 }
 
 
