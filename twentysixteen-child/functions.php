@@ -333,7 +333,7 @@ function sortByName( $a, $b ){
     $at = strtr( $a->name, $translit );
     $bt = strtr( $b->name, $translit );
 
-    return strcoll( $at, $bt );
+    return strcasecmp( $at, $bt );
 }
 
 function sortLocationByTranslation( $a, $b ){
@@ -341,7 +341,7 @@ function sortLocationByTranslation( $a, $b ){
     $at = strtr( $a->translation, $translit );
     $bt = strtr( $b->translation, $translit );
 
-    return strcoll( $at, $bt );
+    return strcasecmp( $at, $bt );
 }
 
 function twentysixteen_entry_taxonomies() {
