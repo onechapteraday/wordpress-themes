@@ -1897,13 +1897,19 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
  * 8.1 - Full-width single
  */
 
-.book-template-fullwidth-single-book .content-area,
-.post-template-fullwidth-single .content-area {
+.album-template-fullwidth-single-album         .content-area,
+.book-template-fullwidth-single-book           .content-area,
+.concert-template-fullwidth-single-concert     .content-area,
+.interview-template-fullwidth-single-interview .content-area,
+.post-template-fullwidth-single                .content-area {
     width: 100%
 }
 
-.book-template-fullwidth-single-book .post-thumbnail img,
-.post-template-fullwidth-single .post-thumbnail img {
+.album-template-fullwidth-single-album         .post-thumbnail img,
+.book-template-fullwidth-single-book           .post-thumbnail img,
+.concert-template-fullwidth-single-concert     .post-thumbnail img,
+.interview-template-fullwidth-single-interview .post-thumbnail img,
+.post-template-fullwidth-single                .post-thumbnail img {
     width: 100%;
 }
 
