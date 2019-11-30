@@ -70,100 +70,11 @@ get_header(); ?>
 	</div><!-- .content-area -->
 
 <?php
-    $check = false;
-    $book_check = false;
-    $music_check = false;
-    $tag = get_queried_object();
+    $sidebar = get_option( 'taxonomy_' . $tag_id )['sidebar'];
 
-    $book_patterns = array(
-        '/amitie/',
-        '/bande/',
-        '/biographie/',
-        '/deuil/',
-        '/ecriture/',
-        '/enfant/',
-        '/esclavage/',
-        '/fantastique/',
-        '/feminisme/',
-        '/femme/',
-        '/fiction/',
-        '/hommage/',
-        '/identite/',
-        '/immigration/',
-        '/lecture/',
-        '/litteraire/',
-        '/litterature/',
-        '/livre/',
-        '/memoire/',
-        '/narrateur/',
-        '/poesie/',
-        '/prix/',
-        '/racisme/',
-        '/realisme-magique/',
-        '/recit/',
-        '/recueil/',
-        '/reportage/',
-        '/roman/',
-        '/sexualite/',
-        '/slam/',
-        '/temoignage/',
-        '/thriller/',
-        '/violence/',
-    );
-
-    $music_patterns = array(
-        '/album/',
-        '/concert/',
-        '/musique/',
-        '/remix/',
-        '/riddim/',
-        '/single/',
-        '/acoustique/',
-        '/blues/',
-        '/dancehall/',
-        '/gospel/',
-        '/gwo-ka/',
-        '/jazz/',
-        '/kizomba/',
-        '/konpa/',
-        '/rap/',
-        '/reggae/',
-        '/rnb/',
-        '/rock/',
-        '/salsa/',
-        '/soul/',
-        '/zouk/',
-        '/batterie/',
-        '/guitare/',
-        '/piano/',
-    );
-
-    # Check if book_tag
-
-    foreach( $book_patterns as $pattern ){
-        if( preg_match( $pattern, $tag->slug ) ){
-            $book_check = true;
-            break;
-        }
-    }
-
-    # Check if music_tag
-
-    foreach( $music_patterns as $pattern ){
-        if( preg_match( $pattern, $tag->slug ) ){
-            $music_check = true;
-            break;
-        }
-    }
-
-
-    if( $book_check ){
-        get_sidebar( 'book' );
-    }
-    else if( $music_check ){
-        get_sidebar( 'music' );
-    }
-    else {
+    if( $sidebar ){
+        get_sidebar( $sidebar );
+    } else {
         get_sidebar();
     }
 ?>
