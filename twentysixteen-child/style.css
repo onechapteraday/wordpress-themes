@@ -439,6 +439,11 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     letter-spacing: 0.769px;
 }
 
+.widget.jetpack_widget_social_icons li a {
+    border-color: #7f7f7f;
+    margin-right: 10px;
+}
+
 @media screen and (max-width: 909px) {
     #jp-relatedposts .jp-relatedposts-items-visual {
         margin-right: -10px !important;
