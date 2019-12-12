@@ -51,6 +51,10 @@ class popular_tags_in_category_widget extends WP_Widget {
             array_push( $post_types, 'album' );
         }
 
+        if( post_type_exists( 'concert' ) ){
+            array_push( $post_types, 'concert' );
+        }
+
         if( post_type_exists( 'interview' ) ){
             array_push( $post_types, 'interview' );
         }
@@ -77,85 +81,8 @@ class popular_tags_in_category_widget extends WP_Widget {
             $terms = wp_get_post_terms( $post->ID );
 
             foreach( $terms as $value ){
-                $check = false;
-                $tag_check = false;
-
-                $patterns = array(
-                    '/amitie/',
-                    '/bande/',
-                    '/biographie/',
-                    '/deuil/',
-                    '/ecriture',
-                    '/enfant/',
-                    '/esclavage/',
-                    '/fantastique/',
-                    '/feminisme/',
-                    '/femme/',
-                    '/fiction/',
-                    '/hommage/',
-                    '/identite/',
-                    '/immigration/',
-                    '/lecture/',
-                    '/litteraire/',
-                    '/litterature/',
-                    '/livre/',
-                    '/memoire/',
-                    '/narrateur/',
-                    '/poesie/',
-                    '/prix/',
-                    '/racisme/',
-                    '/realisme-magique/',
-                    '/recit/',
-                    '/recueil/',
-                    '/reportage/',
-                    '/roman/',
-                    '/sexualite/',
-                    '/slam/',
-                    '/temoignage/',
-                    '/terrorisme/',
-                    '/thriller/',
-                    '/violence/',
-                );
-
-                # Check if is_tag with book patterns
-
-                if( is_tag() ){
-                    $tag = get_queried_object();
-                    $tag_slug = $tag->slug;
-
-                    foreach( $patterns as $pattern ){
-                        if( preg_match( $pattern, $tag_slug ) ){
-                            $tag_check = true;
-                            break;
-                        }
-                    }
-                }
-
-                # Check whether or not if I should update tag cloud with specific book tags
-
-                if( is_singular( 'book' ) || is_category( 'reads' ) || is_tax( 'publisher' ) || $tag_check == true ){
-                    $term_slug = $value->slug;
-
-                    foreach( $patterns as $pattern ){
-                        if( preg_match( $pattern, $term_slug ) ){
-                            $check = true;
-                            break;
-                        }
-                    }
-
-                    # Will construct tag cloud with only specific book tags from posts
-
-                    if( $check == true && !in_array( $value, $array_of_terms_in_category, true ) ){
-                        array_push( $array_of_terms_in_category, $value->term_id );
-                    }
-                }
-
-                # Will construct tag cloud with only tags from posts
-
-                else {
-                    if( !in_array( $value, $array_of_terms_in_category, true ) ){
-                        array_push( $array_of_terms_in_category, $value->term_id );
-                    }
+                if( !in_array( $value, $array_of_terms_in_category, true ) ){
+                    array_push( $array_of_terms_in_category, $value->term_id );
                 }
             }
         }
@@ -181,7 +108,7 @@ class popular_tags_in_category_widget extends WP_Widget {
                 $at = strtolower( strtr( $a->name, $translit ) );
                 $bt = strtolower( strtr( $b->name, $translit ) );
 
-                return strcoll( $at, $bt );
+                return strcasecmp( $at, $bt );
             }
 
             usort( $mytags_array, 'widget_sort_tag_by_name' );
