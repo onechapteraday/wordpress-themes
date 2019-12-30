@@ -463,6 +463,7 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
         display: none !important;
     }
 
+    body.tax-person    article:not(.sticky) .entry-footer .book-release-date,
     body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
         display: inline !important;
     }
@@ -2026,10 +2027,12 @@ body:not(search-results) article:not(.sticky) .entry-footer .book-release-date {
     display: none;
 }
 
+body.tax-person    .entry-footer .posted-on + .posted-on,
 body.tax-publisher .entry-footer .posted-on + .posted-on {
     display: none;
 }
 
+body.tax-person    article:not(.sticky) .entry-footer .book-release-date,
 body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
     display: block;
 }
