@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-30 08:37-0500\n"
-"PO-Revision-Date: 2019-12-30 08:39-0500\n"
+"PO-Revision-Date: 2019-12-30 09:39-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -267,12 +267,12 @@ msgstr "Archives"
 #: functions.php:840 functions.php:842
 msgctxt "Used before release date of book."
 msgid "Released on"
-msgstr "Paru le"
+msgstr "Parution le"
 
 #: functions.php:848 functions.php:850
 msgctxt "Used before release date of album."
 msgid "Released on"
-msgstr "Sorti le"
+msgstr "Sortie le"
 
 #: single.php:29 image.php:108 page-templates/fullwidth-single.php:31
 #: page-templates/fullwidth-single-album.php:31
