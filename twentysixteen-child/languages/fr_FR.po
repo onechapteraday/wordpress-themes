@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-18 23:41-0500\n"
-"PO-Revision-Date: 2019-11-18 23:45-0500\n"
+"POT-Creation-Date: 2019-12-30 08:37-0500\n"
+"PO-Revision-Date: 2019-12-30 08:39-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -23,12 +23,12 @@ msgctxt "Used before post author name."
 msgid "Author"
 msgstr "Auteur"
 
-#: functions.php:303
+#: functions.php:307
 msgctxt "Used before post format."
 msgid "Format"
 msgstr "Format"
 
-#: functions.php:317 widgets/recent-posts-big-one-widget.php:85
+#: functions.php:321 widgets/recent-posts-big-one-widget.php:85
 #: widgets/recent-posts-colored-widget.php:234
 #: widgets/recent-posts-medium-one-widget.php:82
 #: widgets/random-posts-medium-two-widget.php:227
@@ -40,70 +40,70 @@ msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 "Laisser un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
 
-#: functions.php:357 functions.php:444
+#: functions.php:353 functions.php:440
 msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
 msgstr ", "
 
-#: functions.php:361
+#: functions.php:357
 msgctxt "Used before category names."
 msgid "Categories"
 msgstr "Catégories"
 
-#: functions.php:383
+#: functions.php:379
 msgctxt "Used before person names."
 msgid "People"
 msgstr "Personnes"
 
-#: functions.php:410
+#: functions.php:406
 msgctxt "Used before prize names."
 msgid "Literary Prizes"
 msgstr "Prix littéraires"
 
-#: functions.php:437
+#: functions.php:433
 msgctxt "Used before location names."
 msgid "Locations"
 msgstr "Localisations"
 
-#: functions.php:448
+#: functions.php:444
 msgctxt "Used before tag names."
 msgid "Tags"
 msgstr "Étiquettes"
 
-#: functions.php:467
+#: functions.php:463
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: functions.php:469
+#: functions.php:465
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 "Ajouter des widgets ici pour les faire apparaître dans votre barre latérale."
 
-#: functions.php:477
+#: functions.php:473
 msgid "Sidebar for Books"
 msgstr "Barre latérale pour les livres"
 
-#: functions.php:479
+#: functions.php:475
 msgid "Add widgets here to appears in your Book sidebar."
 msgstr ""
 "Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
 "pour les livres."
 
-#: functions.php:487
+#: functions.php:483
 msgid "Sidebar for Music"
 msgstr "Barre latérale pour la musique"
 
-#: functions.php:489
+#: functions.php:485
 msgid "Add widgets here to appears in your Music sidebar."
 msgstr ""
 "Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
 "pour la musique."
 
-#: functions.php:497
+#: functions.php:493
 msgid "Front Page - FullWidth Top"
 msgstr "Page d'accueil - Pleine largeur haut"
 
-#: functions.php:499
+#: functions.php:495
 msgid ""
 "Widgets appear in a single-column widget area on the top of the Front Page "
 "(and above the Featured Content slider, if active)."
@@ -112,11 +112,11 @@ msgstr ""
 "haut de la Page d'accueil (et au-dessus du silder de contenu, si celui-ci "
 "est actif)."
 
-#: functions.php:507
+#: functions.php:503
 msgid "Front Page - Post Content 1"
 msgstr "Page d'accueil - Contenu 1"
 
-#: functions.php:509
+#: functions.php:505
 msgid ""
 "Widgets appear left of Sidebar 1 and below the FullWidth Top widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
@@ -126,11 +126,11 @@ msgstr ""
 "de la zone Pleine largeur haut. Cette zone a été spécialement créée pour les "
 "widgets personnalisés du thème Twenty Sixteen Child."
 
-#: functions.php:517
+#: functions.php:513
 msgid "Front Page - Sidebar 1"
 msgstr "Page d'accueil - Barre latérale 1"
 
-#: functions.php:519
+#: functions.php:515
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 1 "
 "widget area."
@@ -138,11 +138,11 @@ msgstr ""
 "Les widgets apparaissent dans la barre latérale alignée à droite près de la "
 "zone du widget Contenu&nbsp;1."
 
-#: functions.php:527
+#: functions.php:523
 msgid "Front Page - FullWidth Center"
 msgstr "Page d'accueil - Pleine largeur central"
 
-#: functions.php:529
+#: functions.php:525
 msgid ""
 "Widgets will appear in a single-column widget area below the Post Content 1 "
 "and Sidebar 1 widget areas."
@@ -150,11 +150,11 @@ msgstr ""
 "Les widgets vont apparaître dans une seule colonne en-dessous des zones "
 "Contenu&nbsp;1 et Barre latérale&nbsp;1."
 
-#: functions.php:537
+#: functions.php:533
 msgid "Front Page - Post Content 2"
 msgstr "Page d'accueil - Contenu 2"
 
-#: functions.php:539
+#: functions.php:535
 msgid ""
 "Widgets appear left of Sidebar 2 and below the FullWidth Center widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
@@ -164,11 +164,11 @@ msgstr ""
 "de la zone Pleine largeur central. Cette zone a été spécialement créée pour "
 "les widgets personnalisés du thème Twenty Sixteen Child."
 
-#: functions.php:547
+#: functions.php:543
 msgid "Front Page - Sidebar 2"
 msgstr "Page d'accueil - Barre latérale 2"
 
-#: functions.php:549
+#: functions.php:545
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 2 "
 "widget area."
@@ -176,11 +176,11 @@ msgstr ""
 "Les widgets apparaissent dans la barre latérale alignée à droite près de la "
 "zone du widget Contenu&nbsp;2."
 
-#: functions.php:557
+#: functions.php:553
 msgid "Front Page - FullWidth Bottom"
 msgstr "Page d'accueil - Pleine largeur bas"
 
-#: functions.php:559
+#: functions.php:555
 msgid ""
 "Widgets will appear in a single-column widget area at the bottom of your "
 "Front Page above the footer."
@@ -188,90 +188,96 @@ msgstr ""
 "Les widgets vont apparaître dans une seule colonne à la fin de votre Page "
 "d'accueil au-dessus du pied-de-page."
 
-#: functions.php:567
+#: functions.php:563
 msgid "Content Bottom 1"
 msgstr "Contenu du bas 1"
 
-#: functions.php:569 functions.php:579
+#: functions.php:565 functions.php:575
 msgid "Appears at the bottom of the content on posts and pages."
 msgstr "Apparaît en bas du contenu des articles et des pages."
 
-#: functions.php:577
+#: functions.php:573
 msgid "Content Bottom 2"
 msgstr "Contenu du bas 2"
 
-#: functions.php:621
+#: functions.php:617
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: functions.php:623
+#: functions.php:619
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: functions.php:625
+#: functions.php:621
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "F j, Y"
 
-#: functions.php:628
+#: functions.php:624
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "Apartés"
 
-#: functions.php:630
+#: functions.php:626
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "Galeries"
 
-#: functions.php:632
+#: functions.php:628
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "Images"
 
-#: functions.php:634
+#: functions.php:630
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "Vidéos"
 
-#: functions.php:636
+#: functions.php:632
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "Citations"
 
-#: functions.php:638
+#: functions.php:634
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "Liens"
 
-#: functions.php:640
+#: functions.php:636
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "Statuts"
 
-#: functions.php:642
+#: functions.php:638
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "Audios"
 
-#: functions.php:644
+#: functions.php:640
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "Messages"
 
-#: functions.php:651
+#: functions.php:647
 msgid "Archives"
 msgstr "Archives"
 
-#: functions.php:792 functions.php:794
+#: functions.php:840 functions.php:842
 msgctxt "Used before release date of book."
 msgid "Released on"
 msgstr "Paru le"
 
+#: functions.php:848 functions.php:850
+msgctxt "Used before release date of album."
+msgid "Released on"
+msgstr "Sorti le"
+
 #: single.php:29 image.php:108 page-templates/fullwidth-single.php:31
 #: page-templates/fullwidth-single-album.php:31
 #: page-templates/fullwidth-single-interview.php:31
+#: page-templates/fullwidth-single-concert.php:31
 #: page-templates/fullwidth-single-book.php:31 single-album.php:29
 #: single-book.php:29
 msgctxt "Parent post link"
@@ -285,6 +291,7 @@ msgstr ""
 #: single.php:34 page-templates/fullwidth-single.php:36
 #: page-templates/fullwidth-single-album.php:36
 #: page-templates/fullwidth-single-interview.php:36
+#: page-templates/fullwidth-single-concert.php:36
 #: page-templates/fullwidth-single-book.php:36 single-album.php:34
 #: single-book.php:34
 msgid "Next"
@@ -293,6 +300,7 @@ msgstr "Suivant"
 #: single.php:35 page-templates/fullwidth-single.php:37
 #: page-templates/fullwidth-single-album.php:37
 #: page-templates/fullwidth-single-interview.php:37
+#: page-templates/fullwidth-single-concert.php:37
 #: page-templates/fullwidth-single-book.php:37 single-album.php:35
 #: single-book.php:35
 msgid "Next post:"
@@ -301,6 +309,7 @@ msgstr "Article suivant :"
 #: single.php:37 page-templates/fullwidth-single.php:39
 #: page-templates/fullwidth-single-album.php:39
 #: page-templates/fullwidth-single-interview.php:39
+#: page-templates/fullwidth-single-concert.php:39
 #: page-templates/fullwidth-single-book.php:39 single-album.php:37
 #: single-book.php:37
 msgid "Previous"
@@ -309,6 +318,7 @@ msgstr "Précédent"
 #: single.php:38 page-templates/fullwidth-single.php:40
 #: page-templates/fullwidth-single-album.php:40
 #: page-templates/fullwidth-single-interview.php:40
+#: page-templates/fullwidth-single-concert.php:40
 #: page-templates/fullwidth-single-book.php:40 single-album.php:38
 #: single-book.php:38
 msgid "Previous post:"
@@ -426,69 +436,69 @@ msgid "Author"
 msgstr "Auteur"
 
 #: template-parts/content-single-book.php:130
-msgctxt "book metadata female translators"
-msgid "Translators"
-msgstr "Traductrices"
-
-#: template-parts/content-single-book.php:132
-msgctxt "book metadata translators"
-msgid "Translators"
-msgstr "Traducteurs"
-
-#: template-parts/content-single-book.php:138
-msgctxt "book metadata female translator"
-msgid "Translator"
-msgstr "Traductrice"
-
-#: template-parts/content-single-book.php:140
-msgctxt "book metadata male translator"
-msgid "Translator"
-msgstr "Traducteur"
-
-#: template-parts/content-single-book.php:181
 msgctxt "book metadata female illustrators"
 msgid "Illustrators"
 msgstr "Illustratrices"
 
-#: template-parts/content-single-book.php:183
+#: template-parts/content-single-book.php:132
 msgctxt "book metadata illustrators"
 msgid "Illustrators"
 msgstr "Illustrateurs"
 
-#: template-parts/content-single-book.php:189
+#: template-parts/content-single-book.php:138
 msgctxt "book metadata female illustrator"
 msgid "Illustrator"
 msgstr "Illustratrice"
 
-#: template-parts/content-single-book.php:191
+#: template-parts/content-single-book.php:140
 msgctxt "book metadata male illustrator"
 msgid "Illustrator"
 msgstr "Illustrateur"
 
-#: template-parts/content-single-book.php:233
+#: template-parts/content-single-book.php:182
 msgctxt "book metadata female colourists"
 msgid "Colourists"
 msgstr "Coloristes"
 
-#: template-parts/content-single-book.php:235
+#: template-parts/content-single-book.php:184
 msgctxt "book metadata colourists"
 msgid "Colourists"
 msgstr "Coloristes"
 
-#: template-parts/content-single-book.php:241
+#: template-parts/content-single-book.php:190
 msgctxt "book metadata female colourist"
 msgid "Colourist"
 msgstr "Coloriste"
 
-#: template-parts/content-single-book.php:243
+#: template-parts/content-single-book.php:192
 msgctxt "book metadata male colourist"
 msgid "Colourist"
 msgstr "Coloriste"
 
-#: template-parts/content-single-book.php:270
+#: template-parts/content-single-book.php:219
 msgctxt "book metadata preface authors"
 msgid "Preface"
 msgstr "Préface"
+
+#: template-parts/content-single-book.php:257
+msgctxt "book metadata female translators"
+msgid "Translators"
+msgstr "Traductrices"
+
+#: template-parts/content-single-book.php:259
+msgctxt "book metadata translators"
+msgid "Translators"
+msgstr "Traducteurs"
+
+#: template-parts/content-single-book.php:265
+msgctxt "book metadata female translator"
+msgid "Translator"
+msgstr "Traductrice"
+
+#: template-parts/content-single-book.php:267
+msgctxt "book metadata male translator"
+msgid "Translator"
+msgstr "Traducteur"
 
 #: template-parts/content-single-book.php:294
 msgctxt "book metadata publisher"
@@ -644,11 +654,11 @@ msgstr ""
 "Ce widget va afficher les étiquettes populaires de la catégorie que vous "
 "choisissez."
 
-#: widgets/popular-tags-in-category-widget.php:210
+#: widgets/popular-tags-in-category-widget.php:137
 msgid "New title"
 msgstr "Nouveau titre"
 
-#: widgets/popular-tags-in-category-widget.php:216
+#: widgets/popular-tags-in-category-widget.php:143
 #: widgets/recent-posts-big-one-widget.php:124
 #: widgets/recent-posts-colored-widget.php:281 widgets/quote-widget.php:73
 #: widgets/recent-posts-medium-one-widget.php:115

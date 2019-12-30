@@ -294,6 +294,10 @@ function twentysixteen_entry_meta() {
             twentysixteen_child_release_date();
         }
 
+        if( $post_type == 'album' ){
+            twentysixteen_child_release_date();
+        }
+
         twentysixteen_entry_date();
     }
 
@@ -829,12 +833,23 @@ add_action( 'pre_get_posts', 'update_post_order_query' );
 
 function twentysixteen_child_release_date(){
     $release_date = get_post_meta( get_the_ID(), 'date_release', true );
+    $post_type    = get_post_type( get_the_ID() );
 
-    printf( '<span class="posted-on book-release-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
-        _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ),
-        esc_url( get_permalink() ),
-        _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ) . ' ' . date_i18n( 'j F Y', strtotime( $release_date ) )
-    );
+    if( $post_type == 'book' ){
+        printf( '<span class="posted-on book-release-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
+            _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ),
+            esc_url( get_permalink() ),
+            _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ) . ' ' . date_i18n( 'j F Y', strtotime( $release_date ) )
+        );
+    }
+
+    if( $post_type == 'album' ){
+        printf( '<span class="posted-on album-release-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
+            _x( 'Released on', 'Used before release date of album.', 'twentysixteen-child' ),
+            esc_url( get_permalink() ),
+            _x( 'Released on', 'Used before release date of album.', 'twentysixteen-child' ) . ' ' . date_i18n( 'j F Y', strtotime( $release_date ) )
+        );
+    }
 }
 
 ?>
