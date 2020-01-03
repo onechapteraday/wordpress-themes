@@ -444,6 +444,11 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     margin-right: 10px;
 }
 
+.sharedaddy.sd-sharing-enabled {
+    padding: 1.75em 0 0.5em;
+    margin-top: 50px;
+}
+
 @media screen and (max-width: 909px) {
     #jp-relatedposts .jp-relatedposts-items-visual {
         margin-right: -10px !important;

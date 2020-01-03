@@ -26,6 +26,19 @@
 	<div class="entry-content">
 		<?php
 			the_content();
+
+                        # Add sharing buttons
+
+                        if ( function_exists( 'sharing_display' ) ) {
+                            sharing_display( '', true );
+                        }
+
+                        if ( class_exists( 'Jetpack_Likes' ) ) {
+                            $custom_likes = new Jetpack_Likes;
+                            echo $custom_likes->post_likes( '' );
+                        }
+
+                        add_action( 'loop_start', 'jptweak_remove_share' );
 		?>
                 <div class="single-metadata metadata-book">
 		<h2><?php echo _x( 'About this book', 'book metadata section title', 'twentysixteen-child' ); ?></h2>
