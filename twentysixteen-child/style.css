@@ -445,8 +445,21 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 }
 
 .sharedaddy.sd-sharing-enabled {
-    padding: 1.75em 0 0.5em;
+    padding: 1.75em 0 1em;
     margin-top: 50px;
+}
+
+.jetpack-likes-widget-wrapper {
+    padding-bottom: 0 !important;
+    margin-bottom: -20px;
+}
+
+.hentry .jetpack-likes-widget-wrapper h3.sd-title {
+    display: none;
+}
+
+.jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item .icon-feed {
+    display: none;
 }
 
 @media screen and (max-width: 909px) {
