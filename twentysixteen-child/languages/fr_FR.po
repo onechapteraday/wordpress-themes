@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-26 17:09-0500\n"
-"PO-Revision-Date: 2020-01-26 17:10-0500\n"
+"POT-Creation-Date: 2020-01-26 17:19-0500\n"
+"PO-Revision-Date: 2020-01-26 17:20-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -28,7 +28,8 @@ msgctxt "Used before post format."
 msgid "Format"
 msgstr "Format"
 
-#: functions.php:321 widgets/recent-posts-big-one-widget.php:222
+#: functions.php:321 widgets/random-posts-big-two-widget.php:232
+#: widgets/recent-posts-big-one-widget.php:222
 #: widgets/recent-posts-colored-widget.php:234
 #: widgets/random-posts-medium-one-widget.php:225
 #: widgets/recent-posts-medium-one-widget.php:219
@@ -202,76 +203,76 @@ msgstr "Apparaît en bas du contenu des articles et des pages."
 msgid "Content Bottom 2"
 msgstr "Contenu du bas 2"
 
-#: functions.php:618
+#: functions.php:619
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: functions.php:620
+#: functions.php:621
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: functions.php:622
+#: functions.php:623
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "F j, Y"
 
-#: functions.php:625
+#: functions.php:626
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "Apartés"
 
-#: functions.php:627
+#: functions.php:628
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "Galeries"
 
-#: functions.php:629
+#: functions.php:630
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "Images"
 
-#: functions.php:631
+#: functions.php:632
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "Vidéos"
 
-#: functions.php:633
+#: functions.php:634
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "Citations"
 
-#: functions.php:635
+#: functions.php:636
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "Liens"
 
-#: functions.php:637
+#: functions.php:638
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "Statuts"
 
-#: functions.php:639
+#: functions.php:640
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "Audios"
 
-#: functions.php:641
+#: functions.php:642
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "Messages"
 
-#: functions.php:648
+#: functions.php:649
 msgid "Archives"
 msgstr "Archives"
 
-#: functions.php:841 functions.php:843
+#: functions.php:842 functions.php:844
 msgctxt "Used before release date of book."
 msgid "Released on"
 msgstr "Parution le"
 
-#: functions.php:849 functions.php:851
+#: functions.php:850 functions.php:852
 msgctxt "Used before release date of album."
 msgid "Released on"
 msgstr "Sortie le"
@@ -661,6 +662,7 @@ msgid "New title"
 msgstr "Nouveau titre"
 
 #: widgets/popular-tags-in-category-widget.php:143
+#: widgets/random-posts-big-two-widget.php:283
 #: widgets/recent-posts-big-one-widget.php:273
 #: widgets/recent-posts-colored-widget.php:281 widgets/quote-widget.php:73
 #: widgets/random-posts-medium-one-widget.php:270
@@ -675,19 +677,20 @@ msgstr "Nouveau titre"
 msgid "Title:"
 msgstr "Titre :"
 
-#: widgets/recent-posts-big-one-widget.php:19
-msgid "Recent Posts (Big 1)"
-msgstr "Articles récents (Grand 1)"
+#: widgets/random-posts-big-two-widget.php:19
+msgid "Random Posts (Big 2)"
+msgstr "Articles aléatoires (Grand 2)"
 
-#: widgets/recent-posts-big-one-widget.php:24
+#: widgets/random-posts-big-two-widget.php:24
 msgid ""
-"Big Recents Posts with an overlay excerpt text. Featured images must have a "
-"minimum size of 1200x800 pixel."
+"Big Random Posts with featured image and a 2-column excerpt. Featured images "
+"must have a minimum size of 1200x800 pixel."
 msgstr ""
-"Articles récents de grande taille avec un extrait de texte en superposition. "
-"Les images mises en avant doivent avoir une taille minimale de 1200x800 "
-"pixels."
+"Articles aléatoires de grande taille avec une image mise en page et un "
+"extrait sur deux colonnes. Les images mises en avant doivent avoir une "
+"taille minimale de 1200x800 pixels."
 
+#: widgets/random-posts-big-two-widget.php:221
 #: widgets/recent-posts-big-one-widget.php:215
 #: widgets/recent-posts-colored-widget.php:223
 #: widgets/random-posts-medium-two-widget.php:220
@@ -699,6 +702,7 @@ msgstr ""
 msgid "Permalink to %s"
 msgstr "Permalien vers %s"
 
+#: widgets/random-posts-big-two-widget.php:288
 #: widgets/recent-posts-big-one-widget.php:278
 #: widgets/recent-posts-colored-widget.php:286
 #: widgets/random-posts-medium-one-widget.php:275
@@ -713,6 +717,7 @@ msgstr "Permalien vers %s"
 msgid "Number of posts to show:"
 msgstr "Nombre d'articles à afficher&nbsp;:"
 
+#: widgets/random-posts-big-two-widget.php:293
 #: widgets/recent-posts-big-one-widget.php:283
 #: widgets/recent-posts-colored-widget.php:291
 #: widgets/random-posts-medium-one-widget.php:280
@@ -727,6 +732,7 @@ msgstr "Nombre d'articles à afficher&nbsp;:"
 msgid "Number of posts to exclude (optional):"
 msgstr "Nombre d'articles à exclure (facultatif)&nbsp;:"
 
+#: widgets/random-posts-big-two-widget.php:298
 #: widgets/recent-posts-big-one-widget.php:288
 #: widgets/recent-posts-colored-widget.php:296
 #: widgets/random-posts-medium-one-widget.php:285
@@ -740,6 +746,7 @@ msgstr "Nombre d'articles à exclure (facultatif)&nbsp;:"
 msgid "Category slug (optional):"
 msgstr "Slug de la catégorie (facultatif)&nbsp;:"
 
+#: widgets/random-posts-big-two-widget.php:303
 #: widgets/recent-posts-big-one-widget.php:293
 #: widgets/recent-posts-colored-widget.php:301
 #: widgets/random-posts-medium-one-widget.php:290
@@ -753,6 +760,7 @@ msgstr "Slug de la catégorie (facultatif)&nbsp;:"
 msgid "Tag slug (optional):"
 msgstr "Slug de l'étiquette (facultatif)&nbsp;:"
 
+#: widgets/random-posts-big-two-widget.php:313
 #: widgets/recent-posts-big-one-widget.php:303
 #: widgets/recent-posts-colored-widget.php:311
 #: widgets/random-posts-medium-one-widget.php:300
@@ -767,6 +775,7 @@ msgstr "Slug de l'étiquette (facultatif)&nbsp;:"
 msgid "Publisher slug (optional):"
 msgstr "Slug de la maison d'édition (facultatif)&nbsp;:"
 
+#: widgets/random-posts-big-two-widget.php:324
 #: widgets/recent-posts-big-one-widget.php:314
 #: widgets/recent-posts-colored-widget.php:322
 #: widgets/random-posts-medium-one-widget.php:311
@@ -781,6 +790,7 @@ msgstr "Slug de la maison d'édition (facultatif)&nbsp;:"
 msgid "Location slug (optional):"
 msgstr "Slug de la localisation (facultatif)&nbsp;:"
 
+#: widgets/random-posts-big-two-widget.php:335
 #: widgets/recent-posts-big-one-widget.php:325
 #: widgets/recent-posts-colored-widget.php:333
 #: widgets/random-posts-medium-one-widget.php:322
@@ -795,6 +805,7 @@ msgstr "Slug de la localisation (facultatif)&nbsp;:"
 msgid "Person slug (optional):"
 msgstr "Slug de la personne (facultatif)&nbsp;:"
 
+#: widgets/random-posts-big-two-widget.php:346
 #: widgets/recent-posts-big-one-widget.php:336
 #: widgets/recent-posts-colored-widget.php:344
 #: widgets/random-posts-medium-one-widget.php:333
@@ -808,6 +819,19 @@ msgstr "Slug de la personne (facultatif)&nbsp;:"
 #: widgets/random-posts-colored-widget.php:348
 msgid "Prize slug (optional):"
 msgstr "Slug du prix littéraire (facultatif)&nbsp;:"
+
+#: widgets/recent-posts-big-one-widget.php:19
+msgid "Recent Posts (Big 1)"
+msgstr "Articles récents (Grand 1)"
+
+#: widgets/recent-posts-big-one-widget.php:24
+msgid ""
+"Big Recents Posts with an overlay excerpt text. Featured images must have a "
+"minimum size of 1200x800 pixel."
+msgstr ""
+"Articles récents de grande taille avec un extrait de texte en superposition. "
+"Les images mises en avant doivent avoir une taille minimale de 1200x800 "
+"pixels."
 
 #: widgets/recent-posts-colored-widget.php:19
 msgid "Recent Posts (Background)"
@@ -891,8 +915,8 @@ msgstr "Articles récents (Grand 2)"
 
 #: widgets/recent-posts-big-two-widget.php:24
 msgid ""
-"Big Recents Posts with featured image and a 2-column excerpt. Featured "
-"images must have a minimum size of 1200x800 pixel."
+"Big Recent Posts with featured image and a 2-column excerpt. Featured images "
+"must have a minimum size of 1200x800 pixel."
 msgstr ""
 "Articles récents de grande taille avec une image mise en page et un extrait "
 "sur deux colonnes. Les images mises en avant doivent avoir une taille "

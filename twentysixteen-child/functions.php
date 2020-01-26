@@ -589,6 +589,7 @@ add_action( 'widgets_init', 'twentysixteenchild_widgets_init' );
 require_once( __DIR__ . '/widgets/random-posts-medium-one-widget.php');
 require_once( __DIR__ . '/widgets/random-posts-medium-two-widget.php');
 require_once( __DIR__ . '/widgets/random-posts-big-one-widget.php');
+require_once( __DIR__ . '/widgets/random-posts-big-two-widget.php');
 require_once( __DIR__ . '/widgets/random-posts-colored-widget.php');
 
 require_once( __DIR__ . '/widgets/recent-posts-small-one-widget.php');
