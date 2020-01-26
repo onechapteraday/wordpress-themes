@@ -21,7 +21,7 @@ class twentysixteenchild_recentposts_small_one extends WP_Widget {
             # Widget description
             array(
                 'classname'   => 'widget_twentysixteenchild_recentposts_small_one',
-                'description' => __( 'Small Recents Posts widget with featured images.', 'twentysixteen-child' ),
+                'description' => __( 'Small Recent Posts widget with featured images.', 'twentysixteen-child' ),
             )
         );
     }

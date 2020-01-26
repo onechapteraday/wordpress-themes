@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-26 17:19-0500\n"
-"PO-Revision-Date: 2020-01-26 17:20-0500\n"
+"POT-Creation-Date: 2020-01-26 17:24-0500\n"
+"PO-Revision-Date: 2020-01-26 17:25-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -203,76 +203,76 @@ msgstr "Apparaît en bas du contenu des articles et des pages."
 msgid "Content Bottom 2"
 msgstr "Contenu du bas 2"
 
-#: functions.php:619
+#: functions.php:620
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: functions.php:621
+#: functions.php:622
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: functions.php:623
+#: functions.php:624
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "F j, Y"
 
-#: functions.php:626
+#: functions.php:627
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "Apartés"
 
-#: functions.php:628
+#: functions.php:629
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "Galeries"
 
-#: functions.php:630
+#: functions.php:631
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "Images"
 
-#: functions.php:632
+#: functions.php:633
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "Vidéos"
 
-#: functions.php:634
+#: functions.php:635
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "Citations"
 
-#: functions.php:636
+#: functions.php:637
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "Liens"
 
-#: functions.php:638
+#: functions.php:639
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "Statuts"
 
-#: functions.php:640
+#: functions.php:641
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "Audios"
 
-#: functions.php:642
+#: functions.php:643
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "Messages"
 
-#: functions.php:649
+#: functions.php:650
 msgid "Archives"
 msgstr "Archives"
 
-#: functions.php:842 functions.php:844
+#: functions.php:843 functions.php:845
 msgctxt "Used before release date of book."
 msgid "Released on"
 msgstr "Parution le"
 
-#: functions.php:850 functions.php:852
+#: functions.php:851 functions.php:853
 msgctxt "Used before release date of album."
 msgid "Released on"
 msgstr "Sortie le"
@@ -826,7 +826,7 @@ msgstr "Articles récents (Grand 1)"
 
 #: widgets/recent-posts-big-one-widget.php:24
 msgid ""
-"Big Recents Posts with an overlay excerpt text. Featured images must have a "
+"Big Recent Posts with an overlay excerpt text. Featured images must have a "
 "minimum size of 1200x800 pixel."
 msgstr ""
 "Articles récents de grande taille avec un extrait de texte en superposition. "
@@ -838,7 +838,7 @@ msgid "Recent Posts (Background)"
 msgstr "Articles récents (Arrière-plan)"
 
 #: widgets/recent-posts-colored-widget.php:24
-msgid "Medium-sized Recents Posts with a background color."
+msgid "Medium-sized Recent Posts with a background color."
 msgstr "Articles récents de taille moyenne avec un arrière-plan coloré."
 
 #: widgets/quote-widget.php:19
@@ -872,7 +872,7 @@ msgid "Recent Posts (Medium 1)"
 msgstr "Articles récents (Moyen 1)"
 
 #: widgets/recent-posts-medium-one-widget.php:24
-msgid "Medium-sized Recents Posts with featured image and excerpt."
+msgid "Medium-sized Recent Posts with featured image and excerpt."
 msgstr ""
 "Articles récents de taille moyenne avec une image mise en avant et un "
 "extrait."
@@ -882,7 +882,7 @@ msgid "Recent Posts (Small 2)"
 msgstr "Articles récents (Petit 2)"
 
 #: widgets/recent-posts-small-two-widget.php:24
-msgid "Small Recents Posts widget without featured images."
+msgid "Small Recent Posts widget without featured images."
 msgstr "Articles récents de petite taille sans les images mises en avant."
 
 #: widgets/random-posts-medium-two-widget.php:19
@@ -903,7 +903,7 @@ msgstr "Articles récents (Moyen 2)"
 
 #: widgets/recent-posts-medium-two-widget.php:24
 msgid ""
-"Medium-sized Recents Posts in a 2-column layout with featured image and "
+"Medium-sized Recent Posts in a 2-column layout with featured image and "
 "excerpt."
 msgstr ""
 "Articles récents de taille moyenne avec une mise en page sur deux colonnes, "
@@ -940,7 +940,9 @@ msgid "Recent Posts (Small 1)"
 msgstr "Articles récents (Petit 1)"
 
 #: widgets/recent-posts-small-one-widget.php:24
-msgid "Small Recents Posts widget with featured images."
+#, fuzzy
+#| msgid "Small Recents Posts widget with featured images."
+msgid "Small Recent Posts widget with featured images."
 msgstr "Articles récents de petite taille avec les images mises en avant."
 
 #: widgets/recent-posts-small-one-widget.php:272

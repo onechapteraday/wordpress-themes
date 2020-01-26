@@ -21,7 +21,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
             # Widget description
             array(
                 'classname'   => 'widget_twentysixteenchild_recentposts_big_one',
-                'description' => __( 'Big Recents Posts with an overlay excerpt text. Featured images must have a minimum size of 1200x800 pixel.', 'twentysixteen-child' ),
+                'description' => __( 'Big Recent Posts with an overlay excerpt text. Featured images must have a minimum size of 1200x800 pixel.', 'twentysixteen-child' ),
             )
         );
     }

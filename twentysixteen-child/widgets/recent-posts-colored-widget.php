@@ -21,7 +21,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
             # Widget description
             array(
                 'classname'   => 'widget_twentysixteenchild_recentposts_color',
-                'description' => __( 'Medium-sized Recents Posts with a background color.', 'twentysixteen-child' ),
+                'description' => __( 'Medium-sized Recent Posts with a background color.', 'twentysixteen-child' ),
             )
         );
     }

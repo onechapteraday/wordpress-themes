@@ -21,7 +21,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
             # Widget description
             array(
                 'classname'   => 'widget_twentysixteenchild_recentposts_medium_two',
-                'description' => __( 'Medium-sized Recents Posts in a 2-column layout with featured image and excerpt.', 'twentysixteen-child' ),
+                'description' => __( 'Medium-sized Recent Posts in a 2-column layout with featured image and excerpt.', 'twentysixteen-child' ),
             )
         );
     }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-26 17:19-0500\n"
+"POT-Creation-Date: 2020-01-26 17:24-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -179,76 +179,76 @@ msgstr ""
 msgid "Content Bottom 2"
 msgstr ""
 
-#: functions.php:619
+#: functions.php:620
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:621
+#: functions.php:622
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: functions.php:623
+#: functions.php:624
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: functions.php:626
+#: functions.php:627
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: functions.php:628
+#: functions.php:629
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: functions.php:630
+#: functions.php:631
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: functions.php:632
+#: functions.php:633
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: functions.php:634
+#: functions.php:635
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: functions.php:636
+#: functions.php:637
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: functions.php:638
+#: functions.php:639
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: functions.php:640
+#: functions.php:641
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: functions.php:642
+#: functions.php:643
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
 
-#: functions.php:649
+#: functions.php:650
 msgid "Archives"
 msgstr ""
 
-#: functions.php:842 functions.php:844
+#: functions.php:843 functions.php:845
 msgctxt "Used before release date of book."
 msgid "Released on"
 msgstr ""
 
-#: functions.php:850 functions.php:852
+#: functions.php:851 functions.php:853
 msgctxt "Used before release date of album."
 msgid "Released on"
 msgstr ""
@@ -793,7 +793,7 @@ msgstr ""
 
 #: widgets/recent-posts-big-one-widget.php:24
 msgid ""
-"Big Recents Posts with an overlay excerpt text. Featured images must have a "
+"Big Recent Posts with an overlay excerpt text. Featured images must have a "
 "minimum size of 1200x800 pixel."
 msgstr ""
 
@@ -802,7 +802,7 @@ msgid "Recent Posts (Background)"
 msgstr ""
 
 #: widgets/recent-posts-colored-widget.php:24
-msgid "Medium-sized Recents Posts with a background color."
+msgid "Medium-sized Recent Posts with a background color."
 msgstr ""
 
 #: widgets/quote-widget.php:19
@@ -834,7 +834,7 @@ msgid "Recent Posts (Medium 1)"
 msgstr ""
 
 #: widgets/recent-posts-medium-one-widget.php:24
-msgid "Medium-sized Recents Posts with featured image and excerpt."
+msgid "Medium-sized Recent Posts with featured image and excerpt."
 msgstr ""
 
 #: widgets/recent-posts-small-two-widget.php:19
@@ -842,7 +842,7 @@ msgid "Recent Posts (Small 2)"
 msgstr ""
 
 #: widgets/recent-posts-small-two-widget.php:24
-msgid "Small Recents Posts widget without featured images."
+msgid "Small Recent Posts widget without featured images."
 msgstr ""
 
 #: widgets/random-posts-medium-two-widget.php:19
@@ -861,7 +861,7 @@ msgstr ""
 
 #: widgets/recent-posts-medium-two-widget.php:24
 msgid ""
-"Medium-sized Recents Posts in a 2-column layout with featured image and "
+"Medium-sized Recent Posts in a 2-column layout with featured image and "
 "excerpt."
 msgstr ""
 
@@ -890,7 +890,7 @@ msgid "Recent Posts (Small 1)"
 msgstr ""
 
 #: widgets/recent-posts-small-one-widget.php:24
-msgid "Small Recents Posts widget with featured images."
+msgid "Small Recent Posts widget with featured images."
 msgstr ""
 
 #: widgets/recent-posts-small-one-widget.php:272
