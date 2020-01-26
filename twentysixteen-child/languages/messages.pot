@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-26 16:51-0500\n"
+"POT-Creation-Date: 2020-01-26 17:09-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:227
 #: widgets/recent-posts-medium-two-widget.php:223
 #: widgets/recent-posts-big-two-widget.php:226
+#: widgets/random-posts-big-one-widget.php:228
 #: widgets/random-posts-colored-widget.php:238
 #, php-format
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
@@ -177,76 +178,76 @@ msgstr ""
 msgid "Content Bottom 2"
 msgstr ""
 
-#: functions.php:617
+#: functions.php:618
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:619
+#: functions.php:620
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: functions.php:621
+#: functions.php:622
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: functions.php:624
+#: functions.php:625
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: functions.php:626
+#: functions.php:627
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: functions.php:628
+#: functions.php:629
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: functions.php:630
+#: functions.php:631
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: functions.php:632
+#: functions.php:633
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: functions.php:634
+#: functions.php:635
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: functions.php:636
+#: functions.php:637
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: functions.php:638
+#: functions.php:639
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: functions.php:640
+#: functions.php:641
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
 
-#: functions.php:647
+#: functions.php:648
 msgid "Archives"
 msgstr ""
 
-#: functions.php:840 functions.php:842
+#: functions.php:841 functions.php:843
 msgctxt "Used before release date of book."
 msgid "Released on"
 msgstr ""
 
-#: functions.php:848 functions.php:850
+#: functions.php:849 functions.php:851
 msgctxt "Used before release date of album."
 msgid "Released on"
 msgstr ""
@@ -638,6 +639,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:277
 #: widgets/recent-posts-medium-two-widget.php:273
 #: widgets/recent-posts-big-two-widget.php:277
+#: widgets/random-posts-big-one-widget.php:279
 #: widgets/recent-posts-small-one-widget.php:257
 #: widgets/random-posts-colored-widget.php:285
 msgid "Title:"
@@ -658,6 +660,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:220
 #: widgets/recent-posts-medium-two-widget.php:216
 #: widgets/recent-posts-big-two-widget.php:215
+#: widgets/random-posts-big-one-widget.php:221
 #: widgets/random-posts-colored-widget.php:227
 #, php-format
 msgid "Permalink to %s"
@@ -671,6 +674,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:282
 #: widgets/recent-posts-medium-two-widget.php:278
 #: widgets/recent-posts-big-two-widget.php:282
+#: widgets/random-posts-big-one-widget.php:284
 #: widgets/recent-posts-small-one-widget.php:262
 #: widgets/random-posts-colored-widget.php:290
 msgid "Number of posts to show:"
@@ -684,6 +688,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:287
 #: widgets/recent-posts-medium-two-widget.php:283
 #: widgets/recent-posts-big-two-widget.php:287
+#: widgets/random-posts-big-one-widget.php:289
 #: widgets/recent-posts-small-one-widget.php:267
 #: widgets/random-posts-colored-widget.php:295
 msgid "Number of posts to exclude (optional):"
@@ -697,6 +702,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:292
 #: widgets/recent-posts-medium-two-widget.php:288
 #: widgets/recent-posts-big-two-widget.php:292
+#: widgets/random-posts-big-one-widget.php:294
 #: widgets/random-posts-colored-widget.php:300
 msgid "Category slug (optional):"
 msgstr ""
@@ -709,6 +715,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:297
 #: widgets/recent-posts-medium-two-widget.php:293
 #: widgets/recent-posts-big-two-widget.php:297
+#: widgets/random-posts-big-one-widget.php:299
 #: widgets/random-posts-colored-widget.php:305
 msgid "Tag slug (optional):"
 msgstr ""
@@ -721,6 +728,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:307
 #: widgets/recent-posts-medium-two-widget.php:303
 #: widgets/recent-posts-big-two-widget.php:307
+#: widgets/random-posts-big-one-widget.php:309
 #: widgets/recent-posts-small-one-widget.php:287
 #: widgets/random-posts-colored-widget.php:315
 msgid "Publisher slug (optional):"
@@ -734,6 +742,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:318
 #: widgets/recent-posts-medium-two-widget.php:314
 #: widgets/recent-posts-big-two-widget.php:318
+#: widgets/random-posts-big-one-widget.php:320
 #: widgets/recent-posts-small-one-widget.php:298
 #: widgets/random-posts-colored-widget.php:326
 msgid "Location slug (optional):"
@@ -747,6 +756,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:329
 #: widgets/recent-posts-medium-two-widget.php:325
 #: widgets/recent-posts-big-two-widget.php:329
+#: widgets/random-posts-big-one-widget.php:331
 #: widgets/recent-posts-small-one-widget.php:309
 #: widgets/random-posts-colored-widget.php:337
 msgid "Person slug (optional):"
@@ -760,6 +770,7 @@ msgstr ""
 #: widgets/random-posts-medium-two-widget.php:340
 #: widgets/recent-posts-medium-two-widget.php:336
 #: widgets/recent-posts-big-two-widget.php:340
+#: widgets/random-posts-big-one-widget.php:342
 #: widgets/recent-posts-small-one-widget.php:320
 #: widgets/random-posts-colored-widget.php:348
 msgid "Prize slug (optional):"
@@ -841,6 +852,16 @@ msgstr ""
 msgid ""
 "Big Recents Posts with featured image and a 2-column excerpt. Featured "
 "images must have a minimum size of 1200x800 pixel."
+msgstr ""
+
+#: widgets/random-posts-big-one-widget.php:19
+msgid "Random Posts (Big 1)"
+msgstr ""
+
+#: widgets/random-posts-big-one-widget.php:24
+msgid ""
+"Big Random Posts with an overlay excerpt text. Featured images must have a "
+"minimum size of 1200x800 pixel."
 msgstr ""
 
 #: widgets/recent-posts-small-one-widget.php:19
