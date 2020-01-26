@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-26 17:24-0500\n"
+"POT-Creation-Date: 2020-01-26 17:36-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -179,76 +179,76 @@ msgstr ""
 msgid "Content Bottom 2"
 msgstr ""
 
-#: functions.php:620
+#: functions.php:622
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:622
+#: functions.php:624
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: functions.php:624
+#: functions.php:626
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: functions.php:627
+#: functions.php:629
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: functions.php:629
+#: functions.php:631
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: functions.php:631
+#: functions.php:633
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: functions.php:633
+#: functions.php:635
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: functions.php:635
+#: functions.php:637
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: functions.php:637
+#: functions.php:639
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: functions.php:639
+#: functions.php:641
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: functions.php:641
+#: functions.php:643
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: functions.php:643
+#: functions.php:645
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
 
-#: functions.php:650
+#: functions.php:652
 msgid "Archives"
 msgstr ""
 
-#: functions.php:843 functions.php:845
+#: functions.php:845 functions.php:847
 msgctxt "Used before release date of book."
 msgid "Released on"
 msgstr ""
 
-#: functions.php:851 functions.php:853
+#: functions.php:853 functions.php:855
 msgctxt "Used before release date of album."
 msgid "Released on"
 msgstr ""
@@ -635,11 +635,13 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:283
 #: widgets/recent-posts-big-one-widget.php:273
 #: widgets/recent-posts-colored-widget.php:281 widgets/quote-widget.php:73
+#: widgets/random-posts-small-one-widget.php:263
 #: widgets/random-posts-medium-one-widget.php:270
 #: widgets/recent-posts-medium-one-widget.php:264
-#: widgets/recent-posts-small-two-widget.php:249
+#: widgets/recent-posts-small-two-widget.php:248
 #: widgets/random-posts-medium-two-widget.php:277
 #: widgets/recent-posts-medium-two-widget.php:273
+#: widgets/random-posts-small-two-widget.php:254
 #: widgets/recent-posts-big-two-widget.php:277
 #: widgets/random-posts-big-one-widget.php:279
 #: widgets/recent-posts-small-one-widget.php:257
@@ -672,11 +674,13 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:288
 #: widgets/recent-posts-big-one-widget.php:278
 #: widgets/recent-posts-colored-widget.php:286
+#: widgets/random-posts-small-one-widget.php:268
 #: widgets/random-posts-medium-one-widget.php:275
 #: widgets/recent-posts-medium-one-widget.php:269
-#: widgets/recent-posts-small-two-widget.php:254
+#: widgets/recent-posts-small-two-widget.php:253
 #: widgets/random-posts-medium-two-widget.php:282
 #: widgets/recent-posts-medium-two-widget.php:278
+#: widgets/random-posts-small-two-widget.php:259
 #: widgets/recent-posts-big-two-widget.php:282
 #: widgets/random-posts-big-one-widget.php:284
 #: widgets/recent-posts-small-one-widget.php:262
@@ -687,11 +691,13 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:293
 #: widgets/recent-posts-big-one-widget.php:283
 #: widgets/recent-posts-colored-widget.php:291
+#: widgets/random-posts-small-one-widget.php:273
 #: widgets/random-posts-medium-one-widget.php:280
 #: widgets/recent-posts-medium-one-widget.php:274
-#: widgets/recent-posts-small-two-widget.php:259
+#: widgets/recent-posts-small-two-widget.php:258
 #: widgets/random-posts-medium-two-widget.php:287
 #: widgets/recent-posts-medium-two-widget.php:283
+#: widgets/random-posts-small-two-widget.php:264
 #: widgets/recent-posts-big-two-widget.php:287
 #: widgets/random-posts-big-one-widget.php:289
 #: widgets/recent-posts-small-one-widget.php:267
@@ -702,11 +708,13 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:298
 #: widgets/recent-posts-big-one-widget.php:288
 #: widgets/recent-posts-colored-widget.php:296
+#: widgets/random-posts-small-one-widget.php:278
 #: widgets/random-posts-medium-one-widget.php:285
 #: widgets/recent-posts-medium-one-widget.php:279
-#: widgets/recent-posts-small-two-widget.php:264
+#: widgets/recent-posts-small-two-widget.php:263
 #: widgets/random-posts-medium-two-widget.php:292
 #: widgets/recent-posts-medium-two-widget.php:288
+#: widgets/random-posts-small-two-widget.php:269
 #: widgets/recent-posts-big-two-widget.php:292
 #: widgets/random-posts-big-one-widget.php:294
 #: widgets/random-posts-colored-widget.php:300
@@ -716,11 +724,13 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:303
 #: widgets/recent-posts-big-one-widget.php:293
 #: widgets/recent-posts-colored-widget.php:301
+#: widgets/random-posts-small-one-widget.php:283
 #: widgets/random-posts-medium-one-widget.php:290
 #: widgets/recent-posts-medium-one-widget.php:284
-#: widgets/recent-posts-small-two-widget.php:269
+#: widgets/recent-posts-small-two-widget.php:268
 #: widgets/random-posts-medium-two-widget.php:297
 #: widgets/recent-posts-medium-two-widget.php:293
+#: widgets/random-posts-small-two-widget.php:274
 #: widgets/recent-posts-big-two-widget.php:297
 #: widgets/random-posts-big-one-widget.php:299
 #: widgets/random-posts-colored-widget.php:305
@@ -730,11 +740,13 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:313
 #: widgets/recent-posts-big-one-widget.php:303
 #: widgets/recent-posts-colored-widget.php:311
+#: widgets/random-posts-small-one-widget.php:293
 #: widgets/random-posts-medium-one-widget.php:300
 #: widgets/recent-posts-medium-one-widget.php:294
-#: widgets/recent-posts-small-two-widget.php:279
+#: widgets/recent-posts-small-two-widget.php:278
 #: widgets/random-posts-medium-two-widget.php:307
 #: widgets/recent-posts-medium-two-widget.php:303
+#: widgets/random-posts-small-two-widget.php:284
 #: widgets/recent-posts-big-two-widget.php:307
 #: widgets/random-posts-big-one-widget.php:309
 #: widgets/recent-posts-small-one-widget.php:287
@@ -745,11 +757,13 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:324
 #: widgets/recent-posts-big-one-widget.php:314
 #: widgets/recent-posts-colored-widget.php:322
+#: widgets/random-posts-small-one-widget.php:304
 #: widgets/random-posts-medium-one-widget.php:311
 #: widgets/recent-posts-medium-one-widget.php:305
-#: widgets/recent-posts-small-two-widget.php:290
+#: widgets/recent-posts-small-two-widget.php:289
 #: widgets/random-posts-medium-two-widget.php:318
 #: widgets/recent-posts-medium-two-widget.php:314
+#: widgets/random-posts-small-two-widget.php:295
 #: widgets/recent-posts-big-two-widget.php:318
 #: widgets/random-posts-big-one-widget.php:320
 #: widgets/recent-posts-small-one-widget.php:298
@@ -760,11 +774,13 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:335
 #: widgets/recent-posts-big-one-widget.php:325
 #: widgets/recent-posts-colored-widget.php:333
+#: widgets/random-posts-small-one-widget.php:315
 #: widgets/random-posts-medium-one-widget.php:322
 #: widgets/recent-posts-medium-one-widget.php:316
-#: widgets/recent-posts-small-two-widget.php:301
+#: widgets/recent-posts-small-two-widget.php:300
 #: widgets/random-posts-medium-two-widget.php:329
 #: widgets/recent-posts-medium-two-widget.php:325
+#: widgets/random-posts-small-two-widget.php:306
 #: widgets/recent-posts-big-two-widget.php:329
 #: widgets/random-posts-big-one-widget.php:331
 #: widgets/recent-posts-small-one-widget.php:309
@@ -775,11 +791,13 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:346
 #: widgets/recent-posts-big-one-widget.php:336
 #: widgets/recent-posts-colored-widget.php:344
+#: widgets/random-posts-small-one-widget.php:326
 #: widgets/random-posts-medium-one-widget.php:333
 #: widgets/recent-posts-medium-one-widget.php:327
-#: widgets/recent-posts-small-two-widget.php:312
+#: widgets/recent-posts-small-two-widget.php:311
 #: widgets/random-posts-medium-two-widget.php:340
 #: widgets/recent-posts-medium-two-widget.php:336
+#: widgets/random-posts-small-two-widget.php:317
 #: widgets/recent-posts-big-two-widget.php:340
 #: widgets/random-posts-big-one-widget.php:342
 #: widgets/recent-posts-small-one-widget.php:320
@@ -819,6 +837,14 @@ msgstr ""
 
 #: widgets/quote-widget.php:83
 msgid "Quote Author (optional):"
+msgstr ""
+
+#: widgets/random-posts-small-one-widget.php:19
+msgid "Random Posts (Small 1)"
+msgstr ""
+
+#: widgets/random-posts-small-one-widget.php:24
+msgid "Small Random Posts widget with featured images."
 msgstr ""
 
 #: widgets/random-posts-medium-one-widget.php:19
@@ -863,6 +889,14 @@ msgstr ""
 msgid ""
 "Medium-sized Recent Posts in a 2-column layout with featured image and "
 "excerpt."
+msgstr ""
+
+#: widgets/random-posts-small-two-widget.php:19
+msgid "Random Posts (Small 2)"
+msgstr ""
+
+#: widgets/random-posts-small-two-widget.php:24
+msgid "Small Random Posts widget without featured images."
 msgstr ""
 
 #: widgets/recent-posts-big-two-widget.php:19
