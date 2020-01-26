@@ -198,47 +198,47 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
             }
         }
 
-    # The Loop
-    if($bigtwo_query->have_posts()) : ?>
+        # The Loop
+        if($bigtwo_query->have_posts()) : ?>
 
-        <?php while($bigtwo_query->have_posts()) : $bigtwo_query->the_post() ?>
-        <article class="rp-big-two cf">
-            <div class="rp-big-two-content">
+            <?php while($bigtwo_query->have_posts()) : $bigtwo_query->the_post() ?>
+            <article class="rp-big-two cf">
+                <div class="rp-big-two-content">
 
-            <?php if ( '' != get_the_post_thumbnail() ) : ?>
-                <div class="entry-thumb">
-                    <?php twentysixteen_post_thumbnail( 'twentysixteenchild-fullwidth', true ); ?>
-                </div><!-- end .entry-thumb -->
-            <?php endif; ?>
+                <?php if ( '' != get_the_post_thumbnail() ) : ?>
+                    <div class="entry-thumb">
+                        <?php twentysixteen_post_thumbnail( 'twentysixteenchild-fullwidth', true ); ?>
+                    </div><!-- end .entry-thumb -->
+                <?php endif; ?>
 
-            <header class="entry-header">
-                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h2>
-            </header>
+                <header class="entry-header">
+                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h2>
+                </header>
 
-            <div class="story">
-                <p class="summary"><?php echo twentysixteenchild_excerpt(175); ?></p>
+                <div class="story">
+                    <p class="summary"><?php echo twentysixteenchild_excerpt(175); ?></p>
 
-                <footer class="entry-footer">
-                    <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
+                    <footer class="entry-footer">
+                        <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
 
-                    <?php if ( comments_open() ) : ?>
-                        <div class="entry-comments">
-                            <?php comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) ); ?>
-                        </div><!-- end .entry-comments -->
-                    <?php endif; // comments_open() ?>
+                        <?php if ( comments_open() ) : ?>
+                            <div class="entry-comments">
+                                <?php comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) ); ?>
+                            </div><!-- end .entry-comments -->
+                        <?php endif; // comments_open() ?>
 
-                    <div class="entry-cats">
-                        <?php the_category(', '); ?>
-                    </div><!-- end .entry-cats -->
-                </footer>
-             </div><!--end .story -->
-             </div><!--end .rp-big-two-content -->
-         </article><!--end .rp-big-two -->
-       <?php endwhile ?>
+                        <div class="entry-cats">
+                            <?php the_category(', '); ?>
+                        </div><!-- end .entry-cats -->
+                    </footer>
+                 </div><!--end .story -->
+                 </div><!--end .rp-big-two-content -->
+            </article><!--end .rp-big-two -->
+            <?php endwhile ?>
 
-    <?php endif ?>
+        <?php endif ?>
 
-    <?php
+        <?php
         echo $args['after_widget'];
 
         # Reset the post globals as this query will have stomped on it
