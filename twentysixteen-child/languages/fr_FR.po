@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-26 17:36-0500\n"
-"PO-Revision-Date: 2020-01-26 17:38-0500\n"
+"POT-Creation-Date: 2020-01-27 17:30-0500\n"
+"PO-Revision-Date: 2020-01-27 17:30-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -277,7 +277,7 @@ msgctxt "Used before release date of album."
 msgid "Released on"
 msgstr "Sortie le"
 
-#: single.php:29 image.php:108 page-templates/fullwidth-single.php:31
+#: single.php:29 image.php:101 page-templates/fullwidth-single.php:31
 #: page-templates/fullwidth-single-album.php:31
 #: page-templates/fullwidth-single-interview.php:31
 #: page-templates/fullwidth-single-concert.php:31
@@ -327,21 +327,13 @@ msgstr "Précédent"
 msgid "Previous post:"
 msgstr "Article precedent :"
 
-#: image.php:24
-msgid "Previous Image"
-msgstr "Image précédente"
-
-#: image.php:25
-msgid "Next Image"
-msgstr "Image suivante"
-
-#: image.php:62 template-parts/content-single-book.php:437
+#: image.php:55 template-parts/content-single-book.php:437
 #: template-parts/content.php:33 template-parts/content-single.php:48
 #: template-parts/content-single-album.php:227
 msgid "Pages:"
 msgstr "Pages :"
 
-#: image.php:66 category.php:59 category-reads.php:59 search.php:44 tag.php:59
+#: image.php:59 category.php:59 category-reads.php:59 search.php:44 tag.php:59
 #: taxonomy-publisher.php:141 archive.php:57 taxonomy-location.php:58
 #: template-parts/content-single-book.php:441 template-parts/content.php:37
 #: template-parts/content-single.php:52
@@ -350,7 +342,7 @@ msgstr "Pages :"
 msgid "Page"
 msgstr "Page"
 
-#: image.php:90 template-parts/content-single-book.php:454
+#: image.php:83 template-parts/content-single-book.php:454
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content.php:49 template-parts/content-single.php:64
 #: template-parts/content-single-album.php:244
@@ -657,11 +649,11 @@ msgstr ""
 "Ce widget va afficher les étiquettes populaires de la catégorie que vous "
 "choisissez."
 
-#: widgets/popular-tags-in-category-widget.php:137
-msgid "New title"
-msgstr "Nouveau titre"
+#: widgets/popular-tags-in-category-widget.php:140
+msgid "Tags"
+msgstr "Étiquettes"
 
-#: widgets/popular-tags-in-category-widget.php:143
+#: widgets/popular-tags-in-category-widget.php:147
 #: widgets/random-posts-big-two-widget.php:283
 #: widgets/recent-posts-big-one-widget.php:273
 #: widgets/recent-posts-colored-widget.php:281 widgets/quote-widget.php:73
@@ -678,6 +670,10 @@ msgstr "Nouveau titre"
 #: widgets/random-posts-colored-widget.php:285
 msgid "Title:"
 msgstr "Titre :"
+
+#: widgets/popular-tags-in-category-widget.php:152
+msgid "Number of tags to show:"
+msgstr "Nombre d'étiquettes à afficher&nbsp;:"
 
 #: widgets/random-posts-big-two-widget.php:19
 msgid "Random Posts (Big 2)"
@@ -998,6 +994,15 @@ msgstr "Articles aléatoires (Arrière-plan)"
 #: widgets/random-posts-colored-widget.php:24
 msgid "Medium-sized Random Posts with a background color."
 msgstr "Articles aléatoires de taille moyenne avec un arrière-plan coloré."
+
+#~ msgid "Previous Image"
+#~ msgstr "Image précédente"
+
+#~ msgid "Next Image"
+#~ msgstr "Image suivante"
+
+#~ msgid "New title"
+#~ msgstr "Nouveau titre"
 
 #~ msgid "Random Posts w/o Last 5 (Medium 2)"
 #~ msgstr "Articles aléatoires sans les 5 derniers (Moyen&nbsp;2)"

@@ -21,7 +21,8 @@ class popular_tags_in_category_widget extends WP_Widget {
 
     # Creating widget front-end
     public function widget( $args, $instance ) {
-        $title = isset( $instance['title'] ) ? apply_filters( 'widget_title', $instance['title'] ) : '';
+        $title     = isset( $instance['title'] ) ? apply_filters( 'widget_title', $instance['title'] ) : '';
+        $tag_count = isset( $instance['tag_count'] ) ? $instance['tag_count'] : '';
 
         # Before and after widget arguments are defined by themes
         echo $args['before_widget'];
@@ -35,6 +36,7 @@ class popular_tags_in_category_widget extends WP_Widget {
         $categories = get_the_category();
 
 	$catID = null;
+
         if( !is_home() ){
 	    if( isset( $categories[0] ) ) {
                 $catID = $categories[0]->cat_ID;
@@ -92,7 +94,7 @@ class popular_tags_in_category_widget extends WP_Widget {
                         'largest'  => 1,
                         'unit'     => 'em',
                         'format'   => 'list',
-                        'number'   => 55,
+                        'number'   => $tag_count,
                         'orderby'  => 'count',
                         'order'    => 'DESC',
                         'include'  => $array_of_terms_in_category,
@@ -108,7 +110,7 @@ class popular_tags_in_category_widget extends WP_Widget {
                 $at = strtolower( strtr( $a->name, $translit ) );
                 $bt = strtolower( strtr( $b->name, $translit ) );
 
-                return strcasecmp( $at, $bt );
+                return strcoll( $at, $bt );
             }
 
             usort( $mytags_array, 'widget_sort_tag_by_name' );
@@ -132,9 +134,11 @@ class popular_tags_in_category_widget extends WP_Widget {
     # Widget Backend
     public function form( $instance ) {
         if ( isset( $instance[ 'title' ] ) ) {
-            $title = $instance[ 'title' ];
+            $title     = $instance[ 'title' ];
+            $tag_count = isset( $instance['tag_count'] ) ? esc_attr( $instance['tag_count'] ) : '';
         } else {
-            $title = __( 'New title', 'twentysixteen-child' );
+            $title = __( 'Tags', 'twentysixteen-child' );
+            $tag_count = 75;
         }
 
         # Widget admin form
@@ -143,13 +147,21 @@ class popular_tags_in_category_widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'tag_count' ); ?>"><?php _e( 'Number of tags to show:', 'twentysixteen-child' ); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name( 'tag_count' ); ?>" value="<?php echo esc_attr( $tag_count ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'tag_count' ); ?>" />
+	</p>
         <?php
     }
 
     # Updating widget replacing old instances with new
     public function update( $new_instance, $old_instance ) {
         $instance = array();
-        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+
+        $instance['title']     = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['tag_count'] = $new_instance['tag_count'];
+
         return $instance;
     }
 }
