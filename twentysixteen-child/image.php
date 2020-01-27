@@ -19,13 +19,6 @@ get_header(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<nav id="image-navigation" class="navigation image-navigation">
-						<div class="nav-links">
-							<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'twentysixteen' ) ); ?></div>
-							<div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'twentysixteen' ) ); ?></div>
-						</div><!-- .nav-links -->
-					</nav><!-- .image-navigation -->
-
 					<header class="entry-header">
                                                 <?php
                                                     if( shortcode_exists( 'wp_breadcrumb_image' ) ) {
