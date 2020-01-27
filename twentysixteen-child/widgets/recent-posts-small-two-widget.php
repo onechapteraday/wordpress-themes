@@ -205,7 +205,6 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
             <article class="rp-small-two">
                 <p class="summary"><a href="<?php the_permalink(); ?>"><span class="entry-title"><?php the_title(); ?></span><?php echo twentysixteenchild_excerpt(15); ?></a><span class="entry-date"><?php echo get_the_date(); ?></span></p>
             </article><!--end .rp-small-two -->
-
             <?php endwhile ?>
 
         <?php endif ?>
