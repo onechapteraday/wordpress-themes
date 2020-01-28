@@ -298,16 +298,32 @@
 				}
 			?>
 			<?php
-				$publisher = get_book_publisher( $book_id );
+				$publishers = get_book_publisher( $book_id );
 
-				if( $publisher ){
+				if( $publishers ){
 				?>
                                 <tr>
                                         <td>
-					        <b><?php echo _x( 'Publisher', 'book metadata publisher', 'twentysixteen-child' ); ?></b>
+					        <b><?php
+				                    if( count( $publishers ) > 1 ){
+                                                        echo _x( 'Publishers', 'book metadata publishers', 'twentysixteen-child' );
+				                    }
+				                    else {
+                                                        echo _x( 'Publisher', 'book metadata publisher', 'twentysixteen-child' );
+				                    }
+                                                ?></b>
                                         </td>
                                         <td>
-                                                <?php echo '<a href="' . get_term_link( $publisher->term_id ) . '">' . $publisher->name . '</a>'; ?>
+                                                <?php
+                                                $item_count = 0;
+
+                                                foreach( $publishers as $publisher ){
+					            if( $item_count > 0 ) echo ', ';
+
+                                                    echo '<a href="' . get_term_link( $publisher->term_id ) . '">' . $publisher->name . '</a>';
+                                                    $item_count++;
+                                                }
+                                                ?>
                                         </td>
                                 </tr>
 				<?php
