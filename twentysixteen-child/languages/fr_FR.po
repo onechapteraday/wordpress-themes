@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 17:30-0500\n"
-"PO-Revision-Date: 2020-01-27 17:30-0500\n"
+"POT-Creation-Date: 2020-01-27 22:01-0500\n"
+"PO-Revision-Date: 2020-01-27 22:01-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -28,7 +28,7 @@ msgctxt "Used before post format."
 msgid "Format"
 msgstr "Format"
 
-#: functions.php:321 widgets/random-posts-big-two-widget.php:232
+#: functions.php:333 widgets/random-posts-big-two-widget.php:232
 #: widgets/recent-posts-big-one-widget.php:222
 #: widgets/recent-posts-colored-widget.php:234
 #: widgets/random-posts-medium-one-widget.php:225
@@ -43,70 +43,78 @@ msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 "Laisser un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
 
-#: functions.php:353 functions.php:440
+#: functions.php:336
+msgid "comment"
+msgstr "commentaire"
+
+#: functions.php:339
+msgid "comments"
+msgstr "commentaires"
+
+#: functions.php:373 functions.php:460
 msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
 msgstr ", "
 
-#: functions.php:357
+#: functions.php:377
 msgctxt "Used before category names."
 msgid "Categories"
 msgstr "Catégories"
 
-#: functions.php:379
+#: functions.php:399
 msgctxt "Used before person names."
 msgid "People"
 msgstr "Personnes"
 
-#: functions.php:406
+#: functions.php:426
 msgctxt "Used before prize names."
 msgid "Literary Prizes"
 msgstr "Prix littéraires"
 
-#: functions.php:433
+#: functions.php:453
 msgctxt "Used before location names."
 msgid "Locations"
 msgstr "Localisations"
 
-#: functions.php:444
+#: functions.php:464
 msgctxt "Used before tag names."
 msgid "Tags"
 msgstr "Étiquettes"
 
-#: functions.php:463
+#: functions.php:483
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: functions.php:465
+#: functions.php:485
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 "Ajouter des widgets ici pour les faire apparaître dans votre barre latérale."
 
-#: functions.php:473
+#: functions.php:493
 msgid "Sidebar for Books"
 msgstr "Barre latérale pour les livres"
 
-#: functions.php:475
+#: functions.php:495
 msgid "Add widgets here to appears in your Book sidebar."
 msgstr ""
 "Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
 "pour les livres."
 
-#: functions.php:483
+#: functions.php:503
 msgid "Sidebar for Music"
 msgstr "Barre latérale pour la musique"
 
-#: functions.php:485
+#: functions.php:505
 msgid "Add widgets here to appears in your Music sidebar."
 msgstr ""
 "Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
 "pour la musique."
 
-#: functions.php:493
+#: functions.php:513
 msgid "Front Page - FullWidth Top"
 msgstr "Page d'accueil - Pleine largeur haut"
 
-#: functions.php:495
+#: functions.php:515
 msgid ""
 "Widgets appear in a single-column widget area on the top of the Front Page "
 "(and above the Featured Content slider, if active)."
@@ -115,11 +123,11 @@ msgstr ""
 "haut de la Page d'accueil (et au-dessus du silder de contenu, si celui-ci "
 "est actif)."
 
-#: functions.php:503
+#: functions.php:523
 msgid "Front Page - Post Content 1"
 msgstr "Page d'accueil - Contenu 1"
 
-#: functions.php:505
+#: functions.php:525
 msgid ""
 "Widgets appear left of Sidebar 1 and below the FullWidth Top widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
@@ -129,11 +137,11 @@ msgstr ""
 "de la zone Pleine largeur haut. Cette zone a été spécialement créée pour les "
 "widgets personnalisés du thème Twenty Sixteen Child."
 
-#: functions.php:513
+#: functions.php:533
 msgid "Front Page - Sidebar 1"
 msgstr "Page d'accueil - Barre latérale 1"
 
-#: functions.php:515
+#: functions.php:535
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 1 "
 "widget area."
@@ -141,11 +149,11 @@ msgstr ""
 "Les widgets apparaissent dans la barre latérale alignée à droite près de la "
 "zone du widget Contenu&nbsp;1."
 
-#: functions.php:523
+#: functions.php:543
 msgid "Front Page - FullWidth Center"
 msgstr "Page d'accueil - Pleine largeur central"
 
-#: functions.php:525
+#: functions.php:545
 msgid ""
 "Widgets will appear in a single-column widget area below the Post Content 1 "
 "and Sidebar 1 widget areas."
@@ -153,11 +161,11 @@ msgstr ""
 "Les widgets vont apparaître dans une seule colonne en-dessous des zones "
 "Contenu&nbsp;1 et Barre latérale&nbsp;1."
 
-#: functions.php:533
+#: functions.php:553
 msgid "Front Page - Post Content 2"
 msgstr "Page d'accueil - Contenu 2"
 
-#: functions.php:535
+#: functions.php:555
 msgid ""
 "Widgets appear left of Sidebar 2 and below the FullWidth Center widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
@@ -167,11 +175,11 @@ msgstr ""
 "de la zone Pleine largeur central. Cette zone a été spécialement créée pour "
 "les widgets personnalisés du thème Twenty Sixteen Child."
 
-#: functions.php:543
+#: functions.php:563
 msgid "Front Page - Sidebar 2"
 msgstr "Page d'accueil - Barre latérale 2"
 
-#: functions.php:545
+#: functions.php:565
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 2 "
 "widget area."
@@ -179,11 +187,11 @@ msgstr ""
 "Les widgets apparaissent dans la barre latérale alignée à droite près de la "
 "zone du widget Contenu&nbsp;2."
 
-#: functions.php:553
+#: functions.php:573
 msgid "Front Page - FullWidth Bottom"
 msgstr "Page d'accueil - Pleine largeur bas"
 
-#: functions.php:555
+#: functions.php:575
 msgid ""
 "Widgets will appear in a single-column widget area at the bottom of your "
 "Front Page above the footer."
@@ -191,88 +199,88 @@ msgstr ""
 "Les widgets vont apparaître dans une seule colonne à la fin de votre Page "
 "d'accueil au-dessus du pied-de-page."
 
-#: functions.php:563
+#: functions.php:583
 msgid "Content Bottom 1"
 msgstr "Contenu du bas 1"
 
-#: functions.php:565 functions.php:575
+#: functions.php:585 functions.php:595
 msgid "Appears at the bottom of the content on posts and pages."
 msgstr "Apparaît en bas du contenu des articles et des pages."
 
-#: functions.php:573
+#: functions.php:593
 msgid "Content Bottom 2"
 msgstr "Contenu du bas 2"
 
-#: functions.php:622
+#: functions.php:642
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: functions.php:624
+#: functions.php:644
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: functions.php:626
+#: functions.php:646
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "F j, Y"
 
-#: functions.php:629
+#: functions.php:649
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "Apartés"
 
-#: functions.php:631
+#: functions.php:651
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "Galeries"
 
-#: functions.php:633
+#: functions.php:653
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "Images"
 
-#: functions.php:635
+#: functions.php:655
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "Vidéos"
 
-#: functions.php:637
+#: functions.php:657
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "Citations"
 
-#: functions.php:639
+#: functions.php:659
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "Liens"
 
-#: functions.php:641
+#: functions.php:661
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "Statuts"
 
-#: functions.php:643
+#: functions.php:663
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "Audios"
 
-#: functions.php:645
+#: functions.php:665
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "Messages"
 
-#: functions.php:652
+#: functions.php:672
 msgid "Archives"
 msgstr "Archives"
 
-#: functions.php:845 functions.php:847
+#: functions.php:865 functions.php:867
 msgctxt "Used before release date of book."
 msgid "Released on"
 msgstr "Parution le"
 
-#: functions.php:853 functions.php:855
+#: functions.php:873 functions.php:875
 msgctxt "Used before release date of album."
 msgid "Released on"
 msgstr "Sortie le"
@@ -391,7 +399,7 @@ msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr "Une réflexion sur &ldquo;%s&rdquo;"
 
-#: comments.php:70
+#: comments.php:84
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
@@ -970,8 +978,6 @@ msgid "Recent Posts (Small 1)"
 msgstr "Articles récents (Petit 1)"
 
 #: widgets/recent-posts-small-one-widget.php:24
-#, fuzzy
-#| msgid "Small Recents Posts widget with featured images."
 msgid "Small Recent Posts widget with featured images."
 msgstr "Articles récents de petite taille avec les images mises en avant."
 

@@ -318,7 +318,27 @@ function twentysixteen_entry_meta() {
 
     if ( ! is_singular() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo '<span class="comments-link">';
-        comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) );
+
+        $comments_number = get_comments_number();
+        $comments_letter = $comments_number;
+        $locale          = substr( get_locale(), 0, 2 );
+
+        if( class_exists('NumberFormatter') ){
+            $numberFormatter = new NumberFormatter( $locale, NumberFormatter::SPELLOUT );
+            $comments_letter = ucfirst( $numberFormatter->format( $comments_number ) );
+        }
+
+        comments_popup_link(
+            # zero
+            sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ),
+
+            # one
+            $comments_letter . ' ' . __( 'comment', 'twentysixteen-child' ),
+
+            # more
+            $comments_letter . ' ' . __( 'comments', 'twentysixteen-child' )
+        );
+
         echo '</span>';
     }
 }
