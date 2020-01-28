@@ -330,16 +330,34 @@
 				}
 			?>
 			<?php
-				$collection = get_book_collection( $book_id );
+				$collections = get_book_collection( $book_id );
 
-				if( $collection ){
+				if( $collections ){
 				?>
 		        	<tr>
 				        <td>
-					        <b><?php echo _x( 'Collection', 'book metadata publisher collection', 'twentysixteen-child' ); ?></b>
+					        <b><?php
+				                    if( count( $collections ) > 1 ){
+                                                        echo _x( 'Collections', 'book metadata publisher collections', 'twentysixteen-child' );
+				                    }
+				                    else {
+                                                        echo _x( 'Collection', 'book metadata publisher collection', 'twentysixteen-child' );
+				                    }
+                                                ?></b>
+                                        </td>
 				        </td>
 				        <td>
-						<?php echo '<a href="' . get_term_link( $collection->term_id ) . '">' . $collection->name . '</a>'; ?>
+                                                <?php
+                                                $item_count = 0;
+
+                                                foreach( $collections as $collection ){
+					            if( $item_count > 0 ) echo ', ';
+
+						    echo '<a href="' . get_term_link( $collection->term_id ) . '">' . $collection->name . '</a>';
+                                                    $item_count++;
+                                                }
+                                                ?>
+                                        </td>
 				        </td>
 		        	</tr>
 				<?php
