@@ -108,7 +108,7 @@
 					<?php
                                         $item_count = 0;
 				        foreach( $authors as $author ){
-					    if( $item_count > 0 ) echo ', ';
+					    if( $item_count > 0 ) echo ' &sdot; ';
 
 					    echo '<a href="' . get_term_link( $author->term_id ) . '">' . $author->name . '</a>';
                                             $item_count++;
@@ -160,7 +160,7 @@
 					        <?php
                                                 $item_count = 0;
 				                foreach( $illustrators as $illustrator ){
-					            if( $item_count > 0 ) echo ', ';
+					            if( $item_count > 0 ) echo ' &sdot; ';
 
 					            echo '<a href="' . get_term_link( $illustrator->term_id ) . '">' . $illustrator->name . '</a>';
                                                     $item_count++;
@@ -211,7 +211,7 @@
 					        <?php
                                                 $item_count = 0;
 				                foreach( $colourists as $colourist ){
-					            if( $item_count > 0 ) echo ', ';
+					            if( $item_count > 0 ) echo ' &sdot; ';
 
 					            echo '<a href="' . get_term_link( $colourist->term_id ) . '">' . $colourist->name . '</a>';
                                                     $item_count++;
@@ -235,7 +235,7 @@
 						<?php
                                                 $item_count = 0;
 				                foreach( $preface_authors as $author ){
-					            if( $item_count > 0 ) echo ', ';
+					            if( $item_count > 0 ) echo ' &sdot; ';
 
 					            echo '<a href="' . get_term_link( $author->term_id ) . '">' . $author->name . '</a>';
                                                     $item_count++;
@@ -286,7 +286,7 @@
 					        <?php
                                                 $item_count = 0;
 				                foreach( $translators as $translator ){
-					            if( $item_count > 0 ) echo ', ';
+					            if( $item_count > 0 ) echo ' &sdot; ';
 
 					            echo '<a href="' . get_term_link( $translator->term_id ) . '">' . $translator->name . '</a>';
                                                     $item_count++;
@@ -318,7 +318,7 @@
                                                 $item_count = 0;
 
                                                 foreach( $publishers as $publisher ){
-					            if( $item_count > 0 ) echo ', ';
+					            if( $item_count > 0 ) echo ' &sdot; ';
 
                                                     echo '<a href="' . get_term_link( $publisher->term_id ) . '">' . $publisher->name . '</a>';
                                                     $item_count++;
@@ -351,7 +351,7 @@
                                                 $item_count = 0;
 
                                                 foreach( $collections as $collection ){
-					            if( $item_count > 0 ) echo ', ';
+					            if( $item_count > 0 ) echo ' &sdot; ';
 
 						    echo '<a href="' . get_term_link( $collection->term_id ) . '">' . $collection->name . '</a>';
                                                     $item_count++;
