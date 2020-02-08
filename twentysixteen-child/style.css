@@ -2060,10 +2060,11 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
  */
 
 header ol.breadcrumb {
-    list-style: none;
-    margin: 0 0 2.5em 0;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
     font-size: 0.8125em;
     font-size: 0.75em;
+    list-style: none;
+    margin: 0 0 2.5em 0;
 }
 
 header ol.breadcrumb li {
@@ -2086,7 +2087,6 @@ header ol.breadcrumb li:first-child:before {
 }
 
 .single header ol.breadcrumb {
-    font-family: Montserrat, "Helvetica Neue", sans-serif;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
