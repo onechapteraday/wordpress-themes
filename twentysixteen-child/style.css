@@ -183,9 +183,8 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 
 #subscribe-text,
 #subscribe-text + p {
-    font-family: Montserrat, "Helvetica Neue", sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .taxonomy-description {
