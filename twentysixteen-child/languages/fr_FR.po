@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-28 11:50-0500\n"
-"PO-Revision-Date: 2020-01-28 11:51-0500\n"
+"POT-Creation-Date: 2020-02-16 19:40-0500\n"
+"PO-Revision-Date: 2020-02-16 19:41-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -353,7 +353,7 @@ msgstr "Précédent"
 msgid "Previous post:"
 msgstr "Article precedent :"
 
-#: image.php:55 template-parts/content-single-book.php:471
+#: image.php:55 template-parts/content-single-book.php:485
 #: template-parts/content.php:33 template-parts/content-single.php:48
 #: template-parts/content-single-album.php:227
 msgid "Pages:"
@@ -361,14 +361,14 @@ msgstr "Pages :"
 
 #: image.php:59 category.php:59 category-reads.php:59 search.php:44 tag.php:59
 #: taxonomy-publisher.php:141 archive.php:57 taxonomy-location.php:58
-#: template-parts/content-single-book.php:475 template-parts/content.php:37
+#: template-parts/content-single-book.php:489 template-parts/content.php:37
 #: template-parts/content-single.php:52
 #: template-parts/content-single-album.php:231 taxonomy-prize.php:67
 #: author.php:57 taxonomy-person.php:104 category-music.php:59
 msgid "Page"
 msgstr "Page"
 
-#: image.php:83 template-parts/content-single-book.php:488
+#: image.php:83 template-parts/content-single-book.php:502
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content.php:49 template-parts/content-single.php:64
 #: template-parts/content-single-album.php:244
@@ -541,42 +541,47 @@ msgctxt "book metadata publisher collection"
 msgid "Collection"
 msgstr "Collection"
 
-#: template-parts/content-single-book.php:368
+#: template-parts/content-single-book.php:366
 msgctxt "book metadata isbn13"
 msgid "ISBN13"
 msgstr "ISBN13"
 
-#: template-parts/content-single-book.php:381
+#: template-parts/content-single-book.php:379
 msgctxt "book metadata isbn10"
 msgid "ISBN10"
 msgstr "ISBN10"
 
-#: template-parts/content-single-book.php:392
+#: template-parts/content-single-book.php:395
+msgctxt "book metadata asin"
+msgid "ASIN"
+msgstr "ASIN"
+
+#: template-parts/content-single-book.php:406
 msgctxt "book metadata price"
 msgid "Price"
 msgstr "Prix"
 
-#: template-parts/content-single-book.php:400
+#: template-parts/content-single-book.php:414
 msgctxt "book metadata number of pages"
 msgid "Number of pages"
 msgstr "Nombre de pages"
 
-#: template-parts/content-single-book.php:408
+#: template-parts/content-single-book.php:422
 msgctxt "book metadata release date"
 msgid "Release date"
 msgstr "Date de publication"
 
-#: template-parts/content-single-book.php:427
+#: template-parts/content-single-book.php:441
 msgctxt "book metadata first publication date"
 msgid "First publication"
 msgstr "Première publication"
 
-#: template-parts/content-single-book.php:451
+#: template-parts/content-single-book.php:465
 msgctxt "book metadata Amazon affiliate link"
 msgid "Affiliate link"
 msgstr "Lien affilié"
 
-#: template-parts/content-single-book.php:456
+#: template-parts/content-single-book.php:470
 msgctxt "book metadata Amazon affiliate message"
 msgid "Buy on Amazon"
 msgstr "Acheter sur Amazon"
@@ -1029,6 +1034,9 @@ msgstr "Articles aléatoires (Arrière-plan)"
 msgid "Medium-sized Random Posts with a background color."
 msgstr "Articles aléatoires de taille moyenne avec un arrière-plan coloré."
 
+#~ msgid "Skip to content"
+#~ msgstr "Passer au contenu"
+
 #~ msgid "Previous Image"
 #~ msgstr "Image précédente"
 
@@ -1055,9 +1063,6 @@ msgstr "Articles aléatoires de taille moyenne avec un arrière-plan coloré."
 #~ msgstr ""
 #~ "Articles aléatoires de taille moyenne sans les cinq derniers publiés avec "
 #~ "un arrière-plan coloré."
-
-#~ msgid "Skip to content"
-#~ msgstr "Passer au contenu"
 
 #~ msgid "Primary Menu"
 #~ msgstr "Menu primaire"

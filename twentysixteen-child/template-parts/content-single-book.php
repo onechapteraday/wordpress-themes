@@ -385,6 +385,22 @@
 				<?php
 				}
 			?>
+			<?php
+				$asin = get_book_asin( $book_id );
+
+				if( $asin ){
+				?>
+                                <tr>
+				        <td>
+                                                <b><?php echo _x( 'ASIN', 'book metadata asin', 'twentysixteen-child' ); ?></b>
+				        </td>
+				        <td>
+                                                <?php echo $asin; ?>
+				        </td>
+                                </tr>
+				<?php
+				}
+			?>
 		        <tr>
 			        <td>
 					<b><?php echo _x( 'Price', 'book metadata price', 'twentysixteen-child' ); ?></b>
