@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-16 19:40-0500\n"
+"POT-Creation-Date: 2020-02-16 19:56-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -327,7 +327,7 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
-#: image.php:55 template-parts/content-single-book.php:485
+#: image.php:55 template-parts/content-single-book.php:509
 #: template-parts/content.php:33 template-parts/content-single.php:48
 #: template-parts/content-single-album.php:227
 msgid "Pages:"
@@ -335,14 +335,14 @@ msgstr ""
 
 #: image.php:59 category.php:59 category-reads.php:59 search.php:44 tag.php:59
 #: taxonomy-publisher.php:141 archive.php:57 taxonomy-location.php:58
-#: template-parts/content-single-book.php:489 template-parts/content.php:37
+#: template-parts/content-single-book.php:513 template-parts/content.php:37
 #: template-parts/content-single.php:52
 #: template-parts/content-single-album.php:231 taxonomy-prize.php:67
 #: author.php:57 taxonomy-person.php:104 category-music.php:59
 msgid "Page"
 msgstr ""
 
-#: image.php:83 template-parts/content-single-book.php:502
+#: image.php:83 template-parts/content-single-book.php:526
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content.php:49 template-parts/content-single.php:64
 #: template-parts/content-single-album.php:244
@@ -475,87 +475,92 @@ msgctxt "book metadata preface authors"
 msgid "Preface"
 msgstr ""
 
-#: template-parts/content-single-book.php:270
+#: template-parts/content-single-book.php:256
+msgctxt "book metadata postface authors"
+msgid "Postface"
+msgstr ""
+
+#: template-parts/content-single-book.php:294
 msgctxt "book metadata female translators"
 msgid "Translators"
 msgstr ""
 
-#: template-parts/content-single-book.php:272
+#: template-parts/content-single-book.php:296
 msgctxt "book metadata translators"
 msgid "Translators"
 msgstr ""
 
-#: template-parts/content-single-book.php:278
+#: template-parts/content-single-book.php:302
 msgctxt "book metadata female translator"
 msgid "Translator"
 msgstr ""
 
-#: template-parts/content-single-book.php:280
+#: template-parts/content-single-book.php:304
 msgctxt "book metadata male translator"
 msgid "Translator"
 msgstr ""
 
-#: template-parts/content-single-book.php:309
+#: template-parts/content-single-book.php:333
 msgctxt "book metadata publishers"
 msgid "Publishers"
 msgstr ""
 
-#: template-parts/content-single-book.php:312
+#: template-parts/content-single-book.php:336
 msgctxt "book metadata publisher"
 msgid "Publisher"
 msgstr ""
 
-#: template-parts/content-single-book.php:341
+#: template-parts/content-single-book.php:365
 msgctxt "book metadata publisher collections"
 msgid "Collections"
 msgstr ""
 
-#: template-parts/content-single-book.php:344
+#: template-parts/content-single-book.php:368
 msgctxt "book metadata publisher collection"
 msgid "Collection"
 msgstr ""
 
-#: template-parts/content-single-book.php:366
+#: template-parts/content-single-book.php:390
 msgctxt "book metadata isbn13"
 msgid "ISBN13"
 msgstr ""
 
-#: template-parts/content-single-book.php:379
+#: template-parts/content-single-book.php:403
 msgctxt "book metadata isbn10"
 msgid "ISBN10"
 msgstr ""
 
-#: template-parts/content-single-book.php:395
+#: template-parts/content-single-book.php:419
 msgctxt "book metadata asin"
 msgid "ASIN"
 msgstr ""
 
-#: template-parts/content-single-book.php:406
+#: template-parts/content-single-book.php:430
 msgctxt "book metadata price"
 msgid "Price"
 msgstr ""
 
-#: template-parts/content-single-book.php:414
+#: template-parts/content-single-book.php:438
 msgctxt "book metadata number of pages"
 msgid "Number of pages"
 msgstr ""
 
-#: template-parts/content-single-book.php:422
+#: template-parts/content-single-book.php:446
 msgctxt "book metadata release date"
 msgid "Release date"
 msgstr ""
 
-#: template-parts/content-single-book.php:441
+#: template-parts/content-single-book.php:465
 msgctxt "book metadata first publication date"
 msgid "First publication"
 msgstr ""
 
-#: template-parts/content-single-book.php:465
+#: template-parts/content-single-book.php:489
 msgctxt "book metadata Amazon affiliate link"
 msgid "Affiliate link"
 msgstr ""
 
-#: template-parts/content-single-book.php:470
+#: template-parts/content-single-book.php:494
 msgctxt "book metadata Amazon affiliate message"
 msgid "Buy on Amazon"
 msgstr ""

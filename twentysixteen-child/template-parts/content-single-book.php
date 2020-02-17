@@ -247,6 +247,30 @@
 				}
 			?>
 			<?php
+				$postface_authors = get_book_author_postface( $book_id );
+
+				if( $postface_authors ){
+				?>
+		                <tr>
+				        <td>
+					        <b><?php echo _x( 'Postface', 'book metadata postface authors', 'twentysixteen-child' ); ?></b>
+				        </td>
+				        <td>
+						<?php
+                                                $item_count = 0;
+				                foreach( $postface_authors as $author ){
+					            if( $item_count > 0 ) echo ' &sdot; ';
+
+					            echo '<a href="' . get_term_link( $author->term_id ) . '">' . $author->name . '</a>';
+                                                    $item_count++;
+					        }
+						?>
+				        </td>
+		                </tr>
+				<?php
+				}
+			?>
+			<?php
 				$translators = get_book_translator( $book_id );
 
 				if( $translators ){
