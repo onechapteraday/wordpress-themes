@@ -214,7 +214,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
                     <div class="story">
                         <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h2>
 
-			<p class="summary"><?php echo twentysixteenchild_excerpt(65); ?></p>
+			<p class="summary"><?php echo twentysixteenchild_excerpt(60); ?></p>
 			<div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
 
                         <?php if ( comments_open() ) : ?>
