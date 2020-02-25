@@ -210,8 +210,8 @@ class twentysixteenchild_recentposts_medium_one extends WP_Widget {
                             </div><!-- end .entry-thumb -->
                         <?php endif; ?>
 
-                        <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php twentysixteenchild_title_limit( 85, '...'); ?></a></h3>
-                        <p class="summary"><?php echo twentysixteenchild_excerpt(20); ?></p>
+                        <h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h3>
+                        <p class="summary"><?php echo twentysixteenchild_excerpt(30); ?></p>
                         <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
 
                         <?php if ( comments_open() ) : ?>
