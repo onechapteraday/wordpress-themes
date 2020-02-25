@@ -187,6 +187,17 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     line-height: inherit;
 }
 
+.fable{
+    margin-bottom: 20px;
+    background-color: #faf9f5;
+    border-left: 4px solid #efece2;
+    padding: 18px 10px;
+    width: 48%;
+    float: left;
+    text-align: center;
+    font-size: 13px;
+}
+
 #subscribe-text,
 #subscribe-text + p {
     font-size: 12px;
@@ -2038,6 +2049,12 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
     }
 }
 
+@media screen and (max-width: 479px) {
+    .fable {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .archive .page-header h1.page-title {
         font-size: 18px;
@@ -2067,6 +2084,10 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
         font-size: 17px;
         font-size: 1.0625rem;
         line-height: 1.4;
+    }
+
+    .fable {
+        font-size: 11px;
     }
 
     .rp-color header.entry-header {
