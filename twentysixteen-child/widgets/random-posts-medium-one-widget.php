@@ -245,6 +245,10 @@ class twentysixteenchild_randomposts_medium_one extends WP_Widget {
                                 ?>
                             </div><!-- end .entry-comments -->
                         <?php endif; // comments_open() ?>
+
+                        <div class="entry-cats">
+                            <?php the_category( ', ' ); ?>
+                        </div><!-- end .entry-cats -->
                     </div><!--end .rp-medium-one -->
                 </article><!--end .rp-medium-one -->
             <?php endwhile ?>
