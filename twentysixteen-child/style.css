@@ -84,6 +84,12 @@ td {
     border-width: 0 0 1px 0;
 }
 
+.page-title {
+    font-family: Merriweather, Georgia, serif;
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+
 .site-title {
     font-family: Merriweather, Georgia, serif;
     font-size: 21px;
