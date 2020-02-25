@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-16 19:56-0500\n"
-"PO-Revision-Date: 2020-02-16 19:57-0500\n"
+"PO-Revision-Date: 2020-02-24 18:39-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -301,7 +301,7 @@ msgstr "Parution le"
 #: functions.php:873 functions.php:875
 msgctxt "Used before release date of album."
 msgid "Released on"
-msgstr "Sortie le"
+msgstr "Parution le"
 
 #: single.php:29 image.php:101 page-templates/fullwidth-single.php:31
 #: page-templates/fullwidth-single-album.php:31
