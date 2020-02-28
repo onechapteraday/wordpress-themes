@@ -105,7 +105,7 @@
 					<?php
                                         $item_count = 0;
 				        foreach( $authors as $author ){
-					    if( $item_count > 0 ) echo ', ';
+					    if( $item_count > 0 ) echo ' &sdot; ';
 
 					    echo '<a href="' . get_term_link( $author->term_id ) . '">' . $author->name . '</a>';
                                             $item_count++;
@@ -155,7 +155,7 @@
 					<?php
                                         $item_count = 0;
 				        foreach( $authors_featured as $author ){
-					    if( $item_count > 0 ) echo ', ';
+					    if( $item_count > 0 ) echo ' &sdot; ';
 
 					    echo '<a href="' . get_term_link( $author->term_id ) . '">' . $author->name . '</a>';
                                             $item_count++;
