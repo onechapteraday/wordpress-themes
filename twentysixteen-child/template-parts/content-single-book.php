@@ -155,7 +155,6 @@
 					        }
                                                 ?></b>
 				        </td>
-				        </td>
 				        <td>
 					        <?php
                                                 $item_count = 0;
