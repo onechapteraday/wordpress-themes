@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-13 15:27-0400\n"
+"POT-Creation-Date: 2020-03-13 16:46-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -369,18 +369,33 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: page-templates/catalog-books.php:113
+#: page-templates/catalog-books.php:115
 msgctxt "book catalog before author elision"
 msgid " by "
 msgstr ""
 
-#: page-templates/catalog-books.php:115
+#: page-templates/catalog-books.php:117
 msgctxt "book catalog before author normal form"
 msgid " by "
 msgstr ""
 
-#: page-templates/catalog-books.php:120
+#: page-templates/catalog-books.php:122
 msgctxt "book catalog additional author"
+msgid " and "
+msgstr ""
+
+#: page-templates/catalog-albums.php:120
+msgctxt "album catalog before author elision"
+msgid " by "
+msgstr ""
+
+#: page-templates/catalog-albums.php:122
+msgctxt "album catalog before author normal form"
+msgid " by "
+msgstr ""
+
+#: page-templates/catalog-albums.php:128
+msgctxt "album catalog additional author"
 msgid " and "
 msgstr ""
 
