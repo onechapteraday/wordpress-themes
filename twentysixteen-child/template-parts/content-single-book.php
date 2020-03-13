@@ -120,6 +120,57 @@
 			}
 			?>
 			<?php
+				$scenarists = get_book_scenarist( $book_id );
+
+				if( $scenarists ){
+				?>
+                                <tr>
+				        <td>
+					        <b><?php
+				                if( count( $scenarists ) > 1 ){
+					            $female_only = true;
+
+					            foreach( $scenarists as $scenarist ){
+				                        $gender = get_option( 'taxonomy_' . $scenarist->term_id )['gender'];
+
+                                                        if( $gender == 0 ){
+                                                            $female_only = false;
+                                                            break;
+                                                        }
+					            }
+
+					            if( $female_only ){
+					                echo _x( 'Scripters', 'book metadata female scenarists', 'twentysixteen-child' );
+					            } else {
+					                echo _x( 'Scripters', 'book metadata scenarists', 'twentysixteen-child' );
+					            }
+					        } else {
+				                    $gender = get_option( 'taxonomy_' . $scenarists[0]->term_id )['gender'];
+
+					            if( $gender == 1 ){
+					                echo _x( 'Scripter', 'book metadata female scenarist', 'twentysixteen-child' );
+					            } else {
+					                echo _x( 'Scripter', 'book metadata male scenarist', 'twentysixteen-child' );
+					            }
+					        }
+                                                ?></b>
+				        </td>
+				        <td>
+					        <?php
+                                                $item_count = 0;
+				                foreach( $scenarists as $scenarist ){
+					            if( $item_count > 0 ) echo ' &sdot; ';
+
+					            echo '<a href="' . get_term_link( $scenarist->term_id ) . '">' . $scenarist->name . '</a>';
+                                                    $item_count++;
+					        }
+                                                ?>
+				        </td>
+                                    </tr>
+				<?php
+				}
+			?>
+			<?php
 				$illustrators = get_book_illustrator( $book_id );
 
 				if( $illustrators ){
