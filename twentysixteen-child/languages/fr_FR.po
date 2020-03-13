@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-13 14:33-0400\n"
-"PO-Revision-Date: 2020-03-13 14:34-0400\n"
+"POT-Creation-Date: 2020-03-13 15:27-0400\n"
+"PO-Revision-Date: 2020-03-13 15:30-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -394,6 +394,21 @@ msgstr "Page suivante"
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de recherche pour&nbsp;: %s"
+
+#: page-templates/catalog-books.php:113
+msgctxt "book catalog before author elision"
+msgid " by "
+msgstr " d’"
+
+#: page-templates/catalog-books.php:115
+msgctxt "book catalog before author normal form"
+msgid " by "
+msgstr " de "
+
+#: page-templates/catalog-books.php:120
+msgctxt "book catalog additional author"
+msgid " and "
+msgstr " et "
 
 #: taxonomy-publisher.php:64
 msgid "Collections"

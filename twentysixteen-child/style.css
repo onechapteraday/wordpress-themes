@@ -2443,92 +2443,41 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
 /**
  * 13.0 - Catalog of items
  *
- * ...
+ * Styles for the catalogs of books/albums
  */
 
 .catalog-mosaic {
-    display: table;
-    border-spacing: 20px;
-    margin: 0 -20px;
+    font-size: 12px;
 }
 
-.catalog-mosaic .catalog-row {
-    display: table-row;
-}
-
-.catalog-mosaic .catalog-clear {
-    clear: both;
+.catalog-mosaic .catalog-input {
+    font-size: 18px;
+    margin: 20px 0 5px;
 }
 
 .catalog-mosaic .catalog-element {
-    position: relative;
-    display: table-cell;
-    vertical-align: top;
-    box-sizing: border-box;
-    width: 20%;
+    color: #686868;
+    line-height: 1.2;
+    margin: 0 0 5px;
 }
 
-.catalog-mosaic .catalog-element figure {
-    margin: 0;
-}
-
-.catalog-mosaic .catalog-element figure figcaption {
-    display: none;
-}
-
-.catalog-mosaic .catalog-element-data {
-    text-align: center;
-}
-
-.catalog-mosaic .catalog-element-data .catalog-element-link a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: none;
-    font-size: 0;
-}
-
-.catalog-mosaic .catalog-element-data .catalog-element-title {
-    margin: 5px 0 2px;
-    line-height: 1.4;
+.catalog-mosaic .catalog-element .catalog-element-title {
     font-style: italic;
 }
 
-.catalog-mosaic .catalog-element-data .catalog-element-title a {
-    margin: 0;
-    max-width: 100%;
-    box-shadow: none;
+.catalog-mosaic .catalog-element .catalog-element-author {
+    color: #686868;
 }
 
-.catalog-mosaic .catalog-element-data .catalog-element-date {
-    font-size: 11px;
+.catalog-mosaic .catalog-element a {
+    display: inline-block;
+    *display: inline;
+    margin: 5px 0 0;
+    zoom: 1;
 }
 
-@media screen and (max-width: 479px) {
-    .catalog-mosaic,
-    .catalog-mosaic .catalog-row,
-    .catalog-mosaic .catalog-element {
-        display: block;
-    }
-
+@media screen and (max-width: 909px) {
     .catalog-mosaic {
-        margin: 0;
-    }
-
-    .catalog-mosaic .catalog-element {
-        float: left;
-        width: 50%;
-        padding: 0 10px;
-    }
-
-    .catalog-mosaic .catalog-element-data .catalog-element-title a {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .catalog-mosaic .catalog-element:nth-child(4n){
+        margin: 0 7.6923% 3.5em;
     }
 }
