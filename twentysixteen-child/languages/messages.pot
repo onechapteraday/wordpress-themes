@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-16 19:56-0500\n"
+"POT-Creation-Date: 2020-03-13 14:33-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -327,7 +327,7 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
-#: image.php:55 template-parts/content-single-book.php:509
+#: image.php:55 template-parts/content-single-book.php:559
 #: template-parts/content.php:33 template-parts/content-single.php:48
 #: template-parts/content-single-album.php:227
 msgid "Pages:"
@@ -335,14 +335,14 @@ msgstr ""
 
 #: image.php:59 category.php:59 category-reads.php:59 search.php:44 tag.php:59
 #: taxonomy-publisher.php:141 archive.php:57 taxonomy-location.php:58
-#: template-parts/content-single-book.php:513 template-parts/content.php:37
+#: template-parts/content-single-book.php:563 template-parts/content.php:37
 #: template-parts/content-single.php:52
 #: template-parts/content-single-album.php:231 taxonomy-prize.php:67
 #: author.php:57 taxonomy-person.php:104 category-music.php:59
 msgid "Page"
 msgstr ""
 
-#: image.php:83 template-parts/content-single-book.php:526
+#: image.php:83 template-parts/content-single-book.php:576
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content.php:49 template-parts/content-single.php:64
 #: template-parts/content-single-album.php:244
@@ -431,136 +431,156 @@ msgid "Author"
 msgstr ""
 
 #: template-parts/content-single-book.php:143
+msgctxt "book metadata female scenarists"
+msgid "Scripters"
+msgstr ""
+
+#: template-parts/content-single-book.php:145
+msgctxt "book metadata scenarists"
+msgid "Scripters"
+msgstr ""
+
+#: template-parts/content-single-book.php:151
+msgctxt "book metadata female scenarist"
+msgid "Scripter"
+msgstr ""
+
+#: template-parts/content-single-book.php:153
+msgctxt "book metadata male scenarist"
+msgid "Scripter"
+msgstr ""
+
+#: template-parts/content-single-book.php:194
 msgctxt "book metadata female illustrators"
 msgid "Illustrators"
 msgstr ""
 
-#: template-parts/content-single-book.php:145
+#: template-parts/content-single-book.php:196
 msgctxt "book metadata illustrators"
 msgid "Illustrators"
 msgstr ""
 
-#: template-parts/content-single-book.php:151
+#: template-parts/content-single-book.php:202
 msgctxt "book metadata female illustrator"
 msgid "Illustrator"
 msgstr ""
 
-#: template-parts/content-single-book.php:153
+#: template-parts/content-single-book.php:204
 msgctxt "book metadata male illustrator"
 msgid "Illustrator"
 msgstr ""
 
-#: template-parts/content-single-book.php:195
+#: template-parts/content-single-book.php:245
 msgctxt "book metadata female colourists"
 msgid "Colourists"
 msgstr ""
 
-#: template-parts/content-single-book.php:197
+#: template-parts/content-single-book.php:247
 msgctxt "book metadata colourists"
 msgid "Colourists"
 msgstr ""
 
-#: template-parts/content-single-book.php:203
+#: template-parts/content-single-book.php:253
 msgctxt "book metadata female colourist"
 msgid "Colourist"
 msgstr ""
 
-#: template-parts/content-single-book.php:205
+#: template-parts/content-single-book.php:255
 msgctxt "book metadata male colourist"
 msgid "Colourist"
 msgstr ""
 
-#: template-parts/content-single-book.php:232
+#: template-parts/content-single-book.php:282
 msgctxt "book metadata preface authors"
 msgid "Preface"
 msgstr ""
 
-#: template-parts/content-single-book.php:256
+#: template-parts/content-single-book.php:306
 msgctxt "book metadata postface authors"
 msgid "Postface"
 msgstr ""
 
-#: template-parts/content-single-book.php:294
+#: template-parts/content-single-book.php:344
 msgctxt "book metadata female translators"
 msgid "Translators"
 msgstr ""
 
-#: template-parts/content-single-book.php:296
+#: template-parts/content-single-book.php:346
 msgctxt "book metadata translators"
 msgid "Translators"
 msgstr ""
 
-#: template-parts/content-single-book.php:302
+#: template-parts/content-single-book.php:352
 msgctxt "book metadata female translator"
 msgid "Translator"
 msgstr ""
 
-#: template-parts/content-single-book.php:304
+#: template-parts/content-single-book.php:354
 msgctxt "book metadata male translator"
 msgid "Translator"
 msgstr ""
 
-#: template-parts/content-single-book.php:333
+#: template-parts/content-single-book.php:383
 msgctxt "book metadata publishers"
 msgid "Publishers"
 msgstr ""
 
-#: template-parts/content-single-book.php:336
+#: template-parts/content-single-book.php:386
 msgctxt "book metadata publisher"
 msgid "Publisher"
 msgstr ""
 
-#: template-parts/content-single-book.php:365
+#: template-parts/content-single-book.php:415
 msgctxt "book metadata publisher collections"
 msgid "Collections"
 msgstr ""
 
-#: template-parts/content-single-book.php:368
+#: template-parts/content-single-book.php:418
 msgctxt "book metadata publisher collection"
 msgid "Collection"
 msgstr ""
 
-#: template-parts/content-single-book.php:390
+#: template-parts/content-single-book.php:440
 msgctxt "book metadata isbn13"
 msgid "ISBN13"
 msgstr ""
 
-#: template-parts/content-single-book.php:403
+#: template-parts/content-single-book.php:453
 msgctxt "book metadata isbn10"
 msgid "ISBN10"
 msgstr ""
 
-#: template-parts/content-single-book.php:419
+#: template-parts/content-single-book.php:469
 msgctxt "book metadata asin"
 msgid "ASIN"
 msgstr ""
 
-#: template-parts/content-single-book.php:430
+#: template-parts/content-single-book.php:480
 msgctxt "book metadata price"
 msgid "Price"
 msgstr ""
 
-#: template-parts/content-single-book.php:438
+#: template-parts/content-single-book.php:488
 msgctxt "book metadata number of pages"
 msgid "Number of pages"
 msgstr ""
 
-#: template-parts/content-single-book.php:446
+#: template-parts/content-single-book.php:496
 msgctxt "book metadata release date"
 msgid "Release date"
 msgstr ""
 
-#: template-parts/content-single-book.php:465
+#: template-parts/content-single-book.php:515
 msgctxt "book metadata first publication date"
 msgid "First publication"
 msgstr ""
 
-#: template-parts/content-single-book.php:489
+#: template-parts/content-single-book.php:539
 msgctxt "book metadata Amazon affiliate link"
 msgid "Affiliate link"
 msgstr ""
 
-#: template-parts/content-single-book.php:494
+#: template-parts/content-single-book.php:544
 msgctxt "book metadata Amazon affiliate message"
 msgid "Buy on Amazon"
 msgstr ""
@@ -674,8 +694,8 @@ msgstr ""
 #: widgets/recent-posts-big-one-widget.php:293
 #: widgets/recent-posts-colored-widget.php:301 widgets/quote-widget.php:73
 #: widgets/random-posts-small-one-widget.php:263
-#: widgets/random-posts-medium-one-widget.php:290
-#: widgets/recent-posts-medium-one-widget.php:284
+#: widgets/random-posts-medium-one-widget.php:294
+#: widgets/recent-posts-medium-one-widget.php:288
 #: widgets/recent-posts-small-two-widget.php:248
 #: widgets/random-posts-medium-two-widget.php:297
 #: widgets/recent-posts-medium-two-widget.php:293
@@ -704,6 +724,8 @@ msgstr ""
 #: widgets/random-posts-big-two-widget.php:221
 #: widgets/recent-posts-big-one-widget.php:215
 #: widgets/recent-posts-colored-widget.php:223
+#: widgets/random-posts-medium-one-widget.php:219
+#: widgets/recent-posts-medium-one-widget.php:213
 #: widgets/random-posts-medium-two-widget.php:220
 #: widgets/recent-posts-medium-two-widget.php:216
 #: widgets/recent-posts-big-two-widget.php:215
@@ -717,8 +739,8 @@ msgstr ""
 #: widgets/recent-posts-big-one-widget.php:298
 #: widgets/recent-posts-colored-widget.php:306
 #: widgets/random-posts-small-one-widget.php:268
-#: widgets/random-posts-medium-one-widget.php:295
-#: widgets/recent-posts-medium-one-widget.php:289
+#: widgets/random-posts-medium-one-widget.php:299
+#: widgets/recent-posts-medium-one-widget.php:293
 #: widgets/recent-posts-small-two-widget.php:253
 #: widgets/random-posts-medium-two-widget.php:302
 #: widgets/recent-posts-medium-two-widget.php:298
@@ -734,8 +756,8 @@ msgstr ""
 #: widgets/recent-posts-big-one-widget.php:303
 #: widgets/recent-posts-colored-widget.php:311
 #: widgets/random-posts-small-one-widget.php:273
-#: widgets/random-posts-medium-one-widget.php:300
-#: widgets/recent-posts-medium-one-widget.php:294
+#: widgets/random-posts-medium-one-widget.php:304
+#: widgets/recent-posts-medium-one-widget.php:298
 #: widgets/recent-posts-small-two-widget.php:258
 #: widgets/random-posts-medium-two-widget.php:307
 #: widgets/recent-posts-medium-two-widget.php:303
@@ -751,8 +773,8 @@ msgstr ""
 #: widgets/recent-posts-big-one-widget.php:308
 #: widgets/recent-posts-colored-widget.php:316
 #: widgets/random-posts-small-one-widget.php:278
-#: widgets/random-posts-medium-one-widget.php:305
-#: widgets/recent-posts-medium-one-widget.php:299
+#: widgets/random-posts-medium-one-widget.php:309
+#: widgets/recent-posts-medium-one-widget.php:303
 #: widgets/recent-posts-small-two-widget.php:263
 #: widgets/random-posts-medium-two-widget.php:312
 #: widgets/recent-posts-medium-two-widget.php:308
@@ -767,8 +789,8 @@ msgstr ""
 #: widgets/recent-posts-big-one-widget.php:313
 #: widgets/recent-posts-colored-widget.php:321
 #: widgets/random-posts-small-one-widget.php:283
-#: widgets/random-posts-medium-one-widget.php:310
-#: widgets/recent-posts-medium-one-widget.php:304
+#: widgets/random-posts-medium-one-widget.php:314
+#: widgets/recent-posts-medium-one-widget.php:308
 #: widgets/recent-posts-small-two-widget.php:268
 #: widgets/random-posts-medium-two-widget.php:317
 #: widgets/recent-posts-medium-two-widget.php:313
@@ -783,8 +805,8 @@ msgstr ""
 #: widgets/recent-posts-big-one-widget.php:323
 #: widgets/recent-posts-colored-widget.php:331
 #: widgets/random-posts-small-one-widget.php:293
-#: widgets/random-posts-medium-one-widget.php:320
-#: widgets/recent-posts-medium-one-widget.php:314
+#: widgets/random-posts-medium-one-widget.php:324
+#: widgets/recent-posts-medium-one-widget.php:318
 #: widgets/recent-posts-small-two-widget.php:278
 #: widgets/random-posts-medium-two-widget.php:327
 #: widgets/recent-posts-medium-two-widget.php:323
@@ -800,8 +822,8 @@ msgstr ""
 #: widgets/recent-posts-big-one-widget.php:334
 #: widgets/recent-posts-colored-widget.php:342
 #: widgets/random-posts-small-one-widget.php:304
-#: widgets/random-posts-medium-one-widget.php:331
-#: widgets/recent-posts-medium-one-widget.php:325
+#: widgets/random-posts-medium-one-widget.php:335
+#: widgets/recent-posts-medium-one-widget.php:329
 #: widgets/recent-posts-small-two-widget.php:289
 #: widgets/random-posts-medium-two-widget.php:338
 #: widgets/recent-posts-medium-two-widget.php:334
@@ -817,8 +839,8 @@ msgstr ""
 #: widgets/recent-posts-big-one-widget.php:345
 #: widgets/recent-posts-colored-widget.php:353
 #: widgets/random-posts-small-one-widget.php:315
-#: widgets/random-posts-medium-one-widget.php:342
-#: widgets/recent-posts-medium-one-widget.php:336
+#: widgets/random-posts-medium-one-widget.php:346
+#: widgets/recent-posts-medium-one-widget.php:340
 #: widgets/recent-posts-small-two-widget.php:300
 #: widgets/random-posts-medium-two-widget.php:349
 #: widgets/recent-posts-medium-two-widget.php:345
@@ -834,8 +856,8 @@ msgstr ""
 #: widgets/recent-posts-big-one-widget.php:356
 #: widgets/recent-posts-colored-widget.php:364
 #: widgets/random-posts-small-one-widget.php:326
-#: widgets/random-posts-medium-one-widget.php:353
-#: widgets/recent-posts-medium-one-widget.php:347
+#: widgets/random-posts-medium-one-widget.php:357
+#: widgets/recent-posts-medium-one-widget.php:351
 #: widgets/recent-posts-small-two-widget.php:311
 #: widgets/random-posts-medium-two-widget.php:360
 #: widgets/recent-posts-medium-two-widget.php:356
