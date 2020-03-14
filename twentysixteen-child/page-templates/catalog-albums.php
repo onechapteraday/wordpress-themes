@@ -76,6 +76,7 @@ get_header(); ?>
                                         # Retrieve authors
 
                                         $element_authors = get_album_author( $element_id );
+                                        $element_featured_authors = get_album_author_featured( $element_id );
 
                                         # Display current letter in catalog
 
@@ -119,6 +120,24 @@ get_header(); ?>
 
 				                    echo '<a href="' . get_term_link( $author->term_id ) . '" class="catalog-element-author">' . $author->name . '</a>';
                                                     $item_count++;
+				                }
+
+                                                if( $element_featured_authors ){
+                                                    $item_count = 0;
+                                                    echo ' featuring ';
+
+			                            foreach( $element_featured_authors as $author ){
+				                        if( $item_count > 0 ){
+                                                            if( $item_count == sizeof( $element_featured_authors )-1 ){
+					                        echo _x( ' and ', 'album catalog additional author', 'twentysixteen-child' );
+                                                            } else {
+                                                                echo ', ';
+                                                            }
+                                                        }
+
+				                        echo '<a href="' . get_term_link( $author->term_id ) . '" class="catalog-element-author">' . $author->name . '</a>';
+                                                        $item_count++;
+				                    }
 				                }
 
                                                 echo '</span>';
