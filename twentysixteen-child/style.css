@@ -2457,7 +2457,7 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
 
 .catalog-mosaic .catalog-element {
     color: #686868;
-    line-height: 1.2;
+    line-height: 1.75;
     margin: 0 0 5px;
 }
 
@@ -2470,10 +2470,7 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
 }
 
 .catalog-mosaic .catalog-element a {
-    display: inline-block;
-    *display: inline;
     margin: 5px 0 0;
-    zoom: 1;
 }
 
 @media screen and (max-width: 909px) {
