@@ -530,19 +530,45 @@
 			?>
 			<?php
 
-			$amazon = get_book_amazon( $book_id );
+			$amazon       = get_book_amazon( $book_id );
+			$leslibraires = get_book_leslibraires_ca( $book_id );
 
-                        if( $amazon ){
+                        if( $amazon || $leslibraires ){
 			?>
-		        <tr>
+		        <tr class="affiliate_links">
 			        <td>
-			                <b><?php echo _x( 'Affiliate link', 'book metadata Amazon affiliate link', 'twentysixteen-child' ); ?></b>
+                                        <?php
+                                        if( $amazon && $leslibraires ){
+                                            ?>
+			                    <b><?php echo _x( 'Affiliate links', 'book metadata affiliate links', 'twentysixteen-child' ); ?></b>
+                                            <?php
+                                        } else {
+                                            ?>
+			                    <b><?php echo _x( 'Affiliate link', 'book metadata affiliate link', 'twentysixteen-child' ); ?></b>
+                                            <?php
+                                        }
+                                        ?>
 			        </td>
 			        <td>
+                                        <?php
+                                        if( $leslibraires ){
+                                        ?>
+			                <a href="<?php echo $leslibraires[ 'link' ]; ?>" target="_blank" rel="nofollow" class="logo_partner logo_libraires_ca">
+			                     <img src="<?php echo $leslibraires[ 'img' ]; ?>" alt="leslibraires.ca" />
+                                             <span><?php echo _x( 'Buy on Les Libraires', 'book metadata leslibraires.ca affiliate message', 'twentysixteen-child' ); ?></span>
+			                </a>
+                                        <?php
+                                        }
+
+                                        if( $amazon ){
+                                        ?>
 			                <a href="<?php echo $amazon[ 'link' ]; ?>" target="_blank" rel="nofollow" class="logo_partner logo_amazon">
 			                     <img src="<?php echo $amazon[ 'img_buy' ]; ?>" alt="Amazon" />
                                              <span><?php echo _x( 'Buy on Amazon', 'book metadata Amazon affiliate message', 'twentysixteen-child' ); ?></span>
 			                </a>
+                                        <?php
+                                        }
+                                        ?>
 			        </td>
 		        </tr>
                         <?php

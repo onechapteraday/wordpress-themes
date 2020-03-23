@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-13 16:46-0400\n"
+"POT-Creation-Date: 2020-03-23 10:51-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -327,7 +327,7 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
-#: image.php:55 template-parts/content-single-book.php:559
+#: image.php:55 template-parts/content-single-book.php:585
 #: template-parts/content.php:33 template-parts/content-single.php:48
 #: template-parts/content-single-album.php:227
 msgid "Pages:"
@@ -335,14 +335,14 @@ msgstr ""
 
 #: image.php:59 category.php:59 category-reads.php:59 search.php:44 tag.php:59
 #: taxonomy-publisher.php:141 archive.php:57 taxonomy-location.php:58
-#: template-parts/content-single-book.php:563 template-parts/content.php:37
+#: template-parts/content-single-book.php:589 template-parts/content.php:37
 #: template-parts/content-single.php:52
 #: template-parts/content-single-album.php:231 taxonomy-prize.php:67
 #: author.php:57 taxonomy-person.php:104 category-music.php:59
 msgid "Page"
 msgstr ""
 
-#: image.php:83 template-parts/content-single-book.php:576
+#: image.php:83 template-parts/content-single-book.php:602
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content.php:49 template-parts/content-single.php:64
 #: template-parts/content-single-album.php:244
@@ -379,22 +379,22 @@ msgctxt "book catalog before author normal form"
 msgid " by "
 msgstr ""
 
-#: page-templates/catalog-books.php:122
+#: page-templates/catalog-books.php:123
 msgctxt "book catalog additional author"
 msgid " and "
 msgstr ""
 
-#: page-templates/catalog-albums.php:120
+#: page-templates/catalog-albums.php:107
 msgctxt "album catalog before author elision"
 msgid " by "
 msgstr ""
 
-#: page-templates/catalog-albums.php:122
+#: page-templates/catalog-albums.php:109
 msgctxt "album catalog before author normal form"
 msgid " by "
 msgstr ""
 
-#: page-templates/catalog-albums.php:128
+#: page-templates/catalog-albums.php:115 page-templates/catalog-albums.php:132
 msgctxt "album catalog additional author"
 msgid " and "
 msgstr ""
@@ -605,12 +605,22 @@ msgctxt "book metadata first publication date"
 msgid "First publication"
 msgstr ""
 
-#: template-parts/content-single-book.php:539
-msgctxt "book metadata Amazon affiliate link"
+#: template-parts/content-single-book.php:543
+msgctxt "book metadata affiliate links"
+msgid "Affiliate links"
+msgstr ""
+
+#: template-parts/content-single-book.php:547
+msgctxt "book metadata affiliate link"
 msgid "Affiliate link"
 msgstr ""
 
-#: template-parts/content-single-book.php:544
+#: template-parts/content-single-book.php:558
+msgctxt "book metadata leslibraires.ca affiliate message"
+msgid "Buy on Les Libraires"
+msgstr ""
+
+#: template-parts/content-single-book.php:567
 msgctxt "book metadata Amazon affiliate message"
 msgid "Buy on Amazon"
 msgstr ""

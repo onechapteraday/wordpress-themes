@@ -363,6 +363,10 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     .single-metadata td + td {
         width: 55%;
     }
+
+    .single-metadata tr.affiliate_links td + td {
+        padding-right: 0;
+    }
 }
 
 /* >= 985px */
@@ -645,28 +649,74 @@ table.book_metadata td ul.book_info {
  */
 
 a.logo_partner {
+    position: relative;
     display: inline-block;
     *display: inline;
     zoom: 1;
     vertical-align: middle;
-}
-
-a.logo_amazon {
-    position: relative;
-    width: 170px;
-    height: 31px;
+    width: 160px;
+    height: 30px;
     text-align: right;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 29px;
     max-width: 100%;
     color: #111;
     box-shadow: none;
     border-width: 1px;
     border-style: solid;
-    border-color: #a88734 #9c7e31 #846a29;
     border-radius: 3px;
-    transition: all 0.25s linear;
+    -webkit-transition: all 0.75s ease-in;
+    -moz-transition: all 0.75s ease-in;
+    -ms-transition: all 0.75s ease-in;
+    transition: all 0.75s ease-in;
+}
 
+a.logo_partner img {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 3px;
+    left: 2px;
+    color: transparent;
+    border-radius: 3px;
+}
+
+a.logo_partner span {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: calc(100% - 24px);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 4px 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a.logo_libraires_ca img {
+    height: 24px;
+}
+
+a.logo_libraires_ca {
+    border-color: #bcbcbc #ababab #9a9a9a;
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #d8d8d8 100%);
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#d8d8d8 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#d8d8d8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8',GradientType=0 );
+}
+
+a.logo_libraires_ca:hover {
+    background: #f7f7f7;
+    background: -moz-linear-gradient(top,  #f7f7f7 0%, #d1d1d1 100%);
+    background: -webkit-linear-gradient(top,  #f7f7f7 0%,#d1d1d1 100%);
+    background: linear-gradient(to bottom,  #f7f7f7 0%,#d1d1d1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#d1d1d1',GradientType=0 );
+}
+
+a.logo_amazon {
+    border-color: #a88734 #9c7e31 #846a29;
     background: -moz-linear-gradient(top, #f7dfa5 1%, #f0c14b 100%);
     background: -webkit-linear-gradient(top, #f7dfa5 1%,#f0c14b 100%);
     background: linear-gradient(to bottom, #f7dfa5 1%,#f0c14b 100%);
@@ -674,8 +724,6 @@ a.logo_amazon {
 }
 
 a.logo_amazon:hover {
-    border-color: #a88734 #9c7e31 #846a29;
-
     background: #f1c861;
     background: -moz-linear-gradient(top, #f5d78e 1%, #eeb933 100%);
     background: -webkit-linear-gradient(top, #f5d78e 1%,#eeb933 100%);
@@ -683,38 +731,9 @@ a.logo_amazon:hover {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5d78e', endColorstr='#eeeb933',GradientType=0 );
 }
 
-a.logo_amazon img {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 2px;
-    left: 2px;
-    color: transparent;
-    border-radius: 3px;
-}
-
-a.logo_amazon span {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    width: calc(100% - 27px);
-    text-align: center;
-
-    box-sizing: border-box;
-    padding: 0 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-a.logo_fnac {
-    max-width: 45px;
-    margin-left: 5px;
-}
-
 @media screen and (max-width: 479px) {
-    a.logo_amazon {
-        font-size: 10px;
+    a.logo_libraires_ca {
+        margin-bottom: 5px;
     }
 }
 
