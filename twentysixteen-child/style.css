@@ -621,10 +621,6 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     width: 55%;
 }
 
-.single-metadata tr.title td + td {
-    font-style: italic;
-}
-
 .single-metadata tr.affiliate_links td + td {
     padding-right: 0;
 }
