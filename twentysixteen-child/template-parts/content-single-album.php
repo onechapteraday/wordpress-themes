@@ -56,7 +56,7 @@
 			<?php
 			$album_id = get_the_ID();
 			?>
-		        <tr>
+		        <tr class="title">
 			        <td>
 					<b><?php echo _x( 'Title', 'album metadata title', 'twentysixteen-child' ); ?></b>
 			        </td>

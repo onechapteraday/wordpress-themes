@@ -49,7 +49,7 @@
 			$title = get_book_title_read( $book_id );
 			if( $title ){
 			?>
-		        <tr>
+		        <tr class="title">
 			        <td>
 					<b><?php echo _x( 'Title read', 'book metadata title read', 'twentysixteen-child' ); ?></b>
 			        </td>
@@ -60,7 +60,7 @@
 			<?php
 			}
 			?>
-		        <tr>
+		        <tr class="title">
 			        <td>
 					<b><?php echo _x( 'Original title', 'book metadata original title', 'twentysixteen-child' ); ?></b>
 			        </td>

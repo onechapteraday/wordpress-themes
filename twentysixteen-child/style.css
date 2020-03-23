@@ -359,14 +359,6 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     .main-navigation .menu-item-has-children > a::after {
         top: 0.575em;
     }
-
-    .single-metadata td + td {
-        width: 55%;
-    }
-
-    .single-metadata tr.affiliate_links td + td {
-        padding-right: 0;
-    }
 }
 
 /* >= 985px */
@@ -621,7 +613,20 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
  */
 
 .single-metadata {
+  font-size: 13px;
   margin-top: 40px;
+}
+
+.single-metadata td + td {
+    width: 55%;
+}
+
+.single-metadata tr.title td + td {
+    font-style: italic;
+}
+
+.single-metadata tr.affiliate_links td + td {
+    padding-right: 0;
 }
 
 table.book_metadata {
@@ -650,11 +655,9 @@ table.book_metadata td ul.book_info {
 
 a.logo_partner {
     position: relative;
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
+    display: block;
     vertical-align: middle;
-    width: 160px;
+    width: 180px;
     height: 30px;
     text-align: right;
     font-size: 10px;
@@ -692,6 +695,10 @@ a.logo_partner span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+a.logo_libraires_ca {
+    margin-bottom: 5px;
 }
 
 a.logo_libraires_ca img {
@@ -732,8 +739,8 @@ a.logo_amazon:hover {
 }
 
 @media screen and (max-width: 479px) {
-    a.logo_libraires_ca {
-        margin-bottom: 5px;
+    .single-metadata table {
+        font-size: 12px;
     }
 }
 
