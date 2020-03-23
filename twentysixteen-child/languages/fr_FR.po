@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-23 10:51-0400\n"
-"PO-Revision-Date: 2020-03-23 10:52-0400\n"
+"PO-Revision-Date: 2020-03-23 16:16-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -624,7 +624,7 @@ msgstr "Nombre de pages"
 #: template-parts/content-single-book.php:496
 msgctxt "book metadata release date"
 msgid "Release date"
-msgstr "Date de publication"
+msgstr "Date de parution"
 
 #: template-parts/content-single-book.php:515
 msgctxt "book metadata first publication date"
