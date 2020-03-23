@@ -892,4 +892,25 @@ function jptweak_remove_share() {
 
 add_action( 'loop_start', 'jptweak_remove_share' );
 
+
+/**
+ * Add Google Analytics only for not admin
+ */
+
+function footer_google_analytics(){
+    if( !is_user_logged_in() ){
+        ?>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16598900-4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-16598900-4');
+        </script>
+        <?php
+    }
+}
+
+add_action('wp_footer', 'footer_google_analytics');
+
 ?>
