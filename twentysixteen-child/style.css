@@ -739,6 +739,10 @@ a.logo_amazon:hover {
 }
 
 @media screen and (max-width: 479px) {
+    .single .byline {
+        display: none;
+    }
+
     .single-metadata table {
         font-size: 12px;
     }
