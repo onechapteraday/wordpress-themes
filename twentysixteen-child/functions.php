@@ -913,4 +913,16 @@ function footer_google_analytics(){
 
 add_action('wp_footer', 'footer_google_analytics');
 
+
+/**
+ * Remove Genericons styles in front
+ */
+
+function dequeue_genericons_css() {
+  wp_dequeue_style( 'genericons' );
+  wp_deregister_style( 'genericons' );
+}
+
+add_action('wp_enqueue_scripts','dequeue_genericons_css', 100);
+
 ?>
