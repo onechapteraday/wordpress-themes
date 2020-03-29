@@ -490,10 +490,7 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
 .jp-relatedposts:before,
 .jp-relatedposts-items:before,
 .jp-relatedposts:last-child::after,
-.jp-relatedposts-items:after {
-    display: none;
-}
-
+.jp-relatedposts-items:after,
 .jp-relatedposts-post-context {
     display: none;
 }
@@ -543,10 +540,7 @@ body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     margin-bottom: -20px;
 }
 
-.hentry .jetpack-likes-widget-wrapper h3.sd-title {
-    display: none;
-}
-
+.hentry .jetpack-likes-widget-wrapper h3.sd-title,
 .jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item .icon-feed {
     display: none;
 }
@@ -779,26 +773,10 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
  * 6.0 - Goodreads book widget
  */
 
-.gr_grid_book_container {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    margin-right: 1px;
-    margin-bottom: 4px;
-    vertical-align: top;
-}
-
-.gr_grid_book_container a {
-    display: block;
-}
-
 
 /*
  * 7.0 - Custom widgets for front page
  */
-
-.custom-front-page {
-}
 
 .custom-front-page .more-link {
     display: none;
@@ -1013,10 +991,7 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
 .front-sidebar   .widget_twentysixteenchild_recentposts_small_one .rp-small-one .post-thumbnail,
 .front-sidebar   .widget_twentysixteenchild_randomposts_small_one .rp-small-one .post-thumbnail,
 .default-sidebar .widget_twentysixteenchild_recentposts_small_one .rp-small-one .post-thumbnail,
-.default-sidebar .widget_twentysixteenchild_randomposts_small_one .rp-small-one .post-thumbnail {
-    margin-bottom: 0;
-}
-
+.default-sidebar .widget_twentysixteenchild_randomposts_small_one .rp-small-one .post-thumbnail,
 .front-sidebar   .widget_twentysixteenchild_recentposts_small_one .rp-small-one .post-thumbnail figure,
 .front-sidebar   .widget_twentysixteenchild_randomposts_small_one .rp-small-one .post-thumbnail figure,
 .default-sidebar .widget_twentysixteenchild_recentposts_small_one .rp-small-one .post-thumbnail figure,
@@ -1305,10 +1280,7 @@ figcaption.wp-post-image-copyright a .copyright_author:hover {
 .front-sidebar .rp-medium-two .entry-author,
 .front-sidebar .rp-medium-two p.summary,
 .front-sidebar .rp-medium-two .entry-comments,
-.front-sidebar .rp-medium-two .entry-cats {
-    display: none;
-}
-
+.front-sidebar .rp-medium-two .entry-cats,
 .default-sidebar .rp-medium-two .entry-author,
 .default-sidebar .rp-medium-two p.summary,
 .default-sidebar .rp-medium-two .entry-comments,
