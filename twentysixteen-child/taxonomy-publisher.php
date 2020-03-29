@@ -71,7 +71,7 @@ get_header(); ?>
 
                                             foreach( $collections_with as $key => $collection ){
                                                if( $key > 0 ){
-                                                   echo ' - ';
+                                                   echo ' &sdot; ';
                                                }
 
                                                $term_link = get_term_link( $collection );
