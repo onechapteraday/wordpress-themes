@@ -720,8 +720,8 @@ function jetpack_relatedposts_custom_image( $media, $post_id, $args ) {
 add_filter( 'jetpack_images_get_images', 'jetpack_relatedposts_custom_image', 10, 3 );
 
 function jetpack_relatedposts_update_thumbnail_size( $thumbnail_size ){
-    $thumbnail_size['width'] = 420;
-    $thumbnail_size['height'] = 560;
+    $thumbnail_size['width'] = 195;
+    $thumbnail_size['height'] = 260;
     $thumbnail_size['crop'] = true;
 
     return $thumbnail_size;
