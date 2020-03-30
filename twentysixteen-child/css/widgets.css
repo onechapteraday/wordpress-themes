@@ -765,6 +765,12 @@
     padding-bottom: 0;
 }
 
+body:not(.search-results) .front-sidebar article:not(.type-page).rp-big-two .entry-footer {
+    float: none;
+    margin: 0;
+    width: auto;
+}
+
 
 /*
  * 1.8 - Quote
