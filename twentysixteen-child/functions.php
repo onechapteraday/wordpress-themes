@@ -894,10 +894,10 @@ add_action( 'loop_start', 'jptweak_remove_share' );
 
 
 /**
- * Add Google Analytics only for not admin
+ * Add third party tags
  */
 
-function footer_google_analytics(){
+function footer_third_party_tags(){
     if( !is_user_logged_in() ){
         ?>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16598900-4"></script>
@@ -909,9 +909,15 @@ function footer_google_analytics(){
         </script>
         <?php
     }
+
+    if( is_single() ){
+        ?>
+        <div id="amzn-assoc-ad-353aef04-e181-46c1-a75a-74b1a4e6ef93"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=353aef04-e181-46c1-a75a-74b1a4e6ef93"></script>
+        <?php
+    }
 }
 
-add_action('wp_footer', 'footer_google_analytics');
+add_action('wp_footer', 'footer_third_party_tags');
 
 
 /**
