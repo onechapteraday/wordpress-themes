@@ -1449,7 +1449,7 @@ blockquote:after,
 }
 
 .widget_calendar caption {
-	font-weight: 900;
+	font-weight: 700;
 	margin-bottom: 1.75em;
 }
 
@@ -1803,15 +1803,6 @@ blockquote:after,
 	margin-left: 7.6923%;
 }
 
-.entry-title,
-.comments-title,
-.post-navigation .post-title {
-        -webkit-hyphens: none;
-        -moz-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-}
-
 .entry-title {
         font-family: Merriweather, Georgia, serif;
 	font-size: 28px;
@@ -1979,13 +1970,13 @@ a.post-thumbnail:focus {
         margin-bottom: 20px;
 }
 
-.post-navigation .post-title,
 .entry-title,
-.comments-title {
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
+.comments-title,
+.post-navigation .post-title {
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
 }
 
 body:not(.search-results) .entry-summary {
@@ -2083,7 +2074,7 @@ body:not(.search-results) .entry-summary > :last-child,
 	clear: none;
 	font-size: 16px;
 	font-size: 1rem;
-	font-weight: 900;
+	font-weight: 700;
 	line-height: 1.75;
 	margin: 0;
 }
@@ -2950,7 +2941,7 @@ p > video {
 .widecolumn h2 {
 	font-size: 23px;
 	font-size: 1.4375rem;
-	font-weight: 900;
+	font-weight: 700;
 	line-height: 1.2173913043;
 	margin-bottom: 1.2173913043em;
 }
