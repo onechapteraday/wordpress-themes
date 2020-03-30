@@ -28,6 +28,14 @@ function my_theme_enqueue_styles() {
             wp_get_theme()->get('Version')
         );
     }
+
+    if( is_archive() ){
+        wp_enqueue_style( 'child-archive-style',
+            get_stylesheet_directory_uri() . '/css/archive.css',
+            array( $parent_style ),
+            wp_get_theme()->get('Version')
+        );
+    }
 }
 
 

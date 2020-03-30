@@ -1562,6 +1562,8 @@ blockquote:after,
 	border-radius: 2px;
 	display: inline-block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
+        font-size: 12px;
+        font-size: 0.75rem;
 	line-height: 1;
 	margin: 0 0.1875em 0.4375em 0;
 	padding: 0.5625em 0.4375em 0.5em;
@@ -1804,10 +1806,10 @@ blockquote:after,
 .entry-title,
 .comments-title,
 .post-navigation .post-title {
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
 }
 
 .entry-title {
@@ -2186,47 +2188,11 @@ body.search-no-results .page-header {
 	padding-top: 0;
 }
 
-.archive .page-header h1.page-title {
-        font-family: Merriweather, Georgia, serif;
-        font-size: 20px;
-        font-size: 1.25rem;
-        line-height: 1.35;
-        margin-bottom: 15px;
-}
-
 .page-title {
         font-family: Merriweather, Georgia, serif;
         font-size: 20px;
         font-size: 1.25rem;
 	line-height: 1.2173913043;
-}
-
-.taxonomy-description {
-	color: #686868;
-        font-size: 12px;
-        font-size: 0.75rem;
-	line-height: 1.6153846154;
-}
-
-.taxonomy-description p {
-	margin: 0.5384615385em 0 12px;
-}
-
-.taxonomy-description > :last-child {
-	margin-bottom: 0;
-}
-
-.taxonomy-description.social-icons {
-        margin-top: 10px;
-}
-
-.taxonomy-description.publisher-collections {
-        margin: 13px 0 10px;
-}
-
-.taxonomy-description.publisher-collections a {
-        text-decoration: none;
-        box-shadow: none;
 }
 
 .page-links {
@@ -2353,23 +2319,6 @@ body.search-no-results .page-header {
         margin-right: 10px;
 }
 
-/* Taxonomy archive */
-body:not(search-results) article:not(.sticky) .entry-footer .album-release-date,
-body:not(search-results) article:not(.sticky) .entry-footer .book-release-date {
-        display: none;
-}
-
-body.tax-person    .entry-footer .posted-on + .posted-on,
-body.tax-publisher .entry-footer .posted-on + .posted-on {
-        display: none;
-}
-
-body.tax-person    article:not(.sticky) .entry-footer .album-release-date,
-body.tax-person    article:not(.sticky) .entry-footer .book-release-date,
-body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
-        display: block;
-}
-
 
 /**
  * 11.3 - Post Formats
@@ -2390,8 +2339,7 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
 	margin-bottom: 1.473684211em;
 }
 
-.blog .format-status .entry-title,
-.archive .format-status .entry-title {
+.blog .format-status .entry-title {
 	display: none;
 }
 
@@ -3343,11 +3291,6 @@ p > video {
 }
 
 @media screen and (max-width: 767px) {
-        .archive .page-header h1.page-title {
-                font-size: 18px;
-                font-size: 1.125rem;
-        }
-
         .entry-title {
                 font-size: 24px;
                 font-size: 1.5rem;
@@ -4106,14 +4049,6 @@ p > video {
         body:not(.search-results) .locations-links {
                 display: block;
                 margin-bottom: 0.5384615385em;
-        }
-
-        body.archive .tags-links {
-                display: none;
-        }
-
-        body.archive .post-1359 .locations-links {
-                display: none;
         }
 
         .entry-title {

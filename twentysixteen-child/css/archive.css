@@ -1,0 +1,88 @@
+/**
+ * Archive
+ *
+ */
+
+.archive .format-status .entry-title {
+	display: none;
+}
+
+.archive .page-header h1.page-title {
+        font-family: Merriweather, Georgia, serif;
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.35;
+        margin-bottom: 15px;
+}
+
+.taxonomy-description {
+	color: #686868;
+        font-size: 12px;
+        font-size: 0.75rem;
+	line-height: 1.6153846154;
+}
+
+.taxonomy-description p {
+	margin: 0.5384615385em 0 12px;
+}
+
+.taxonomy-description > :last-child {
+	margin-bottom: 0;
+}
+
+.taxonomy-description.social-icons {
+        margin-top: 10px;
+}
+
+.taxonomy-description.publisher-collections {
+        margin: 13px 0 10px;
+}
+
+.taxonomy-description.publisher-collections a {
+        text-decoration: none;
+        box-shadow: none;
+}
+
+/* Taxonomy archive */
+body:not(search-results) article:not(.sticky) .entry-footer .album-release-date,
+body:not(search-results) article:not(.sticky) .entry-footer .book-release-date {
+        display: none;
+}
+
+body.tax-person    .entry-footer .posted-on + .posted-on,
+body.tax-publisher .entry-footer .posted-on + .posted-on {
+        display: none;
+}
+
+body.tax-person    article:not(.sticky) .entry-footer .album-release-date,
+body.tax-person    article:not(.sticky) .entry-footer .book-release-date,
+body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
+        display: block;
+}
+
+
+/**
+ * 14.4 - >= 768px
+ */
+
+@media screen and (max-width: 767px) {
+        .archive .page-header h1.page-title {
+                font-size: 18px;
+                font-size: 1.125rem;
+        }
+}
+
+
+/**
+ * 14.4 - >= 985px
+ */
+
+@media screen and (min-width: 61.5625em) {
+        body.archive .tags-links {
+                display: none;
+        }
+
+        body.archive .post-1359 .locations-links {
+                display: none;
+        }
+}
