@@ -921,14 +921,13 @@ add_action('wp_footer', 'footer_third_party_tags');
 
 
 /**
- * Remove Genericons styles in front
+ * Remove Gutenberg CSS
  */
 
-function dequeue_genericons_css() {
-  wp_dequeue_style( 'genericons' );
-  wp_deregister_style( 'genericons' );
+function wps_deregister_styles() {
+    wp_dequeue_style( 'wp-block-library' );
 }
 
-add_action('wp_enqueue_scripts','dequeue_genericons_css', 100);
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
 
 ?>
