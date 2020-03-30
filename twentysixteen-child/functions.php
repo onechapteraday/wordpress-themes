@@ -33,17 +33,17 @@ function twentysixteenchild_title_limit($length, $replacer = '...') {
 
 # Multiple custom excerpt lengths
 
-function twentysixteenchild_excerpt($limit) {
-    $excerpt = explode(' ', get_the_excerpt(), $limit);
+function twentysixteenchild_excerpt( $limit ){
+    $excerpt = explode( ' ', get_the_excerpt(), $limit );
 
-    if (count($excerpt)>=$limit) {
-        array_pop($excerpt);
-        $excerpt = implode(" ",$excerpt).'...';
+    if( count( $excerpt ) >= $limit ){
+        array_pop( $excerpt );
+        $excerpt = implode( " ", $excerpt ) . '...';
     } else {
-        $excerpt = implode(" ",$excerpt);
+        $excerpt = implode( " ", $excerpt );
     }
 
-    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+    $excerpt = preg_replace( '`[[^]]*]`', '', $excerpt );
 
     return $excerpt;
 }
