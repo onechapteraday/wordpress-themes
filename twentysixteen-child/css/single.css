@@ -1,0 +1,396 @@
+/**
+ * Table of Contents
+ *
+ * 1.0 - Single styles
+ * 2.0 - Post Dictionary
+ * 3.0 - Table Book Metadata
+ * 4.0 - Add partners images
+ * 5.0 - Page templates
+ *    5.1 - Full-width single
+ *    5.2 - Single interview
+ * 6.0 - Media Queries
+ */
+
+
+/*
+ * 1.0 - Single styles
+ */
+
+.single span.small-caps {
+    font-variant: small-caps;
+}
+
+.single header ol.breadcrumb {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fable {
+    margin-bottom: 20px;
+    background-color: #faf9f5;
+    border-left: 4px solid #efece2;
+    padding: 18px 10px;
+    width: 48%;
+    float: left;
+    text-align: center;
+    font-size: 13px;
+}
+
+.postid-162 .entry-content ul li {
+    margin-bottom: 3px;
+}
+
+.akismet_comment_form_privacy_notice {
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    margin-top: 30px;
+}
+
+
+/**
+ * 2.0 - Post Dictionary
+ */
+
+.post_dictionary_letters ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.post_dictionary_letters li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin: 0 5px 0 0;
+    text-transform: uppercase;
+}
+
+.post_dictionary_data .post_dictionary_letter {
+    font-size: 24px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0 0 0.75em;
+}
+
+.post_dictionary_data dd.post_dictionary_info {
+    font-style: italic;
+    margin: 0;
+}
+
+
+/**
+ * 3.0 - Table Book Metadata
+ */
+
+.single-metadata {
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+.single-metadata td + td {
+    width: 55%;
+}
+
+.single-metadata tr.affiliate_links td + td {
+    padding-right: 0;
+}
+
+table.book_metadata td {
+    padding: 1em 0;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    vertical-align: top;
+}
+
+table.book_metadata td.book_data {
+    padding: 1em;
+}
+
+table.book_metadata td ul.book_info {
+    margin: 15px 0 0;
+    list-style: none;
+}
+
+
+/*
+ * 4.0 - Add partners images
+ */
+
+a.logo_partner {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    width: 180px;
+    height: 30px;
+    text-align: right;
+    font-size: 10px;
+    line-height: 29px;
+    max-width: 98%;
+    color: #111;
+    box-shadow: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    -webkit-transition: all 0.75s ease-in;
+    -moz-transition: all 0.75s ease-in;
+    -ms-transition: all 0.75s ease-in;
+    transition: all 0.75s ease-in;
+}
+
+a.logo_partner img {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 3px;
+    left: 2px;
+    color: transparent;
+    border-radius: 3px;
+}
+
+a.logo_partner span {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: calc(100% - 24px);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 4px 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a.logo_libraires_ca {
+    margin-bottom: 5px;
+}
+
+a.logo_libraires_ca img {
+    height: 24px;
+}
+
+a.logo_libraires_ca {
+    border-color: #bcbcbc #ababab #9a9a9a;
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #d8d8d8 100%);
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#d8d8d8 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#d8d8d8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8',GradientType=0 );
+}
+
+a.logo_libraires_ca:hover {
+    background: #f7f7f7;
+    background: -moz-linear-gradient(top,  #f7f7f7 0%, #d1d1d1 100%);
+    background: -webkit-linear-gradient(top,  #f7f7f7 0%,#d1d1d1 100%);
+    background: linear-gradient(to bottom,  #f7f7f7 0%,#d1d1d1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#d1d1d1',GradientType=0 );
+}
+
+a.logo_amazon {
+    border-color: #a88734 #9c7e31 #846a29;
+    background: -moz-linear-gradient(top, #f7dfa5 1%, #f0c14b 100%);
+    background: -webkit-linear-gradient(top, #f7dfa5 1%,#f0c14b 100%);
+    background: linear-gradient(to bottom, #f7dfa5 1%,#f0c14b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7dfa5', endColorstr='#f0c14b',GradientType=0 );
+}
+
+a.logo_amazon:hover {
+    background: #f1c861;
+    background: -moz-linear-gradient(top, #f5d78e 1%, #eeb933 100%);
+    background: -webkit-linear-gradient(top, #f5d78e 1%,#eeb933 100%);
+    background: linear-gradient(to bottom, #f5d78e 1%,#eeeb933 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5d78e', endColorstr='#eeeb933',GradientType=0 );
+}
+
+
+/**
+ * 5.0 - Page templates
+ */
+
+
+/**
+ * 5.1 - Full-width single
+ */
+
+.album-template-fullwidth-single-album         .content-area,
+.book-template-fullwidth-single-book           .content-area,
+.concert-template-fullwidth-single-concert     .content-area,
+.interview-template-fullwidth-single-interview .content-area,
+.post-template-fullwidth-single                .content-area {
+    width: 100%
+}
+
+.album-template-fullwidth-single-album         .post-thumbnail img,
+.book-template-fullwidth-single-book           .post-thumbnail img,
+.concert-template-fullwidth-single-concert     .post-thumbnail img,
+.interview-template-fullwidth-single-interview .post-thumbnail img,
+.post-template-fullwidth-single                .post-thumbnail img {
+    width: 100%;
+}
+
+
+/**
+ * 5.2 - Single interview
+ */
+
+.single-interview .entry-content h2 {
+    font-size: 1.4rem;
+}
+
+
+/* Jetpack Related Posts */
+
+.entry-content #jp-relatedposts {
+    padding: 3em 0 0;
+}
+
+.jp-relatedposts:before,
+.jp-relatedposts-items:before,
+.jp-relatedposts:last-child::after,
+.jp-relatedposts-items:after,
+.jp-relatedposts-post-context {
+    display: none;
+}
+
+.jp-relatedposts-post-title,
+.entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-size: 0.725em;
+    margin-bottom: 0.25em;
+    max-height: 52px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
+    font-size: 13px;
+    font-size: 0.725em;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+    font-weight: normal;
+}
+
+.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
+    margin-bottom: 2.05em;
+    text-transform: uppercase;
+    color: #686868;
+    letter-spacing: 0.769px;
+}
+
+.widget.jetpack_widget_social_icons li a {
+    border-color: #7f7f7f;
+    margin-right: 10px;
+}
+
+.sharedaddy.sd-sharing-enabled {
+    padding: 1.75em 0 1em;
+    margin-top: 50px;
+}
+
+.jetpack-likes-widget-wrapper {
+    padding-bottom: 0 !important;
+    margin-bottom: -20px;
+}
+
+.hentry .jetpack-likes-widget-wrapper h3.sd-title,
+.jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item .icon-feed {
+    display: none;
+}
+
+
+/**
+ * 6.0 - Media Queries
+ */
+
+
+/* < 480px */
+
+@media screen and (max-width: 479px) {
+    .single .byline {
+        display: none;
+    }
+
+    .fable {
+        width: 100%;
+    }
+}
+
+/* < 768px */
+
+@media screen and (max-width: 767px) {
+    .fable {
+        font-size: 11px;
+    }
+}
+
+/* < 910px */
+
+@media screen and (max-width: 909px) {
+    #jp-relatedposts .jp-relatedposts-items-visual {
+        margin-right: -10px !important;
+    }
+
+    .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+        box-sizing: border-box;
+        width: 33.33%;
+        padding-right: 10px;
+    }
+
+    #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:nth-child(3n) {
+        clear: none !important;
+    }
+
+    .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
+        display: none !important;
+    }
+
+    body.tax-person    article:not(.sticky) .entry-footer .album-release-date,
+    body.tax-person    article:not(.sticky) .entry-footer .book-release-date,
+    body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
+        display: inline !important;
+    }
+}
+
+/* >= 985px */
+
+@media screen and (min-width: 61.5625em) {
+    /* Entry paragraphs */
+
+    .single .entry-content {
+        counter-reset: paragraphCount;
+    }
+
+    .single .entry-content > p {
+        position: relative;
+        counter-increment: paragraphCount;
+    }
+
+    .single .entry-content > p:before {
+        position: absolute;
+        content: counter(paragraphCount);
+        top: 3px;
+        left: -30px;
+        width: 20px;
+        height: 20px;
+        font-size: 80%;
+        opacity: 0.25;
+        filter: alpha(opacity=25);
+    }
+
+    .single .entry-content > blockquote.alignleft + p:before {
+        content: '';
+    }
+
+    .single .entry-content > p.media {
+        counter-increment: paragraphCount -0;
+    }
+
+    .single .entry-content > p.media:before {
+        display: none;
+    }
+}
