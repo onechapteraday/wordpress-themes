@@ -66,6 +66,7 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
 
         # Add custom taxonomy to WP_Query
         $tax_query = array();
+        $tax__used = false;
 
         if( $publisher ){
             $publisher = str_replace( ' ', '', $publisher );
@@ -78,6 +79,7 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
             );
 
             array_push( $tax_query, $publisher_array );
+            $tax__used = true;
         }
 
         if( $location ){
@@ -91,6 +93,7 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
             );
 
             array_push( $tax_query, $location_array );
+            $tax__used = true;
         }
 
         if( $person ){
@@ -104,6 +107,7 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
             );
 
             array_push( $tax_query, $person_array );
+            $tax__used = true;
         }
 
         if( $prize ){
@@ -117,13 +121,14 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
             );
 
             array_push( $tax_query, $prize_array );
+            $tax__used = true;
         }
 
         # And compose
-        $latest_posts = false;
 
         if( $tax_query ){
             if( $except != '' ){
+
                 $latest_posts = new WP_Query( array(
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -134,23 +139,7 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
                     'fields'              => 'ids',
                     'ignore_sticky_posts' => 1
                 ));
-            }
 
-            # If $latest_posts does not exist
-            if( !$latest_posts ){
-                $color_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-
-            # If $latest_posts exists
-            } else {
                 $color_query = new WP_Query(array (
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -159,6 +148,19 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
                     'tag'                 => $tag,
                     'tax_query'           => $tax_query,
                     'post__not_in'        => $latest_posts->posts,
+                    'orderby'             => 'rand',
+                    'ignore_sticky_posts' => 1
+                ));
+
+            } else {
+
+                $color_query = new WP_Query(array (
+                    'post_status'         => 'publish',
+                    'post_type'           => $post_types,
+                    'posts_per_page'      => $postnumber,
+                    'category_name'       => $category,
+                    'tag'                 => $tag,
+                    'tax_query'           => $tax_query,
                     'orderby'             => 'rand',
                     'ignore_sticky_posts' => 1
                 ));
@@ -166,6 +168,7 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
         }
         else {
             if( $except != '' ){
+
                 $latest_posts = new WP_Query( array(
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -175,22 +178,7 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
                     'fields'              => 'ids',
                     'ignore_sticky_posts' => 1
                 ));
-            }
 
-            # If $latest_posts does not exist
-            if( !$latest_posts ){
-                $color_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-
-            # If $latest_posts exists
-            } else {
                 $color_query = new WP_Query(array (
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -198,6 +186,18 @@ class twentysixteenchild_randomposts_color extends WP_Widget {
                     'category_name'       => $category,
                     'tag'                 => $tag,
                     'post__not_in'        => $latest_posts->posts,
+                    'orderby'             => 'rand',
+                    'ignore_sticky_posts' => 1
+                ));
+
+            } else {
+
+                $color_query = new WP_Query(array (
+                    'post_status'         => 'publish',
+                    'post_type'           => $post_types,
+                    'posts_per_page'      => $postnumber,
+                    'category_name'       => $category,
+                    'tag'                 => $tag,
                     'orderby'             => 'rand',
                     'ignore_sticky_posts' => 1
                 ));

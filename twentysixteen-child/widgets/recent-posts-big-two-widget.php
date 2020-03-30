@@ -64,6 +64,7 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
 
         # Add custom taxonomy to WP_Query
         $tax_query = array();
+        $tax__used = false;
 
         if( $publisher ){
             $publisher = str_replace( ' ', '', $publisher );
@@ -76,6 +77,7 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
             );
 
             array_push( $tax_query, $publisher_array );
+            $tax__used = true;
         }
 
         if( $location ){
@@ -89,6 +91,7 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
             );
 
             array_push( $tax_query, $location_array );
+            $tax__used = true;
         }
 
         if( $person ){
@@ -102,6 +105,7 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
             );
 
             array_push( $tax_query, $person_array );
+            $tax__used = true;
         }
 
         if( $prize ){
@@ -115,13 +119,14 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
             );
 
             array_push( $tax_query, $prize_array );
+            $tax__used = true;
         }
 
         # And compose
-        $latest_posts = false;
 
         if( $tax_query ){
             if( $except != '' ){
+
                 $latest_posts = new WP_Query( array(
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -132,22 +137,7 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
                     'fields'              => 'ids',
                     'ignore_sticky_posts' => 1
                 ));
-            }
 
-            # If $latest_posts does not exist
-            if( !$latest_posts ){
-                $bigtwo_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'ignore_sticky_posts' => 1
-                ));
-
-            # If $latest_posts exists
-            } else {
                 $bigtwo_query = new WP_Query(array (
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -156,12 +146,25 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
                     'tag'                 => $tag,
                     'tax_query'           => $tax_query,
                     'post__not_in'        => $latest_posts->posts,
+                    'ignore_sticky_posts' => 1
+                ));
+
+            } else {
+
+                $bigtwo_query = new WP_Query(array (
+                    'post_status'         => 'publish',
+                    'post_type'           => $post_types,
+                    'posts_per_page'      => $postnumber,
+                    'category_name'       => $category,
+                    'tag'                 => $tag,
+                    'tax_query'           => $tax_query,
                     'ignore_sticky_posts' => 1
                 ));
             }
         }
         else {
             if( $except != '' ){
+
                 $latest_posts = new WP_Query( array(
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -171,21 +174,7 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
                     'fields'              => 'ids',
                     'ignore_sticky_posts' => 1
                 ));
-            }
 
-            # If $latest_posts does not exist
-            if( !$latest_posts ){
-                $bigtwo_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'ignore_sticky_posts' => 1
-                ));
-
-            # If $latest_posts exists
-            } else {
                 $bigtwo_query = new WP_Query(array (
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -195,11 +184,22 @@ class twentysixteenchild_recentposts_big_two extends WP_Widget {
                     'post__not_in'        => $latest_posts->posts,
                     'ignore_sticky_posts' => 1
                 ));
+
+            } else {
+
+                $bigtwo_query = new WP_Query(array (
+                    'post_status'         => 'publish',
+                    'post_type'           => $post_types,
+                    'posts_per_page'      => $postnumber,
+                    'category_name'       => $category,
+                    'tag'                 => $tag,
+                    'ignore_sticky_posts' => 1
+                ));
             }
         }
 
         # The Loop
-        if($bigtwo_query->have_posts()) : ?>
+        if( $bigtwo_query->have_posts() ) : ?>
 
             <?php while($bigtwo_query->have_posts()) : $bigtwo_query->the_post() ?>
             <article class="rp-big-two cf">
