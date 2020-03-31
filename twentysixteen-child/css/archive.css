@@ -62,13 +62,19 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
 
 
 /**
- * 14.4 - >= 768px
+ * 14.4 - <= 768px
  */
 
 @media screen and (max-width: 767px) {
         .archive .page-header h1.page-title {
                 font-size: 18px;
                 font-size: 1.125rem;
+        }
+
+        body.tax-person    article:not(.sticky) .entry-footer .album-release-date,
+        body.tax-person    article:not(.sticky) .entry-footer .book-release-date,
+        body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
+                display: inline;
         }
 }
 
