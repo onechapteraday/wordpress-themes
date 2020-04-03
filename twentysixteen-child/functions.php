@@ -9,14 +9,14 @@ function my_theme_enqueue_styles() {
 
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
-        array( $parent_style ),
+        array(),
         wp_get_theme()->get('Version')
     );
 
     if( is_home() || is_front_page() ){
         wp_enqueue_style( 'child-widgets-style',
             get_stylesheet_directory_uri() . '/css/widgets.css',
-            array( $parent_style ),
+            array(),
             wp_get_theme()->get('Version')
         );
     }
@@ -24,7 +24,7 @@ function my_theme_enqueue_styles() {
     if( is_single() ){
         wp_enqueue_style( 'child-single-style',
             get_stylesheet_directory_uri() . '/css/single.css',
-            array( $parent_style ),
+            array(),
             wp_get_theme()->get('Version')
         );
     }
@@ -32,7 +32,7 @@ function my_theme_enqueue_styles() {
     if( is_archive() ){
         wp_enqueue_style( 'child-archive-style',
             get_stylesheet_directory_uri() . '/css/archive.css',
-            array( $parent_style ),
+            array(),
             wp_get_theme()->get('Version')
         );
     }
