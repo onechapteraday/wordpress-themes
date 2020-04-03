@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-23 10:51-0400\n"
-"PO-Revision-Date: 2020-03-23 16:16-0400\n"
+"PO-Revision-Date: 2020-04-01 12:19-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -445,7 +445,7 @@ msgstr "Site web"
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr "Une réflexion sur &ldquo;%s&rdquo;"
+msgstr "Une réflexion sur «&nbsp;%s&nbsp;»"
 
 #: comments.php:84
 msgid "Comments are closed."
