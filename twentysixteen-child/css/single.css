@@ -63,7 +63,7 @@
     display: inline-block;
     *display: inline;
     zoom: 1;
-    margin: 0 5px 0 0;
+    margin: 0 10px 0 0;
     text-transform: uppercase;
 }
 
@@ -377,8 +377,8 @@ a.logo_amazon:hover {
 .pingback .edit-link {
 	color: #686868;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	font-size: 12px;
+	font-size: 0.75rem;
 	line-height: 1.6153846154;
 }
 
