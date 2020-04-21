@@ -18,7 +18,7 @@
  */
 
 .single span.small-caps {
-    font-variant: small-caps;
+    font-size: smaller;
 }
 
 .single header ol.breadcrumb {
