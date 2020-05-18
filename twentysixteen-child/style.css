@@ -1596,15 +1596,15 @@ blockquote:after,
     max-width: 100%;
 }
 
-.widget_popular_prizes_in_category_widget .tagcloud .tag-cloud-link {
+.widget .tagcloud .tag-cloud-link {
     line-height: 1.375;
     padding-top: 0.35em;
     padding-bottom: 0.275em;
     max-width: 100%;
     overflow: hidden;
-    overflow: -moz-hidden-unscrollable;
     text-overflow: ellipsis;
     white-space: nowrap;
+    height: 26px;
 }
 
 /* Jetpack Display Posts */
@@ -3049,6 +3049,11 @@ p > video {
 	body:not(.search-results) .entry-summary blockquote > ol {
 		margin-left: 1.473684211em;
 	}
+
+        .widget .tagcloud .tag-cloud-link {
+                margin-bottom: 1px;
+        }
+
 }
 
 @media screen and (max-width: 767px) {
