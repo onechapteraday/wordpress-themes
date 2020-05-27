@@ -9,7 +9,8 @@
  *    5.1 - Full-width single
  *    5.2 - Single interview
  * 6.0 - Comments
- * 7.0 - Media Queries
+ * 7.0 - Jetpack Related Posts
+ * 8.0 - Media Queries
  */
 
 
@@ -236,71 +237,6 @@ a.logo_amazon:hover {
 
 .single-interview .entry-content h2 {
     font-size: 1.4rem;
-}
-
-
-/* Jetpack Related Posts */
-
-.entry-content #jp-relatedposts {
-    padding: 3em 0 0;
-}
-
-.jp-relatedposts:before,
-.jp-relatedposts-items:before,
-.jp-relatedposts:last-child::after,
-.jp-relatedposts-items:after,
-.jp-relatedposts-post-context {
-    display: none;
-}
-
-.jp-relatedposts-post-title,
-.entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-family: Montserrat, "Helvetica Neue", sans-serif;
-    font-size: 13px;
-    font-size: 0.725em;
-    margin-bottom: 0.25em;
-    max-height: 52px;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-
-#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
-    font-size: 13px;
-    font-size: 0.725em;
-}
-
-.entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
-    font-weight: normal;
-}
-
-.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
-    margin-bottom: 2.05em;
-    text-transform: uppercase;
-    color: #686868;
-    letter-spacing: 0.769px;
-}
-
-.widget.jetpack_widget_social_icons li a {
-    border-color: #7f7f7f;
-    margin-right: 10px;
-}
-
-.sharedaddy.sd-sharing-enabled {
-    padding: 1.75em 0 1em;
-    margin-top: 50px;
-}
-
-.jetpack-likes-widget-wrapper {
-    padding-bottom: 0 !important;
-    margin-bottom: -20px;
-}
-
-.hentry .jetpack-likes-widget-wrapper h3.sd-title,
-.jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item .icon-feed {
-    display: none;
 }
 
 
@@ -535,7 +471,85 @@ a.logo_amazon:hover {
 
 
 /**
- * 7.0 - Media Queries
+ * 7.0 - Jetpack Related Posts
+ */
+
+
+/* Jetpack Related Posts */
+
+.entry-content #jp-relatedposts {
+    padding: 3em 0 0;
+}
+
+.jp-relatedposts:before,
+.jp-relatedposts-items:before,
+.jp-relatedposts:last-child::after,
+.jp-relatedposts-items:after,
+.jp-relatedposts-post-context {
+    display: none;
+}
+
+.jp-relatedposts-post-title,
+.entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-size: 0.725em;
+    margin-bottom: 0.25em;
+    max-height: 52px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
+    font-size: 13px;
+    font-size: 0.725em;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+    font-weight: normal;
+}
+
+.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
+    margin-bottom: 2.05em;
+    text-transform: uppercase;
+    color: #686868;
+    letter-spacing: 0.769px;
+}
+
+.widget.jetpack_widget_social_icons li a {
+    border-color: #7f7f7f;
+    margin-right: 10px;
+}
+
+.sharedaddy.sd-sharing-enabled {
+    padding: 1.75em 0 1em;
+    margin-top: 50px;
+}
+
+.jetpack-likes-widget-wrapper {
+    padding-bottom: 0 !important;
+    margin-bottom: -20px;
+}
+
+.hentry .jetpack-likes-widget-wrapper h3.sd-title,
+.jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item .icon-feed {
+    display: none;
+}
+
+#jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post {
+-webkit-opacity: 1;
+   -moz-opacity: 1;
+    -ms-opacity: 1;
+        opacity: 1;
+        filter: alpha(opacity=100);
+}
+
+
+/**
+ * 8.0 - Media Queries
  */
 
 
