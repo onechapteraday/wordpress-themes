@@ -50,7 +50,7 @@ get_header(); ?>
 					    echo '<p><u>' . __( 'More information', 'twentysixteen-child' ) . '</u>' . __( ': ', 'twentysixteen-child' );
 
 					    if ( $website ) {
-					        echo '<a class="icon-link" href="http://' . $website . '" target="_blank" title="'. __( 'Website', 'twentysixteen' ) . '"></a>';
+					        echo '<a class="icon-link" href="https://' . $website . '" target="_blank" title="'. __( 'Website', 'twentysixteen' ) . '"></a>';
 					    }
 
 					    if ( $facebook ) {
