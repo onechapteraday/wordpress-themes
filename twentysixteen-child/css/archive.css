@@ -95,4 +95,14 @@ body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
         body.archive .post-1359 .locations-links {
                 display: none;
         }
+
+        body.archive.tax-prize .entry-footer .posted-on,
+        body.archive.tax-prize .entry-footer [class$="links"] {
+                display: none;
+        }
+
+        body.archive.tax-prize .entry-footer .book-release-date,
+        body.archive.tax-prize .entry-footer .prizes-links {
+                display: block;
+        }
 }
