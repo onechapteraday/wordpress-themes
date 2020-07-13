@@ -163,15 +163,15 @@ a.logo_partner span {
     text-overflow: ellipsis;
 }
 
-a.logo_libraires_ca {
+a.logo_libraires_fr {
     margin-bottom: 5px;
 }
 
-a.logo_libraires_ca img {
+a.logo_libraires_fr img {
     height: 24px;
 }
 
-a.logo_libraires_ca {
+a.logo_libraires_fr {
     border-color: #bcbcbc #ababab #9a9a9a;
     background: #ffffff;
     background: -moz-linear-gradient(top,  #ffffff 0%, #d8d8d8 100%);
@@ -180,7 +180,7 @@ a.logo_libraires_ca {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8',GradientType=0 );
 }
 
-a.logo_libraires_ca:hover {
+a.logo_libraires_fr:hover {
     background: #f7f7f7;
     background: -moz-linear-gradient(top,  #f7f7f7 0%, #d1d1d1 100%);
     background: -webkit-linear-gradient(top,  #f7f7f7 0%,#d1d1d1 100%);

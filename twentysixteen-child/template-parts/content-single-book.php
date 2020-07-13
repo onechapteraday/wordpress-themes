@@ -553,9 +553,9 @@
                                         <?php
                                         if( $leslibraires ){
                                         ?>
-			                <a href="<?php echo $leslibraires[ 'link' ]; ?>" target="_blank" rel="nofollow" class="logo_partner logo_libraires_ca">
-			                     <img src="<?php echo $leslibraires[ 'img' ]; ?>" alt="leslibraires.ca" />
-                                             <span><?php echo _x( 'Buy on Les Libraires', 'book metadata leslibraires.ca affiliate message', 'twentysixteen-child' ); ?></span>
+			                <a href="<?php echo $leslibraires[ 'link' ]; ?>" target="_blank" rel="nofollow" class="logo_partner logo_libraires_fr">
+			                     <img src="<?php echo $leslibraires[ 'img' ]; ?>" alt="leslibraires.fr" />
+                                             <span><?php echo _x( 'Buy on Les Libraires', 'book metadata leslibraires.fr affiliate message', 'twentysixteen-child' ); ?></span>
 			                </a>
                                         <?php
                                         }
