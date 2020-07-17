@@ -47,7 +47,7 @@
 			$book_id = get_the_ID();
 
 			$title = get_book_title_read( $book_id );
-			if( $title ){
+			if( $title && ( $title != get_book_title_original( $book_id ) ) ){
 			?>
 		        <tr class="title">
 			        <td>
