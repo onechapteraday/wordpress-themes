@@ -45,9 +45,10 @@
 		<table>
 			<?php
 			$book_id = get_the_ID();
+		        $translators = get_book_translator( $book_id );
 
 			$title = get_book_title_read( $book_id );
-			if( $title && ( $title != get_book_title_original( $book_id ) ) ){
+			if( $title && ( ( $title != get_book_title_original( $book_id ) || $translators ) ) ){
 			?>
 		        <tr class="title">
 			        <td>
@@ -321,8 +322,6 @@
 				}
 			?>
 			<?php
-				$translators = get_book_translator( $book_id );
-
 				if( $translators ){
 				?>
 		        	<tr>
