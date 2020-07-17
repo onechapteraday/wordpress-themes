@@ -459,22 +459,6 @@
 				<?php
 				}
 			?>
-			<?php
-				$asin = get_book_asin( $book_id );
-
-				if( $asin ){
-				?>
-                                <tr>
-				        <td>
-                                                <b><?php echo _x( 'ASIN', 'book metadata asin', 'twentysixteen-child' ); ?></b>
-				        </td>
-				        <td>
-                                                <?php echo $asin; ?>
-				        </td>
-                                </tr>
-				<?php
-				}
-			?>
 		        <tr>
 			        <td>
 					<b><?php echo _x( 'Price', 'book metadata price', 'twentysixteen-child' ); ?></b>
@@ -563,7 +547,7 @@
                                         if( $amazon ){
                                         ?>
 			                <a href="<?php echo $amazon[ 'link' ]; ?>" target="_blank" rel="nofollow" class="logo_partner logo_amazon">
-			                     <img src="<?php echo $amazon[ 'img_buy' ]; ?>" alt="Amazon" />
+                                             <img src="<?php echo $amazon[ 'img_buy' ]; ?>" alt="Amazon" />
                                              <span><?php echo _x( 'Buy on Amazon', 'book metadata Amazon affiliate message', 'twentysixteen-child' ); ?></span>
 			                </a>
                                         <?php
