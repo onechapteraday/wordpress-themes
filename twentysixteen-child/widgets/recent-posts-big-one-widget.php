@@ -205,7 +205,11 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
 
                     <?php if ( '' != get_the_post_thumbnail() ) : ?>
                         <div class="entry-thumb">
-                            <?php twentysixteen_post_thumbnail( 'twentysixteenchild-fullwidth', true ); ?>
+                            <?php
+                            add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
+                            twentysixteen_post_thumbnail( 'twentysixteenchild-fullwidth', true );
+                            remove_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
+                            ?>
                         </div><!-- end .entry-thumb -->
                     <?php endif; ?>
 
