@@ -3234,6 +3234,7 @@ p > video {
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
 		border-bottom-width: 0;
+                font-size: 12px;
 	}
 
 	.main-navigation ul ul a {
@@ -3503,6 +3504,11 @@ p > video {
 		width: 35px;
 	}
 
+        .widget_blog_subscription input {
+                font-size: 11px;
+                font-size: 0.6875rem;
+        }
+
 	.tagcloud a {
 		margin: 0 0.2307692308em 0.5384615385em 0;
 		padding: 0.5384615385em 0.4615384615em 0.4615384615em;
@@ -3689,8 +3695,8 @@ p > video {
 	.entry-content h3,
 	.entry-summary h3,
 	.comment-content h3 {
-		font-size: 23px;
-		font-size: 1.4375rem;
+		font-size: 22px;
+		font-size: 1.375rem;
 		line-height: 1.2173913043;
 		margin-top: 2.4347826087em;
 		margin-bottom: 1.2173913043em;
