@@ -45,9 +45,15 @@
 
 .akismet_comment_form_privacy_notice {
     font-family: Montserrat, "Helvetica Neue", sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 12px;
+    font-size: 0.75rem;
     margin-top: 30px;
+    line-height: 1.65;
+}
+
+.hentry div.sharedaddy h3.sd-title {
+    font-size: 11px;
+    font-size: 0.6875rem;
 }
 
 
@@ -489,6 +495,23 @@ a.logo_amazon:hover {
     display: none;
 }
 
+.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
+    color: inherit;
+    font-family: Montserrat,"Helvetica Neue",sans-serif;
+    font-size: 13px;
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 1.076923077em;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-items p, .entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+    font-size: 13px;
+    font-size: .8125rem;
+    letter-spacing: 0;
+    line-height: 1.615384615;
+}
+
 .jp-relatedposts-post-title,
 .entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
     display: -webkit-box;
@@ -497,10 +520,14 @@ a.logo_amazon:hover {
     font-family: Montserrat, "Helvetica Neue", sans-serif;
     font-size: 13px;
     font-size: 0.725em;
-    margin-bottom: 0.25em;
+    margin: 0.75em 0 0.25em;
     max-height: 52px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+#jp-relatedposts h3.jp-relatedposts-headline em {
+    font-weight: normal;
 }
 
 #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
@@ -510,6 +537,7 @@ a.logo_amazon:hover {
 
 .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
     font-weight: normal;
+    box-shadow: none;
 }
 
 .entry-content #jp-relatedposts h3.jp-relatedposts-headline {
@@ -637,5 +665,15 @@ a.logo_amazon:hover {
 
     .single .entry-content > p.media:before {
         display: none;
+    }
+
+    .single article .entry-footer .posted-on.book-release-date {
+        display: none;
+    }
+
+    .akismet_comment_form_privacy_notice a {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
     }
 }
