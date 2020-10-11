@@ -32,6 +32,12 @@ get_header(); ?>
                                 ?>
 				<?php
 					$title = single_term_title('', false);
+
+                                        # Literary prizes selection
+                                        $arr_needle  = array( '1re', '2e', '3e' );
+                                        $arr_replace = array( 'Première', 'Deuxième', 'Troisième' );
+                                        $title = str_replace( $arr_needle, $arr_replace, $title );
+
 					echo '<h1 class="page-title">' . mb_strtoupper( mb_substr( $title, 0, 1 )) . mb_substr( $title, 1 ) . '</h1>';
 
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
