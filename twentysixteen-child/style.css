@@ -317,6 +317,15 @@ optgroup {
 	vertical-align: top;
 }
 
+.widget.jetpack_widget_social_icons li {
+    width: 50px;
+    margin-right: 1em;
+}
+
+.jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item .icon-feed {
+    display: none;
+}
+
 
 /**
  * 3.0 - Typography
