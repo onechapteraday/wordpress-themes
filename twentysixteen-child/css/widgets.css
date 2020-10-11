@@ -1018,8 +1018,8 @@ body:not(.search-results) .front-sidebar article:not(.type-page).rp-big-two .ent
 
     .front-fullwidth .rp-big-one h2.entry-title,
     #featured-content .rp-big-one h2.entry-title  {
-        font-size: 30px;
-        font-size: 1.875rem;
+        font-size: 28px;
+        font-size: 1.75rem;
         margin: 0 0 30px;
         line-height: 1.3;
     }
