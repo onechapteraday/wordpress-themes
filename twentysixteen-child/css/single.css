@@ -56,6 +56,27 @@
     font-size: 0.6875rem;
 }
 
+.single .entry-content blockquote.modern-quote {
+    margin-left: 0;
+    font-size: 14px;
+    font-size: 0.875rem;
+    border: none;
+    padding: 0 30px;
+    font-style: normal;
+}
+
+.single .entry-content blockquote.modern-quote em {
+    font-style: italic;
+}
+
+.single .entry-content blockquote.modern-quote.center {
+    text-align: center;
+}
+
+.single .entry-content blockquote.modern-quote.justify {
+    text-align: justify;
+}
+
 
 /**
  * 2.0 - Post Dictionary
