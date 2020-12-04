@@ -43,6 +43,18 @@
         box-shadow: none;
 }
 
+.taxonomy-description ul.prize-selections {
+        margin: 10px 0 0;
+}
+
+.taxonomy-description ul.prize-selections li {
+        display: inline;
+}
+
+.taxonomy-description ul.prize-selections li + li:before {
+        content: " \00a0\2022\00a0\00a0 ";
+}
+
 /* Taxonomy archive */
 body:not(search-results) article:not(.sticky) .entry-footer .album-release-date,
 body:not(search-results) article:not(.sticky) .entry-footer .book-release-date {

@@ -38,6 +38,55 @@ get_header(); ?>
 
 					$prize_link = get_prize_option( 'prize_link' );
 
+					$prize_1st_selection = get_prize_option( 'prize_1st_selection' );
+					$prize_2nd_selection = get_prize_option( 'prize_2nd_selection' );
+					$prize_3rd_selection = get_prize_option( 'prize_3rd_selection' );
+
+                                        if( $prize_1st_selection || $prize_2nd_selection || $prize_3rd_selection ){
+                                            $selections = array();
+
+                                            if( $prize_1st_selection ){
+                                                array_push( $selections,
+                                                    array(
+                                                        "name" => "Première sélection",
+                                                        "slug" => $prize_1st_selection
+                                                    )
+                                                );
+                                            }
+
+                                            if( $prize_2nd_selection ){
+                                                array_push( $selections,
+                                                    array(
+                                                        "name" => "Deuxième sélection",
+                                                        "slug" => $prize_2nd_selection
+                                                    )
+                                                );
+                                            }
+
+                                            if( $prize_3rd_selection ){
+                                                array_push( $selections,
+                                                    array(
+                                                        "name" => "Troisième sélection",
+                                                        "slug" => $prize_3rd_selection
+                                                    )
+                                                );
+                                            }
+                                            ?>
+                                            <div class="taxonomy-description">
+                                                <ul class="prize-selections">
+                                                    <?php
+                                                    foreach( $selections as $selection ){
+                                                        $term = get_term_by( 'slug', $selection['slug'], 'post_tag' );
+                                                        ?>
+                                                        <li><a href="<?php echo get_term_link( $term, 'prize' ); ?>"><?php echo $selection['name']; ?></a></li>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </div>
+                                            <?php
+                                        }
+
 					if( $prize_link ){
 					    echo '<div class="taxonomy-description"><p>';
 					    echo '<a href="' . $prize_link . '" target="_blank">Site web</a>';
