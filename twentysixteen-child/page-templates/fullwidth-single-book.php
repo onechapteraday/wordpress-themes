@@ -17,8 +17,10 @@ get_header(); ?>
 		// Start the loop.
 		while ( have_posts() ) : the_post();
 
-			// Include the single post content template.
-			get_template_part( 'template-parts/content', 'single-book' );
+                        // Include the single post content template.
+                        add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
+                        get_template_part( 'template-parts/content', 'single-book' );
+                        remove_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) {
