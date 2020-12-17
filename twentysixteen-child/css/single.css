@@ -263,7 +263,8 @@ a.logo_amazon:hover {
  */
 
 .single-interview .entry-content h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
 }
 
 
