@@ -128,9 +128,9 @@ class twentysixteenchild_random_recent_posts_medium_two extends WP_Widget {
 
         # If a custom taxonomy is defined
 
-        if( $tax__used ){
+        if( !$only ) $only = 5;
 
-            if( !$only ) $only = 5;
+        if( $tax__used ){
 
             $latest_posts = new WP_Query( array(
                 'post_status'         => 'publish',
@@ -141,26 +141,12 @@ class twentysixteenchild_random_recent_posts_medium_two extends WP_Widget {
                 'tag'                 => $tag,
                 'tax_query'           => $tax_query,
                 'fields'              => 'ids',
-                'ignore_sticky_posts' => 1
-            ));
-
-            $mediumtwo_query = new WP_Query(array (
-                'post_status'         => 'publish',
-                'post_type'           => $post_types,
-                'posts_per_page'      => $postnumber,
-                'category_name'       => $category,
-                'tag'                 => $tag,
-                'tax_query'           => $tax_query,
-                'post__in'            => $latest_posts->posts,
-                'orderby'             => 'rand',
                 'ignore_sticky_posts' => 1
             ));
 
         }
         else {
 
-            if( !$only ) $only = 5;
-
             $latest_posts = new WP_Query( array(
                 'post_status'         => 'publish',
                 'post_type'           => $post_types,
@@ -172,18 +158,16 @@ class twentysixteenchild_random_recent_posts_medium_two extends WP_Widget {
                 'ignore_sticky_posts' => 1
             ));
 
-            $mediumtwo_query = new WP_Query(array (
-                'post_status'         => 'publish',
-                'post_type'           => $post_types,
-                'posts_per_page'      => $postnumber,
-                'category_name'       => $category,
-                'tag'                 => $tag,
-                'post__in'            => $latest_posts->posts,
-                'orderby'             => 'rand',
-                'ignore_sticky_posts' => 1
-            ));
-
         }
+
+        $mediumtwo_query = new WP_Query(array (
+            'post_status'         => 'publish',
+            'post_type'           => $post_types,
+            'posts_per_page'      => $postnumber,
+            'post__in'            => $latest_posts->posts,
+            'orderby'             => 'rand',
+            'ignore_sticky_posts' => 1
+        ));
 
         # The Loop
         if( $mediumtwo_query->have_posts() ) : ?>
