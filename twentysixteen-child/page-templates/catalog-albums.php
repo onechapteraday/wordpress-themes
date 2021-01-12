@@ -71,7 +71,7 @@ get_header(); ?>
 			                $element_title   = get_album_title_original( $element_id );
 			                $element_sort    = ( get_album_title_sort( $element_id ) != '' ) ? get_album_title_sort( $element_id ) : $element_title;
                                         $element_sort    = strtolower( strtr( $element_sort, $translit ) );
-                                        $current_letter  = strtolower( $element_sort[0] );
+                                        $current_letter  = ( $element_sort ) ? strtolower( $element_sort[0] ) : '';
 
                                         # Retrieve authors
 
@@ -97,13 +97,16 @@ get_header(); ?>
                                         ?>
                                         <div class="catalog-element">
                                             <?php
-                                            echo '<span class="catalog-element-title"><a href="' . $element_link . '">' . ( $element_title ) . '</a></span>';
+                                            echo '<span class="catalog-element-title"><a href="' . $element_link . '">' . str_replace( '\'', '’', $element_title ) . '</a></span>';
 
                                             if( $element_authors ){
                                                 echo '<span class="catalog-element-authors">';
 
                                                 $item_count = 0;
-                                                if( in_array( strtolower( $element_authors[$item_count]->name[0] ), $vowels ) ){
+                                                $letter_1st = $element_authors[$item_count]->name[0];
+                                                $letter_2nd = $element_authors[$item_count]->name[1];
+
+                                                if( in_array( strtolower( $letter_1st ), $vowels ) || ( strtolower( $letter_1st ) == 'y' && !in_array( strtolower( $letter_2nd ), $vowels ) ) ){
 					            echo _x( ' by ', 'album catalog before author elision', 'twentysixteen-child' );
                                                 } else {
 					            echo _x( ' by ', 'album catalog before author normal form', 'twentysixteen-child' );
@@ -118,7 +121,7 @@ get_header(); ?>
                                                         }
                                                     }
 
-				                    echo '<a href="' . get_term_link( $author->term_id ) . '" class="catalog-element-author">' . $author->name . '</a>';
+				                    echo '<a href="' . get_term_link( $author->term_id ) . '" class="catalog-element-author">' . str_replace( '\'', '’', $author->name ) . '</a>';
                                                     $item_count++;
 				                }
 
