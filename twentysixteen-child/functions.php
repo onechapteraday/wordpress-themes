@@ -620,6 +620,16 @@ function twentysixteenchild_widgets_init() {
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ));
+
+    register_sidebar( array(
+        'name'          => __( 'EU Cookie Law Footer', 'twentysixteen-child' ),
+        'id'            => 'eu-cookie-law-footer',
+        'description'   => __( 'Appears at the bottom of all pages.', 'twentysixteen-child' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
 }
 
 add_action( 'widgets_init', 'twentysixteenchild_widgets_init' );
