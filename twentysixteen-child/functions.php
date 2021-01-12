@@ -815,6 +815,12 @@ function update_post_order_query( $query ) {
         $query->set( 'orderby', 'post__in' );
     }
 
+    # Display book releases by title desc
+    if( $query->is_category( 'book-releases' ) ) {
+        $query->set( 'orderby', 'post_title' );
+        $query->set( 'order', 'desc' );
+    }
+
     # Display publisher and collection by release date of book
     if( $query->is_tax( 'publisher' ) ) {
         $query->set( 'meta_key', 'date_release' );
