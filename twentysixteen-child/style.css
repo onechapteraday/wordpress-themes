@@ -4092,7 +4092,6 @@ p > video {
 		border-color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
 	}
 
-	blockquote,
 	.site-description,
 	body:not(.search-results) .entry-summary,
 	body:not(.search-results) .entry-summary blockquote,
@@ -4208,8 +4207,15 @@ p > video {
         h1,
         div.entry-content h2,
         div.entry-content h3 {
-                page-break-after: avoid;
-                     break-after: avoid;
+                page-break-after: avoid !important;
+                     break-after: avoid !important;
+        }
+
+        h1 + p,
+        div.entry-content h2 + p,
+        div.entry-content h3 + p {
+                page-break-before: avoid;
+                     break-before: avoid;
         }
 
         h1.entry-title {
@@ -4227,7 +4233,11 @@ p > video {
         }
 
         blockquote {
-                font-size: 15px;
+                font-size: 14px;
+        }
+
+        blockquote cite {
+                font-size: 12px;
         }
 
         blockquote small {
@@ -4253,7 +4263,7 @@ p > video {
 
         div.entry-content h2 {
                 font-size: 18px;
-                margin: 20px auto 18px;
+                margin: 25px auto 15px;
                 -webkit-hyphens: none;
                 -moz-hyphens: none;
                 -ms-hyphens: none;
@@ -4284,22 +4294,17 @@ p > video {
 
         div.entry-content a:link:after,
         div.entry-content a:visited:after {
-                content: "\00a0(" attr(href) ") ";
+                content: " (" attr(href) ") ";
                 font-size: 80%;
-                color: #333;
+                color: grey;
         }
 
-        div.entry-content p,
         div.entry-content h2,
         div.entry-content li,
         div.entry-content img,
         div.entry-content pre,
         div.entry-content blockquote {
                 page-break-inside: avoid;
-        }
-
-        div.entry-content p:last-of-type {
-                margin-bottom: 0;
         }
 
         div.entry-content p:last-of-type + img
