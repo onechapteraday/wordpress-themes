@@ -50,6 +50,14 @@ get_header(); ?>
                                         }
 
                                         if( $collections ){
+                                            foreach( $collections as $key => $collection ){
+                                                if( $collection->count > 0 ){
+                                                    array_push( $collections_with, $collection );
+                                                }
+                                            }
+                                        }
+
+                                        if( $collections_with ){
                                             function sort_collection_by_name( $a, $b ){
                                                 $translit = array('Á'=>'A','À'=>'A','Â'=>'A','Ä'=>'A','Ã'=>'A','Å'=>'A','Ç'=>'C','É'=>'E','È'=>'E','Ê'=>'E','Ë'=>'E','Í'=>'I','Ï'=>'I','Î'=>'I','Ì'=>'I','Ñ'=>'N','Ó'=>'O','Ò'=>'O','Ô'=>'O','Ö'=>'O','Õ'=>'O','Ú'=>'U','Ù'=>'U','Û'=>'U','Ü'=>'U','Ý'=>'Y','á'=>'a','à'=>'a','â'=>'a','ä'=>'a','ã'=>'a','å'=>'a','ç'=>'c','é'=>'e','è'=>'e','ê'=>'e','ë'=>'e','í'=>'i','ì'=>'i','î'=>'i','ï'=>'i','ñ'=>'n','ó'=>'o','ò'=>'o','ô'=>'o','ö'=>'o','õ'=>'o','ú'=>'u','ù'=>'u','û'=>'u','ü'=>'u','ý'=>'y','ÿ'=>'y');
                                                 $at = strtolower( strtr( $a->name, $translit ) );
@@ -62,12 +70,6 @@ get_header(); ?>
 
 				            echo '<div class="taxonomy-description publisher-collections">';
 				            echo '<p><u>' . __( 'Collections', 'twentysixteen-child' ) . '</u>' . __( ': ', 'twentysixteen-child' );
-
-                                            foreach( $collections as $key => $collection ){
-                                                if( $collection->count > 0 ){
-                                                    array_push( $collections_with, $collection );
-                                                }
-                                            }
 
                                             foreach( $collections_with as $key => $collection ){
                                                if( $key > 0 ){
