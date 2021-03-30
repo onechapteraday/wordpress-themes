@@ -2457,9 +2457,9 @@ header ol.breadcrumb li:first-child:before {
 
 .rp-color h3.entry-title {
     margin: 0;
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.3;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.45;
 }
 
 .rp-color p.summary {
