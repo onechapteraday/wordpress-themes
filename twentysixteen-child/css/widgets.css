@@ -438,7 +438,7 @@
     margin: 15px 0;
     font-size: 12px;
     font-size: 0.75rem;
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 .rp-medium-two .entry-author {
@@ -556,7 +556,7 @@
 .rp-big-one p.summary {
     font-size: 12px;
     font-size: 0.75rem;
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 .rp-big-one .entry-author {
@@ -736,7 +736,7 @@
     margin: 0;
     font-size: 12px;
     font-size: 0.75rem;
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 .front-fullwidth .rp-big-two p.summary,
@@ -790,7 +790,7 @@ body:not(.search-results) .front-sidebar article:not(.type-page).rp-big-two .ent
 .front-fullwidth .widget_twentysixteenchild_quote blockquote.quote-text,
 .front-content .widget_twentysixteenchild_quote blockquote.quote-text {
     font-size: 28px;
-    font-size: 1.75rem;
+    font-size: 1.8rem;
 }
 
 .front-content .widget_twentysixteenchild_quote blockquote.quote-text {
@@ -1019,7 +1019,7 @@ body:not(.search-results) .front-sidebar article:not(.type-page).rp-big-two .ent
     .front-fullwidth .rp-big-one h2.entry-title,
     #featured-content .rp-big-one h2.entry-title  {
         font-size: 28px;
-        font-size: 1.75rem;
+        font-size: 1.8rem;
         margin: 0 0 30px;
         line-height: 1.4;
     }
