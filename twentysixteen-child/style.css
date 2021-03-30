@@ -4079,7 +4079,6 @@ p > video {
 
 	body,
 	blockquote cite,
-	blockquote small,
 	.site-branding .site-title a,
 	.entry-title a,
 	.comment-author {
@@ -4206,21 +4205,33 @@ p > video {
 
         h1,
         div.entry-content h2,
+        div.entry-content h3,
+        div.entry-content li,
+        div.entry-content img,
+        div.entry-content pre,
+        div.entry-content blockquote {
+                page-break-inside: avoid;
+        }
+
+        h1,
+        div.entry-content h2,
         div.entry-content h3 {
                 page-break-after: avoid !important;
                      break-after: avoid !important;
         }
 
-        h1 + p,
-        div.entry-content h2 + p,
-        div.entry-content h3 + p {
-                page-break-before: avoid;
-                     break-before: avoid;
+        h1:after,
+        div.entry-content h2:after,
+        div.entry-content h3:after {
+                content: "";
+                display: block;
+                height: 100px;
+                margin-bottom: -100px;
         }
 
         h1.entry-title {
                 font-size: 25px;
-                margin-bottom: 20px;
+                margin: 0 auto 20px;
                 -webkit-hyphens: none;
                 -moz-hyphens: none;
                 -ms-hyphens: none;
@@ -4233,7 +4244,8 @@ p > video {
         }
 
         blockquote {
-                font-size: 14px;
+                font-size: 13px;
+                line-height: 1.7;
         }
 
         blockquote cite {
@@ -4297,14 +4309,6 @@ p > video {
                 content: " (" attr(href) ") ";
                 font-size: 80%;
                 color: grey;
-        }
-
-        div.entry-content h2,
-        div.entry-content li,
-        div.entry-content img,
-        div.entry-content pre,
-        div.entry-content blockquote {
-                page-break-inside: avoid;
         }
 
         div.entry-content p:last-of-type + img
