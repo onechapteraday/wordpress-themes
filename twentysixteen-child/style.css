@@ -898,7 +898,7 @@ a:active {
 
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a {
-	font-weight: 700;
+	color: #007acc;
 }
 
 .main-navigation ul ul {
@@ -3345,7 +3345,7 @@ p > video {
 	.widget {
 		font-size: 13px;
 		font-size: 0.8125rem;
-		line-height: 1.6153846154;
+		line-height: 1.75;
 		margin-bottom: 3.230769231em;
 		padding-top: 1.615384615em;
 	}
