@@ -375,9 +375,26 @@ if ( ! function_exists( 'twentysixteen_entry_taxonomies' ) ) :
  * @since Twenty Sixteen Child 1.0
  */
 function sortByName( $a, $b ){
+    $asort = $a->name;
+    $bsort = $b->name;
+
+    if( $a->taxonomy == 'person' ){
+        $a_op = get_option( "taxonomy_$a->term_id" );
+        $b_op = get_option( "taxonomy_$b->term_id" );
+
+        if( isset( $a_op['sortname'] ) ){
+            $asort = ( $a_op['sortname'] ) ? $a_op['sortname'] : $asort;
+        }
+
+        if( isset( $b_op['sortname'] ) ){
+            $bsort = ( $b_op['sortname'] ) ? $b_op['sortname'] : $bsort;
+        }
+    }
+
     $translit = array('Á'=>'A','À'=>'A','Â'=>'A','Ä'=>'A','Ã'=>'A','Å'=>'A','Ç'=>'C','É'=>'E','È'=>'E','Ê'=>'E','Ë'=>'E','Í'=>'I','Ï'=>'I','Î'=>'I','Ì'=>'I','Ñ'=>'N','Ó'=>'O','Ò'=>'O','Ô'=>'O','Ö'=>'O','Õ'=>'O','Ú'=>'U','Ù'=>'U','Û'=>'U','Ü'=>'U','Ý'=>'Y','á'=>'a','à'=>'a','â'=>'a','ä'=>'a','ã'=>'a','å'=>'a','ç'=>'c','é'=>'e','è'=>'e','ê'=>'e','ë'=>'e','í'=>'i','ì'=>'i','î'=>'i','ï'=>'i','ñ'=>'n','ó'=>'o','ò'=>'o','ô'=>'o','ö'=>'o','õ'=>'o','ú'=>'u','ù'=>'u','û'=>'u','ü'=>'u','ý'=>'y','ÿ'=>'y');
-    $at = strtr( $a->name, $translit );
-    $bt = strtr( $b->name, $translit );
+
+    $at = strtr( $asort, $translit );
+    $bt = strtr( $bsort, $translit );
 
     return strcasecmp( $at, $bt );
 }
