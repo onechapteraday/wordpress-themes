@@ -50,8 +50,8 @@ get_header(); ?>
                                         array_push( $tags, $element );
                                     }
 
-                                    if( function_exists('sortByName') ){
-                                        usort( $tags, 'sortByName' );
+                                    if( function_exists('sortByNamePersonTagCloud') ){
+                                        usort( $tags, 'sortByNamePersonTagCloud' );
                                     }
 
                                     foreach( $tags as $element ){
