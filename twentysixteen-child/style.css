@@ -2818,8 +2818,8 @@ p > video {
 
 @media screen and (min-width: 29.9375em) {
         .rp-color {
-            width: 100%;
-            float: none;
+            width: 33.33%;
+            float: left;
         }
 
         .rp-color:nth-of-type(3n+1) {
@@ -2836,6 +2836,10 @@ p > video {
 
         .rp-color header {
             margin: 0;
+        }
+
+        .rp-color header.entry-header {
+                margin: 0;
         }
 }
 
@@ -3063,7 +3067,6 @@ p > video {
         .widget .tagcloud .tag-cloud-link {
                 margin-bottom: 1px;
         }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -3090,42 +3093,6 @@ p > video {
                 font-size: 17px;
                 font-size: 1.0625rem;
                 line-height: 1.4;
-        }
-
-        .rp-color {
-                width: 33.33%;
-                float: left;
-        }
-
-        .rp-color header.entry-header {
-                margin: 0;
-        }
-
-        .front-fullwidth .rp-color {
-                width: 20%;
-        }
-
-        .front-fullwidth .rp-color:nth-of-type(3n+1),
-        .front-fullwidth .rp-color:nth-of-type(3n+3) {
-                clear: none;
-        }
-
-        .front-fullwidth .rp-color:nth-of-type(5n+5) {
-                clear: right;
-        }
-
-        .front-fullwidth .rp-color:nth-of-type(5n+1) {
-                clear: left;
-        }
-
-        .front-fullwidth .rp-color:nth-of-type(5n+5) {
-                clear: right;
-        }
-
-        .front-sidebar .rp-color,
-        .default-sidebar .rp-color {
-            width: 100%;
-            float: none;
         }
 }
 
@@ -3836,6 +3803,31 @@ p > video {
         .entry-title {
                 font-size: 30px;
                 font-size: 1.875rem;
+        }
+
+        /* Update .rp-color appearance in big screen */
+
+        .front-fullwidth .rp-color {
+                width: 20%;
+        }
+
+        .front-fullwidth .rp-color:nth-of-type(3n+1),
+        .front-fullwidth .rp-color:nth-of-type(3n+3) {
+                clear: none;
+        }
+
+        .front-fullwidth .rp-color:nth-of-type(5n+5) {
+                clear: right;
+        }
+
+        .front-fullwidth .rp-color:nth-of-type(5n+1) {
+                clear: left;
+        }
+
+        .front-sidebar .rp-color,
+        .default-sidebar .rp-color {
+            width: 100%;
+            float: none;
         }
 }
 
