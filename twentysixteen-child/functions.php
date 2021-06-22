@@ -881,22 +881,21 @@ function update_post_order_query( $query ) {
         $query->set( 'order', 'desc' );
     }
 
-    # Display person by post type, then by release date of book or album
+    # Display person by release date of work if exists, else by post date
     if( $query->is_tax( 'person' ) ) {
         $queried_slug = $query->queried_object->slug;
 
         $sql = "SELECT *,
-                LOCATE(
-                    p.ID,
-                    (
-                        SELECT GROUP_CONCAT( m.`post_id` ORDER BY m.`meta_value` DESC )
+                (
+                        SELECT m.`meta_value`
                         FROM `wp_postmeta` m, `wp_term_taxonomy` x, `wp_term_relationships` r, `wp_terms` t
-                        WHERE m.`post_id` = r.object_id
+                        WHERE m.`post_id` = p.ID
+                        AND m.`post_id` = r.object_id
                         AND t.term_id = x.term_id
                         AND r.term_taxonomy_id = x.term_taxonomy_id
                         AND m.`meta_key` = 'date_release'
-                        AND t.`slug` = '$queried_slug')
-                    ) as position
+                        AND t.`slug` = '$queried_slug'
+                    ) as `release`
                 FROM `wp_posts` p, `wp_terms` t, `wp_term_relationships` r, `wp_term_taxonomy` x
                 WHERE p.ID = r.object_id
                 AND t.term_id = x.term_id
@@ -910,15 +909,10 @@ function update_post_order_query( $query ) {
                     )
                 )
                 ORDER BY
-                    CASE p.post_type
-                        WHEN 'post'      THEN 1
-                        WHEN 'book'      THEN 2
-                        WHEN 'album'     THEN 3
-                        WHEN 'interview' THEN 4
-                        WHEN 'concert'   THEN 5
-                    END,
-                    position ASC,
-                    p.post_date DESC";
+                    CASE
+                        WHEN `release` IS NOT NULL THEN `release`
+                        ELSE p.post_date
+                    END DESC";
 
         $results = $GLOBALS['wpdb']->get_results( $sql );
         $posts_id = array();
