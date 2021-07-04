@@ -487,7 +487,7 @@ function twentysixteen_entry_taxonomies() {
             foreach($people_list as $i => $tag) {
                 if ( $i > 0) $people .= ', ';
                 $people .= '<a href="' . get_term_link( $tag->term_id ) . '">';
-                $people .= $tag->name;
+                $people .= str_replace( '-', '-&#8288;', str_replace( ' ', '&nbsp;', $tag->name ) );
                 $people .= '</a>';
             }
 
