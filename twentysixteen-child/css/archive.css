@@ -26,6 +26,18 @@
 	margin: 0.5384615385em 0 12px;
 }
 
+.taxonomy-description ul {
+        margin: -8px 0 0;
+}
+
+.taxonomy-description ul li {
+        list-style-type: none;
+}
+
+.taxonomy-description ul li:before {
+        content: "– ";
+}
+
 .taxonomy-description > :last-child {
 	margin-bottom: 0;
 }
