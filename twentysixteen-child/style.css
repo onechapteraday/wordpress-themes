@@ -3094,6 +3094,15 @@ p > video {
                 font-size: 1.0625rem;
                 line-height: 1.4;
         }
+
+        .widget_twentysixteenchild_randomposts_color .entry-header {
+                margin-left: 0;
+                margin-right: 0;
+        }
+
+        .widget_twentysixteenchild_randomposts_color .entry-cats {
+                display: none;
+        }
 }
 
 
