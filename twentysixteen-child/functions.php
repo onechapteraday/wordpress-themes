@@ -860,7 +860,7 @@ add_filter( 'body_class', 'twentysixteen_child_body_classes' );
 
 
 /**
- * Update posts order in literary prize archive
+ * Update posts order in taxonomy archive
  */
 
 function update_post_order_query( $query ) {
