@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 17:13-0500\n"
-"PO-Revision-Date: 2021-01-12 17:16-0500\n"
+"POT-Creation-Date: 2021-07-31 14:28-0400\n"
+"PO-Revision-Date: 2021-07-31 14:29-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -23,12 +23,12 @@ msgctxt "Used before post author name."
 msgid "Author"
 msgstr "Auteur"
 
-#: functions.php:343
+#: functions.php:329
 msgctxt "Used before post format."
 msgid "Format"
 msgstr "Format"
 
-#: functions.php:369 widgets/random-posts-big-two-widget.php:248
+#: functions.php:355 widgets/random-posts-big-two-widget.php:248
 #: widgets/recent-posts-big-one-widget.php:236
 #: widgets/recent-posts-colored-widget.php:246
 #: widgets/random-recent-posts-medium-two-widget.php:204
@@ -44,7 +44,7 @@ msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 "Laisser un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
 
-#: functions.php:372 widgets/random-posts-big-two-widget.php:251
+#: functions.php:358 widgets/random-posts-big-two-widget.php:251
 #: widgets/recent-posts-big-one-widget.php:239
 #: widgets/recent-posts-colored-widget.php:249
 #: widgets/random-recent-posts-medium-two-widget.php:207
@@ -58,7 +58,7 @@ msgstr ""
 msgid "comment"
 msgstr "commentaire"
 
-#: functions.php:375 widgets/random-posts-big-two-widget.php:254
+#: functions.php:361 widgets/random-posts-big-two-widget.php:254
 #: widgets/recent-posts-big-one-widget.php:242
 #: widgets/recent-posts-colored-widget.php:252
 #: widgets/random-recent-posts-medium-two-widget.php:210
@@ -72,70 +72,75 @@ msgstr "commentaire"
 msgid "comments"
 msgstr "commentaires"
 
-#: functions.php:409 functions.php:496
+#: functions.php:470 functions.php:574
 msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
 msgstr ", "
 
-#: functions.php:413
+#: functions.php:474
 msgctxt "Used before category names."
 msgid "Categories"
 msgstr "Catégories"
 
-#: functions.php:435
+#: functions.php:496
 msgctxt "Used before person names."
 msgid "People"
 msgstr "Personnes"
 
-#: functions.php:462
+#: functions.php:519
 msgctxt "Used before prize names."
-msgid "Literary Prizes"
+msgid "Prizes"
 msgstr "Prix littéraires"
 
-#: functions.php:489
+#: functions.php:541
+msgctxt "Used before selection names."
+msgid "Selections"
+msgstr "Sélections de prix littéraires"
+
+#: functions.php:567
 msgctxt "Used before location names."
 msgid "Locations"
 msgstr "Localisations"
 
-#: functions.php:500
+#: functions.php:578
 msgctxt "Used before tag names."
 msgid "Tags"
 msgstr "Étiquettes"
 
-#: functions.php:519
+#: functions.php:597
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: functions.php:521
+#: functions.php:599
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 "Ajouter des widgets ici pour les faire apparaître dans votre barre latérale."
 
-#: functions.php:529
+#: functions.php:607
 msgid "Sidebar for Books"
 msgstr "Barre latérale pour les livres"
 
-#: functions.php:531
+#: functions.php:609
 msgid "Add widgets here to appears in your Book sidebar."
 msgstr ""
 "Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
 "pour les livres."
 
-#: functions.php:539
+#: functions.php:617
 msgid "Sidebar for Music"
 msgstr "Barre latérale pour la musique"
 
-#: functions.php:541
+#: functions.php:619
 msgid "Add widgets here to appears in your Music sidebar."
 msgstr ""
 "Ajouter des widgets ici pour les faire apparaître dans votre barre latérale "
 "pour la musique."
 
-#: functions.php:549
+#: functions.php:627
 msgid "Front Page - FullWidth Top"
 msgstr "Page d'accueil - Pleine largeur haut"
 
-#: functions.php:551
+#: functions.php:629
 msgid ""
 "Widgets appear in a single-column widget area on the top of the Front Page "
 "(and above the Featured Content slider, if active)."
@@ -144,11 +149,11 @@ msgstr ""
 "haut de la Page d'accueil (et au-dessus du silder de contenu, si celui-ci "
 "est actif)."
 
-#: functions.php:559
+#: functions.php:637
 msgid "Front Page - Post Content 1"
 msgstr "Page d'accueil - Contenu 1"
 
-#: functions.php:561
+#: functions.php:639
 msgid ""
 "Widgets appear left of Sidebar 1 and below the FullWidth Top widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
@@ -158,11 +163,11 @@ msgstr ""
 "de la zone Pleine largeur haut. Cette zone a été spécialement créée pour les "
 "widgets personnalisés du thème Twenty Sixteen Child."
 
-#: functions.php:569
+#: functions.php:647
 msgid "Front Page - Sidebar 1"
 msgstr "Page d'accueil - Barre latérale 1"
 
-#: functions.php:571
+#: functions.php:649
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 1 "
 "widget area."
@@ -170,11 +175,11 @@ msgstr ""
 "Les widgets apparaissent dans la barre latérale alignée à droite près de la "
 "zone du widget Contenu&nbsp;1."
 
-#: functions.php:579
+#: functions.php:657
 msgid "Front Page - FullWidth Center"
 msgstr "Page d'accueil - Pleine largeur central"
 
-#: functions.php:581
+#: functions.php:659
 msgid ""
 "Widgets will appear in a single-column widget area below the Post Content 1 "
 "and Sidebar 1 widget areas."
@@ -182,11 +187,11 @@ msgstr ""
 "Les widgets vont apparaître dans une seule colonne en-dessous des zones "
 "Contenu&nbsp;1 et Barre latérale&nbsp;1."
 
-#: functions.php:589
+#: functions.php:667
 msgid "Front Page - Post Content 2"
 msgstr "Page d'accueil - Contenu 2"
 
-#: functions.php:591
+#: functions.php:669
 msgid ""
 "Widgets appear left of Sidebar 2 and below the FullWidth Center widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
@@ -196,11 +201,11 @@ msgstr ""
 "de la zone Pleine largeur central. Cette zone a été spécialement créée pour "
 "les widgets personnalisés du thème Twenty Sixteen Child."
 
-#: functions.php:599
+#: functions.php:677
 msgid "Front Page - Sidebar 2"
 msgstr "Page d'accueil - Barre latérale 2"
 
-#: functions.php:601
+#: functions.php:679
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 2 "
 "widget area."
@@ -208,11 +213,11 @@ msgstr ""
 "Les widgets apparaissent dans la barre latérale alignée à droite près de la "
 "zone du widget Contenu&nbsp;2."
 
-#: functions.php:609
+#: functions.php:687
 msgid "Front Page - FullWidth Bottom"
 msgstr "Page d'accueil - Pleine largeur bas"
 
-#: functions.php:611
+#: functions.php:689
 msgid ""
 "Widgets will appear in a single-column widget area at the bottom of your "
 "Front Page above the footer."
@@ -220,101 +225,147 @@ msgstr ""
 "Les widgets vont apparaître dans une seule colonne à la fin de votre Page "
 "d'accueil au-dessus du pied-de-page."
 
-#: functions.php:619
+#: functions.php:697
 msgid "Content Bottom 1"
 msgstr "Contenu du bas 1"
 
-#: functions.php:621 functions.php:631
+#: functions.php:699 functions.php:709
 msgid "Appears at the bottom of the content on posts and pages."
 msgstr "Apparaît en bas du contenu des articles et des pages."
 
-#: functions.php:629
+#: functions.php:707
 msgid "Content Bottom 2"
 msgstr "Contenu du bas 2"
 
-#: functions.php:639
+#: functions.php:717
 msgid "EU Cookie Law Footer"
 msgstr "Bannière européenne de cookies"
 
-#: functions.php:641
+#: functions.php:719
 msgid "Appears at the bottom of all pages."
 msgstr "Apparaît en bas de toutes les pages."
 
-#: functions.php:690
+#: functions.php:768
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: functions.php:692
+#: functions.php:770
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: functions.php:694
+#: functions.php:772
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "F j, Y"
 
-#: functions.php:697
+#: functions.php:775
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "Apartés"
 
-#: functions.php:699
+#: functions.php:777
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "Galeries"
 
-#: functions.php:701
+#: functions.php:779
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "Images"
 
-#: functions.php:703
+#: functions.php:781
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "Vidéos"
 
-#: functions.php:705
+#: functions.php:783
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "Citations"
 
-#: functions.php:707
+#: functions.php:785
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "Liens"
 
-#: functions.php:709
+#: functions.php:787
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "Statuts"
 
-#: functions.php:711
+#: functions.php:789
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "Audios"
 
-#: functions.php:713
+#: functions.php:791
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "Messages"
 
-#: functions.php:720
+#: functions.php:798
 msgid "Archives"
 msgstr "Archives"
 
-#: functions.php:919 functions.php:921
+#: functions.php:985 functions.php:987
 msgctxt "Used before release date of book."
 msgid "Released on"
 msgstr "Parution le"
 
-#: functions.php:927 functions.php:929
+#: functions.php:993 functions.php:995
 msgctxt "Used before release date of album."
 msgid "Released on"
 msgstr "Parution le"
 
-#: single.php:29 image.php:101 page-templates/fullwidth-single.php:31
+#: taxonomy-publisher-20191030.php:85 taxonomy-person-see.php:50
+#: taxonomy-person-see.php:114 taxonomy-publisher.php:88 taxonomy-person.php:50
+msgid "More information"
+msgstr "Plus de renseignements"
+
+#: taxonomy-publisher-20191030.php:85 taxonomy-person-see.php:50
+#: taxonomy-person-see.php:114 taxonomy-publisher.php:64
+#: taxonomy-publisher.php:88 taxonomy-person.php:50
+msgid ": "
+msgstr "&nbsp;: "
+
+#: taxonomy-publisher-20191030.php:89 taxonomy-person-see.php:53
+#: taxonomy-person-see.php:117 taxonomy-publisher.php:92 taxonomy-person.php:53
+msgid "Website"
+msgstr "Site web"
+
+#: taxonomy-publisher-20191030.php:130 category.php:57 category-reads.php:57
+#: search.php:42 tag.php:63 category-book-news.php:57
+#: taxonomy-person-see.php:166 taxonomy-publisher.php:133 archive.php:55
+#: taxonomy-selection.php:90 taxonomy-location.php:56 taxonomy-prize.php:112
+#: author.php:55 category-book-releases.php:57 taxonomy-person.php:102
+#: category-rentrees-litteraires.php:57 category-music.php:57
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: taxonomy-publisher-20191030.php:131 category.php:58 category-reads.php:58
+#: search.php:43 tag.php:64 category-book-news.php:58
+#: taxonomy-person-see.php:167 taxonomy-publisher.php:134 archive.php:56
+#: taxonomy-selection.php:91 taxonomy-location.php:57 taxonomy-prize.php:113
+#: author.php:56 category-book-releases.php:58 taxonomy-person.php:103
+#: category-rentrees-litteraires.php:58 category-music.php:58
+msgid "Next page"
+msgstr "Page suivante"
+
+#: taxonomy-publisher-20191030.php:132 image.php:59 category.php:59
+#: category-reads.php:59 search.php:44 tag.php:65 category-book-news.php:59
+#: taxonomy-person-see.php:168 taxonomy-publisher.php:135 archive.php:57
+#: taxonomy-selection.php:92 taxonomy-location.php:58
+#: template-parts/content-single-book.php:572 template-parts/content.php:37
+#: template-parts/content-single.php:52
+#: template-parts/content-single-album.php:231 taxonomy-prize.php:114
+#: author.php:57 category-book-releases.php:59 taxonomy-person.php:104
+#: category-rentrees-litteraires.php:59 category-music.php:59
+msgid "Page"
+msgstr "Page"
+
+#: single.php:29 image.php:101 page-templates/fullwidth-single.php:33
 #: page-templates/fullwidth-single-album.php:31
 #: page-templates/fullwidth-single-interview.php:31
 #: page-templates/fullwidth-single-concert.php:31
@@ -328,7 +379,7 @@ msgstr ""
 "<span class=\"meta-nav\">Publié dans</span><span class=\"post-title\">"
 "%title</span>"
 
-#: single.php:34 page-templates/fullwidth-single.php:36
+#: single.php:34 page-templates/fullwidth-single.php:38
 #: page-templates/fullwidth-single-album.php:36
 #: page-templates/fullwidth-single-interview.php:36
 #: page-templates/fullwidth-single-concert.php:36
@@ -337,7 +388,7 @@ msgstr ""
 msgid "Next"
 msgstr "Suivant"
 
-#: single.php:35 page-templates/fullwidth-single.php:37
+#: single.php:35 page-templates/fullwidth-single.php:39
 #: page-templates/fullwidth-single-album.php:37
 #: page-templates/fullwidth-single-interview.php:37
 #: page-templates/fullwidth-single-concert.php:37
@@ -346,7 +397,7 @@ msgstr "Suivant"
 msgid "Next post:"
 msgstr "Article suivant&nbsp;:"
 
-#: single.php:37 page-templates/fullwidth-single.php:39
+#: single.php:37 page-templates/fullwidth-single.php:41
 #: page-templates/fullwidth-single-album.php:39
 #: page-templates/fullwidth-single-interview.php:39
 #: page-templates/fullwidth-single-concert.php:39
@@ -355,7 +406,7 @@ msgstr "Article suivant&nbsp;:"
 msgid "Previous"
 msgstr "Précédent"
 
-#: single.php:38 page-templates/fullwidth-single.php:40
+#: single.php:38 page-templates/fullwidth-single.php:42
 #: page-templates/fullwidth-single-album.php:40
 #: page-templates/fullwidth-single-interview.php:40
 #: page-templates/fullwidth-single-concert.php:40
@@ -370,16 +421,6 @@ msgstr "Article précédent&nbsp;:"
 msgid "Pages:"
 msgstr "Pages&nbsp;:"
 
-#: image.php:59 category.php:59 category-reads.php:59 search.php:44 tag.php:65
-#: category-book-news.php:59 taxonomy-publisher.php:141 archive.php:57
-#: taxonomy-location.php:58 template-parts/content-single-book.php:572
-#: template-parts/content.php:37 template-parts/content-single.php:52
-#: template-parts/content-single-album.php:231 taxonomy-prize.php:116
-#: author.php:57 category-book-releases.php:59 taxonomy-person.php:104
-#: category-music.php:59
-msgid "Page"
-msgstr "Page"
-
 #: image.php:83 template-parts/content-single-book.php:585
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content.php:49 template-parts/content-single.php:64
@@ -387,20 +428,6 @@ msgstr "Page"
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Modifier<span class=\"screen-reader-text\"> \"%s\"</span>"
-
-#: category.php:57 category-reads.php:57 search.php:42 tag.php:63
-#: category-book-news.php:57 taxonomy-publisher.php:139 archive.php:55
-#: taxonomy-location.php:56 taxonomy-prize.php:114 author.php:55
-#: category-book-releases.php:57 taxonomy-person.php:102 category-music.php:57
-msgid "Previous page"
-msgstr "Page précédente"
-
-#: category.php:58 category-reads.php:58 search.php:43 tag.php:64
-#: category-book-news.php:58 taxonomy-publisher.php:140 archive.php:56
-#: taxonomy-location.php:57 taxonomy-prize.php:115 author.php:56
-#: category-book-releases.php:58 taxonomy-person.php:103 category-music.php:58
-msgid "Next page"
-msgstr "Page suivante"
 
 #: search.php:23
 #, php-format
@@ -422,17 +449,17 @@ msgctxt "book catalog additional author"
 msgid " and "
 msgstr " et "
 
-#: page-templates/catalog-albums.php:107
+#: page-templates/catalog-albums.php:110
 msgctxt "album catalog before author elision"
 msgid " by "
 msgstr " d’"
 
-#: page-templates/catalog-albums.php:109
+#: page-templates/catalog-albums.php:112
 msgctxt "album catalog before author normal form"
 msgid " by "
 msgstr " de "
 
-#: page-templates/catalog-albums.php:115 page-templates/catalog-albums.php:132
+#: page-templates/catalog-albums.php:118 page-templates/catalog-albums.php:135
 msgctxt "album catalog additional author"
 msgid " and "
 msgstr " et "
@@ -440,18 +467,6 @@ msgstr " et "
 #: taxonomy-publisher.php:64
 msgid "Collections"
 msgstr "Collections littéraires"
-
-#: taxonomy-publisher.php:64 taxonomy-publisher.php:94 taxonomy-person.php:50
-msgid ": "
-msgstr "&nbsp;: "
-
-#: taxonomy-publisher.php:94 taxonomy-person.php:50
-msgid "More information"
-msgstr "Plus de renseignements"
-
-#: taxonomy-publisher.php:98 taxonomy-person.php:53
-msgid "Website"
-msgstr "Site web"
 
 #: comments.php:32
 #, php-format
@@ -1141,6 +1156,10 @@ msgstr "Articles aléatoires (Arrière-plan)"
 #: widgets/random-posts-colored-widget.php:24
 msgid "Medium-sized Random Posts with a background color."
 msgstr "Articles aléatoires de taille moyenne avec un arrière-plan coloré."
+
+#~ msgctxt "Used before prize names."
+#~ msgid "Literary Prizes"
+#~ msgstr "Prix littéraires"
 
 #~ msgctxt "book metadata asin"
 #~ msgid "ASIN"

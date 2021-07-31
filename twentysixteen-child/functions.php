@@ -493,22 +493,18 @@ function twentysixteen_entry_taxonomies() {
 
             if ( $people ) {
                 printf( '<span class="persons-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                    _x( 'People', 'Used before person names.', 'twentysixteen' ),
+                    _x( 'People', 'Used before person names.', 'twentysixteen-child' ),
                     $people
                 );
             }
         }
     }
 
-    # Literary Prizes list
+    # Prizes list
     if( taxonomy_exists( 'prize' )) {
         $prizes_list = get_the_terms( get_the_ID(), 'prize', '', ', ' );
 
         if ( $prizes_list ) {
-            foreach( $prizes_list as $myprize ) {
-                $myprize->translation = __( $myprize->name, 'prize-taxonomy' );
-            }
-
             usort( $prizes_list, 'sortByName' );
             $prizes = '';
 
@@ -520,7 +516,7 @@ function twentysixteen_entry_taxonomies() {
             }
 
             printf( '<span class="prizes-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                _x( 'Literary Prizes', 'Used before prize names.', 'twentysixteen' ),
+                _x( 'Prizes', 'Used before prize names.', 'twentysixteen-child' ),
                 $prizes
             );
         }
@@ -542,7 +538,7 @@ function twentysixteen_entry_taxonomies() {
             }
 
             printf( '<span class="selections-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                _x( 'Literary Prizes Selections', 'Used before selection names.', 'twentysixteen-child' ),
+                _x( 'Selections', 'Used before selection names.', 'twentysixteen-child' ),
                 $selections
             );
         }
@@ -568,7 +564,7 @@ function twentysixteen_entry_taxonomies() {
             }
 
             printf( '<span class="locations-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                _x( 'Locations', 'Used before location names.', 'twentysixteen' ),
+                _x( 'Locations', 'Used before location names.', 'twentysixteen-child' ),
                 $locations
             );
         }
