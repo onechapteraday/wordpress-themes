@@ -3,6 +3,10 @@
  *
  */
 
+.archive span.small-caps {
+        font-size: smaller;
+}
+
 .archive .format-status .entry-title {
 	display: none;
 }
