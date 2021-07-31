@@ -36,55 +36,53 @@ get_header(); ?>
 
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 
+                                        $prize      = get_term( $prize_id, 'prize' );
 					$prize_link = get_prize_option( 'prize_link' );
 
-					$prize_1st_selection = get_prize_option( 'prize_1st_selection' );
-					$prize_2nd_selection = get_prize_option( 'prize_2nd_selection' );
-					$prize_3rd_selection = get_prize_option( 'prize_3rd_selection' );
+                                        # selections
 
-                                        if( $prize_1st_selection || $prize_2nd_selection || $prize_3rd_selection ){
-                                            $selections = array();
+                                        if( taxonomy_exists( 'selection' ) ){
+                                            $selections = get_terms( array(
+                                                'taxonomy'   => 'selection',
+                                                'hide_empty' => false,
+                                            ) );
 
-                                            if( $prize_1st_selection ){
-                                                array_push( $selections,
-                                                    array(
-                                                        "name" => "Première sélection",
-                                                        "slug" => $prize_1st_selection
-                                                    )
-                                                );
+                                            $prize_selections = array();
+
+                                            foreach( $selections as $selection ){
+                                                $options = get_option("taxonomy_$selection->term_id");
+
+                                                if( $options['selection_prize'] == $prize->slug ){
+                                                    array_push( $prize_selections, $selection );
+                                                }
                                             }
 
-                                            if( $prize_2nd_selection ){
-                                                array_push( $selections,
-                                                    array(
-                                                        "name" => "Deuxième sélection",
-                                                        "slug" => $prize_2nd_selection
-                                                    )
-                                                );
+                                            # sort by order
+
+                                            function sortSelection( $a, $b ){
+                                                $a_op = get_option( "taxonomy_$a->term_id" );
+                                                $b_op = get_option( "taxonomy_$b->term_id" );
+
+                                                return strcasecmp( $a_op['selection_order'], $b_op['selection_order'] );
                                             }
 
-                                            if( $prize_3rd_selection ){
-                                                array_push( $selections,
-                                                    array(
-                                                        "name" => "Troisième sélection",
-                                                        "slug" => $prize_3rd_selection
-                                                    )
-                                                );
-                                            }
-                                            ?>
-                                            <div class="taxonomy-description">
-                                                <ul class="prize-selections">
-                                                    <?php
-                                                    foreach( $selections as $selection ){
-                                                        $term = get_term_by( 'slug', $selection['slug'], 'post_tag' );
-                                                        ?>
-                                                        <li><a href="<?php echo get_term_link( $term, 'prize' ); ?>"><?php echo $selection['name']; ?></a></li>
+                                            if( $prize_selections ){
+                                                usort( $prize_selections, 'sortSelection' );
+
+                                                ?>
+                                                <div class="taxonomy-description">
+                                                    <ul class="prize-selections">
                                                         <?php
-                                                    }
-                                                    ?>
-                                                </ul>
-                                            </div>
-                                            <?php
+                                                        foreach( $prize_selections as $selection ){
+                                                            ?>
+                                                            <li><a href="<?php echo get_term_link( $selection, 'selection' ); ?>"><?php echo $selection->name; ?></a></li>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </ul>
+                                                </div>
+                                                <?php
+                                            }
                                         }
 
 					if( $prize_link ){
