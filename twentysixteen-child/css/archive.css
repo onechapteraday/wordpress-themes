@@ -27,15 +27,7 @@
 }
 
 .taxonomy-description ul {
-        margin: -8px 0 0;
-}
-
-.taxonomy-description ul li {
-        list-style-type: none;
-}
-
-.taxonomy-description ul li:before {
-        content: "– ";
+        margin: -10px 0 0 1.25em;
 }
 
 .taxonomy-description > :last-child {
