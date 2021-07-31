@@ -379,7 +379,7 @@ function sortByName( $a, $b ){
     $asort = $a->name;
     $bsort = $b->name;
 
-    if( $a->taxonomy == 'person' ){
+    if( isset( $a->taxonomy ) && $a->taxonomy == 'person' ){
         $a_op = get_option( "taxonomy_$a->term_id" );
         $b_op = get_option( "taxonomy_$b->term_id" );
 
