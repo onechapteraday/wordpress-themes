@@ -37,6 +37,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
         $location   = isset($instance['location']) ? $instance['location'] : '';
         $person     = isset($instance['person']) ? $instance['person'] : '';
         $prize      = isset($instance['prize']) ? $instance['prize'] : '';
+        $selection  = isset($instance['selection']) ? $instance['selection'] : '';
 
         echo $args['before_widget'];
 
@@ -66,6 +67,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
 
         # Add custom taxonomy to WP_Query
         $tax_query = array();
+        $tax__used = false;
 
         if( $publisher ){
             $publisher = str_replace( ' ', '', $publisher );
@@ -78,6 +80,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
             );
 
             array_push( $tax_query, $publisher_array );
+            $tax__used = true;
         }
 
         if( $location ){
@@ -91,6 +94,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
             );
 
             array_push( $tax_query, $location_array );
+            $tax__used = true;
         }
 
         if( $person ){
@@ -104,6 +108,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
             );
 
             array_push( $tax_query, $person_array );
+            $tax__used = true;
         }
 
         if( $prize ){
@@ -117,13 +122,28 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
             );
 
             array_push( $tax_query, $prize_array );
+            $tax__used = true;
+        }
+
+        if( $selection ){
+            $selection = str_replace( ' ', '', $selection );
+            $sel_array  = explode( ',', $selection );
+
+            $selection_array = array(
+                'taxonomy' => 'selection',
+                'field'    => 'slug',
+                'terms'    => $sel_array,
+            );
+
+            array_push( $tax_query, $selection_array );
+            $tax__used  = true;
         }
 
         # And compose
-        $latest_posts = false;
 
         if( $tax_query ){
             if( $except != '' ){
+
                 $latest_posts = new WP_Query( array(
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -134,22 +154,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
                     'fields'              => 'ids',
                     'ignore_sticky_posts' => 1
                 ));
-            }
 
-            # If $latest_posts does not exist
-            if( !$latest_posts ){
-                $color_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'ignore_sticky_posts' => 1
-                ));
-
-            # If $latest_posts exists
-            } else {
                 $color_query = new WP_Query(array (
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -158,12 +163,25 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
                     'tag'                 => $tag,
                     'tax_query'           => $tax_query,
                     'post__not_in'        => $latest_posts->posts,
+                    'ignore_sticky_posts' => 1
+                ));
+
+            } else {
+
+                $color_query = new WP_Query(array (
+                    'post_status'         => 'publish',
+                    'post_type'           => $post_types,
+                    'posts_per_page'      => $postnumber,
+                    'category_name'       => $category,
+                    'tag'                 => $tag,
+                    'tax_query'           => $tax_query,
                     'ignore_sticky_posts' => 1
                 ));
             }
         }
         else {
             if( $except != '' ){
+
                 $latest_posts = new WP_Query( array(
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -173,21 +191,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
                     'fields'              => 'ids',
                     'ignore_sticky_posts' => 1
                 ));
-            }
 
-            # If $latest_posts does not exist
-            if( !$latest_posts ){
-                $color_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'ignore_sticky_posts' => 1
-                ));
-
-            # If $latest_posts exists
-            } else {
                 $color_query = new WP_Query(array (
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -195,6 +199,17 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
                     'category_name'       => $category,
                     'tag'                 => $tag,
                     'post__not_in'        => $latest_posts->posts,
+                    'ignore_sticky_posts' => 1
+                ));
+
+            } else {
+
+                $color_query = new WP_Query(array (
+                    'post_status'         => 'publish',
+                    'post_type'           => $post_types,
+                    'posts_per_page'      => $postnumber,
+                    'category_name'       => $category,
+                    'tag'                 => $tag,
                     'ignore_sticky_posts' => 1
                 ));
             }
@@ -280,6 +295,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
         $instance['location']   = $new_instance['location'];
         $instance['person']     = $new_instance['person'];
         $instance['prize']      = $new_instance['prize'];
+        $instance['selection']  = $new_instance['selection'];
 
         return $new_instance;
     }
@@ -295,6 +311,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
         $location   = isset( $instance['location'] ) ? esc_attr( $instance['location'] ) : '';
         $person     = isset( $instance['person'] ) ? esc_attr( $instance['person'] ) : '';
         $prize      = isset( $instance['prize'] ) ? esc_attr( $instance['prize'] ) : '';
+        $selection  = isset( $instance['selection'] ) ? esc_attr( $instance['selection'] ) : '';
 
         ?>
 	<p>
@@ -363,6 +380,17 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
 	<p>
 	    <label for="<?php echo $this->get_field_id( 'prize' ); ?>"><?php _e( 'Prize slug (optional):', 'twentysixteen-child' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'prize' ); ?>" value="<?php echo esc_attr( $prize ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'prize' ); ?>" />
+	</p>
+	<?php
+
+        }
+
+        if( taxonomy_exists( 'selection' )) {
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'selection' ) ; ?>"><?php _e( 'Selection slug (optional):', 'twentysixteen-child' ); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name( 'selection' ) ; ?>" value="<?php echo esc_attr( $selection ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'selection' ) ; ?>" />
 	</p>
 	<?php
 

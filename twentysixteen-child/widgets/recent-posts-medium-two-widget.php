@@ -37,6 +37,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
         $location   = isset($instance['location']) ? $instance['location'] : '';
         $person     = isset($instance['person']) ? $instance['person'] : '';
         $prize      = isset($instance['prize']) ? $instance['prize'] : '';
+        $selection  = isset($instance['selection']) ? $instance['selection'] : '';
 
         echo $args['before_widget'];
 
@@ -124,11 +125,28 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
             $tax__used  = true;
         }
 
+        if( $selection ){
+            $selection = str_replace( ' ', '', $selection );
+            $sel_array  = explode( ',', $selection );
+
+            $selection_array = array(
+                'taxonomy' => 'selection',
+                'field'    => 'slug',
+                'terms'    => $sel_array,
+            );
+
+            array_push( $tax_query, $selection_array );
+            $tax__used  = true;
+        }
+
         # And compose
 
-        if( $tax__used ){
-            if( $except != '' ){
+        # If a custom taxonomy is defined
 
+        if( $tax__used ){
+            # If exclude posts is defined
+
+            if( $except != '' ){
                 $latest_posts = new WP_Query( array(
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -201,7 +219,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
         }
 
         # The Loop
-        if($mediumtwo_query->have_posts()) : ?>
+        if( $mediumtwo_query->have_posts() ) : ?>
 
             <?php while($mediumtwo_query->have_posts()) : $mediumtwo_query->the_post() ?>
             <article class="rp-medium-two">
@@ -272,6 +290,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
         $instance['location']   = $new_instance['location'];
         $instance['person']     = $new_instance['person'];
         $instance['prize']      = $new_instance['prize'];
+        $instance['selection']  = $new_instance['selection'];
 
         return $new_instance;
     }
@@ -287,6 +306,7 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
         $location   = isset( $instance['location'] ) ? esc_attr( $instance['location'] ) : '';
         $person     = isset( $instance['person'] ) ? esc_attr( $instance['person'] ) : '';
         $prize      = isset( $instance['prize'] ) ? esc_attr( $instance['prize'] ) : '';
+        $selection  = isset( $instance['selection'] ) ? esc_attr( $instance['selection'] ) : '';
 
         ?>
 	<p>
@@ -355,6 +375,17 @@ class twentysixteenchild_recentposts_medium_two extends WP_Widget {
 	<p>
 	    <label for="<?php echo $this->get_field_id( 'prize' ) ; ?>"><?php _e( 'Prize slug (optional):', 'twentysixteen-child' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'prize' ) ; ?>" value="<?php echo esc_attr( $prize ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'prize' ) ; ?>" />
+	</p>
+	<?php
+
+        }
+
+        if( taxonomy_exists( 'selection' )) {
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'selection' ) ; ?>"><?php _e( 'Selection slug (optional):', 'twentysixteen-child' ); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name( 'selection' ) ; ?>" value="<?php echo esc_attr( $selection ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'selection' ) ; ?>" />
 	</p>
 	<?php
 

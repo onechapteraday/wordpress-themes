@@ -37,6 +37,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
         $location   = isset($instance['location']) ? $instance['location'] : '';
         $person     = isset($instance['person']) ? $instance['person'] : '';
         $prize      = isset($instance['prize']) ? $instance['prize'] : '';
+        $selection  = isset($instance['selection']) ? $instance['selection'] : '';
 
         echo $args['before_widget'];
 
@@ -121,6 +122,20 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
             );
 
             array_push( $tax_query, $prize_array );
+            $tax__used  = true;
+        }
+
+        if( $selection ){
+            $selection = str_replace( ' ', '', $selection );
+            $sel_array  = explode( ',', $selection );
+
+            $selection_array = array(
+                'taxonomy' => 'selection',
+                'field'    => 'slug',
+                'terms'    => $sel_array,
+            );
+
+            array_push( $tax_query, $selection_array );
             $tax__used  = true;
         }
 
@@ -267,7 +282,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
         wp_reset_postdata();
     }
 
-    function update($new_instance, $old_instance) {
+    function update( $new_instance, $old_instance ){
         $instance['title']      = $new_instance['title'];
         $instance['postnumber'] = $new_instance['postnumber'];
         $instance['category']   = $new_instance['category'];
@@ -278,11 +293,12 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
         $instance['location']   = $new_instance['location'];
         $instance['person']     = $new_instance['person'];
         $instance['prize']      = $new_instance['prize'];
+        $instance['selection']  = $new_instance['selection'];
 
         return $new_instance;
     }
 
-    function form($instance) {
+    function form( $instance ){
         $title      = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
         $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
         $category   = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
@@ -293,6 +309,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
         $location   = isset( $instance['location'] ) ? esc_attr( $instance['location'] ) : '';
         $person     = isset( $instance['person'] ) ? esc_attr( $instance['person'] ) : '';
         $prize      = isset( $instance['prize'] ) ? esc_attr( $instance['prize'] ) : '';
+        $selection  = isset( $instance['selection'] ) ? esc_attr( $instance['selection'] ) : '';
 
         ?>
 	<p>
@@ -361,6 +378,17 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
 	<p>
 	    <label for="<?php echo $this->get_field_id( 'prize' ) ; ?>"><?php _e( 'Prize slug (optional):', 'twentysixteen-child' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'prize' ) ; ?>" value="<?php echo esc_attr( $prize ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'prize' ) ; ?>" />
+	</p>
+	<?php
+
+        }
+
+        if( taxonomy_exists( 'selection' )) {
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'selection' ) ; ?>"><?php _e( 'Selection slug (optional):', 'twentysixteen-child' ); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name( 'selection' ) ; ?>" value="<?php echo esc_attr( $selection ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'selection' ) ; ?>" />
 	</p>
 	<?php
 

@@ -37,13 +37,16 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
         $location   = isset($instance['location']) ? $instance['location'] : '';
         $person     = isset($instance['person']) ? $instance['person'] : '';
         $prize      = isset($instance['prize']) ? $instance['prize'] : '';
+        $selection  = isset($instance['selection']) ? $instance['selection'] : '';
 
         echo $args['before_widget'];
 
         if( ! empty( $title ) )
             echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
 
-        # The Query
+        ## The Query
+
+        # Add every existing post types
         $post_types = array( 'post' );
 
         if( post_type_exists( 'book' ) ){
@@ -64,6 +67,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
 
         # Add custom taxonomy to WP_Query
         $tax_query = array();
+        $tax__used = false;
 
         if( $publisher ){
             $publisher = str_replace( ' ', '', $publisher );
@@ -76,6 +80,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
             );
 
             array_push( $tax_query, $publisher_array );
+            $tax__used  = true;
         }
 
         if( $location ){
@@ -89,6 +94,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
             );
 
             array_push( $tax_query, $location_array );
+            $tax__used  = true;
         }
 
         if( $person ){
@@ -102,6 +108,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
             );
 
             array_push( $tax_query, $person_array );
+            $tax__used  = true;
         }
 
         if( $prize ){
@@ -115,13 +122,28 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
             );
 
             array_push( $tax_query, $prize_array );
+            $tax__used  = true;
+        }
+
+        if( $selection ){
+            $selection = str_replace( ' ', '', $selection );
+            $sel_array  = explode( ',', $selection );
+
+            $selection_array = array(
+                'taxonomy' => 'selection',
+                'field'    => 'slug',
+                'terms'    => $sel_array,
+            );
+
+            array_push( $tax_query, $selection_array );
+            $tax__used  = true;
         }
 
         # And compose
-        $latest_posts = false;
 
         if( $tax_query ){
             if( $except != '' ){
+
                 $latest_posts = new WP_Query( array(
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -132,22 +154,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
                     'fields'              => 'ids',
                     'ignore_sticky_posts' => 1
                 ));
-            }
 
-            # If $latest_posts does not exist
-            if( !$latest_posts ){
-                $smalltwo_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'ignore_sticky_posts' => 1
-                ));
-
-            # If $latest_posts exists
-            } else {
                 $smalltwo_query = new WP_Query(array (
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -156,12 +163,25 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
                     'tag'                 => $tag,
                     'tax_query'           => $tax_query,
                     'post__not_in'        => $latest_posts->posts,
+                    'ignore_sticky_posts' => 1
+                ));
+
+            } else {
+
+                $smalltwo_query = new WP_Query(array (
+                    'post_status'         => 'publish',
+                    'post_type'           => $post_types,
+                    'posts_per_page'      => $postnumber,
+                    'category_name'       => $category,
+                    'tag'                 => $tag,
+                    'tax_query'           => $tax_query,
                     'ignore_sticky_posts' => 1
                 ));
             }
         }
         else {
             if( $except != '' ){
+
                 $latest_posts = new WP_Query( array(
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
@@ -171,37 +191,34 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
                     'fields'              => 'ids',
                     'ignore_sticky_posts' => 1
                 ));
-            }
 
-            # If $latest_posts does not exist
-            if( !$latest_posts ){
                 $smalltwo_query = new WP_Query(array (
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
                     'posts_per_page'      => $postnumber,
                     'category_name'       => $category,
                     'tag'                 => $tag,
+		    'post__not_in'        => $latest_posts->posts,
                     'ignore_sticky_posts' => 1
                 ));
 
-            # If $latest_posts exists
             } else {
+
                 $smalltwo_query = new WP_Query(array (
                     'post_status'         => 'publish',
                     'post_type'           => $post_types,
                     'posts_per_page'      => $postnumber,
                     'category_name'       => $category,
                     'tag'                 => $tag,
-                    'post__not_in'        => $latest_posts->posts,
                     'ignore_sticky_posts' => 1
                 ));
             }
         }
 
         # The Loop
-        if($smalltwo_query->have_posts()) : ?>
+        if( $smalltwo_query->have_posts() ) : ?>
 
-            <?php while($smalltwo_query->have_posts()) : $smalltwo_query->the_post() ?>
+            <?php while( $smalltwo_query->have_posts() ) : $smalltwo_query->the_post() ?>
             <article class="rp-small-two">
                 <p class="summary"><a href="<?php the_permalink(); ?>"><span class="entry-title"><?php the_title(); ?></span><?php echo twentysixteenchild_excerpt(15); ?></a><span class="entry-date"><?php echo get_the_date(); ?></span></p>
             </article><!--end .rp-small-two -->
@@ -216,7 +233,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
         wp_reset_postdata();
     }
 
-    function update($new_instance, $old_instance) {
+    function update( $new_instance, $old_instance ){
         $instance['title']      = $new_instance['title'];
         $instance['postnumber'] = $new_instance['postnumber'];
         $instance['category']   = $new_instance['category'];
@@ -227,11 +244,12 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
         $instance['location']   = $new_instance['location'];
         $instance['person']     = $new_instance['person'];
         $instance['prize']      = $new_instance['prize'];
+        $instance['selection']  = $new_instance['selection'];
 
         return $new_instance;
     }
 
-    function form($instance) {
+    function form( $instance ){
         $title      = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
         $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
         $category   = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
@@ -242,6 +260,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
         $location   = isset( $instance['location'] ) ? esc_attr( $instance['location'] ) : '';
         $person     = isset( $instance['person'] ) ? esc_attr( $instance['person'] ) : '';
         $prize      = isset( $instance['prize'] ) ? esc_attr( $instance['prize'] ) : '';
+        $selection  = isset( $instance['selection'] ) ? esc_attr( $instance['selection'] ) : '';
 
         ?>
 	<p>
@@ -271,7 +290,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
 
         <?php
 
-        if( taxonomy_exists( 'publisher' )) {
+        if( taxonomy_exists( 'publisher' ) ){
 
         ?>
 	<p>
@@ -282,7 +301,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
 
         }
 
-        if( taxonomy_exists( 'location' )) {
+        if( taxonomy_exists( 'location' ) ){
 
         ?>
 	<p>
@@ -293,7 +312,7 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
 
         }
 
-        if( taxonomy_exists( 'person' )) {
+        if( taxonomy_exists( 'person' ) ){
 
         ?>
 	<p>
@@ -304,12 +323,23 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
 
         }
 
-        if( taxonomy_exists( 'prize' )) {
+        if( taxonomy_exists( 'prize' ) ){
 
         ?>
 	<p>
 	    <label for="<?php echo $this->get_field_id( 'prize' ); ?>"><?php _e( 'Prize slug (optional):', 'twentysixteen-child' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'prize' ); ?>" value="<?php echo esc_attr( $prize ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'prize' ); ?>" />
+	</p>
+	<?php
+
+        }
+
+        if( taxonomy_exists( 'selection' ) ){
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'selection' ) ; ?>"><?php _e( 'Selection slug (optional):', 'twentysixteen-child' ); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name( 'selection' ) ; ?>" value="<?php echo esc_attr( $selection ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'selection' ) ; ?>" />
 	</p>
 	<?php
 
