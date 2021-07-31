@@ -40,6 +40,38 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php
+                        # Display selection by first author's sortname
+
+                        global $wp_query;
+                        $posts = $wp_query->posts;
+
+                        function get_author_sortname( $post ){
+                            $authors = get_post_meta( $post->ID, 'author' );
+
+                            if( $authors ){
+                                $pe_array = explode( ',', $authors[0] );
+
+                                # only use first author
+                                $person = get_term_by( 'slug', $pe_array[0], 'person' );
+
+                                # find sortname
+                                $person_id   = $person->term_id;
+                                $person_meta = get_option( 'taxonomy_' . $person_id );
+                                $person_sort = $person_meta['sortname'];
+
+                                return $person_sort;
+                            }
+                        }
+
+                        function sort_by_author_sortname( $a, $b ){
+                            $a_sortname = get_author_sortname ( $a );
+                            $b_sortname = get_author_sortname ( $b );
+
+                            return strcasecmp( $a_sortname, $b_sortname );
+                        }
+
+                        usort( $posts, 'sort_by_author_sortname' );
+
 			// Start the Loop.
 			while ( have_posts() ) : the_post();
 
