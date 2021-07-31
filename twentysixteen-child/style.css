@@ -3804,6 +3804,7 @@ p > video {
 
         body:not(.search-results) .persons-links,
         body:not(.search-results) .prizes-links,
+        body:not(.search-results) .selections-links,
         body:not(.search-results) .locations-links {
                 display: block;
                 margin-bottom: 0.5384615385em;

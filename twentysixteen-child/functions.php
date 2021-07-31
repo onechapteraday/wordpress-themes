@@ -526,6 +526,27 @@ function twentysixteen_entry_taxonomies() {
         }
     }
 
+    # Selections list
+    if( taxonomy_exists( 'selection' )) {
+        $selections_list = get_the_terms( get_the_ID(), 'selection', '', ', ' );
+
+        if ( $selections_list ) {
+            usort( $selections_list, 'sortByName' );
+            $selections = '';
+
+            foreach($selections_list as $i => $tag) {
+                if ( $i > 0) $selections .= ', ';
+                $selections .= '<a href="' . get_term_link( $tag->term_id ) . '">';
+                $selections .= $tag->name;
+                $selections .= '</a>';
+            }
+
+            printf( '<span class="selections-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+                _x( 'Literary Prizes Selections', 'Used before selection names.', 'twentysixteen-child' ),
+                $selections
+            );
+        }
+    }
 
     # Locations list
     if( taxonomy_exists( 'location' )) {
