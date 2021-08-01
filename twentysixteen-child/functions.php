@@ -892,9 +892,9 @@ add_filter( 'body_class', 'twentysixteen_child_body_classes' );
  * Update posts order in taxonomy archive
  */
 
-function update_post_order_query( $query ) {
+function update_post_order_query( $query ){
     # Display prizes by year of attribution desc
-    if( $query->is_tax( 'prize' ) ) {
+    if( $query->is_tax( 'prize' ) ){
 
         $queried_slug = $query->queried_object->slug;
 
@@ -930,14 +930,14 @@ function update_post_order_query( $query ) {
     }
 
     # Display publisher and collection by release date of book
-    if( $query->is_tax( 'publisher' ) ) {
+    if( $query->is_tax( 'publisher' ) ){
         $query->set( 'meta_key', 'date_release' );
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'order', 'desc' );
     }
 
     # Display person by release date of work if exists, else by post date
-    if( $query->is_tax( 'person' ) ) {
+    if( $query->is_tax( 'person' ) ){
         $queried_slug = $query->queried_object->slug;
 
         $sql = "SELECT *,
