@@ -34,6 +34,10 @@
         margin: -10px 0 0 1.25em;
 }
 
+.tax-selection .taxonomy-description ul {
+        margin-top: 0;
+}
+
 .taxonomy-description > :last-child {
 	margin-bottom: 0;
 }
@@ -52,15 +56,11 @@
 }
 
 .taxonomy-description ul.prize-selections {
-        margin: 10px 0 0;
+        margin: 10px 0 0 10px;
 }
 
 .taxonomy-description ul.prize-selections li {
-        display: inline;
-}
-
-.taxonomy-description ul.prize-selections li + li:before {
-        content: " \00a0\2022\00a0\00a0 ";
+        margin-bottom: 5px;
 }
 
 /* Taxonomy archive */
