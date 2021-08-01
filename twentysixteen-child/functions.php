@@ -929,6 +929,11 @@ function update_post_order_query( $query ){
         $query->set( 'orderby', 'post__in' );
     }
 
+    # Display all books in selection
+    if( $query->is_tax( 'selection' ) ){
+        $query->set( 'posts_per_page', -1 );
+    }
+
     # Display publisher and collection by release date of book
     if( $query->is_tax( 'publisher' ) ){
         $query->set( 'meta_key', 'date_release' );
