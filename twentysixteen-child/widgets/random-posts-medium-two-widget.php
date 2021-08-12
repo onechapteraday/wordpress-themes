@@ -32,6 +32,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
         $category   = isset($instance['category']) ? apply_filters( 'widget_title', $instance['category']) : '';
         $tag        = isset($instance['tag']) ? $instance['tag'] : '';
         $except     = isset($instance['except']) ? $instance['except'] : '';
+        $between    = isset($instance['between']) ? $instance['between'] : '';
 
         $publisher  = isset($instance['publisher']) ? $instance['publisher'] : '';
         $location   = isset($instance['location']) ? $instance['location'] : '';
@@ -169,6 +170,21 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
             $query_args['tax_query'] = $tax_query;
         }
 
+        # Add between dates
+
+        if( $between ){
+            $between_dates = explode( ';', $between );
+
+            $meta_query = array(
+                'key'      => 'date_release',
+                'value'    => $between_dates,
+                'compare'  => 'BETWEEN',
+                'type'     => 'DATE',
+            );
+
+            $query_args['meta_query'] = array( $meta_query );
+        }
+
         # Add post exceptions
 
         if( $except != '' ){
@@ -263,6 +279,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
         $instance['category']   = $new_instance['category'];
         $instance['tag']        = $new_instance['tag'];
         $instance['except']     = $new_instance['except'];
+        $instance['between']    = $new_instance['between'];
 
         $instance['publisher']  = $new_instance['publisher'];
         $instance['location']   = $new_instance['location'];
@@ -279,6 +296,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
         $category   = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
         $tag        = isset( $instance['tag'] ) ? esc_attr( $instance['tag'] ) : '';
         $except     = isset( $instance['except'] ) ? esc_attr( $instance['except'] ) : '';
+        $between    = isset( $instance['between'] ) ? esc_attr( $instance['between'] ) : '';
 
         $publisher  = isset( $instance['publisher'] ) ? esc_attr( $instance['publisher'] ) : '';
         $location   = isset( $instance['location'] ) ? esc_attr( $instance['location'] ) : '';
@@ -368,6 +386,13 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
 	<?php
 
         }
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'between' ); ?>"><?php _e( 'Releases from DATE to DATE (optional):', 'twentysixteen-child' ); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name( 'between' ); ?>" value="<?php echo esc_attr( $between ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'between' ); ?>" />
+	</p>
+        <?php
 
     }
 }
