@@ -47,6 +47,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
         ## The Query
 
         # Add every existing post types
+
         $post_types = array( 'post' );
 
         if( post_type_exists( 'book' ) ){
@@ -65,7 +66,8 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
             array_push( $post_types, 'concert' );
         }
 
-        # Add custom taxonomy to WP_Query
+        # Add taxonomy parameters
+
         $tax_query = array();
         $tax__used = false;
 
@@ -139,89 +141,62 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
             $tax__used  = true;
         }
 
-        # And compose
+        # Compose WP_Query
 
-        # If a custom taxonomy is defined
+        $query_args = array (
+            'post_status'         => 'publish',
+            'post_type'           => $post_types,
+            'posts_per_page'      => $postnumber,
+            'orderby'             => 'rand',
+            'ignore_sticky_posts' => 1
+        );
+
+        # Add category
+
+        if( $category ){
+            $query_args['category_name'] = $category;
+        }
+
+        # Add tag
+
+        if( $tag ){
+            $query_args['tag'] = $tag;
+        }
+
+        # Add custom taxonomies
 
         if( $tax__used ){
-            # If exclude posts is defined
-
-            if( $except != '' ){
-                $latest_posts = new WP_Query( array(
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $except,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'fields'              => 'ids',
-                    'ignore_sticky_posts' => 1
-                ));
-
-                $mediumtwo_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'post__not_in'        => $latest_posts->posts,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-
-            } else {
-
-                $mediumtwo_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-            }
-        }
-        else {
-            if( $except != '' ){
-                $latest_posts = new WP_Query( array(
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $except,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'fields'              => 'ids',
-                    'ignore_sticky_posts' => 1
-                ));
-
-                $mediumtwo_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'post__not_in'        => $latest_posts->posts,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-
-            } else {
-
-                $mediumtwo_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-            }
+            $query_args['tax_query'] = $tax_query;
         }
 
-        # The Loop
+        # Add post exceptions
+
+        if( $except != '' ){
+            $latest_args = array(
+                'post_status'         => 'publish',
+                'post_type'           => $post_types,
+                'posts_per_page'      => $except,
+                'category_name'       => $category,
+                'tag'                 => $tag,
+                'fields'              => 'ids',
+                'ignore_sticky_posts' => 1
+            );
+
+            if( $tax__used ){
+                $latest_args['tax_query'] = $tax_query;
+            }
+
+            $latest_posts = new WP_Query( $latest_args );
+
+            $query_args['post__not_in'] = $latest_posts->posts;
+        }
+
+        # Launch WP_Query with all arguments
+
+        $mediumtwo_query = new WP_Query( $query_args );
+
+        ## The Loop
+
         if( $mediumtwo_query->have_posts() ) : ?>
 
             <?php while( $mediumtwo_query->have_posts() ) : $mediumtwo_query->the_post() ?>
