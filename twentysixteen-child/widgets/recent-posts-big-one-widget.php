@@ -32,6 +32,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
         $category   = isset( $instance['category'] ) ? apply_filters( 'widget_title', $instance['category'] ) : '';
         $tag        = isset( $instance['tag'] ) ? $instance['tag'] : '';
         $except     = isset( $instance['except'] ) ? $instance['except'] : '';
+        $random     = isset( $instance['random'] ) ? $instance['random'] : '';
         $between    = isset( $instance['between'] ) ? $instance['between'] : '';
 
         $publisher  = isset( $instance['publisher'] ) ? $instance['publisher'] : '';
@@ -163,6 +164,12 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
             $query_args['tag'] = $tag;
         }
 
+        # Add random
+
+        if( $random == '1' ){
+            $query_args['orderby'] = 'rand';
+        }
+
         # Add custom taxonomies
 
         if( $tax__used ){
@@ -284,6 +291,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
         $instance['category']   = $new_instance['category'];
         $instance['tag']        = $new_instance['tag'];
         $instance['except']     = $new_instance['except'];
+        $instance['random']     = $new_instance['random'];
         $instance['between']    = $new_instance['between'];
 
         $instance['publisher']  = $new_instance['publisher'];
@@ -301,6 +309,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
         $category   = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
         $tag        = isset( $instance['tag'] ) ? esc_attr( $instance['tag'] ) : '';
         $except     = isset( $instance['except'] ) ? esc_attr( $instance['except'] ) : '';
+        $random     = isset( $instance['random'] ) ? esc_attr( $instance['random'] ) : '';
         $between    = isset( $instance['between'] ) ? esc_attr( $instance['between'] ) : '';
 
         $publisher  = isset( $instance['publisher'] ) ? esc_attr( $instance['publisher'] ) : '';
@@ -323,6 +332,11 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
 	<p>
 	    <label for="<?php echo $this->get_field_id( 'except' ); ?>"><?php _e( 'Number of posts to exclude (optional):', 'twentysixteen-child' ); ?></label>
 	    <input type="text" name="<?php echo $this->get_field_name( 'except' ); ?>" value="<?php echo esc_attr( $except ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'except' ); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'random' ); ?>"><?php _e( 'Display randomly posts (optional):', 'twentysixteen-child' ); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name( 'random' ); ?>" value="<?php echo esc_attr( $random ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'random' ); ?>" />
 	</p>
 
 	<p>
