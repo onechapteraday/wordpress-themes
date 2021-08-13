@@ -26,18 +26,19 @@ class twentysixteenchild_randomposts_small_one extends WP_Widget {
         );
     }
 
-    public function widget($args, $instance) {
-        $title      = isset($instance['title']) ? $instance['title'] : '';
-        $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
-        $category   = isset($instance['category']) ? apply_filters( 'widget_title', $instance['category']) : '';
-        $tag        = isset($instance['tag']) ? $instance['tag'] : '';
-        $except     = isset($instance['except']) ? $instance['except'] : '';
+    public function widget( $args, $instance ){
+        $title      = isset( $instance['title'] ) ? $instance['title'] : '';
+        $postnumber = isset( $instance['postnumber'] ) ? $instance['postnumber'] : '';
+        $category   = isset( $instance['category'] ) ? apply_filters( 'widget_title', $instance['category'] ) : '';
+        $tag        = isset( $instance['tag'] ) ? $instance['tag'] : '';
+        $except     = isset( $instance['except'] ) ? $instance['except'] : '';
+        $between    = isset( $instance['between'] ) ? $instance['between'] : '';
 
-        $publisher  = isset($instance['publisher']) ? $instance['publisher'] : '';
-        $location   = isset($instance['location']) ? $instance['location'] : '';
-        $person     = isset($instance['person']) ? $instance['person'] : '';
-        $prize      = isset($instance['prize']) ? $instance['prize'] : '';
-        $selection  = isset($instance['selection']) ? $instance['selection'] : '';
+        $publisher  = isset( $instance['publisher'] ) ? $instance['publisher'] : '';
+        $location   = isset( $instance['location'] ) ? $instance['location'] : '';
+        $person     = isset( $instance['person'] ) ? $instance['person'] : '';
+        $prize      = isset( $instance['prize'] ) ? $instance['prize'] : '';
+        $selection  = isset( $instance['selection'] ) ? $instance['selection'] : '';
 
         echo $args['before_widget'];
 
@@ -47,6 +48,7 @@ class twentysixteenchild_randomposts_small_one extends WP_Widget {
         ## The Query
 
         # Add every existing post types
+
         $post_types = array( 'post' );
 
         if( post_type_exists( 'book' ) ){
@@ -66,6 +68,7 @@ class twentysixteenchild_randomposts_small_one extends WP_Widget {
         }
 
         # Add custom taxonomy to WP_Query
+
         $tax_query = array();
         $tax__used = false;
 
@@ -139,87 +142,76 @@ class twentysixteenchild_randomposts_small_one extends WP_Widget {
             $tax__used  = true;
         }
 
-        # And compose
+        # Compose WP_Query
 
-        if( $tax_query ){
-            if( $except != '' ){
+        $query_args = array (
+            'post_status'         => 'publish',
+            'post_type'           => $post_types,
+            'posts_per_page'      => $postnumber,
+            'ignore_sticky_posts' => 1
+        );
 
-                $latest_posts = new WP_Query( array(
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $except,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'fields'              => 'ids',
-                    'ignore_sticky_posts' => 1
-                ));
+        # Add category
 
-                $smallone_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'post__not_in'        => $latest_posts->posts,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-
-            } else {
-
-                $smallone_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'tax_query'           => $tax_query,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-            }
-        }
-        else {
-            if( $except != '' ){
-
-                $latest_posts = new WP_Query( array(
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $except,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'fields'              => 'ids',
-                    'ignore_sticky_posts' => 1
-                ));
-
-                $smallone_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-		    'post__not_in'        => $latest_posts->posts,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-
-            } else {
-
-                $smallone_query = new WP_Query(array (
-                    'post_status'         => 'publish',
-                    'post_type'           => $post_types,
-                    'posts_per_page'      => $postnumber,
-                    'category_name'       => $category,
-                    'tag'                 => $tag,
-                    'orderby'             => 'rand',
-                    'ignore_sticky_posts' => 1
-                ));
-            }
+        if( $category ){
+            $query_args['category_name'] = $category;
         }
 
-        # The Loop
+        # Add tag
+
+        if( $tag ){
+            $query_args['tag'] = $tag;
+        }
+
+        # Add custom taxonomies
+
+        if( $tax__used ){
+            $query_args['tax_query'] = $tax_query;
+        }
+
+        # Add between dates
+
+        if( $between ){
+            $between_dates = explode( ';', $between );
+
+            $meta_query = array(
+                'key'      => 'date_release',
+                'value'    => $between_dates,
+                'compare'  => 'BETWEEN',
+                'type'     => 'DATE',
+            );
+
+            $query_args['meta_query'] = array( $meta_query );
+        }
+
+        # Add post exceptions
+
+        if( $except != '' ){
+            $latest_args = array(
+                'post_status'         => 'publish',
+                'post_type'           => $post_types,
+                'posts_per_page'      => $except,
+                'category_name'       => $category,
+                'tag'                 => $tag,
+                'fields'              => 'ids',
+                'ignore_sticky_posts' => 1
+            );
+
+            if( $tax__used ){
+                $latest_args['tax_query'] = $tax_query;
+            }
+
+            $latest_posts = new WP_Query( $latest_args );
+
+            $query_args['post__not_in'] = $latest_posts->posts;
+        }
+
+        # Launch WP_Query with all arguments
+
+        $smallone_query = new WP_Query( $query_args );
+
+        ## The Loop
+
         if( $smallone_query->have_posts() ) : ?>
 
             <?php while( $smallone_query->have_posts() ) : $smallone_query->the_post() ?>
@@ -357,6 +349,13 @@ class twentysixteenchild_randomposts_small_one extends WP_Widget {
 	<?php
 
         }
+
+        ?>
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'between' ); ?>"><?php _e( 'Releases from DATE to DATE (optional):', 'twentysixteen-child' ); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name( 'between' ); ?>" value="<?php echo esc_attr( $between ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'between' ); ?>" />
+	</p>
+        <?php
 
     }
 }
