@@ -10,7 +10,7 @@
 
 class twentysixteenchild_randomposts_medium_two extends WP_Widget {
 
-    public function __construct() {
+    public function __construct(){
         parent::__construct(
             # Base ID of your widget
             'twentysixteenchild_randomposts_medium_two',
@@ -26,24 +26,24 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
         );
     }
 
-    public function widget($args, $instance) {
-        $title      = isset($instance['title']) ? $instance['title'] : '';
-        $postnumber = isset($instance['postnumber']) ? $instance['postnumber'] : '';
-        $category   = isset($instance['category']) ? apply_filters( 'widget_title', $instance['category']) : '';
-        $tag        = isset($instance['tag']) ? $instance['tag'] : '';
-        $except     = isset($instance['except']) ? $instance['except'] : '';
-        $between    = isset($instance['between']) ? $instance['between'] : '';
+    public function widget( $args, $instance ){
+        $title      = isset( $instance['title'] ) ? $instance['title'] : '';
+        $postnumber = isset( $instance['postnumber'] ) ? $instance['postnumber'] : '';
+        $category   = isset( $instance['category'] ) ? apply_filters( 'widget_title', $instance['category'] ) : '';
+        $tag        = isset( $instance['tag'] ) ? $instance['tag'] : '';
+        $except     = isset( $instance['except'] ) ? $instance['except'] : '';
+        $between    = isset( $instance['between'] ) ? $instance['between'] : '';
 
-        $publisher  = isset($instance['publisher']) ? $instance['publisher'] : '';
-        $location   = isset($instance['location']) ? $instance['location'] : '';
-        $person     = isset($instance['person']) ? $instance['person'] : '';
-        $prize      = isset($instance['prize']) ? $instance['prize'] : '';
-        $selection  = isset($instance['selection']) ? $instance['selection'] : '';
+        $publisher  = isset( $instance['publisher'] ) ? $instance['publisher'] : '';
+        $location   = isset( $instance['location'] ) ? $instance['location'] : '';
+        $person     = isset( $instance['person'] ) ? $instance['person'] : '';
+        $prize      = isset( $instance['prize'] ) ? $instance['prize'] : '';
+        $selection  = isset( $instance['selection'] ) ? $instance['selection'] : '';
 
         echo $args['before_widget'];
 
         if( ! empty( $title ) )
-            echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html($title) .'</span></h3></div>';
+            echo '<div class="widget-title-wrap"><h3 class="widget-title"><span>'. esc_html( $title ) .'</span></h3></div>';
 
         ## The Query
 
@@ -237,7 +237,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
                                     $comments_letter = $comments_number;
                                     $locale          = substr( get_locale(), 0, 2 );
 
-                                    if( class_exists('NumberFormatter') ){
+                                    if( class_exists( 'NumberFormatter' ) ){
                                         $numberFormatter = new NumberFormatter( $locale, NumberFormatter::SPELLOUT );
                                         $comments_letter = ucfirst( $numberFormatter->format( $comments_number ) );
                                     }
@@ -332,7 +332,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
 
         <?php
 
-        if( taxonomy_exists( 'publisher' )) {
+        if( taxonomy_exists( 'publisher' ) ){
 
         ?>
 	<p>
@@ -343,7 +343,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
 
         }
 
-        if( taxonomy_exists( 'location' )) {
+        if( taxonomy_exists( 'location' ) ){
 
         ?>
 	<p>
@@ -354,7 +354,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
 
         }
 
-        if( taxonomy_exists( 'person' )) {
+        if( taxonomy_exists( 'person' ) ){
 
         ?>
 	<p>
@@ -365,7 +365,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
 
         }
 
-        if( taxonomy_exists( 'prize' )) {
+        if( taxonomy_exists( 'prize' ) ){
 
         ?>
 	<p>
@@ -376,7 +376,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
 
         }
 
-        if( taxonomy_exists( 'selection' )) {
+        if( taxonomy_exists( 'selection' ) ){
 
         ?>
 	<p>
@@ -398,7 +398,7 @@ class twentysixteenchild_randomposts_medium_two extends WP_Widget {
 }
 
 # Register and load the widget
-function twentysixteenchild_randomposts_medium_two_register() {
+function twentysixteenchild_randomposts_medium_two_register(){
     register_widget( 'twentysixteenchild_randomposts_medium_two' );
 }
 
