@@ -286,13 +286,13 @@ class twentysixteenchild_recentposts_small_one extends WP_Widget {
 	</p>
 
 	<p>
-	    <label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category slug (optional):','twentysixteen-child'); ?></label>
-            <input type="text" name="<?php echo $this->get_field_name('category'); ?>" value="<?php echo esc_attr($category); ?>" class="widefat" id="<?php echo $this->get_field_id('category'); ?>" />
+	    <label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Category slug (optional):', 'twentysixteen-child' ); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name( 'category' ); ?>" value="<?php echo esc_attr( $category ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'category' ); ?>" />
 	</p>
 
 	<p>
-	    <label for="<?php echo $this->get_field_id('tag'); ?>"><?php _e('Tag slug (optional):','twentysixteen-child'); ?></label>
-            <input type="text" name="<?php echo $this->get_field_name('tag'); ?>" value="<?php echo esc_attr($tag); ?>" class="widefat" id="<?php echo $this->get_field_id('tag'); ?>" />
+	    <label for="<?php echo $this->get_field_id( 'tag' ); ?>"><?php _e( 'Tag slug (optional):', 'twentysixteen-child' ); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name( 'tag' ); ?>" value="<?php echo esc_attr( $tag ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'tag' ); ?>" />
 	</p>
 
         <?php
