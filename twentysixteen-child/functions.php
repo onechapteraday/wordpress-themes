@@ -750,8 +750,6 @@ require_once( __DIR__ . '/widgets/recent-posts-big-one-widget.php');
 require_once( __DIR__ . '/widgets/recent-posts-big-two-widget.php');
 require_once( __DIR__ . '/widgets/recent-posts-colored-widget.php');
 
-require_once( __DIR__ . '/widgets/random-recent-posts-medium-two-widget.php');
-
 require_once( __DIR__ . '/widgets/popular-tags-in-category-widget.php');
 
 require_once( __DIR__ . '/widgets/quote-widget.php');
