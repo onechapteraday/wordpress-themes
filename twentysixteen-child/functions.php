@@ -829,27 +829,27 @@ function jetpack_relatedposts_remove_display() {
 add_filter( 'wp', 'jetpack_relatedposts_remove_display', 20 );
 
 # Update thumbnail size
+# Use in related posts, but also in open graph tags
+# TODO: Find a way to compartmentalize image used for each sharing technique
 
-function jetpack_relatedposts_custom_image( $media, $post_id, $args ) {
+function jetpack_sharing_custom_image( $media, $post_id, $args ) {
     if ( $media ) {
-        $source = $media[0]['src'];
+        $src_full = get_the_post_thumbnail_url( $post_id, 'twentysixteenchild-fullwidth' );
+        $src_mini = get_the_post_thumbnail_url( $post_id, 'twentysixteenchild-medium-portrait' );
 
-        $info = pathinfo( $source );
-        $dirname   = $info['dirname'];
-        $filename  = $info['filename'];
-        $extension = $info['extension'];
-
-        $media[0]['src'] = $dirname . '/' . $filename . '-420x560.' . $extension;
+        $media[0]['src'] = $src_full;
+        $media[0]['src_width']   = 1200;
+        $media[0]['src_height']  = 800;
 
         return $media;
     }
 }
 
-add_filter( 'jetpack_images_get_images', 'jetpack_relatedposts_custom_image', 10, 3 );
+add_filter( 'jetpack_images_get_images', 'jetpack_sharing_custom_image', 10, 3 );
 
 function jetpack_relatedposts_update_thumbnail_size( $thumbnail_size ){
     $thumbnail_size['width'] = 195;
-    $thumbnail_size['height'] = 260;
+    $thumbnail_size['height'] = 130;
     $thumbnail_size['crop'] = true;
 
     return $thumbnail_size;
