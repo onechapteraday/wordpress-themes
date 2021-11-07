@@ -32,6 +32,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
         $category   = isset( $instance['category'] ) ? apply_filters( 'widget_title', $instance['category'] ) : '';
         $tag        = isset( $instance['tag'] ) ? $instance['tag'] : '';
         $except     = isset( $instance['except'] ) ? $instance['except'] : '';
+        $excluded   = isset( $instance['excluded'] ) ? $instance['excluded'] : '';
         $random     = isset( $instance['random'] ) ? $instance['random'] : '';
         $between    = isset( $instance['between'] ) ? $instance['between'] : '';
 
@@ -70,6 +71,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
 
         # Add custom taxonomy to WP_Query
 
+        $posts_excluded = array();
         $tax_query = array();
         $tax__used = false;
 
@@ -191,13 +193,21 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
             $query_args['meta_query'] = array( $meta_query );
         }
 
-        # Add post exceptions
+        # Add excluded posts
+
+        if( $excluded ){
+            $posts_excluded = explode( ',', $excluded );
+            $query_args['post__not_in'] = $posts_excluded;
+        }
+
+        # Add number of posts to exclude
 
         if( $except != '' ){
             $latest_args = array(
                 'post_status'         => 'publish',
                 'post_type'           => $post_types,
                 'posts_per_page'      => $except,
+                'post__not_in'        => $posts_excluded,
                 'category_name'       => $category,
                 'tag'                 => $tag,
                 'fields'              => 'ids',
@@ -209,8 +219,9 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
             }
 
             $latest_posts = new WP_Query( $latest_args );
+            $all_excluded = array_merge( $posts_excluded, $latest_posts->posts );
 
-            $query_args['post__not_in'] = $latest_posts->posts;
+            $query_args['post__not_in'] = $all_excluded;
         }
 
         # Launch WP_Query with all arguments
@@ -291,6 +302,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
         $instance['category']   = $new_instance['category'];
         $instance['tag']        = $new_instance['tag'];
         $instance['except']     = $new_instance['except'];
+        $instance['excluded']   = $new_instance['excluded'];
         $instance['random']     = $new_instance['random'];
         $instance['between']    = $new_instance['between'];
 
@@ -309,6 +321,7 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
         $category   = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
         $tag        = isset( $instance['tag'] ) ? esc_attr( $instance['tag'] ) : '';
         $except     = isset( $instance['except'] ) ? esc_attr( $instance['except'] ) : '';
+        $excluded   = isset( $instance['excluded'] ) ? esc_attr( $instance['excluded'] ) : '';
         $random     = isset( $instance['random'] ) ? esc_attr( $instance['random'] ) : '';
         $between    = isset( $instance['between'] ) ? esc_attr( $instance['between'] ) : '';
 
@@ -332,6 +345,11 @@ class twentysixteenchild_recentposts_big_one extends WP_Widget {
 	<p>
 	    <label for="<?php echo $this->get_field_id( 'except' ); ?>"><?php _e( 'Number of posts to exclude (optional):', 'twentysixteen-child' ); ?></label>
 	    <input type="text" name="<?php echo $this->get_field_name( 'except' ); ?>" value="<?php echo esc_attr( $except ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'except' ); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'excluded' ); ?>"><?php _e( 'Posts to exclude (optional):', 'twentysixteen-child' ); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name( 'excluded' ); ?>" value="<?php echo esc_attr( $excluded ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'excluded' ); ?>" />
 	</p>
 
 	<p>
