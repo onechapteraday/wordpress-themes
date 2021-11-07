@@ -2439,6 +2439,10 @@ header ol.breadcrumb li:first-child:before {
  * 11.7 - Recent Posts (Colored)
  */
 
+.rp-color header.entry-header {
+    margin: 0;
+}
+
 .rp-color .entry-thumb .post-thumbnail,
 .rp-color .entry-thumb .post-thumbnail figure {
     margin: 0 0 12px;
@@ -2836,10 +2840,6 @@ p > video {
 
         .rp-color header {
             margin: 0;
-        }
-
-        .rp-color header.entry-header {
-                margin: 0;
         }
 }
 
