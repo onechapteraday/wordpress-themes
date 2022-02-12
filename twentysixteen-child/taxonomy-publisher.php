@@ -82,30 +82,30 @@ get_header(); ?>
 
 				    if( $publisher_link || $publisher_twitter || $publisher_facebook || $publisher_instagram || $publisher_youtube ){
 				        echo '<div class="taxonomy-description social-icons">';
-				        echo '<p><u>' . __( 'More information', 'twentysixteen-child' ) . '</u>' . __( ': ', 'twentysixteen-child' );
-
+				        echo '<p><u>' . __( 'More information', 'twentysixteen-child' ) . '</u>' . __( ': ', 'twentysixteen-child' ) . '</p>';
+				        echo '<ul>';
 
 				        if ( $publisher_link ) {
-				            echo '<a class="icon-link" href="' . $publisher_link . '" target="_blank" title="'. __( 'Website', 'twentysixteen' ) . '"></a>';
+				            echo '<li><a class="icon-link" href="' . $publisher_link . '" target="_blank" title="'. __( 'Website', 'twentysixteen' ) . '"></a></li>';
 				        }
 
 				        if ( $publisher_facebook ) {
-				            echo '<a class="icon-facebook" href="http://facebook.com/' . $publisher_facebook . '" target="_blank" title="Facebook"></a>';
+				            echo '<li><a class="icon-facebook" href="http://facebook.com/' . $publisher_facebook . '" target="_blank" title="Facebook"></a></li>';
 				        }
 
 				        if ( $publisher_twitter ) {
-				            echo '<a class="icon-twitter" href="http://twitter.com/' . $publisher_twitter . '" target="_blank" title="Twitter"></a>';
+				            echo '<li><a class="icon-twitter" href="http://twitter.com/' . $publisher_twitter . '" target="_blank" title="Twitter"></a></li>';
 				        }
 
 				        if ( $publisher_instagram ) {
-				            echo '<a class="icon-instagram" href="http://instagram.com/' . $publisher_instagram . '" target="_blank" title="Instagram"></a>';
+				            echo '<li><a class="icon-instagram" href="http://instagram.com/' . $publisher_instagram . '" target="_blank" title="Instagram"></a></li>';
 				        }
 
 				        if ( $publisher_youtube ) {
-				            echo '<a class="icon-youtube" href="http://youtube.com/' . $publisher_youtube . '" target="_blank" title="YouTube"></a>';
+				            echo '<li><a class="icon-youtube" href="http://youtube.com/' . $publisher_youtube . '" target="_blank" title="YouTube"></a></li>';
 				        }
 
-				        echo '</p>';
+				        echo '</ul>';
 				        echo '</div>';
 				    }
 				?>
