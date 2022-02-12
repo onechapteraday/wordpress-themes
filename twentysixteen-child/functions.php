@@ -922,7 +922,17 @@ function update_post_order_query( $query ){
         $queried_slug = $query->queried_object->slug;
 
         $sql = "SELECT *,
-                (
+                    (
+                        SELECT m.`meta_value`
+                        FROM `wp_postmeta` m, `wp_term_taxonomy` x, `wp_term_relationships` r, `wp_terms` t
+                        WHERE m.`post_id` = p.ID
+                        AND m.`post_id` = r.object_id
+                        AND t.term_id = x.term_id
+                        AND r.term_taxonomy_id = x.term_taxonomy_id
+                        AND m.`meta_key` = 'date_first_publication'
+                        AND t.`slug` = '$queried_slug'
+                    ) as `first_release`,
+                    (
                         SELECT m.`meta_value`
                         FROM `wp_postmeta` m, `wp_term_taxonomy` x, `wp_term_relationships` r, `wp_terms` t
                         WHERE m.`post_id` = p.ID
@@ -931,7 +941,17 @@ function update_post_order_query( $query ){
                         AND r.term_taxonomy_id = x.term_taxonomy_id
                         AND m.`meta_key` = 'date_release'
                         AND t.`slug` = '$queried_slug'
-                    ) as `release`
+                    ) as `release`,
+                    (
+                        SELECT m.`meta_value`
+                        FROM `wp_postmeta` m, `wp_term_taxonomy` x, `wp_term_relationships` r, `wp_terms` t
+                        WHERE m.`post_id` = p.ID
+                        AND m.`post_id` = r.object_id
+                        AND t.term_id = x.term_id
+                        AND r.term_taxonomy_id = x.term_taxonomy_id
+                        AND m.`meta_key` = 'author'
+                        AND t.`slug` = '$queried_slug'
+                    ) as `work_authors`
                 FROM `wp_posts` p, `wp_terms` t, `wp_term_relationships` r, `wp_term_taxonomy` x
                 WHERE p.ID = r.object_id
                 AND t.term_id = x.term_id
@@ -945,8 +965,9 @@ function update_post_order_query( $query ){
                     )
                 )
                 ORDER BY
-                    CASE
-                        WHEN `release` IS NOT NULL THEN `release`
+                        CASE
+                        WHEN `work_authors` NOT LIKE '%$queried_slug%' THEN `release`
+                        WHEN `first_release` IS NOT NULL THEN `first_release`
                         ELSE p.post_date
                     END DESC";
 
@@ -970,15 +991,39 @@ add_action( 'pre_get_posts', 'update_post_order_query' );
  */
 
 function twentysixteen_child_release_date(){
-    $release_date = get_post_meta( get_the_ID(), 'date_release', true );
-    $post_type    = get_post_type( get_the_ID() );
+    $release_date  = get_post_meta( get_the_ID(), 'date_release', true );
+    $first_date    = get_post_meta( get_the_ID(), 'date_first_publication', true );
+    $post_type     = get_post_type( get_the_ID() );
+    $display_first = false;
 
     if( $post_type == 'book' ){
-        printf( '<span class="posted-on book-release-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
-            _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ),
-            esc_url( get_permalink() ),
-            _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ) . ' ' . date_i18n( 'j F Y', strtotime( $release_date ) )
-        );
+
+        # If taxonomy = person
+        if( is_tax( 'person' ) ){
+            $authors = get_post_meta( get_the_ID(), 'author', true );
+
+            # Check tax
+            $slug = get_queried_object()->slug;
+
+            # If tax is author then display first publication date
+            if( strpos( $authors, $slug ) !== false ){
+                $display_first = true;
+            }
+        }
+
+        if( $display_first && $release_date != $first_date ){
+            printf( '<span class="posted-on book-release-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
+                _x( 'First edition released on', 'Used before release date of book.', 'twentysixteen-child' ),
+                esc_url( get_permalink() ),
+                _x( 'First edition released on', 'Used before release date of book.', 'twentysixteen-child' ) . ' ' . str_replace('1 ', '1<sup>er</sup> ', date_i18n( 'j F Y', strtotime( $first_date ) ) )
+            );
+        } else {
+            printf( '<span class="posted-on book-release-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
+                _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ),
+                esc_url( get_permalink() ),
+                _x( 'Released on', 'Used before release date of book.', 'twentysixteen-child' ) . ' ' . date_i18n( 'j F Y', strtotime( $release_date ) )
+            );
+        }
     }
 
     if( $post_type == 'album' ){
