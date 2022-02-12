@@ -147,14 +147,13 @@ figure {
 }
 
 figcaption.wp-post-image-copyright {
-    font-family: Montserrat, "Helvetica Neue", sans-serif;
     font-size: 10px;
     color: grey;
     margin: 5px 0 0;
 }
 
 figcaption.wp-post-image-copyright a {
-    color: grey;
+    color: #a6a6a6;
     outline: none;
     cursor: default;
 }
@@ -338,8 +337,8 @@ select,
 textarea {
 	color: #1a1a1a;
 	font-family: Merriweather, Georgia, serif;
-        font-size: 14px;
-        font-size: 0.875rem;
+        font-size: 16px;
+        font-size: 1rem;
 	line-height: 1.9;
 }
 
@@ -370,8 +369,8 @@ blockquote {
 	border: 0 solid #1a1a1a;
 	border-left-width: 4px;
 	color: #686868;
-        font-size: 18px;
-        font-size: 1.125rem;
+        font-size: 20px;
+        font-size: 1.25rem;
 	font-style: italic;
 	line-height: 1.55;
 	margin: 0 0 1.4736842105em;
@@ -399,8 +398,8 @@ blockquote cite,
 blockquote small {
 	color: #1a1a1a;
 	display: block;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	line-height: 1.75;
 }
 
@@ -1597,8 +1596,8 @@ blockquote:after,
 /* Subscribe */
 #subscribe-text,
 #subscribe-text + p {
-        font-size: 12px;
-        font-size: 0.75rem;
+        font-size: 13px;
+        font-size: 0.8125rem;
 }
 
 /* Popular Prizes */
@@ -2102,11 +2101,9 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .entry-footer {
-	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	color: #8e8e8e;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	line-height: 1.6153846154;
 	margin-top: 2.1538461538em;
 }
 
@@ -2115,7 +2112,7 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .entry-footer a {
-	color: #686868;
+	color: #8e8e8e;
 }
 
 .entry-footer a:hover,
@@ -2134,11 +2131,6 @@ body:not(.search-results) .entry-summary > :last-child,
 	height: 21px;
 	margin: -0.1538461538em 0.5384615385em 0 0;
 	width: 21px;
-}
-
-footer.entry-footer {
-    font-size: 12px;
-    font-size: 0.75em;
 }
 
 footer.entry-footer span.author.vcard a,
@@ -2461,16 +2453,16 @@ header ol.breadcrumb li:first-child:before {
 
 .rp-color h3.entry-title {
     margin: 0;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 1.55;
 }
 
 .rp-color p.summary {
     margin: 5px 0 10px;
-    font-size: 12px;
-    font-size: 0.75rem;
-    line-height: 1.65;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.8;
 }
 
 .rp-color .entry-thumb {
@@ -3319,8 +3311,8 @@ p > video {
 	}
 
 	.widget {
-		font-size: 13px;
-		font-size: 0.8125rem;
+		font-size: 14px;
+		font-size: 0.875rem;
 		line-height: 1.75;
 		margin-bottom: 3.230769231em;
 		padding-top: 1.615384615em;

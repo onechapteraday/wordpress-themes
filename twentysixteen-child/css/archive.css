@@ -21,8 +21,8 @@
 
 .taxonomy-description {
 	color: #686868;
-        font-size: 12px;
-        font-size: 0.75rem;
+        font-size: 14px;
+        font-size: 0.875rem;
 	line-height: 1.6153846154;
 }
 
@@ -30,11 +30,15 @@
 	margin: 0.5384615385em 0 12px;
 }
 
-.taxonomy-description ul {
+.taxonomy-description > ul ul {
+        list-style-type: circle;
+}
+
+.taxonomy-description > ul {
         margin: -10px 0 0 1.25em;
 }
 
-.tax-selection .taxonomy-description ul {
+.tax-selection .taxonomy-description > ul {
         margin-top: 0;
 }
 
@@ -44,6 +48,22 @@
 
 .taxonomy-description.social-icons {
         margin-top: 10px;
+}
+
+.taxonomy-description.social-icons p,
+.taxonomy-description.social-icons ul {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        vertical-align: middle;
+}
+
+.taxonomy-description.social-icons ul {
+        margin-left: 5px;
+}
+
+.taxonomy-description.social-icons ul li {
+        display: inline;
 }
 
 .taxonomy-description.publisher-collections {
@@ -78,6 +98,11 @@ body.tax-person    article:not(.sticky) .entry-footer .album-release-date,
 body.tax-person    article:not(.sticky) .entry-footer .book-release-date,
 body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
         display: block;
+}
+
+body.tax-person article .entry-footer .comments-link,
+body.tax-person article .entry-footer .cat-links {
+        display: none;
 }
 
 

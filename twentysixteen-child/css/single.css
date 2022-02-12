@@ -113,8 +113,11 @@
  */
 
 .single-metadata {
-  font-size: 13px;
-  margin-top: 40px;
+  font-size: 14px;
+}
+
+.entry-content .single-metadata h2 {
+  margin: 2em 0 1em;
 }
 
 .single-metadata td + td {
@@ -274,6 +277,7 @@ a.logo_amazon:hover {
 
 .comments-area {
 	margin: 0 7.6923% 3.5em;
+	line-height: 26.6px;
 }
 
 .comment-list + .comment-respond,
@@ -430,9 +434,8 @@ a.logo_amazon:hover {
 .logged-in-as,
 .form-allowed-tags {
 	color: #686868;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.6153846154;
+	font-size: 14px;
+	font-size: 0.875rem;
 	margin-bottom: 2.1538461538em;
 }
 
