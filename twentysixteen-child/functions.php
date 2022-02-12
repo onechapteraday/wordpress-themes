@@ -834,8 +834,8 @@ function jetpack_sharing_custom_image( $media, $post_id, $args ) {
 add_filter( 'jetpack_images_get_images', 'jetpack_sharing_custom_image', 10, 3 );
 
 function jetpack_relatedposts_update_thumbnail_size( $thumbnail_size ){
-    $thumbnail_size['width'] = 195;
-    $thumbnail_size['height'] = 130;
+    $thumbnail_size['width'] = 210;
+    $thumbnail_size['height'] = 140;
     $thumbnail_size['crop'] = true;
 
     return $thumbnail_size;
