@@ -1138,6 +1138,10 @@ function wp_remove_all_jp_css() {
 
 add_action('wp_print_styles', 'wp_remove_all_jp_css' );
 
+# Lazy loading disabled
+
+add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+
 
 # Enable/disable susbcriptions for a specific post
 
