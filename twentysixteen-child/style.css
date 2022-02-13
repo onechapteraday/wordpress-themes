@@ -290,13 +290,30 @@ optgroup {
  * 2.0 - Genericons
  */
 
-.widget.jetpack_widget_social_icons li {
-    width: 50px;
-    margin-right: 1em;
-}
-
-.jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item .icon-feed {
-    display: none;
+.menu-item-has-children a:after,
+.social-navigation a:before,
+.dropdown-toggle:after,
+.bypostauthor > article .fn:after,
+.comment-reply-title small a:before,
+.pagination .prev:before,
+.pagination .next:before,
+.pagination .nav-links:before,
+.pagination .nav-links:after,
+.search-submit:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-family: "Genericons";
+        font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        line-height: 1;
+        speak: none;
+        text-align: center;
+        text-decoration: inherit;
+        text-transform: none;
+        vertical-align: top;
 }
 
 
@@ -949,7 +966,11 @@ a:active {
 
 .social-navigation li {
 	float: left;
-	margin: 0 0.4375em 0.4375em 0;
+	margin: 0 0 0.4375em 0.4375em;
+}
+
+.social-navigation li:first-child {
+        margin-left: 0;
 }
 
 .social-navigation a {
@@ -964,6 +985,7 @@ a:active {
 }
 
 .social-navigation a:before {
+	position: absolute;
 	content: "\f415";
 	height: 33px;
 	line-height: 33px;
@@ -1023,6 +1045,8 @@ a:active {
 }
 
 .widget-area .social-navigation a:before {
+        top: 12px;
+        left: 11px;
         font-size: 35px;
 }
 
