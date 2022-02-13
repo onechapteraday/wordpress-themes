@@ -367,10 +367,6 @@
     font-style: italic;
 }
 
-.rp-medium-one .entry-comments {
-    display: none;
-}
-
 .rp-medium-one figcaption.wp-post-image-copyright {
     font-size: 9px;
 }
@@ -434,7 +430,7 @@
 
 .rp-medium-two p.summary {
     display: block;
-    margin: 15px 0;
+    margin: 15px 0 8px;
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.8;

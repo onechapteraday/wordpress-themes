@@ -2481,12 +2481,6 @@ header ol.breadcrumb li:first-child:before {
     background: #ebf8fe;
 }
 
-.sidebar-book .rp-color .entry-cats,
-.sidebar .rp-color .story footer.entry-footer,
-.sidebar-book .rp-color .story footer.entry-footer {
-    display: none;
-}
-
 body:not(.search-results) article:not(.type-page).rp-color .entry-footer {
     float: none;
     margin: 0;

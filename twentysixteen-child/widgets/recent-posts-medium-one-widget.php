@@ -243,36 +243,6 @@ class twentysixteenchild_recentposts_medium_one extends WP_Widget {
                         <h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h3>
                         <p class="summary"><?php echo twentysixteenchild_excerpt(30); ?></p>
                         <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
-
-                        <?php if ( comments_open() ) : ?>
-                            <div class="entry-comments">
-				<?php
-                                    $comments_number = get_comments_number();
-                                    $comments_letter = $comments_number;
-                                    $locale          = substr( get_locale(), 0, 2 );
-
-                                    if( class_exists( 'NumberFormatter' ) ){
-                                        $numberFormatter = new NumberFormatter( $locale, NumberFormatter::SPELLOUT );
-                                        $comments_letter = ucfirst( $numberFormatter->format( $comments_number ) );
-                                    }
-
-                                    comments_popup_link(
-                                        # zero
-                                        sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ),
-
-                                        # one
-                                        $comments_letter . ' ' . __( 'comment', 'twentysixteen-child' ),
-
-                                        # more
-                                        $comments_letter . ' ' . __( 'comments', 'twentysixteen-child' )
-                                    );
-                                ?>
-                            </div><!-- end .entry-comments -->
-                        <?php endif; // comments_open() ?>
-
-                        <div class="entry-cats">
-                            <?php the_category( ', ' ); ?>
-                        </div><!-- end .entry-cats -->
                     </div><!--end .rp-medium-one -->
                 </article><!--end .rp-medium-one -->
             <?php endwhile ?>

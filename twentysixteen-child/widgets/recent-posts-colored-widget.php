@@ -245,10 +245,6 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
                     <?php endif; ?>
 
                     <header class="entry-header">
-                        <div class="entry-cats">
-                            <?php the_category( ', ' ); ?>
-                        </div><!-- end .entry-cats -->
-
                         <h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentysixteen-child' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a></h3>
                     </header>
 
@@ -257,32 +253,6 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
 
                         <footer class="entry-footer">
                             <div class="entry-date"><a href="<?php the_permalink(); ?>" class="entry-date"><?php echo get_the_date(); ?></a></div>
-
-                            <?php if ( comments_open() ) : ?>
-                                <div class="entry-comments">
-				    <?php
-                                        $comments_number = get_comments_number();
-                                        $comments_letter = $comments_number;
-                                        $locale          = substr( get_locale(), 0, 2 );
-
-                                        if( class_exists( 'NumberFormatter' ) ){
-                                            $numberFormatter = new NumberFormatter( $locale, NumberFormatter::SPELLOUT );
-                                            $comments_letter = ucfirst( $numberFormatter->format( $comments_number ) );
-                                        }
-
-                                        comments_popup_link(
-                                            # zero
-                                            sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ),
-
-                                            # one
-                                            $comments_letter . ' ' . __( 'comment', 'twentysixteen-child' ),
-
-                                            # more
-                                            $comments_letter . ' ' . __( 'comments', 'twentysixteen-child' )
-                                        );
-                                    ?>
-                                </div><!-- end .entry-comments -->
-                            <?php endif; // comments_open() ?>
                         </footer>
                     </div><!--end .story -->
                  </article><!--end .rp-color -->
