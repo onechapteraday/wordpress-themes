@@ -44,7 +44,6 @@
 }
 
 .akismet_comment_form_privacy_notice {
-    font-family: Montserrat, "Helvetica Neue", sans-serif;
     font-size: 12px;
     font-size: 0.75rem;
     margin-top: 30px;
@@ -288,10 +287,8 @@ a.logo_amazon:hover {
 .comments-title,
 .comment-reply-title {
 	border-top: 4px solid #1a1a1a;
-        font-family: Merriweather, Georgia, serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
-	font-weight: 700;
         line-height: 1.3;
 	padding-top: 1.217391304em;
 }
@@ -344,7 +341,6 @@ a.logo_amazon:hover {
 .comment-metadata,
 .pingback .edit-link {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 12px;
 	font-size: 0.75rem;
 	line-height: 1.6153846154;
@@ -394,7 +390,6 @@ a.logo_amazon:hover {
 	border-radius: 2px;
 	color: #007acc;
 	display: inline-block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1;
@@ -410,13 +405,12 @@ a.logo_amazon:hover {
 }
 
 .comment-form {
-	padding-top: 1.75em;
+	padding-top: 1.25em;
 }
 
 .comment-form label {
 	color: #686868;
 	display: inline;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
@@ -441,8 +435,6 @@ a.logo_amazon:hover {
 
 .no-comments {
 	border-top: 1px solid #d1d1d1;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-weight: 700;
 	margin: 0;
 	padding-top: 1.75em;
 }
@@ -453,7 +445,7 @@ a.logo_amazon:hover {
 }
 
 .form-allowed-tags code {
-	font-family: Inconsolata, monospace;
+	font-family: monospace;
 }
 
 .form-submit {
@@ -462,7 +454,6 @@ a.logo_amazon:hover {
 
 .required {
 	color: #007acc;
-	font-family: Merriweather, Georgia, serif;
 }
 
 .comment-reply-title small {
@@ -495,7 +486,6 @@ a.logo_amazon:hover {
 
 .comment-form .comment-form-cookies-consent label {
 	display: inline;
-	font-family: Merriweather, Georgia, serif;
 	letter-spacing: 0;
 	text-transform: none;
 }
@@ -522,10 +512,9 @@ a.logo_amazon:hover {
 
 .entry-content #jp-relatedposts h3.jp-relatedposts-headline {
     color: inherit;
-    font-family: Montserrat,"Helvetica Neue",sans-serif;
     font-size: 13px;
     font-size: .8125rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1;
     margin-bottom: 1.076923077em;
 }
@@ -542,7 +531,6 @@ a.logo_amazon:hover {
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: Montserrat, "Helvetica Neue", sans-serif;
     font-size: 13px;
     font-size: 0.725em;
     margin: 0.75em 0 0.25em;

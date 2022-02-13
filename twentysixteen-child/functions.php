@@ -1133,6 +1133,7 @@ function wp_remove_all_jp_css() {
     wp_deregister_style( 'jetpack_display_posts_widget' ); # Display Posts Widget
     wp_deregister_style( 'gravatar-profile-widget' );      # Gravatar Widget
     wp_deregister_style( 'widget-grid-and-list' );         # Top Posts widget
+    wp_deregister_style( 'twentysixteen-fonts' );          # Google Fonts from Twentysixteen Theme
 }
 
 add_action('wp_print_styles', 'wp_remove_all_jp_css' );
