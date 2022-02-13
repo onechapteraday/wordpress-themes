@@ -1156,6 +1156,10 @@ add_action('wp_print_styles', 'wp_remove_all_jp_css' );
 
 add_filter( 'wp_lazy_loading_enabled', '__return_false' );
 
+# Remove wpstats inline styles
+
+remove_action( 'wp_head', 'stats_hide_smile_css' );
+remove_action( 'embed_head', 'stats_hide_smile_css' );
 
 # Enable/disable susbcriptions for a specific post
 
