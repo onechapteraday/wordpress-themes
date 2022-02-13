@@ -960,6 +960,7 @@ a:active {
 	height: 35px;
 	position: relative;
 	width: 35px;
+	box-shadow: none;
 }
 
 .social-navigation a:before {
@@ -1010,6 +1011,19 @@ a:active {
 
 .social-navigation a[href$="/feed/"]:before {
 	content: "\f413";
+}
+.widget-area .social-links-menu {
+        margin: 0;
+}
+
+.widget-area .social-navigation a,
+.widget-area .social-navigation li {
+        width: 60px;
+        height: 60px;
+}
+
+.widget-area .social-navigation a:before {
+        font-size: 35px;
 }
 
 .pagination {
