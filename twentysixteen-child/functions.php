@@ -180,10 +180,11 @@ function twentysixteenchild_setup() {
     add_theme_support( 'post-thumbnails' );
 
     #  Adding several sizes for Post Thumbnails
-    add_image_size( 'twentysixteenchild-small-square', 120, 120, true ); // Small Square thumbnails (cropped)
-    add_image_size( 'twentysixteenchild-medium-portrait', 420, 560, true ); // Medium Portrait thumbnails (cropped)
-    add_image_size( 'twentysixteenchild-medium-landscape', 840, 560, true ); // Medium landscape thumbnails (cropped)
-    add_image_size( 'twentysixteenchild-fullwidth', 1200, 800, true ); // Big thumbnails (cropped)
+    add_image_size( 'twentysixteenchild-small-square', 120, 120, true );     # Small square thumbnails (cropped)
+    add_image_size( 'twentysixteenchild-medium-portrait', 420, 560, true );  # Medium portrait thumbnails (cropped)
+    add_image_size( 'twentysixteenchild-medium-landscape', 840, 560, true ); # Medium landscape thumbnails (cropped)
+    add_image_size( 'twentysixteenchild-mobile-landscape', 420, 280, true ); # Mobile landscape thumbnails (cropped)
+    add_image_size( 'twentysixteenchild-fullwidth', 1200, 800, true );       # Big thumbnails (cropped)
 }
 
 add_action( 'after_setup_theme', 'twentysixteenchild_setup' );
