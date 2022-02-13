@@ -1100,6 +1100,14 @@ function wps_deregister_styles() {
     # Unused wp-embed
     wp_deregister_script( 'wp-embed' );
     wp_dequeue_script( 'wp-embed' );
+
+    # MediaElement
+    wp_deregister_style('mediaelement');
+    wp_dequeue_style('mediaelement');
+    wp_deregister_script('mediaelement');
+    wp_deregister_style('wp-mediaelement');
+    wp_dequeue_style('wp-mediaelement');
+    wp_deregister_script('wp-mediaelement');
 }
 
 add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
