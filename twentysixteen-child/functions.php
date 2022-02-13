@@ -1108,6 +1108,10 @@ function wps_deregister_styles() {
     wp_deregister_style('wp-mediaelement');
     wp_dequeue_style('wp-mediaelement');
     wp_deregister_script('wp-mediaelement');
+
+    # Global styles
+    wp_deregister_style('global-styles');
+    wp_dequeue_style('global-styles');
 }
 
 add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
