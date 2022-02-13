@@ -9,7 +9,7 @@
  *    5.1 - Full-width single
  *    5.2 - Single interview
  * 6.0 - Comments
- * 7.0 - Jetpack Related Posts
+ * 7.0 - Sharedaddy
  * 8.0 - Media Queries
  */
 
@@ -492,100 +492,12 @@ a.logo_amazon:hover {
 
 
 /**
- * 7.0 - Jetpack Related Posts
+ * 7.0 - Sharedaddy
  */
-
-
-/* Jetpack Related Posts */
-
-.entry-content #jp-relatedposts {
-    padding: 3em 0 0;
-}
-
-.jp-relatedposts:before,
-.jp-relatedposts-items:before,
-.jp-relatedposts:last-child::after,
-.jp-relatedposts-items:after,
-.jp-relatedposts-post-context {
-    display: none;
-}
-
-.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
-    color: inherit;
-    font-size: 13px;
-    font-size: .8125rem;
-    font-weight: normal;
-    line-height: 1;
-    margin-bottom: 1.076923077em;
-}
-
-.entry-content #jp-relatedposts .jp-relatedposts-items p, .entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
-    font-size: 13px;
-    font-size: .8125rem;
-    letter-spacing: 0;
-    line-height: 1.615384615;
-}
-
-.jp-relatedposts-post-title,
-.entry-content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 13px;
-    font-size: 0.725em;
-    margin: 0.75em 0 0.25em;
-    max-height: 52px;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-
-#jp-relatedposts h3.jp-relatedposts-headline em {
-    font-weight: normal;
-}
-
-#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
-    font-size: 13px;
-    font-size: 0.725em;
-}
-
-.entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
-    font-weight: normal;
-    box-shadow: none;
-}
-
-.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
-    margin-bottom: 2.05em;
-    text-transform: uppercase;
-    color: #686868;
-    letter-spacing: 0.769px;
-}
-
-.widget.jetpack_widget_social_icons li a {
-    border-color: #7f7f7f;
-    margin-right: 10px;
-}
 
 .sharedaddy.sd-sharing-enabled {
     padding: 1.75em 0 1em;
     margin-top: 50px;
-}
-
-.jetpack-likes-widget-wrapper {
-    padding-bottom: 0 !important;
-    margin-bottom: -20px;
-}
-
-.hentry .jetpack-likes-widget-wrapper h3.sd-title,
-.jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item + .jetpack-social-widget-item .icon-feed {
-    display: none;
-}
-
-#jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post {
--webkit-opacity: 1;
-   -moz-opacity: 1;
-    -ms-opacity: 1;
-        opacity: 1;
-        filter: alpha(opacity=100);
 }
 
 
@@ -617,24 +529,6 @@ a.logo_amazon:hover {
 /* < 910px */
 
 @media screen and (max-width: 909px) {
-    #jp-relatedposts .jp-relatedposts-items-visual {
-        margin-right: -10px !important;
-    }
-
-    .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
-        box-sizing: border-box;
-        width: 33.33%;
-        padding-right: 10px;
-    }
-
-    #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:nth-child(3n) {
-        clear: none !important;
-    }
-
-    .entry-content #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
-        display: none !important;
-    }
-
     body.tax-person    article:not(.sticky) .entry-footer .album-release-date,
     body.tax-person    article:not(.sticky) .entry-footer .book-release-date,
     body.tax-publisher article:not(.sticky) .entry-footer .book-release-date {
