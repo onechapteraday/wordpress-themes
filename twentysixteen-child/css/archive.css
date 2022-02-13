@@ -82,6 +82,12 @@
         margin-bottom: 5px;
 }
 
+body.error404 .page-header,
+body.search-no-results .page-header {
+	border-top: 0;
+	padding-top: 0;
+}
+
 /* Taxonomy archive */
 body:not(search-results) article:not(.sticky) .entry-footer .album-release-date,
 body:not(search-results) article:not(.sticky) .entry-footer .book-release-date {

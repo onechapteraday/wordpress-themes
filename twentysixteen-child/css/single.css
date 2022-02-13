@@ -76,6 +76,50 @@
     text-align: justify;
 }
 
+.post-navigation {
+	border-top: 4px solid #1a1a1a;
+	border-bottom: 4px solid #1a1a1a;
+	clear: both;
+	margin: 0 7.6923% 3.5em;
+}
+
+.post-navigation a {
+	color: #1a1a1a;
+	display: block;
+	padding: 1.75em 0;
+}
+
+.post-navigation span {
+	display: block;
+}
+
+.post-navigation .meta-nav {
+	color: #686868;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	letter-spacing: 0.076923077em;
+	line-height: 1.6153846154;
+	margin-bottom: 0.5384615385em;
+	text-transform: uppercase;
+}
+
+.post-navigation .post-title {
+	display: inline;
+	font-size: 23px;
+	font-size: 1.4375rem;
+        line-height: 1.4;
+	text-rendering: optimizeLegibility;
+}
+
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title {
+	color: #007acc;
+}
+
+.post-navigation div + div {
+	border-top: 4px solid #1a1a1a;
+}
+
 
 /**
  * 2.0 - Post Dictionary
