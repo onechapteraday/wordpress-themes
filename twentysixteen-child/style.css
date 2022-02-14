@@ -2746,11 +2746,11 @@ p > video {
             float: left;
         }
 
-        .rp-color:nth-of-type(3n+1) {
+        .rp-color:nth-of-type(2n+1) {
             clear: left;
         }
 
-        .rp-color:nth-of-type(3n+3) {
+        .rp-color:nth-of-type(2n+2) {
             clear: right;
         }
 
@@ -3038,6 +3038,14 @@ p > video {
         .rp-color {
             width: 33.33%;
             float: left;
+        }
+
+        .rp-color:nth-of-type(3n+1) {
+            clear: left;
+        }
+
+        .rp-color:nth-of-type(3n+3) {
+            clear: right;
         }
 }
 
