@@ -3036,8 +3036,20 @@ p > video {
 	}
 
         .rp-color {
-            width: 33.33%;
-            float: left;
+                width: 33.33%;
+                float: left;
+        }
+
+        .rp-color:nth-of-type(2n+1) {
+                clear: none;
+        }
+
+        .rp-color:nth-of-type(3n+1) {
+                clear: left;
+        }
+
+        .rp-color:nth-of-type(3n+3) {
+                clear: right;
         }
 
         .rp-color:nth-of-type(3n+1) {
