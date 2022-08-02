@@ -844,6 +844,17 @@ function jetpack_relatedposts_update_thumbnail_size( $thumbnail_size ){
 
 add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jetpack_relatedposts_update_thumbnail_size' );
 
+function jetpackme_related_posts_headline( $headline ){
+    $headline = sprintf(
+        '<h3 class="jp-relatedposts-headline">%s</h3>',
+        esc_html( 'Découvrez aussi...' )
+    );
+
+    return $headline;
+}
+
+add_filter( 'jetpack_relatedposts_filter_headline', 'jetpackme_related_posts_headline' );
+
 
 /**
  * Add class no-sidebar to fullwidth templates
