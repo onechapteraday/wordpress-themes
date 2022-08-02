@@ -856,6 +856,28 @@ function jetpackme_related_posts_headline( $headline ){
 add_filter( 'jetpack_relatedposts_filter_headline', 'jetpackme_related_posts_headline' );
 
 
+# Display the related posts specified in post, if exist
+
+function jetpackme_append_related_post( $hits, $post_id ) {
+    if ( $post_id ) {
+        $relatedposts = get_post_meta( $post_id, 'relatedposts', true );
+
+        if( $relatedposts ){
+            $posts = array_reverse( explode( ",", $relatedposts ) );
+
+            foreach( $posts as $element_id ){
+                array_unshift( $hits, array( 'id' => $element_id ) );
+                array_pop( $hits );
+            }
+        }
+    }
+
+    return $hits;
+}
+
+add_filter( 'jetpack_relatedposts_filter_hits', 'jetpackme_append_related_post', 20, 2 );
+
+
 /**
  * Add class no-sidebar to fullwidth templates
  */
