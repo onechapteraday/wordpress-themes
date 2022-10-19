@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-21 15:35-0500\n"
+"POT-Creation-Date: 2022-10-19 18:37-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,283 +17,259 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:305 functions-prod.php:305
-msgctxt "Used before post author name."
-msgid "Author"
-msgstr ""
-
-#: functions.php:329 functions-prod.php:329
+#: functions.php:318
 msgctxt "Used before post format."
 msgid "Format"
 msgstr ""
 
-#: functions.php:355 functions-prod.php:355
-#: widgets/recent-posts-big-one-widget.php:269
-#: widgets/recent-posts-colored-widget.php:275
-#: widgets/recent-posts-medium-one-widget.php:261
-#: widgets/recent-posts-medium-two-widget.php:264
-#: widgets/recent-posts-big-two-widget.php:273
+#: functions.php:344
 #, php-format
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: functions.php:358 functions-prod.php:358
-#: widgets/recent-posts-big-one-widget.php:272
-#: widgets/recent-posts-colored-widget.php:278
-#: widgets/recent-posts-medium-one-widget.php:264
-#: widgets/recent-posts-medium-two-widget.php:267
-#: widgets/recent-posts-big-two-widget.php:276
+#: functions.php:347
 msgid "comment"
 msgstr ""
 
-#: functions.php:361 functions-prod.php:361
-#: widgets/recent-posts-big-one-widget.php:275
-#: widgets/recent-posts-colored-widget.php:281
-#: widgets/recent-posts-medium-one-widget.php:267
-#: widgets/recent-posts-medium-two-widget.php:270
-#: widgets/recent-posts-big-two-widget.php:279
+#: functions.php:350
 msgid "comments"
 msgstr ""
 
-#: functions.php:482 functions.php:586 functions-prod.php:482
-#: functions-prod.php:586
+#: functions.php:471 functions.php:575
 msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
 msgstr ""
 
-#: functions.php:486 functions-prod.php:486
+#: functions.php:475
 msgctxt "Used before category names."
 msgid "Categories"
 msgstr ""
 
-#: functions.php:508 functions-prod.php:508
+#: functions.php:497
 msgctxt "Used before person names."
 msgid "People"
 msgstr ""
 
-#: functions.php:531 functions-prod.php:531
+#: functions.php:520
 msgctxt "Used before prize names."
 msgid "Prizes"
 msgstr ""
 
-#: functions.php:553 functions-prod.php:553
+#: functions.php:542
 msgctxt "Used before selection names."
 msgid "Selections"
 msgstr ""
 
-#: functions.php:579 functions-prod.php:579
+#: functions.php:568
 msgctxt "Used before location names."
 msgid "Locations"
 msgstr ""
 
-#: functions.php:590 functions-prod.php:590
+#: functions.php:579
 msgctxt "Used before tag names."
 msgid "Tags"
 msgstr ""
 
-#: functions.php:609 functions-prod.php:609
+#: functions.php:598
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:611 functions-prod.php:611
+#: functions.php:600
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:619 functions-prod.php:619
+#: functions.php:608
 msgid "Sidebar for Books"
 msgstr ""
 
-#: functions.php:621 functions-prod.php:621
+#: functions.php:610
 msgid "Add widgets here to appears in your Book sidebar."
 msgstr ""
 
-#: functions.php:629 functions-prod.php:629
+#: functions.php:618
 msgid "Sidebar for Music"
 msgstr ""
 
-#: functions.php:631 functions-prod.php:631
+#: functions.php:620
 msgid "Add widgets here to appears in your Music sidebar."
 msgstr ""
 
-#: functions.php:639 functions-prod.php:639
+#: functions.php:628
 msgid "Front Page - FullWidth Top"
 msgstr ""
 
-#: functions.php:641 functions-prod.php:641
+#: functions.php:630
 msgid ""
 "Widgets appear in a single-column widget area on the top of the Front Page "
 "(and above the Featured Content slider, if active)."
 msgstr ""
 
-#: functions.php:649 functions-prod.php:649
+#: functions.php:638
 msgid "Front Page - Post Content 1"
 msgstr ""
 
-#: functions.php:651 functions-prod.php:651
+#: functions.php:640
 msgid ""
 "Widgets appear left of Sidebar 1 and below the FullWidth Top widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
 "Posts by Category widgets."
 msgstr ""
 
-#: functions.php:659 functions-prod.php:659
+#: functions.php:648
 msgid "Front Page - Sidebar 1"
 msgstr ""
 
-#: functions.php:661 functions-prod.php:661
+#: functions.php:650
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 1 "
 "widget area."
 msgstr ""
 
-#: functions.php:669 functions-prod.php:669
+#: functions.php:658
 msgid "Front Page - FullWidth Center"
 msgstr ""
 
-#: functions.php:671 functions-prod.php:671
+#: functions.php:660
 msgid ""
 "Widgets will appear in a single-column widget area below the Post Content 1 "
 "and Sidebar 1 widget areas."
 msgstr ""
 
-#: functions.php:679 functions-prod.php:679
+#: functions.php:668
 msgid "Front Page - Post Content 2"
 msgstr ""
 
-#: functions.php:681 functions-prod.php:681
+#: functions.php:670
 msgid ""
 "Widgets appear left of Sidebar 2 and below the FullWidth Center widget area. "
 "This widget area is especially designed for the custom Twenty Sixteen Child "
 "Posts by Category widgets."
 msgstr ""
 
-#: functions.php:689 functions-prod.php:689
+#: functions.php:678
 msgid "Front Page - Sidebar 2"
 msgstr ""
 
-#: functions.php:691 functions-prod.php:691
+#: functions.php:680
 msgid ""
 "Widgets appear in a right-aligned sidebar area next to the Post Content 2 "
 "widget area."
 msgstr ""
 
-#: functions.php:699 functions-prod.php:699
+#: functions.php:688
 msgid "Front Page - FullWidth Bottom"
 msgstr ""
 
-#: functions.php:701 functions-prod.php:701
+#: functions.php:690
 msgid ""
 "Widgets will appear in a single-column widget area at the bottom of your "
 "Front Page above the footer."
 msgstr ""
 
-#: functions.php:709 functions-prod.php:709
+#: functions.php:698
 msgid "Content Bottom 1"
 msgstr ""
 
-#: functions.php:711 functions.php:721 functions-prod.php:711
-#: functions-prod.php:721
+#: functions.php:700 functions.php:710
 msgid "Appears at the bottom of the content on posts and pages."
 msgstr ""
 
-#: functions.php:719 functions-prod.php:719
+#: functions.php:708
 msgid "Content Bottom 2"
 msgstr ""
 
-#: functions.php:729 functions-prod.php:729
+#: functions.php:718
 msgid "EU Cookie Law Footer"
 msgstr ""
 
-#: functions.php:731 functions-prod.php:731
+#: functions.php:720
 msgid "Appears at the bottom of all pages."
 msgstr ""
 
-#: functions.php:768 functions-prod.php:768
+#: functions.php:757
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:770 functions-prod.php:770
+#: functions.php:759
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: functions.php:772 functions-prod.php:772
+#: functions.php:761
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: functions.php:775 functions-prod.php:775
+#: functions.php:764
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: functions.php:777 functions-prod.php:777
+#: functions.php:766
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: functions.php:779 functions-prod.php:779
+#: functions.php:768
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: functions.php:781 functions-prod.php:781
+#: functions.php:770
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: functions.php:783 functions-prod.php:783
+#: functions.php:772
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: functions.php:785 functions-prod.php:785
+#: functions.php:774
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: functions.php:787 functions-prod.php:787
+#: functions.php:776
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: functions.php:789 functions-prod.php:789
+#: functions.php:778
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: functions.php:791 functions-prod.php:791
+#: functions.php:780
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
 
-#: functions.php:798 functions-prod.php:798
+#: functions.php:787
 msgid "Archives"
 msgstr ""
 
-#: functions.php:1027 functions.php:1029 functions-prod.php:990
-#: functions-prod.php:992
-msgctxt "Used before release date of book."
-msgid "Released on"
-msgstr ""
-
-#: functions.php:1034 functions.php:1036
+#: functions.php:1050 functions.php:1052
 msgctxt "Used before release date of book."
 msgid "First edition released on"
 msgstr ""
 
-#: functions.php:1043 functions.php:1045 functions-prod.php:998
-#: functions-prod.php:1000
+#: functions.php:1056 functions.php:1058
+msgctxt "Used before release date of book."
+msgid "Released on"
+msgstr ""
+
+#: functions.php:1065 functions.php:1067
 msgctxt "Used before release date of album."
 msgid "Released on"
 msgstr ""
 
-#: single.php:29 image.php:101 page-templates/fullwidth-single.php:33
+#: single.php:29 image.php:101 page-templates/fullwidth-single.php:31
 #: page-templates/fullwidth-single-album.php:31
 #: page-templates/fullwidth-single-interview.php:31
 #: page-templates/fullwidth-single-concert.php:31
-#: page-templates/fullwidth-single-book.php:33 single-album.php:29
+#: page-templates/fullwidth-single-book.php:31 single-album.php:29
 #: single-book.php:29
 msgctxt "Parent post link"
 msgid ""
@@ -301,38 +277,38 @@ msgid ""
 "%title</span>"
 msgstr ""
 
-#: single.php:34 page-templates/fullwidth-single.php:38
+#: single.php:34 page-templates/fullwidth-single.php:36
 #: page-templates/fullwidth-single-album.php:36
 #: page-templates/fullwidth-single-interview.php:36
 #: page-templates/fullwidth-single-concert.php:36
-#: page-templates/fullwidth-single-book.php:38 single-album.php:34
+#: page-templates/fullwidth-single-book.php:36 single-album.php:34
 #: single-book.php:34
 msgid "Next"
 msgstr ""
 
-#: single.php:35 page-templates/fullwidth-single.php:39
+#: single.php:35 page-templates/fullwidth-single.php:37
 #: page-templates/fullwidth-single-album.php:37
 #: page-templates/fullwidth-single-interview.php:37
 #: page-templates/fullwidth-single-concert.php:37
-#: page-templates/fullwidth-single-book.php:39 single-album.php:35
+#: page-templates/fullwidth-single-book.php:37 single-album.php:35
 #: single-book.php:35
 msgid "Next post:"
 msgstr ""
 
-#: single.php:37 page-templates/fullwidth-single.php:41
+#: single.php:37 page-templates/fullwidth-single.php:39
 #: page-templates/fullwidth-single-album.php:39
 #: page-templates/fullwidth-single-interview.php:39
 #: page-templates/fullwidth-single-concert.php:39
-#: page-templates/fullwidth-single-book.php:41 single-album.php:37
+#: page-templates/fullwidth-single-book.php:39 single-album.php:37
 #: single-book.php:37
 msgid "Previous"
 msgstr ""
 
-#: single.php:38 page-templates/fullwidth-single.php:42
+#: single.php:38 page-templates/fullwidth-single.php:40
 #: page-templates/fullwidth-single-album.php:40
 #: page-templates/fullwidth-single-interview.php:40
 #: page-templates/fullwidth-single-concert.php:40
-#: page-templates/fullwidth-single-book.php:42 single-album.php:38
+#: page-templates/fullwidth-single-book.php:40 single-album.php:38
 #: single-book.php:38
 msgid "Previous post:"
 msgstr ""
@@ -425,6 +401,15 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
+#: footer-prod.php:60 footer-net.php:60 footer.php:60
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer-prod.php:63 footer-net.php:63 footer.php:63
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
 #: comments.php:32
 #, php-format
 msgctxt "comments title"
@@ -433,15 +418,6 @@ msgstr ""
 
 #: comments.php:84
 msgid "Comments are closed."
-msgstr ""
-
-#: footer.php:60
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: footer.php:63
-#, php-format
-msgid "Proudly powered by %s"
 msgstr ""
 
 #: template-parts/content-single-book.php:44
@@ -744,12 +720,12 @@ msgid "Tags"
 msgstr ""
 
 #: widgets/popular-tags-in-category-widget.php:147
-#: widgets/recent-posts-big-one-widget.php:336
-#: widgets/recent-posts-colored-widget.php:338 widgets/quote-widget.php:73
-#: widgets/recent-posts-medium-one-widget.php:326
-#: widgets/recent-posts-small-two-widget.php:287
-#: widgets/recent-posts-medium-two-widget.php:330
-#: widgets/recent-posts-big-two-widget.php:340
+#: widgets/recent-posts-big-one-widget.php:302
+#: widgets/recent-posts-colored-widget.php:327 widgets/quote-widget.php:73
+#: widgets/recent-posts-medium-one-widget.php:296
+#: widgets/recent-posts-small-two-widget.php:289
+#: widgets/recent-posts-medium-two-widget.php:300
+#: widgets/recent-posts-big-two-widget.php:306
 #: widgets/recent-posts-small-one-widget.php:296
 msgid "Title:"
 msgstr ""
@@ -768,131 +744,131 @@ msgid ""
 "minimum size of 1200x800 pixel."
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:250
-#: widgets/recent-posts-colored-widget.php:252
+#: widgets/recent-posts-big-one-widget.php:246
+#: widgets/recent-posts-colored-widget.php:265
 #: widgets/recent-posts-medium-one-widget.php:243
 #: widgets/recent-posts-medium-two-widget.php:245
-#: widgets/recent-posts-big-two-widget.php:250
+#: widgets/recent-posts-big-two-widget.php:246
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:341
-#: widgets/recent-posts-colored-widget.php:343
-#: widgets/recent-posts-medium-one-widget.php:331
-#: widgets/recent-posts-small-two-widget.php:292
-#: widgets/recent-posts-medium-two-widget.php:335
-#: widgets/recent-posts-big-two-widget.php:345
+#: widgets/recent-posts-big-one-widget.php:307
+#: widgets/recent-posts-colored-widget.php:332
+#: widgets/recent-posts-medium-one-widget.php:301
+#: widgets/recent-posts-small-two-widget.php:294
+#: widgets/recent-posts-medium-two-widget.php:305
+#: widgets/recent-posts-big-two-widget.php:311
 #: widgets/recent-posts-small-one-widget.php:301
 msgid "Number of posts to show:"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:346
-#: widgets/recent-posts-colored-widget.php:348
-#: widgets/recent-posts-medium-one-widget.php:336
-#: widgets/recent-posts-small-two-widget.php:297
-#: widgets/recent-posts-medium-two-widget.php:340
-#: widgets/recent-posts-big-two-widget.php:350
+#: widgets/recent-posts-big-one-widget.php:312
+#: widgets/recent-posts-colored-widget.php:337
+#: widgets/recent-posts-medium-one-widget.php:306
+#: widgets/recent-posts-small-two-widget.php:299
+#: widgets/recent-posts-medium-two-widget.php:310
+#: widgets/recent-posts-big-two-widget.php:316
 #: widgets/recent-posts-small-one-widget.php:306
 msgid "Number of posts to exclude (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:351
-#: widgets/recent-posts-colored-widget.php:353
-#: widgets/recent-posts-medium-one-widget.php:341
-#: widgets/recent-posts-small-two-widget.php:302
-#: widgets/recent-posts-medium-two-widget.php:345
-#: widgets/recent-posts-big-two-widget.php:355
+#: widgets/recent-posts-big-one-widget.php:317
+#: widgets/recent-posts-colored-widget.php:342
+#: widgets/recent-posts-medium-one-widget.php:311
+#: widgets/recent-posts-small-two-widget.php:304
+#: widgets/recent-posts-medium-two-widget.php:315
+#: widgets/recent-posts-big-two-widget.php:321
 #: widgets/recent-posts-small-one-widget.php:311
 msgid "Posts to exclude (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:356
-#: widgets/recent-posts-colored-widget.php:358
-#: widgets/recent-posts-medium-one-widget.php:346
-#: widgets/recent-posts-small-two-widget.php:307
-#: widgets/recent-posts-medium-two-widget.php:350
-#: widgets/recent-posts-big-two-widget.php:360
+#: widgets/recent-posts-big-one-widget.php:322
+#: widgets/recent-posts-colored-widget.php:347
+#: widgets/recent-posts-medium-one-widget.php:316
+#: widgets/recent-posts-small-two-widget.php:309
+#: widgets/recent-posts-medium-two-widget.php:320
+#: widgets/recent-posts-big-two-widget.php:326
 #: widgets/recent-posts-small-one-widget.php:316
 msgid "Display randomly posts (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:361
-#: widgets/recent-posts-colored-widget.php:363
-#: widgets/recent-posts-medium-one-widget.php:351
-#: widgets/recent-posts-small-two-widget.php:312
-#: widgets/recent-posts-medium-two-widget.php:355
-#: widgets/recent-posts-big-two-widget.php:365
+#: widgets/recent-posts-big-one-widget.php:327
+#: widgets/recent-posts-colored-widget.php:352
+#: widgets/recent-posts-medium-one-widget.php:321
+#: widgets/recent-posts-small-two-widget.php:314
+#: widgets/recent-posts-medium-two-widget.php:325
+#: widgets/recent-posts-big-two-widget.php:331
 #: widgets/recent-posts-small-one-widget.php:321
 msgid "Category slug (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:366
-#: widgets/recent-posts-colored-widget.php:368
-#: widgets/recent-posts-medium-one-widget.php:356
-#: widgets/recent-posts-small-two-widget.php:317
-#: widgets/recent-posts-medium-two-widget.php:360
-#: widgets/recent-posts-big-two-widget.php:370
+#: widgets/recent-posts-big-one-widget.php:332
+#: widgets/recent-posts-colored-widget.php:357
+#: widgets/recent-posts-medium-one-widget.php:326
+#: widgets/recent-posts-small-two-widget.php:319
+#: widgets/recent-posts-medium-two-widget.php:330
+#: widgets/recent-posts-big-two-widget.php:336
 #: widgets/recent-posts-small-one-widget.php:326
 msgid "Tag slug (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:376
-#: widgets/recent-posts-colored-widget.php:378
-#: widgets/recent-posts-medium-one-widget.php:366
-#: widgets/recent-posts-small-two-widget.php:327
-#: widgets/recent-posts-medium-two-widget.php:370
-#: widgets/recent-posts-big-two-widget.php:380
+#: widgets/recent-posts-big-one-widget.php:342
+#: widgets/recent-posts-colored-widget.php:372
+#: widgets/recent-posts-medium-one-widget.php:336
+#: widgets/recent-posts-small-two-widget.php:329
+#: widgets/recent-posts-medium-two-widget.php:340
+#: widgets/recent-posts-big-two-widget.php:346
 #: widgets/recent-posts-small-one-widget.php:336
 msgid "Publisher slug (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:387
-#: widgets/recent-posts-colored-widget.php:389
-#: widgets/recent-posts-medium-one-widget.php:377
-#: widgets/recent-posts-small-two-widget.php:338
-#: widgets/recent-posts-medium-two-widget.php:381
-#: widgets/recent-posts-big-two-widget.php:391
+#: widgets/recent-posts-big-one-widget.php:353
+#: widgets/recent-posts-colored-widget.php:383
+#: widgets/recent-posts-medium-one-widget.php:347
+#: widgets/recent-posts-small-two-widget.php:340
+#: widgets/recent-posts-medium-two-widget.php:351
+#: widgets/recent-posts-big-two-widget.php:357
 #: widgets/recent-posts-small-one-widget.php:347
 msgid "Location slug (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:398
-#: widgets/recent-posts-colored-widget.php:400
-#: widgets/recent-posts-medium-one-widget.php:388
-#: widgets/recent-posts-small-two-widget.php:349
-#: widgets/recent-posts-medium-two-widget.php:392
-#: widgets/recent-posts-big-two-widget.php:402
+#: widgets/recent-posts-big-one-widget.php:364
+#: widgets/recent-posts-colored-widget.php:394
+#: widgets/recent-posts-medium-one-widget.php:358
+#: widgets/recent-posts-small-two-widget.php:351
+#: widgets/recent-posts-medium-two-widget.php:362
+#: widgets/recent-posts-big-two-widget.php:368
 #: widgets/recent-posts-small-one-widget.php:358
 msgid "Person slug (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:409
-#: widgets/recent-posts-colored-widget.php:411
-#: widgets/recent-posts-medium-one-widget.php:399
-#: widgets/recent-posts-small-two-widget.php:360
-#: widgets/recent-posts-medium-two-widget.php:403
-#: widgets/recent-posts-big-two-widget.php:413
+#: widgets/recent-posts-big-one-widget.php:375
+#: widgets/recent-posts-colored-widget.php:405
+#: widgets/recent-posts-medium-one-widget.php:369
+#: widgets/recent-posts-small-two-widget.php:362
+#: widgets/recent-posts-medium-two-widget.php:373
+#: widgets/recent-posts-big-two-widget.php:379
 #: widgets/recent-posts-small-one-widget.php:369
 msgid "Prize slug (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:420
-#: widgets/recent-posts-colored-widget.php:422
-#: widgets/recent-posts-medium-one-widget.php:410
-#: widgets/recent-posts-small-two-widget.php:371
-#: widgets/recent-posts-medium-two-widget.php:414
-#: widgets/recent-posts-big-two-widget.php:424
+#: widgets/recent-posts-big-one-widget.php:386
+#: widgets/recent-posts-colored-widget.php:416
+#: widgets/recent-posts-medium-one-widget.php:380
+#: widgets/recent-posts-small-two-widget.php:373
+#: widgets/recent-posts-medium-two-widget.php:384
+#: widgets/recent-posts-big-two-widget.php:390
 #: widgets/recent-posts-small-one-widget.php:380
 msgid "Selection slug (optional):"
 msgstr ""
 
-#: widgets/recent-posts-big-one-widget.php:429
-#: widgets/recent-posts-colored-widget.php:431
-#: widgets/recent-posts-medium-one-widget.php:419
-#: widgets/recent-posts-small-two-widget.php:380
-#: widgets/recent-posts-medium-two-widget.php:423
-#: widgets/recent-posts-big-two-widget.php:433
+#: widgets/recent-posts-big-one-widget.php:395
+#: widgets/recent-posts-colored-widget.php:425
+#: widgets/recent-posts-medium-one-widget.php:389
+#: widgets/recent-posts-small-two-widget.php:382
+#: widgets/recent-posts-medium-two-widget.php:393
+#: widgets/recent-posts-big-two-widget.php:399
 #: widgets/recent-posts-small-one-widget.php:389
 msgid "Releases from DATE to DATE (optional):"
 msgstr ""
@@ -903,6 +879,10 @@ msgstr ""
 
 #: widgets/recent-posts-colored-widget.php:24
 msgid "Medium-sized Recent Posts with a background color."
+msgstr ""
+
+#: widgets/recent-posts-colored-widget.php:362
+msgid "Language slug (optional):"
 msgstr ""
 
 #: widgets/quote-widget.php:19

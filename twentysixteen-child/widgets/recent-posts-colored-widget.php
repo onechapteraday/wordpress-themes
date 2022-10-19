@@ -35,6 +35,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
         $excluded   = isset( $instance['excluded'] ) ? $instance['excluded'] : '';
         $random     = isset( $instance['random'] ) ? $instance['random'] : '';
         $between    = isset( $instance['between'] ) ? $instance['between'] : '';
+        $language   = isset( $instance['language'] ) ? $instance['language'] : '';
 
         $publisher  = isset( $instance['publisher'] ) ? $instance['publisher'] : '';
         $location   = isset( $instance['location'] ) ? $instance['location'] : '';
@@ -180,17 +181,42 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
 
         # Add between dates
 
+        $meta_query = array();
+        $meta__used = 0;
+
         if( $between ){
             $between_dates = explode( ';', $between );
 
-            $meta_query = array(
+            $betwdates_query = array(
                 'key'      => 'date_release',
                 'value'    => $between_dates,
                 'compare'  => 'BETWEEN',
                 'type'     => 'DATE',
             );
 
-            $query_args['meta_query'] = array( $meta_query );
+            array_push( $meta_query, $betwdates_query );
+            $meta__used = 1;
+        }
+
+        # Add language
+
+        if( $language ){
+            $languages = explode( ',', $language );
+
+            $lang_query = array(
+                'key'      => 'language',
+                'value'    => $languages,
+                'compare'  => 'IN',
+            );
+
+            array_push( $meta_query, $lang_query );
+            $meta__used = 1;
+        }
+
+        # Add custom meta queries
+
+        if( $meta__used ){
+            $query_args['meta_query'] = $meta_query;
         }
 
         # Add excluded posts
@@ -216,6 +242,10 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
 
             if( $tax__used ){
                 $latest_args['tax_query'] = $tax_query;
+            }
+
+            if( $meta__used ){
+                $latest_args['meta_query'] = $meta_query;
             }
 
             $latest_posts = new WP_Query( $latest_args );
@@ -277,6 +307,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
         $instance['excluded']   = $new_instance['excluded'];
         $instance['random']     = $new_instance['random'];
         $instance['between']    = $new_instance['between'];
+        $instance['language']   = $new_instance['language'];
 
         $instance['publisher']  = $new_instance['publisher'];
         $instance['location']   = $new_instance['location'];
@@ -296,6 +327,7 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
         $excluded   = isset( $instance['excluded'] ) ? esc_attr( $instance['excluded'] ) : '';
         $random     = isset( $instance['random'] ) ? esc_attr( $instance['random'] ) : '';
         $between    = isset( $instance['between'] ) ? esc_attr( $instance['between'] ) : '';
+        $language   = isset( $instance['language'] ) ? esc_attr( $instance['language'] ) : '';
 
         $publisher  = isset( $instance['publisher'] ) ? esc_attr( $instance['publisher'] ) : '';
         $location   = isset( $instance['location'] ) ? esc_attr( $instance['location'] ) : '';
@@ -337,6 +369,11 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
 	<p>
 	    <label for="<?php echo $this->get_field_id( 'tag' ); ?>"><?php _e( 'Tag slug (optional):', 'twentysixteen-child' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'tag' ); ?>" value="<?php echo esc_attr($tag); ?>" class="widefat" id="<?php echo $this->get_field_id( 'tag' ); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'language' ); ?>"><?php _e( 'Language slug (optional):', 'twentysixteen-child' ); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name( 'language' ); ?>" value="<?php echo esc_attr( $language ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'language' ); ?>" />
 	</p>
 
         <?php
