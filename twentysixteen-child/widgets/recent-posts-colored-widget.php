@@ -27,15 +27,16 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
     }
 
     public function widget( $args, $instance ){
-        $title      = isset( $instance['title'] ) ? $instance['title'] : '';
-        $postnumber = isset( $instance['postnumber'] ) ? $instance['postnumber'] : '';
-        $category   = isset( $instance['category'] ) ? apply_filters( 'widget_title', $instance['category'] ) : '';
-        $tag        = isset( $instance['tag'] ) ? $instance['tag'] : '';
-        $except     = isset( $instance['except'] ) ? $instance['except'] : '';
-        $excluded   = isset( $instance['excluded'] ) ? $instance['excluded'] : '';
-        $random     = isset( $instance['random'] ) ? $instance['random'] : '';
-        $between    = isset( $instance['between'] ) ? $instance['between'] : '';
-        $language   = isset( $instance['language'] ) ? $instance['language'] : '';
+        $title         = isset( $instance['title'] ) ? $instance['title'] : '';
+        $postnumber    = isset( $instance['postnumber'] ) ? $instance['postnumber'] : '';
+        $category      = isset( $instance['category'] ) ? apply_filters( 'widget_title', $instance['category'] ) : '';
+        $tag           = isset( $instance['tag'] ) ? $instance['tag'] : '';
+        $except        = isset( $instance['except'] ) ? $instance['except'] : '';
+        $excluded      = isset( $instance['excluded'] ) ? $instance['excluded'] : '';
+        $random        = isset( $instance['random'] ) ? $instance['random'] : '';
+        $between       = isset( $instance['between'] ) ? $instance['between'] : '';
+        $language      = isset( $instance['language'] ) ? $instance['language'] : '';
+        $cover_colours = isset( $instance['cover_colours'] ) ? $instance['cover_colours'] : '';
 
         $publisher  = isset( $instance['publisher'] ) ? $instance['publisher'] : '';
         $location   = isset( $instance['location'] ) ? $instance['location'] : '';
@@ -213,6 +214,21 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
             $meta__used = 1;
         }
 
+        # Add cover colours
+
+        if( $cover_colours ){
+            $colours = explode( ',', $cover_colours );
+
+            $colours_query = array(
+                'key'      => 'cover_colours',
+                'value'    => $colours[0],
+                'compare'  => 'LIKE',
+            );
+
+            array_push( $meta_query, $colours_query );
+            $meta__used = 1;
+        }
+
         # Add custom meta queries
 
         if( $meta__used ){
@@ -299,15 +315,16 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
     }
 
     function update( $new_instance, $old_instance ){
-        $instance['title']      = $new_instance['title'];
-        $instance['postnumber'] = $new_instance['postnumber'];
-        $instance['category']   = $new_instance['category'];
-        $instance['tag']        = $new_instance['tag'];
-        $instance['except']     = $new_instance['except'];
-        $instance['excluded']   = $new_instance['excluded'];
-        $instance['random']     = $new_instance['random'];
-        $instance['between']    = $new_instance['between'];
-        $instance['language']   = $new_instance['language'];
+        $instance['title']         = $new_instance['title'];
+        $instance['postnumber']    = $new_instance['postnumber'];
+        $instance['category']      = $new_instance['category'];
+        $instance['tag']           = $new_instance['tag'];
+        $instance['except']        = $new_instance['except'];
+        $instance['excluded']      = $new_instance['excluded'];
+        $instance['random']        = $new_instance['random'];
+        $instance['between']       = $new_instance['between'];
+        $instance['language']      = $new_instance['language'];
+        $instance['cover_colours'] = $new_instance['cover_colours'];
 
         $instance['publisher']  = $new_instance['publisher'];
         $instance['location']   = $new_instance['location'];
@@ -319,15 +336,16 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
     }
 
     function form( $instance ){
-        $title      = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
-        $postnumber = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
-        $category   = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
-        $tag        = isset( $instance['tag'] ) ? esc_attr( $instance['tag'] ) : '';
-        $except     = isset( $instance['except'] ) ? esc_attr( $instance['except'] ) : '';
-        $excluded   = isset( $instance['excluded'] ) ? esc_attr( $instance['excluded'] ) : '';
-        $random     = isset( $instance['random'] ) ? esc_attr( $instance['random'] ) : '';
-        $between    = isset( $instance['between'] ) ? esc_attr( $instance['between'] ) : '';
-        $language   = isset( $instance['language'] ) ? esc_attr( $instance['language'] ) : '';
+        $title         = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $postnumber    = isset( $instance['postnumber'] ) ? esc_attr( $instance['postnumber'] ) : '';
+        $category      = isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+        $tag           = isset( $instance['tag'] ) ? esc_attr( $instance['tag'] ) : '';
+        $except        = isset( $instance['except'] ) ? esc_attr( $instance['except'] ) : '';
+        $excluded      = isset( $instance['excluded'] ) ? esc_attr( $instance['excluded'] ) : '';
+        $random        = isset( $instance['random'] ) ? esc_attr( $instance['random'] ) : '';
+        $between       = isset( $instance['between'] ) ? esc_attr( $instance['between'] ) : '';
+        $language      = isset( $instance['language'] ) ? esc_attr( $instance['language'] ) : '';
+        $cover_colours = isset( $instance['cover_colours'] ) ? esc_attr( $instance['cover_colours'] ) : '';
 
         $publisher  = isset( $instance['publisher'] ) ? esc_attr( $instance['publisher'] ) : '';
         $location   = isset( $instance['location'] ) ? esc_attr( $instance['location'] ) : '';
@@ -374,6 +392,11 @@ class twentysixteenchild_recentposts_color extends WP_Widget {
 	<p>
 	    <label for="<?php echo $this->get_field_id( 'language' ); ?>"><?php _e( 'Language slug (optional):', 'twentysixteen-child' ); ?></label>
 	    <input type="text" name="<?php echo $this->get_field_name( 'language' ); ?>" value="<?php echo esc_attr( $language ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'language' ); ?>" />
+	</p>
+
+	<p>
+	    <label for="<?php echo $this->get_field_id( 'cover_colours' ); ?>"><?php _e( 'Cover colours slug (optional):', 'twentysixteen-child' ); ?></label>
+	    <input type="text" name="<?php echo $this->get_field_name( 'cover_colours' ); ?>" value="<?php echo esc_attr( $cover_colours ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'cover_colours' ); ?>" />
 	</p>
 
         <?php
