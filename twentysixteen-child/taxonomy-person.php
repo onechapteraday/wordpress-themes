@@ -36,6 +36,65 @@ get_header(); ?>
 
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 
+                                        # If creative work taxonomy exists
+
+                                        if( taxonomy_exists( 'creative_work' ) ){
+                                          $works = get_creative_works_from_author( get_term( $person_id, 'person' )->slug );
+
+                                          if( $works ){
+                                            ?>
+                                            <div class="taxonomy-description creative-works">
+                                                <table>
+                                                <?php
+                                                foreach( $works as $work ){
+                                                  $work_title  = get_creative_work_option( 'creative_work_title', $work );
+                                                  $work_review = get_creative_work_option( 'creative_work_review', $work );
+
+                                                  $work_release_date = get_creative_work_option( 'creative_work_release_date', $work );
+
+                                                  $work_publisher = get_term_by( 'slug', get_creative_work_option( 'creative_work_publisher', $work ), 'publisher' );
+
+                                                  if( $work_publisher->parent > 0 ){
+                                                    $work_publisher  = get_term_by( 'id', $work_publisher->parent, 'publisher' );
+                                                  }
+
+                                                  ?>
+                                                  <tr class="work">
+                                                    <td class="work-title">
+                                                      <cite>
+                                                        <?php
+                                                        if( $work_review != '' ){
+                                                          ?>
+                                                          <a href="<?php echo $work_review; ?>">
+                                                          <?php
+                                                        }
+
+                                                        echo $work_title;
+
+                                                        if( $work_review != '' ){
+                                                          ?>
+                                                          </a>
+                                                          <?php
+                                                        }
+                                                        ?>
+                                                      </cite>
+                                                    </td>
+                                                    <td class="work-publisher">
+                                                      <a href="<?php echo get_term_link( $work_publisher->term_id, 'publisher' ); ?>">
+                                                        <?php echo $work_publisher->name; ?>
+                                                      </a>
+                                                    </td>
+                                                    <td class="work-release-date"><?php echo date_i18n( 'Y', strtotime( $work_release_date ) ); ?></td>
+                                                  </tr>
+                                                  <?php
+                                                }
+                                                ?>
+                                                </table>
+                                            </div>
+                                            <?php
+                                          }
+                                        }
+
 					$facebook   = get_person_option( 'facebook' )  ;
 					$instagram  = get_person_option( 'instagram' ) ;
 					$soundcloud = get_person_option( 'soundcloud' );

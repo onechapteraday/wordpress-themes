@@ -42,16 +42,21 @@
         font-size: 95%;
 }
 
+.taxonomy-description table td a {
+        box-shadow: none;
+}
+
 .taxonomy-description table td.work-title {
-        width: 50%;
+        width: 60%;
 }
 
 .taxonomy-description table td.work-publisher {
-        width: 35%;
+        width: 30%;
 }
 
 .taxonomy-description table td.work-release-date {
-        width: 15%;
+        width: 10%;
+        text-align: right;
 }
 
 .tax-selection .taxonomy-description > ul {
