@@ -121,6 +121,59 @@
 	border-top: 4px solid #1a1a1a;
 }
 
+.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
+        margin: 72px 0 30px;
+        margin: 3em 0 1.25em;
+}
+
+.entry-content #jp-relatedposts h3.jp-relatedposts-headline em {
+        font-style: normal;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-post {
+        clear: both;
+        font-size: 14px;
+        font-size: 0.875rem;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-post > a.jp-relatedposts-post-a {
+        display: block;
+        float: left;
+        max-width: 35%;
+        margin: 0 20px 30px 0;
+        box-shadow: none;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-post h4.jp-relatedposts-post-title,
+.entry-content #jp-relatedposts .jp-relatedposts-post .jp-relatedposts-post-excerpt {
+      line-height: 25px;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-post h4.jp-relatedposts-post-title {
+       margin: 0 0 5px;
+       clear: none;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-post h4.jp-relatedposts-post-title a {
+       text-transform: none;
+       letter-spacing: 0;
+       box-shadow: none;
+       font-size: 15px;
+       font-size: 0.9375rem;
+       vertical-align: top;
+}
+
+.entry-content #jp-relatedposts .jp-relatedposts-post .jp-relatedposts-post-excerpt {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 75px;
+      -webkit-line-clamp: 3;
+      -moz-line-clamp: 3;
+      line-clamp: 3;
+}
+
+
+
 
 /**
  * 2.0 - Post Dictionary
@@ -560,6 +613,27 @@ a.logo_amazon:hover {
 
     .fable {
         width: 100%;
+    }
+
+    .entry-content #jp-relatedposts .jp-relatedposts-post > a.jp-relatedposts-post-a {
+        width: 100%;
+        max-width: none;
+        float: none;
+        margin: 0 0 10px;
+    }
+
+    .entry-content #jp-relatedposts h3.jp-relatedposts-headline {
+        font-size: 21px;
+        font-size: 1.3125rem;
+    }
+
+    .entry-content #jp-relatedposts .jp-relatedposts-post h4.jp-relatedposts-post-title a {
+        font-size: 14px;
+        font-size: 0.875rem;
+    }
+
+    .entry-content #jp-relatedposts .jp-relatedposts-post > a.jp-relatedposts-post-a {
+        display: none;
     }
 }
 
