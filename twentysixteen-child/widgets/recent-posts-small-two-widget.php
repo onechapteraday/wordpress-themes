@@ -148,6 +148,8 @@ class twentysixteenchild_recentposts_small_two extends WP_Widget {
         # Compose WP_Query
 
         $query_args = array (
+            'order'               => 'ASC',
+            'orderby'             => 'title',
             'post_status'         => 'publish',
             'post_type'           => $post_types,
             'posts_per_page'      => $postnumber,
