@@ -76,17 +76,51 @@ get_header(); ?>
                                                         echo $work_title;
 
                                                         if( $work_review != '' ){
-                                                          ?>
-                                                          </a>
-                                                          <?php
+                                                          ?><!--
+                                                          --></a><!--
+                                                          --><?php
                                                         }
-                                                        ?>
-                                                      </cite>
+                                                        ?><!--
+                                                      --></cite><!--
+                                                      --><?php
+                                                      if( count( $work_author ) > 1 ){
+                                                          $work_author_count = 0;
+
+                                                          foreach( $work_author as $key => $author ){
+                                                              if( $author != $person_slug ){
+                                                                  if( $work_author_count == 0 ){
+                                                                      echo __( ', with ', 'twentysixteen-child' );
+                                                                  } elseif( ++$key == count( $work_author ) ) {
+                                                                      echo __( ' and ', 'twentysixteen-child' );
+                                                                  } else {
+                                                                      echo ', ';
+                                                                  }
+
+                                                                  $author_ob = get_term_by( 'slug', $author, 'person' );
+                                                                  echo $author_ob->name;
+
+                                                                  $work_author_count++;
+                                                              }
+                                                          }
+                                                      }
+                                                      ?>
                                                     </td>
                                                     <td class="work-publisher">
-                                                      <a href="<?php echo get_term_link( $work_publisher->term_id, 'publisher' ); ?>">
-                                                        <?php echo $work_publisher->name; ?>
-                                                      </a>
+                                                      <?php
+                                                      if( $work_publisher_count > 0 ){
+                                                        ?>
+                                                        <a href="<?php echo get_term_link( $work_publisher->term_id, 'publisher' ); ?>">
+                                                        <?php
+                                                      }
+
+                                                      echo $work_publisher->name;
+
+                                                      if( $work_publisher_count > 0 ){
+                                                        ?>
+                                                        </a>
+                                                        <?php
+                                                      }
+                                                      ?>
                                                     </td>
                                                     <td class="work-release-date"><?php echo date_i18n( 'Y', strtotime( $work_release_date ) ); ?></td>
                                                   </tr>
