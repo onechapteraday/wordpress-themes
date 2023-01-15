@@ -1198,5 +1198,18 @@ remove_action( 'embed_head', 'stats_hide_smile_css' );
 
 add_filter( 'jetpack_allow_per_post_subscriptions', '__return_true' );
 
+# Redirect author page to home
+
+function vpsb_redirect_author_page(){
+    global $wp_query;
+
+    if( is_author() ){
+        wp_redirect( get_option( 'home' ), 301 );
+        exit;
+    }
+}
+
+add_action( 'template_redirect', 'vpsb_redirect_author_page' );
+
 
 ?>
