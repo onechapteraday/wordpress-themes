@@ -1049,7 +1049,7 @@ function twentysixteen_child_release_date(){
             printf( '<span class="posted-on book-release-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
                 _x( 'First edition released on', 'Used before release date of book.', 'twentysixteen-child' ),
                 esc_url( get_permalink() ),
-                _x( 'First edition released on', 'Used before release date of book.', 'twentysixteen-child' ) . ' ' . str_replace('1 ', '1<sup>er</sup> ', date_i18n( 'j F Y', strtotime( $first_date ) ) )
+                _x( 'First edition released on', 'Used before release date of book.', 'twentysixteen-child' ) . ' ' . str_replace(' 1 ', ' 1<sup>er</sup> ', date_i18n( 'j F Y', strtotime( $first_date ) ) )
             );
         } else {
             printf( '<span class="posted-on book-release-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
