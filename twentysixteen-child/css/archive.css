@@ -54,6 +54,10 @@
         width: 30%;
 }
 
+.taxonomy-description table td.work-publisher a {
+        color: #686868;
+}
+
 .taxonomy-description table td.work-release-date {
         width: 10%;
         text-align: right;
