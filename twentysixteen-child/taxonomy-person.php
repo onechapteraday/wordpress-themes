@@ -39,7 +39,8 @@ get_header(); ?>
                                         # If creative work taxonomy exists
 
                                         if( taxonomy_exists( 'creative_work' ) ){
-                                          $works = get_creative_works_from_author( get_term( $person_id, 'person' )->slug );
+                                          $person_slug = get_term( $person_id, 'person' )->slug;
+                                          $works = get_creative_works_from_author( $person_slug );
 
                                           if( $works ){
                                             ?>
@@ -52,7 +53,10 @@ get_header(); ?>
 
                                                   $work_release_date = get_creative_work_option( 'creative_work_release_date', $work );
 
-                                                  $work_publisher = get_term_by( 'slug', get_creative_work_option( 'creative_work_publisher', $work ), 'publisher' );
+                                                  $work_author = explode( ',', get_creative_work_option( 'creative_work_author', $work ) );
+
+                                                  $work_publisher       = get_term_by( 'slug', get_creative_work_option( 'creative_work_publisher', $work ), 'publisher' );
+                                                  $work_publisher_count = $work_publisher->count;
 
                                                   if( $work_publisher->parent > 0 ){
                                                     $work_publisher  = get_term_by( 'id', $work_publisher->parent, 'publisher' );
